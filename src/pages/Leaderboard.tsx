@@ -8,15 +8,22 @@ import { PageHeader, Panel } from "../ui";
 const MEDALS = ["gold", "silver", "bronze"];
 const MEDAL_COLOURS = ["#fbdc8e", "#ced3e0", "#e0a272"];
 
+// OpenSkill's conservative estimate, μ − 3σ: a bot ranks high only once it
+// has played enough to be confidently good. Rounded to the one decimal shown,
+// so bots that look level are level.
+function skill(s: BotStats): number {
+  return Math.round((s.openskillMu - 3 * s.openskillSigma) * 10) / 10;
+}
+
 export default function Leaderboard() {
   const { conn } = useConn();
   const bots = conn ? [...conn.db.bot.iter()] : [];
   const stats = conn ? [...conn.db.botStats.iter()] : [];
-  stats.sort((a, b) => b.rating - a.rating);
+  stats.sort((a, b) => skill(b) - skill(a));
   const botName = botNames(conn);
 
   // Bots on the same rating share a rank (1, 2, 3, 3, 3, 6).
-  const rankOf = competitionRank(stats, (s) => s.rating);
+  const rankOf = competitionRank(stats, skill);
   const tiedAt = (rank: number) => stats.filter((s) => rankOf(s) === rank);
 
   const rated = new Set(stats.map((s) => s.botId));
@@ -76,7 +83,7 @@ function Podium({
             <div className="step-block">
               <div className="step-rank">{rank}</div>
               <div className="step-rating">
-                {holders[0].rating}
+                {skill(holders[0]).toFixed(1)}
                 <span>rating</span>
               </div>
             </div>
@@ -119,8 +126,6 @@ function RatingsTable({
           {stats.map((s) => {
             const rank = rankOf(s);
             const tied = tiedAt(rank).length > 1;
-            const mu = s.openskillMu;
-            const sigma = s.openskillSigma;
             return (
               <tr key={String(s.botId)}>
                 <td className="lb-rank">
@@ -137,9 +142,9 @@ function RatingsTable({
                 <td className="lb-name">{botName(s.botId)}</td>
                 <td
                   className="num lb-rating"
-                  title={`OpenSkill μ ${mu.toFixed(2)}, σ ${sigma.toFixed(2)} (conservative ${(mu - 3 * sigma).toFixed(2)})`}
+                  title={`OpenSkill μ ${s.openskillMu.toFixed(2)} − 3 × σ ${s.openskillSigma.toFixed(2)} · Elo ${s.rating}`}
                 >
-                  {s.rating}
+                  {skill(s).toFixed(1)}
                 </td>
                 <td className="num lb-opt">{s.matchesPlayed}</td>
                 <td className="num lb-opt">{s.wins}</td>

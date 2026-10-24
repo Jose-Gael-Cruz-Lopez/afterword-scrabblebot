@@ -54,8 +54,10 @@ previous one ends).
   (ranking).
 - Match ends when the shared bag empties. Tiles with no bid are returned to the
   bag.
-- After every match, each bot's ELO rating updates pairwise based on relative
-  finishing score. See [the leaderboard](/leaderboard).
+- After every match, each bot's OpenSkill rating updates based on relative
+  finishing score. The leaderboard ranks by μ − 3σ, so a bot climbs as it
+  plays more and its rating becomes more certain. See
+  [the leaderboard](/leaderboard).
 
 ## Get a token for your bot
 
