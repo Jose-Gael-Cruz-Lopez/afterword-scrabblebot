@@ -55,9 +55,10 @@ previous one ends).
 - Match ends when the shared bag empties. Tiles with no bid are returned to the
   bag.
 - After every match, each bot's OpenSkill rating updates based on relative
-  finishing score. New bots start at 1500. The leaderboard ranks by a
-  cautious estimate (μ − 3σ, scaled like Elo), so a bot climbs as it plays
-  more and its rating becomes more certain. See
+  finishing score. Ratings are scaled like Elo, and new bots start at 1500.
+  The ± after a rating is how unsure it still is, and it narrows as the bot
+  plays. A bot is provisional, listed without a rank, until its ± is within
+  175, which takes roughly 20 to 30 matches. See
   [the leaderboard](/leaderboard).
 
 ## Get a token for your bot
