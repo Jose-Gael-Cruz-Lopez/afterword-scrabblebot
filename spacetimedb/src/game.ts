@@ -525,7 +525,7 @@ export function closeAuction(ctx: Ctx, matchId: bigint): boolean {
     paid,
     closedAt: ctx.timestamp,
   });
-  // Spectator-visible mirror of the winning bid (gated through the
+  // Admin-visible mirror of the winning bid (gated through the
   // `visibleAuctionTopBids` view so bots can't see it).
   ctx.db.auctionTopBid.insert({
     auctionId,

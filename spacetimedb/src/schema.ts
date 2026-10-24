@@ -422,7 +422,7 @@ export type AuctionResult = Infer<typeof auctionResult.rowType>;
 // Private — live, in-progress matches. Top bid is sensitive while a match
 // is running (it leaks the winner's true valuation and would undermine
 // Vickrey's truth-telling if competing bots could see it). The
-// `visibleAuctionTopBids` view exposes these to spectators only, bounded
+// `visibleAuctionTopBids` view exposes these to admins only, bounded
 // to Running matches. On match end, rows here are moved to
 // `auctionTopBidArchive` (public) so spectators can replay finished
 // matches without any view-body cost.

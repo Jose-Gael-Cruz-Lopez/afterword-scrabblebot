@@ -104,9 +104,10 @@ export const myTeam = spacetimedb.view(
   },
 );
 
-// Spectator-only view of live winning-bid amounts. Callers that hold a
-// BotCredential (real bots in the game) get an empty list; everyone else
-// sees the data for all currently-Running matches. Bounded by an indexed
+// Admin-only view of live winning-bid amounts, for every currently-Running
+// match; everyone else gets an empty list. (An allowlist, not a denylist:
+// anyone can mint a fresh identity, but only an admin can add an admin.)
+// Bounded by an indexed
 // nested-loop join through match status, so the result is small even as
 // the underlying private table grows. Ended-match top bids live in the
 // public `auctionTopBidArchive` table; subscribe there for replays.
@@ -114,7 +115,8 @@ export const visibleAuctionTopBids = spacetimedb.view(
   { public: true },
   t.array(auctionTopBid.rowType),
   (ctx) => {
-    if (ctx.db.botCredential.identity.find(ctx.sender) != null) {
+    const human = resolveHumanView(ctx);
+    if (ctx.db.admin.humanIdentity.find(human) == null) {
       return [];
     }
     const out = [];
