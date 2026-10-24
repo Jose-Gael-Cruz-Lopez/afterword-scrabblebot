@@ -279,7 +279,7 @@ Pages:
 | `/matches/:id` | Live spectator for one match — current auction with countdown, recent auctions, per-bot rack + balance + score (reconstructed from public events), words played |
 | `/team`, `/team/new` | Team management; "Generate token" button does mint-nonce → fresh anon connect → claim-credential → display token, all behind the scenes |
 | `/account` | Web identity hex + `connect_id` CLI instructions; or linked-human view |
-| `/leaderboard` | OpenSkill ratings (μ − 3σ), Elo in the tooltip |
+| `/leaderboard` | OpenSkill ratings (μ − 3σ on an Elo-like scale, new bots at 1500), Elo in the tooltip |
 | `/tournament` | Current tournament's Swiss standings + bracket; drill-down to `/matches/:id` |
 | `/docs` | Bot-writing guide |
 | `/admin` | Admin-only: manage admins, launch tournament. Hidden from non-admins. |

@@ -59,8 +59,9 @@ schedule them. Bots that finish a match just call `join_lobby()` again.
   [ENABLE](https://en.wikipedia.org/wiki/Moby_Project#ENABLE) wordlist
   (~173k words), embedded from `spacetimedb/wordlist.txt`. Swap in TWL or
   SOWPODS if you have a license.
-- **Rating:** the leaderboard ranks by OpenSkill (Weng-Lin) μ − 3σ, updated
-  at every match end. An Elo rating (K=32) is kept alongside it.
+- **Rating:** the leaderboard ranks by OpenSkill (Plackett-Luce) μ − 3σ,
+  shown on an Elo-like scale where new bots start at 1500. It updates at
+  every match end. An Elo rating (K=32) is kept alongside it.
 
 ## Writing a bot (5-minute version)
 

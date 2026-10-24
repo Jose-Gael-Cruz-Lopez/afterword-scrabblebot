@@ -8,11 +8,19 @@ import { PageHeader, Panel } from "../ui";
 const MEDALS = ["gold", "silver", "bronze"];
 const MEDAL_COLOURS = ["#fbdc8e", "#ced3e0", "#e0a272"];
 
-// OpenSkill's conservative estimate, μ − 3σ: a bot ranks high only once it
-// has played enough to be confidently good. Rounded to the one decimal shown,
-// so bots that look level are level.
+// What a new bot is rated, before its first match.
+const NEW_BOT = 1500;
+// Rating points per point of μ, chosen so that, as in Elo, 400 points
+// between two settled bots means 10:1 odds head to head: 400 / (ln 10 · β√2),
+// with OpenSkill's β = 25/6.
+const ELO_SCALE = 400 / (Math.LN10 * (25 / 6) * Math.SQRT2);
+
+// OpenSkill's conservative estimate, μ − 3σ, on that Elo-like scale. A bot
+// ranks high only once it has played enough to be confidently good.
 function skill(s: BotStats): number {
-  return Math.round((s.openskillMu - 3 * s.openskillSigma) * 10) / 10;
+  return Math.round(
+    NEW_BOT + ELO_SCALE * (s.openskillMu - 3 * s.openskillSigma),
+  );
 }
 
 export default function Leaderboard() {
@@ -83,7 +91,7 @@ function Podium({
             <div className="step-block">
               <div className="step-rank">{rank}</div>
               <div className="step-rating">
-                {skill(holders[0]).toFixed(1)}
+                {skill(holders[0])}
                 <span>rating</span>
               </div>
             </div>
@@ -144,7 +152,7 @@ function RatingsTable({
                   className="num lb-rating"
                   title={`OpenSkill μ ${s.openskillMu.toFixed(2)} − 3 × σ ${s.openskillSigma.toFixed(2)} · Elo ${s.rating}`}
                 >
-                  {skill(s).toFixed(1)}
+                  {skill(s)}
                 </td>
                 <td className="num lb-opt">{s.matchesPlayed}</td>
                 <td className="num lb-opt">{s.wins}</td>
