@@ -2,7 +2,7 @@
 
 This is the architecture and design-decisions notebook for ScrabbleBot. If
 you're only writing a bot, see [README.md](README.md) and
-[/docs](https://scrabblebot.vercel.app/docs) instead.
+[/docs](https://launchpad-scrabblebot.vercel.app/docs) instead.
 
 ## Pieces
 
