@@ -107,38 +107,54 @@ test("my admin is only set for admins", () => {
   expect(myAdmin(view(db, "bob"))).toBeUndefined();
 });
 
-test("live top bids are hidden from bots", () => {
+test("live top bids are visible to admins only", () => {
   const db = newDb();
+  makeAdmin(db, "admin");
   const ann = teamWithBot(db, "alice", "Ann");
   const m = startMatch(db, VICKREY, [ann, simIds(db)[0]!]);
   tick(db, m);
   tick(db, m);
 
-  const spectator = visibleAuctionTopBids(view(db, "spectator"));
-  expect(spectator.length).toBe(2);
-  expect(spectator.every((t) => t.matchId === m)).toBe(true);
+  const admin = visibleAuctionTopBids(view(db, "admin"));
+  expect(admin.length).toBe(2);
+  expect(admin.every((t) => t.matchId === m)).toBe(true);
 
+  expect(visibleAuctionTopBids(view(db, "spectator"))).toEqual([]);
+  expect(visibleAuctionTopBids(view(db, "alice"))).toEqual([]);
   expect(visibleAuctionTopBids(view(db, "Ann"))).toEqual([]);
   const sim = db.viewContext(asClaims("sim", "Cheapo-sim"));
   expect(visibleAuctionTopBids(sim)).toEqual([]);
 });
 
+test("an admin's linked browser sees live top bids", () => {
+  const db = newDb();
+  makeAdmin(db, "admin");
+  const m = startMatch(db, VICKREY, simIds(db).slice(0, 2));
+  tick(db, m);
+  call(db, "admin", (tx) =>
+    connectId(tx, { webIdentity: identity("browser") }),
+  );
+
+  expect(visibleAuctionTopBids(view(db, "browser")).length).toBe(1);
+});
+
 test("finished matches drop out of the live top bids", () => {
   const db = newDb();
+  makeAdmin(db, "admin");
   const sims = simIds(db);
   const finished = startMatch(db, VICKREY, sims.slice(0, 2));
   runToEnd(db, finished);
   const live = startMatch(db, VICKREY, sims.slice(2, 4));
   tick(db, live);
 
-  const bids = visibleAuctionTopBids(view(db, "spectator"));
+  const bids = visibleAuctionTopBids(view(db, "admin"));
   expect(bids.length).toBe(1);
   expect(bids[0]!.matchId).toBe(live);
 });
 
-// TODO.md: AuctionResult is public, and its `paid` exposes the runner-up's bid
-// under Vickrey. That's by design; this pins down that `topBid` itself is
-// not in the public result table.
+// AuctionResult is public, and its `paid` exposes the runner-up's bid under
+// Vickrey. That's by design; this pins down that `topBid` itself is not in
+// the public result table.
 test("auction results do not reveal the top bid", () => {
   const db = newDb();
   const ann = teamWithBot(db, "alice", "Ann");

@@ -86,8 +86,8 @@ export default function MatchView() {
 }
 
 // The winning bid on each auction, by auction id. While a match runs these
-// come through the `visibleAuctionTopBids` view, which is hidden from bot
-// clients. Once it ends, onMatchEnded moves them to the public
+// come through the `visibleAuctionTopBids` view, which only admins can see.
+// Once it ends, onMatchEnded moves them to the public
 // `auctionTopBidArchive` table for replay.
 function topBids(conn: DbConnection, matchId: bigint): Map<bigint, bigint> {
   const bids = new Map<bigint, bigint>();
