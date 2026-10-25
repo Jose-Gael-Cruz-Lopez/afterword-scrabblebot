@@ -1,0 +1,1021 @@
+{
+  "seedStart": 2027011101,
+  "config": {
+    "stallRounds": 6,
+    "minimumReward": 24,
+    "maximumBalance": 20,
+    "minimumHorizon": 8
+  },
+  "method": "48 fixed fresh matched seed+seat+roster scenarios; only focal policy replaced. 24 per auction mode, each seat4times per mode, strong licensed clones/mutants. No tuning on these seeds.",
+  "pairs": [
+    {
+      "seed": 2027011101,
+      "seat": 0,
+      "mode": "SecondPrice",
+      "roster": 0,
+      "control": {
+        "score": 51,
+        "rank": 6,
+        "win": 0,
+        "cash": 34,
+        "maxMs": 6.850333999999975
+      },
+      "candidate": {
+        "score": 51,
+        "rank": 6,
+        "win": 0,
+        "cash": 34,
+        "maxMs": 6.517875000000004
+      }
+    },
+    {
+      "seed": 2027011102,
+      "seat": 1,
+      "mode": "SecondPrice",
+      "roster": 0,
+      "control": {
+        "score": 87,
+        "rank": 3,
+        "win": 0,
+        "cash": 14,
+        "maxMs": 3.402457999999797
+      },
+      "candidate": {
+        "score": 87,
+        "rank": 3,
+        "win": 0,
+        "cash": 14,
+        "maxMs": 3.3115829999997004
+      }
+    },
+    {
+      "seed": 2027011103,
+      "seat": 2,
+      "mode": "SecondPrice",
+      "roster": 0,
+      "control": {
+        "score": 96,
+        "rank": 2,
+        "win": 0,
+        "cash": 15,
+        "maxMs": 1.3494999999998072
+      },
+      "candidate": {
+        "score": 96,
+        "rank": 2,
+        "win": 0,
+        "cash": 15,
+        "maxMs": 1.3881250000004002
+      }
+    },
+    {
+      "seed": 2027011104,
+      "seat": 3,
+      "mode": "SecondPrice",
+      "roster": 0,
+      "control": {
+        "score": 57,
+        "rank": 6,
+        "win": 0,
+        "cash": 12,
+        "maxMs": 5.995124999999916
+      },
+      "candidate": {
+        "score": 57,
+        "rank": 6,
+        "win": 0,
+        "cash": 12,
+        "maxMs": 3.991541999999754
+      }
+    },
+    {
+      "seed": 2027011105,
+      "seat": 4,
+      "mode": "SecondPrice",
+      "roster": 0,
+      "control": {
+        "score": 72,
+        "rank": 4,
+        "win": 0,
+        "cash": 42,
+        "maxMs": 4.20129100000031
+      },
+      "candidate": {
+        "score": 72,
+        "rank": 4,
+        "win": 0,
+        "cash": 15,
+        "maxMs": 1.9293330000000424
+      }
+    },
+    {
+      "seed": 2027011106,
+      "seat": 5,
+      "mode": "SecondPrice",
+      "roster": 0,
+      "control": {
+        "score": 76,
+        "rank": 4,
+        "win": 0,
+        "cash": 34,
+        "maxMs": 4.68170900000041
+      },
+      "candidate": {
+        "score": 76,
+        "rank": 4,
+        "win": 0,
+        "cash": 34,
+        "maxMs": 4.459458999999697
+      }
+    },
+    {
+      "seed": 2027011107,
+      "seat": 0,
+      "mode": "SecondPrice",
+      "roster": 1,
+      "control": {
+        "score": 65,
+        "rank": 5,
+        "win": 0,
+        "cash": 10,
+        "maxMs": 1.3991249999999127
+      },
+      "candidate": {
+        "score": 65,
+        "rank": 5,
+        "win": 0,
+        "cash": 10,
+        "maxMs": 1.3491670000003069
+      }
+    },
+    {
+      "seed": 2027011108,
+      "seat": 1,
+      "mode": "SecondPrice",
+      "roster": 1,
+      "control": {
+        "score": 78,
+        "rank": 3,
+        "win": 0,
+        "cash": 45,
+        "maxMs": 5.18816599999991
+      },
+      "candidate": {
+        "score": 78,
+        "rank": 3,
+        "win": 0,
+        "cash": 45,
+        "maxMs": 5.047625000001062
+      }
+    },
+    {
+      "seed": 2027011109,
+      "seat": 2,
+      "mode": "SecondPrice",
+      "roster": 1,
+      "control": {
+        "score": 66,
+        "rank": 5,
+        "win": 0,
+        "cash": 14,
+        "maxMs": 1.6827090000006137
+      },
+      "candidate": {
+        "score": 66,
+        "rank": 5,
+        "win": 0,
+        "cash": 14,
+        "maxMs": 1.7062910000004194
+      }
+    },
+    {
+      "seed": 2027011110,
+      "seat": 3,
+      "mode": "SecondPrice",
+      "roster": 1,
+      "control": {
+        "score": 76,
+        "rank": 4,
+        "win": 0,
+        "cash": 16,
+        "maxMs": 6.829125000000204
+      },
+      "candidate": {
+        "score": 76,
+        "rank": 4,
+        "win": 0,
+        "cash": 16,
+        "maxMs": 1.3283329999994749
+      }
+    },
+    {
+      "seed": 2027011111,
+      "seat": 4,
+      "mode": "SecondPrice",
+      "roster": 1,
+      "control": {
+        "score": 65,
+        "rank": 4,
+        "win": 0,
+        "cash": 37,
+        "maxMs": 3.809708999999202
+      },
+      "candidate": {
+        "score": 65,
+        "rank": 4,
+        "win": 0,
+        "cash": 37,
+        "maxMs": 3.8119580000002316
+      }
+    },
+    {
+      "seed": 2027011112,
+      "seat": 5,
+      "mode": "SecondPrice",
+      "roster": 1,
+      "control": {
+        "score": 105,
+        "rank": 2,
+        "win": 0,
+        "cash": 20,
+        "maxMs": 4.311666999999943
+      },
+      "candidate": {
+        "score": 105,
+        "rank": 2,
+        "win": 0,
+        "cash": 20,
+        "maxMs": 4.024959000000308
+      }
+    },
+    {
+      "seed": 2027011113,
+      "seat": 0,
+      "mode": "SecondPrice",
+      "roster": 2,
+      "control": {
+        "score": 69,
+        "rank": 6,
+        "win": 0,
+        "cash": 34,
+        "maxMs": 4.988792000000103
+      },
+      "candidate": {
+        "score": 69,
+        "rank": 6,
+        "win": 0,
+        "cash": 34,
+        "maxMs": 4.539041999998517
+      }
+    },
+    {
+      "seed": 2027011114,
+      "seat": 1,
+      "mode": "SecondPrice",
+      "roster": 2,
+      "control": {
+        "score": 80,
+        "rank": 3,
+        "win": 0,
+        "cash": 7,
+        "maxMs": 1.3935830000009446
+      },
+      "candidate": {
+        "score": 80,
+        "rank": 3,
+        "win": 0,
+        "cash": 7,
+        "maxMs": 1.4291249999987485
+      }
+    },
+    {
+      "seed": 2027011115,
+      "seat": 2,
+      "mode": "SecondPrice",
+      "roster": 2,
+      "control": {
+        "score": 57,
+        "rank": 6,
+        "win": 0,
+        "cash": 23,
+        "maxMs": 1.5378330000003189
+      },
+      "candidate": {
+        "score": 57,
+        "rank": 6,
+        "win": 0,
+        "cash": 23,
+        "maxMs": 1.7935419999994338
+      }
+    },
+    {
+      "seed": 2027011116,
+      "seat": 3,
+      "mode": "SecondPrice",
+      "roster": 2,
+      "control": {
+        "score": 75,
+        "rank": 3,
+        "win": 0,
+        "cash": 19,
+        "maxMs": 4.790290999997524
+      },
+      "candidate": {
+        "score": 75,
+        "rank": 3,
+        "win": 0,
+        "cash": 19,
+        "maxMs": 4.566209000000526
+      }
+    },
+    {
+      "seed": 2027011117,
+      "seat": 4,
+      "mode": "SecondPrice",
+      "roster": 2,
+      "control": {
+        "score": 66,
+        "rank": 4,
+        "win": 0,
+        "cash": 12,
+        "maxMs": 6.832000000002154
+      },
+      "candidate": {
+        "score": 66,
+        "rank": 4,
+        "win": 0,
+        "cash": 12,
+        "maxMs": 3.601542000000336
+      }
+    },
+    {
+      "seed": 2027011118,
+      "seat": 5,
+      "mode": "SecondPrice",
+      "roster": 2,
+      "control": {
+        "score": 54,
+        "rank": 6,
+        "win": 0,
+        "cash": 22,
+        "maxMs": 5.9250409999986005
+      },
+      "candidate": {
+        "score": 54,
+        "rank": 6,
+        "win": 0,
+        "cash": 22,
+        "maxMs": 5.568875000000844
+      }
+    },
+    {
+      "seed": 2027011119,
+      "seat": 0,
+      "mode": "SecondPrice",
+      "roster": 0,
+      "control": {
+        "score": 96,
+        "rank": 1,
+        "win": 1,
+        "cash": 17,
+        "maxMs": 3.474999999998545
+      },
+      "candidate": {
+        "score": 96,
+        "rank": 1,
+        "win": 1,
+        "cash": 17,
+        "maxMs": 6.798624999999447
+      }
+    },
+    {
+      "seed": 2027011120,
+      "seat": 1,
+      "mode": "SecondPrice",
+      "roster": 0,
+      "control": {
+        "score": 99,
+        "rank": 2,
+        "win": 0,
+        "cash": 6,
+        "maxMs": 2.225624999999127
+      },
+      "candidate": {
+        "score": 99,
+        "rank": 2,
+        "win": 0,
+        "cash": 6,
+        "maxMs": 1.8221669999984442
+      }
+    },
+    {
+      "seed": 2027011121,
+      "seat": 2,
+      "mode": "SecondPrice",
+      "roster": 0,
+      "control": {
+        "score": 70,
+        "rank": 6,
+        "win": 0,
+        "cash": 23,
+        "maxMs": 6.445999999999913
+      },
+      "candidate": {
+        "score": 70,
+        "rank": 6,
+        "win": 0,
+        "cash": 23,
+        "maxMs": 9.012249999999767
+      }
+    },
+    {
+      "seed": 2027011122,
+      "seat": 3,
+      "mode": "SecondPrice",
+      "roster": 0,
+      "control": {
+        "score": 75,
+        "rank": 3,
+        "win": 0,
+        "cash": 40,
+        "maxMs": 4.530915999999706
+      },
+      "candidate": {
+        "score": 75,
+        "rank": 3,
+        "win": 0,
+        "cash": 40,
+        "maxMs": 4.711582999996608
+      }
+    },
+    {
+      "seed": 2027011123,
+      "seat": 4,
+      "mode": "SecondPrice",
+      "roster": 0,
+      "control": {
+        "score": 112,
+        "rank": 1,
+        "win": 1,
+        "cash": 17,
+        "maxMs": 3.7547079999967536
+      },
+      "candidate": {
+        "score": 112,
+        "rank": 1,
+        "win": 1,
+        "cash": 17,
+        "maxMs": 4.103250000000116
+      }
+    },
+    {
+      "seed": 2027011124,
+      "seat": 5,
+      "mode": "SecondPrice",
+      "roster": 0,
+      "control": {
+        "score": 48,
+        "rank": 5,
+        "win": 0,
+        "cash": 20,
+        "maxMs": 3.9474169999994047
+      },
+      "candidate": {
+        "score": 48,
+        "rank": 5,
+        "win": 0,
+        "cash": 20,
+        "maxMs": 4.333166000000347
+      }
+    },
+    {
+      "seed": 2027011125,
+      "seat": 0,
+      "mode": "FirstPrice",
+      "roster": 0,
+      "control": {
+        "score": 67,
+        "rank": 5,
+        "win": 0,
+        "cash": 2,
+        "maxMs": 2.728833000001032
+      },
+      "candidate": {
+        "score": 67,
+        "rank": 5,
+        "win": 0,
+        "cash": 2,
+        "maxMs": 2.729583000000275
+      }
+    },
+    {
+      "seed": 2027011126,
+      "seat": 1,
+      "mode": "FirstPrice",
+      "roster": 0,
+      "control": {
+        "score": 77,
+        "rank": 5,
+        "win": 0,
+        "cash": 14,
+        "maxMs": 2.686583000002429
+      },
+      "candidate": {
+        "score": 77,
+        "rank": 5,
+        "win": 0,
+        "cash": 14,
+        "maxMs": 2.673458000001119
+      }
+    },
+    {
+      "seed": 2027011127,
+      "seat": 2,
+      "mode": "FirstPrice",
+      "roster": 0,
+      "control": {
+        "score": 87,
+        "rank": 2,
+        "win": 0,
+        "cash": 0,
+        "maxMs": 2.318875000000844
+      },
+      "candidate": {
+        "score": 87,
+        "rank": 2,
+        "win": 0,
+        "cash": 0,
+        "maxMs": 2.0177920000023732
+      }
+    },
+    {
+      "seed": 2027011128,
+      "seat": 3,
+      "mode": "FirstPrice",
+      "roster": 0,
+      "control": {
+        "score": 81,
+        "rank": 3,
+        "win": 0,
+        "cash": 45,
+        "maxMs": 5.04108400000041
+      },
+      "candidate": {
+        "score": 81,
+        "rank": 3,
+        "win": 0,
+        "cash": 45,
+        "maxMs": 5.428208999997878
+      }
+    },
+    {
+      "seed": 2027011129,
+      "seat": 4,
+      "mode": "FirstPrice",
+      "roster": 0,
+      "control": {
+        "score": 80,
+        "rank": 3,
+        "win": 0,
+        "cash": 2,
+        "maxMs": 1.5730419999999867
+      },
+      "candidate": {
+        "score": 80,
+        "rank": 3,
+        "win": 0,
+        "cash": 2,
+        "maxMs": 1.519083999999566
+      }
+    },
+    {
+      "seed": 2027011130,
+      "seat": 5,
+      "mode": "FirstPrice",
+      "roster": 0,
+      "control": {
+        "score": 81,
+        "rank": 2,
+        "win": 0,
+        "cash": 2,
+        "maxMs": 1.9165829999983544
+      },
+      "candidate": {
+        "score": 81,
+        "rank": 2,
+        "win": 0,
+        "cash": 2,
+        "maxMs": 1.9242079999967245
+      }
+    },
+    {
+      "seed": 2027011131,
+      "seat": 0,
+      "mode": "FirstPrice",
+      "roster": 1,
+      "control": {
+        "score": 80,
+        "rank": 3,
+        "win": 0,
+        "cash": 4,
+        "maxMs": 2.0010420000035083
+      },
+      "candidate": {
+        "score": 80,
+        "rank": 3,
+        "win": 0,
+        "cash": 4,
+        "maxMs": 2.1558749999967404
+      }
+    },
+    {
+      "seed": 2027011132,
+      "seat": 1,
+      "mode": "FirstPrice",
+      "roster": 1,
+      "control": {
+        "score": 73,
+        "rank": 5,
+        "win": 0,
+        "cash": 32,
+        "maxMs": 5.440416000004916
+      },
+      "candidate": {
+        "score": 73,
+        "rank": 5,
+        "win": 0,
+        "cash": 32,
+        "maxMs": 5.998333999996248
+      }
+    },
+    {
+      "seed": 2027011133,
+      "seat": 2,
+      "mode": "FirstPrice",
+      "roster": 1,
+      "control": {
+        "score": 111,
+        "rank": 1,
+        "win": 1,
+        "cash": 20,
+        "maxMs": 4.510166999993089
+      },
+      "candidate": {
+        "score": 111,
+        "rank": 1,
+        "win": 1,
+        "cash": 20,
+        "maxMs": 4.427833000001556
+      }
+    },
+    {
+      "seed": 2027011134,
+      "seat": 3,
+      "mode": "FirstPrice",
+      "roster": 1,
+      "control": {
+        "score": 87,
+        "rank": 1,
+        "win": 1,
+        "cash": 0,
+        "maxMs": 1.1768749999973807
+      },
+      "candidate": {
+        "score": 87,
+        "rank": 1,
+        "win": 1,
+        "cash": 0,
+        "maxMs": 1.1983749999999418
+      }
+    },
+    {
+      "seed": 2027011135,
+      "seat": 4,
+      "mode": "FirstPrice",
+      "roster": 1,
+      "control": {
+        "score": 90,
+        "rank": 1,
+        "win": 1,
+        "cash": 2,
+        "maxMs": 1.8247499999997672
+      },
+      "candidate": {
+        "score": 90,
+        "rank": 1,
+        "win": 1,
+        "cash": 2,
+        "maxMs": 2.549083999998402
+      }
+    },
+    {
+      "seed": 2027011136,
+      "seat": 5,
+      "mode": "FirstPrice",
+      "roster": 1,
+      "control": {
+        "score": 65,
+        "rank": 6,
+        "win": 0,
+        "cash": 12,
+        "maxMs": 2.363375000000815
+      },
+      "candidate": {
+        "score": 65,
+        "rank": 6,
+        "win": 0,
+        "cash": 12,
+        "maxMs": 2.16425000000163
+      }
+    },
+    {
+      "seed": 2027011137,
+      "seat": 0,
+      "mode": "FirstPrice",
+      "roster": 2,
+      "control": {
+        "score": 83,
+        "rank": 2,
+        "win": 0,
+        "cash": 19,
+        "maxMs": 1.664041999996698
+      },
+      "candidate": {
+        "score": 83,
+        "rank": 2,
+        "win": 0,
+        "cash": 19,
+        "maxMs": 1.6016669999953592
+      }
+    },
+    {
+      "seed": 2027011138,
+      "seat": 1,
+      "mode": "FirstPrice",
+      "roster": 2,
+      "control": {
+        "score": 86,
+        "rank": 3,
+        "win": 0,
+        "cash": 5,
+        "maxMs": 1.453125
+      },
+      "candidate": {
+        "score": 86,
+        "rank": 3,
+        "win": 0,
+        "cash": 5,
+        "maxMs": 1.4280419999995502
+      }
+    },
+    {
+      "seed": 2027011139,
+      "seat": 2,
+      "mode": "FirstPrice",
+      "roster": 2,
+      "control": {
+        "score": 65,
+        "rank": 5,
+        "win": 0,
+        "cash": 2,
+        "maxMs": 1.3824580000000424
+      },
+      "candidate": {
+        "score": 65,
+        "rank": 5,
+        "win": 0,
+        "cash": 2,
+        "maxMs": 1.2594580000004498
+      }
+    },
+    {
+      "seed": 2027011140,
+      "seat": 3,
+      "mode": "FirstPrice",
+      "roster": 2,
+      "control": {
+        "score": 99,
+        "rank": 1,
+        "win": 1,
+        "cash": 40,
+        "maxMs": 4.095915999998397
+      },
+      "candidate": {
+        "score": 99,
+        "rank": 1,
+        "win": 1,
+        "cash": 40,
+        "maxMs": 3.6191670000043814
+      }
+    },
+    {
+      "seed": 2027011141,
+      "seat": 4,
+      "mode": "FirstPrice",
+      "roster": 2,
+      "control": {
+        "score": 73,
+        "rank": 4,
+        "win": 0,
+        "cash": 21,
+        "maxMs": 2.1974580000023707
+      },
+      "candidate": {
+        "score": 73,
+        "rank": 4,
+        "win": 0,
+        "cash": 21,
+        "maxMs": 1.7828749999971478
+      }
+    },
+    {
+      "seed": 2027011142,
+      "seat": 5,
+      "mode": "FirstPrice",
+      "roster": 2,
+      "control": {
+        "score": 88,
+        "rank": 1,
+        "win": 1,
+        "cash": 34,
+        "maxMs": 4.125542000001587
+      },
+      "candidate": {
+        "score": 88,
+        "rank": 1,
+        "win": 1,
+        "cash": 34,
+        "maxMs": 4.316916999996465
+      }
+    },
+    {
+      "seed": 2027011143,
+      "seat": 0,
+      "mode": "FirstPrice",
+      "roster": 0,
+      "control": {
+        "score": 101,
+        "rank": 1,
+        "win": 1,
+        "cash": 14,
+        "maxMs": 3.483124999998836
+      },
+      "candidate": {
+        "score": 101,
+        "rank": 1,
+        "win": 1,
+        "cash": 14,
+        "maxMs": 3.475917000003392
+      }
+    },
+    {
+      "seed": 2027011144,
+      "seat": 1,
+      "mode": "FirstPrice",
+      "roster": 0,
+      "control": {
+        "score": 75,
+        "rank": 4,
+        "win": 0,
+        "cash": 6,
+        "maxMs": 4.770375000000058
+      },
+      "candidate": {
+        "score": 75,
+        "rank": 4,
+        "win": 0,
+        "cash": 6,
+        "maxMs": 4.8700840000019525
+      }
+    },
+    {
+      "seed": 2027011145,
+      "seat": 2,
+      "mode": "FirstPrice",
+      "roster": 0,
+      "control": {
+        "score": 84,
+        "rank": 4,
+        "win": 0,
+        "cash": 3,
+        "maxMs": 2.0298750000001746
+      },
+      "candidate": {
+        "score": 84,
+        "rank": 4,
+        "win": 0,
+        "cash": 3,
+        "maxMs": 2.0068329999994603
+      }
+    },
+    {
+      "seed": 2027011146,
+      "seat": 3,
+      "mode": "FirstPrice",
+      "roster": 0,
+      "control": {
+        "score": 114,
+        "rank": 1,
+        "win": 1,
+        "cash": 6,
+        "maxMs": 3.0834580000009737
+      },
+      "candidate": {
+        "score": 114,
+        "rank": 1,
+        "win": 1,
+        "cash": 6,
+        "maxMs": 2.949000000000524
+      }
+    },
+    {
+      "seed": 2027011147,
+      "seat": 4,
+      "mode": "FirstPrice",
+      "roster": 0,
+      "control": {
+        "score": 67,
+        "rank": 4,
+        "win": 0,
+        "cash": 19,
+        "maxMs": 2.063084000001254
+      },
+      "candidate": {
+        "score": 67,
+        "rank": 4,
+        "win": 0,
+        "cash": 19,
+        "maxMs": 2.389541000004101
+      }
+    },
+    {
+      "seed": 2027011148,
+      "seat": 5,
+      "mode": "FirstPrice",
+      "roster": 0,
+      "control": {
+        "score": 47,
+        "rank": 6,
+        "win": 0,
+        "cash": 3,
+        "maxMs": 4.08837499999936
+      },
+      "candidate": {
+        "score": 47,
+        "rank": 6,
+        "win": 0,
+        "cash": 3,
+        "maxMs": 3.5697499999951106
+      }
+    }
+  ],
+  "errors": [],
+  "hashes": {
+    "../../bot-starter/src/reference-gaucho/liquidity.ts": "b83a63f34776c2e3f0b6017e3e8fe6e7c6a65ee2536dcf17e7664b6ccdf98275",
+    "../../bot-starter/src/reference-gaucho/adapter.ts": "1a3f1cd2603aa8b51b4398e8ea1e076ff890284dbf4db6e9bdfeae4d2ea66617",
+    "../../bot-starter/src/simulate.ts": "6e882e20b8f9ce1ca30200836db12f63eb7653ec09a2a74dcfa5bba1c183d5d7"
+  },
+  "summary": {
+    "n": 48,
+    "controlWins": 9,
+    "candidateWins": 9,
+    "controlScore": 78.25,
+    "candidateScore": 78.25,
+    "pairedScoreDelta": 0,
+    "pairedScoreSE": 0,
+    "improved": 0,
+    "regressed": 0,
+    "unchanged": 48,
+    "maxCandidateMs": 9.012249999999767
+  },
+  "modes": [
+    {
+      "mode": "SecondPrice",
+      "n": 24,
+      "controlWins": 2,
+      "candidateWins": 2,
+      "controlScore": 74.79166666666667,
+      "candidateScore": 74.79166666666667,
+      "pairedScoreDelta": 0,
+      "pairedScoreSE": 0,
+      "improved": 0,
+      "regressed": 0,
+      "unchanged": 24,
+      "maxCandidateMs": 9.012249999999767
+    },
+    {
+      "mode": "FirstPrice",
+      "n": 24,
+      "controlWins": 7,
+      "candidateWins": 7,
+      "controlScore": 81.70833333333333,
+      "candidateScore": 81.70833333333333,
+      "pairedScoreDelta": 0,
+      "pairedScoreSE": 0,
+      "improved": 0,
+      "regressed": 0,
+      "unchanged": 24,
+      "maxCandidateMs": 5.998333999996248
+    }
+  ]
+}

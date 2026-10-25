@@ -1,0 +1,25 @@
+{
+  "checkedAt": "2026-10-25T07:14:19.552832+00:00",
+  "source": "Official maincloud scrabblebot public tables",
+  "tournament": {
+    "id": 1,
+    "status": "Registration",
+    "swissRounds": 4,
+    "topCut": 6,
+    "matchSize": 6,
+    "auctionType": "Vickrey"
+  },
+  "entry": {
+    "id": 14,
+    "tournamentId": 1,
+    "botId": 145,
+    "eliminated": false,
+    "swissPoints": 0,
+    "totalScore": 0
+  },
+  "queries": [
+    "SELECT * FROM tournament",
+    "SELECT * FROM tournament_entry WHERE bot_id = 145"
+  ],
+  "note": "Registration confirmed; tournament outcome pending."
+}

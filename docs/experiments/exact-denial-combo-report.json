@@ -1,0 +1,5973 @@
+{
+  "name": "exact-terminal-plus-last-tile-denial",
+  "terminalSafe": true,
+  "upstreamCommit": "f2dce03a99e01a88ef9fdf2e300b50ef592c4c50",
+  "startedAt": "2026-10-25T07:12:01.679Z",
+  "methodology": "48 fresh matched scenario pairs/96games,24 per auctionmode, balanced6seats. Candidate wraps licensed terminalSafe=true with ExactTerminalStrategy(18ms,8000nodes), then LastTileDenial. Only final liquidation and penultimate bids differ: exact pre-purchase plan primes a monotone feasible floor, then denial bids entire balance. Control is current licensed terminalSafe=true. Three strong licensed clone/mutant and price-pressure/patient rosters. Seed/seat/opponent policies identical for both arms; prefix trace hashed and compared.",
+  "sourceHashes": {
+    "../../bot-starter/src/reference-gaucho/adapter.ts": "1a3f1cd2603aa8b51b4398e8ea1e076ff890284dbf4db6e9bdfeae4d2ea66617",
+    "../../bot-starter/src/reference-gaucho/core/policy.ts": "a96b54bc8ae7aff795542c93f62a21162c5f2c6d0ac3eebc87cf8ab2ee29874b",
+    "../../bot-starter/src/last-tile-denial.ts": "cad8b2c39a0aed5b2d77e488145edbe79d58236463188d9149ae50e65cedc056",
+    "../../bot-starter/src/reference-gaucho/terminal-exact.ts": "37ab933e256686d067d6e72273c6e89ca3f55c0f4f05f2d49f3ae0d3087544d2"
+  },
+  "rosters": [
+    "licensed-clones-and-mutants",
+    "licensed-and-pressure",
+    "licensed-and-patient"
+  ],
+  "scenarios": [
+    {
+      "seed": 1437500011,
+      "mode": "SecondPrice",
+      "seat": 0,
+      "roster": 0
+    },
+    {
+      "seed": 1437507930,
+      "mode": "SecondPrice",
+      "seat": 1,
+      "roster": 1
+    },
+    {
+      "seed": 1437515849,
+      "mode": "SecondPrice",
+      "seat": 2,
+      "roster": 2
+    },
+    {
+      "seed": 1437523768,
+      "mode": "SecondPrice",
+      "seat": 3,
+      "roster": 0
+    },
+    {
+      "seed": 1437531687,
+      "mode": "SecondPrice",
+      "seat": 4,
+      "roster": 1
+    },
+    {
+      "seed": 1437539606,
+      "mode": "SecondPrice",
+      "seat": 5,
+      "roster": 2
+    },
+    {
+      "seed": 1437547525,
+      "mode": "SecondPrice",
+      "seat": 0,
+      "roster": 0
+    },
+    {
+      "seed": 1437555444,
+      "mode": "SecondPrice",
+      "seat": 1,
+      "roster": 1
+    },
+    {
+      "seed": 1437563363,
+      "mode": "SecondPrice",
+      "seat": 2,
+      "roster": 2
+    },
+    {
+      "seed": 1437571282,
+      "mode": "SecondPrice",
+      "seat": 3,
+      "roster": 0
+    },
+    {
+      "seed": 1437579201,
+      "mode": "SecondPrice",
+      "seat": 4,
+      "roster": 1
+    },
+    {
+      "seed": 1437587120,
+      "mode": "SecondPrice",
+      "seat": 5,
+      "roster": 2
+    },
+    {
+      "seed": 1437595039,
+      "mode": "SecondPrice",
+      "seat": 0,
+      "roster": 0
+    },
+    {
+      "seed": 1437602958,
+      "mode": "SecondPrice",
+      "seat": 1,
+      "roster": 1
+    },
+    {
+      "seed": 1437610877,
+      "mode": "SecondPrice",
+      "seat": 2,
+      "roster": 2
+    },
+    {
+      "seed": 1437618796,
+      "mode": "SecondPrice",
+      "seat": 3,
+      "roster": 0
+    },
+    {
+      "seed": 1437626715,
+      "mode": "SecondPrice",
+      "seat": 4,
+      "roster": 1
+    },
+    {
+      "seed": 1437634634,
+      "mode": "SecondPrice",
+      "seat": 5,
+      "roster": 2
+    },
+    {
+      "seed": 1437642553,
+      "mode": "SecondPrice",
+      "seat": 0,
+      "roster": 0
+    },
+    {
+      "seed": 1437650472,
+      "mode": "SecondPrice",
+      "seat": 1,
+      "roster": 1
+    },
+    {
+      "seed": 1437658391,
+      "mode": "SecondPrice",
+      "seat": 2,
+      "roster": 2
+    },
+    {
+      "seed": 1437666310,
+      "mode": "SecondPrice",
+      "seat": 3,
+      "roster": 0
+    },
+    {
+      "seed": 1437674229,
+      "mode": "SecondPrice",
+      "seat": 4,
+      "roster": 1
+    },
+    {
+      "seed": 1437682148,
+      "mode": "SecondPrice",
+      "seat": 5,
+      "roster": 2
+    },
+    {
+      "seed": 1438500014,
+      "mode": "FirstPrice",
+      "seat": 0,
+      "roster": 0
+    },
+    {
+      "seed": 1438507933,
+      "mode": "FirstPrice",
+      "seat": 1,
+      "roster": 1
+    },
+    {
+      "seed": 1438515852,
+      "mode": "FirstPrice",
+      "seat": 2,
+      "roster": 2
+    },
+    {
+      "seed": 1438523771,
+      "mode": "FirstPrice",
+      "seat": 3,
+      "roster": 0
+    },
+    {
+      "seed": 1438531690,
+      "mode": "FirstPrice",
+      "seat": 4,
+      "roster": 1
+    },
+    {
+      "seed": 1438539609,
+      "mode": "FirstPrice",
+      "seat": 5,
+      "roster": 2
+    },
+    {
+      "seed": 1438547528,
+      "mode": "FirstPrice",
+      "seat": 0,
+      "roster": 0
+    },
+    {
+      "seed": 1438555447,
+      "mode": "FirstPrice",
+      "seat": 1,
+      "roster": 1
+    },
+    {
+      "seed": 1438563366,
+      "mode": "FirstPrice",
+      "seat": 2,
+      "roster": 2
+    },
+    {
+      "seed": 1438571285,
+      "mode": "FirstPrice",
+      "seat": 3,
+      "roster": 0
+    },
+    {
+      "seed": 1438579204,
+      "mode": "FirstPrice",
+      "seat": 4,
+      "roster": 1
+    },
+    {
+      "seed": 1438587123,
+      "mode": "FirstPrice",
+      "seat": 5,
+      "roster": 2
+    },
+    {
+      "seed": 1438595042,
+      "mode": "FirstPrice",
+      "seat": 0,
+      "roster": 0
+    },
+    {
+      "seed": 1438602961,
+      "mode": "FirstPrice",
+      "seat": 1,
+      "roster": 1
+    },
+    {
+      "seed": 1438610880,
+      "mode": "FirstPrice",
+      "seat": 2,
+      "roster": 2
+    },
+    {
+      "seed": 1438618799,
+      "mode": "FirstPrice",
+      "seat": 3,
+      "roster": 0
+    },
+    {
+      "seed": 1438626718,
+      "mode": "FirstPrice",
+      "seat": 4,
+      "roster": 1
+    },
+    {
+      "seed": 1438634637,
+      "mode": "FirstPrice",
+      "seat": 5,
+      "roster": 2
+    },
+    {
+      "seed": 1438642556,
+      "mode": "FirstPrice",
+      "seat": 0,
+      "roster": 0
+    },
+    {
+      "seed": 1438650475,
+      "mode": "FirstPrice",
+      "seat": 1,
+      "roster": 1
+    },
+    {
+      "seed": 1438658394,
+      "mode": "FirstPrice",
+      "seat": 2,
+      "roster": 2
+    },
+    {
+      "seed": 1438666313,
+      "mode": "FirstPrice",
+      "seat": 3,
+      "roster": 0
+    },
+    {
+      "seed": 1438674232,
+      "mode": "FirstPrice",
+      "seat": 4,
+      "roster": 1
+    },
+    {
+      "seed": 1438682151,
+      "mode": "FirstPrice",
+      "seat": 5,
+      "roster": 2
+    }
+  ],
+  "pairs": [
+    {
+      "scenario": {
+        "seed": 1437500011,
+        "mode": "SecondPrice",
+        "seat": 0,
+        "roster": 0
+      },
+      "control": {
+        "score": 78,
+        "win": 0,
+        "rank": 2,
+        "balance": 5,
+        "prefixHash": "ab5d04ba8f97574d8ee62ef982d971a89f2cb16537077246025fe0a27a362a9d",
+        "lastBid": {
+          "original": 0,
+          "actual": 0,
+          "balance": 5,
+          "letter": "Q"
+        },
+        "wonLastUseful": false,
+        "lastUsefulResult": {
+          "round": 67,
+          "letter": "Q",
+          "winner": 5,
+          "paid": 1
+        },
+        "players": [
+          {
+            "name": "licensed-control",
+            "seat": 0,
+            "score": 78
+          },
+          {
+            "name": "clone-A",
+            "seat": 1,
+            "score": 96
+          },
+          {
+            "name": "clone-B",
+            "seat": 2,
+            "score": 77
+          },
+          {
+            "name": "aggressive",
+            "seat": 3,
+            "score": 58
+          },
+          {
+            "name": "liquid",
+            "seat": 4,
+            "score": 74
+          },
+          {
+            "name": "patient-seven",
+            "seat": 5,
+            "score": 54
+          }
+        ],
+        "maxDecisionMs": 2.975582999999972,
+        "meanDecisionMs": 0.5074985539568354
+      },
+      "candidate": {
+        "score": 78,
+        "win": 0,
+        "rank": 2,
+        "balance": 5,
+        "prefixHash": "ab5d04ba8f97574d8ee62ef982d971a89f2cb16537077246025fe0a27a362a9d",
+        "lastBid": {
+          "original": 0,
+          "actual": 5,
+          "balance": 5,
+          "letter": "Q"
+        },
+        "wonLastUseful": false,
+        "lastUsefulResult": {
+          "round": 67,
+          "letter": "Q",
+          "winner": 5,
+          "paid": 5
+        },
+        "players": [
+          {
+            "name": "exact-plus-denial",
+            "seat": 0,
+            "score": 78
+          },
+          {
+            "name": "clone-A",
+            "seat": 1,
+            "score": 96
+          },
+          {
+            "name": "clone-B",
+            "seat": 2,
+            "score": 77
+          },
+          {
+            "name": "aggressive",
+            "seat": 3,
+            "score": 58
+          },
+          {
+            "name": "liquid",
+            "seat": 4,
+            "score": 74
+          },
+          {
+            "name": "patient-seven",
+            "seat": 5,
+            "score": 54
+          }
+        ],
+        "maxDecisionMs": 1.2938749999999573,
+        "meanDecisionMs": 0.46294030935252206
+      }
+    },
+    {
+      "scenario": {
+        "seed": 1437507930,
+        "mode": "SecondPrice",
+        "seat": 1,
+        "roster": 1
+      },
+      "control": {
+        "score": 98,
+        "win": 1,
+        "rank": 1,
+        "balance": 19,
+        "prefixHash": "7654069c632bbb703fda4701fd71a77e6b8a3dddfc278b9e5641ff7bf7f501d6",
+        "lastBid": {
+          "original": 25,
+          "actual": 25,
+          "balance": 25,
+          "letter": "T"
+        },
+        "wonLastUseful": true,
+        "lastUsefulResult": {
+          "round": 67,
+          "letter": "T",
+          "winner": 1,
+          "paid": 8
+        },
+        "players": [
+          {
+            "name": "clone-A",
+            "seat": 0,
+            "score": 72
+          },
+          {
+            "name": "licensed-control",
+            "seat": 1,
+            "score": 98
+          },
+          {
+            "name": "aggressive",
+            "seat": 2,
+            "score": 68
+          },
+          {
+            "name": "pressure-14",
+            "seat": 3,
+            "score": 63
+          },
+          {
+            "name": "pressure-16",
+            "seat": 4,
+            "score": 61
+          },
+          {
+            "name": "pressure-18",
+            "seat": 5,
+            "score": 53
+          }
+        ],
+        "maxDecisionMs": 4.335749999999962,
+        "meanDecisionMs": 0.428806564285724
+      },
+      "candidate": {
+        "score": 98,
+        "win": 1,
+        "rank": 1,
+        "balance": 19,
+        "prefixHash": "7654069c632bbb703fda4701fd71a77e6b8a3dddfc278b9e5641ff7bf7f501d6",
+        "lastBid": {
+          "original": 25,
+          "actual": 25,
+          "balance": 25,
+          "letter": "T"
+        },
+        "wonLastUseful": true,
+        "lastUsefulResult": {
+          "round": 67,
+          "letter": "T",
+          "winner": 1,
+          "paid": 8
+        },
+        "players": [
+          {
+            "name": "clone-A",
+            "seat": 0,
+            "score": 72
+          },
+          {
+            "name": "exact-plus-denial",
+            "seat": 1,
+            "score": 98
+          },
+          {
+            "name": "aggressive",
+            "seat": 2,
+            "score": 68
+          },
+          {
+            "name": "pressure-14",
+            "seat": 3,
+            "score": 63
+          },
+          {
+            "name": "pressure-16",
+            "seat": 4,
+            "score": 61
+          },
+          {
+            "name": "pressure-18",
+            "seat": 5,
+            "score": 53
+          }
+        ],
+        "maxDecisionMs": 2.4211250000000746,
+        "meanDecisionMs": 0.4158390000000054
+      }
+    },
+    {
+      "scenario": {
+        "seed": 1437515849,
+        "mode": "SecondPrice",
+        "seat": 2,
+        "roster": 2
+      },
+      "control": {
+        "score": 78,
+        "win": 0,
+        "rank": 4,
+        "balance": 30,
+        "prefixHash": "4fac1255589a101ea2be58fbe2e3bb2280cd544833d662463cadd3c455102a64",
+        "lastBid": {
+          "original": 0,
+          "actual": 0,
+          "balance": 30,
+          "letter": "Y"
+        },
+        "wonLastUseful": false,
+        "lastUsefulResult": {
+          "round": 67,
+          "letter": "Y",
+          "winner": 1,
+          "paid": 6
+        },
+        "players": [
+          {
+            "name": "clone-A",
+            "seat": 0,
+            "score": 84
+          },
+          {
+            "name": "long",
+            "seat": 1,
+            "score": 96
+          },
+          {
+            "name": "licensed-control",
+            "seat": 2,
+            "score": 78
+          },
+          {
+            "name": "liquid",
+            "seat": 3,
+            "score": 83
+          },
+          {
+            "name": "patient-seven",
+            "seat": 4,
+            "score": 45
+          },
+          {
+            "name": "pressure-16",
+            "seat": 5,
+            "score": 54
+          }
+        ],
+        "maxDecisionMs": 1.7480000000000473,
+        "meanDecisionMs": 0.5501446159420212
+      },
+      "candidate": {
+        "score": 78,
+        "win": 0,
+        "rank": 4,
+        "balance": 19,
+        "prefixHash": "4fac1255589a101ea2be58fbe2e3bb2280cd544833d662463cadd3c455102a64",
+        "lastBid": {
+          "original": 0,
+          "actual": 30,
+          "balance": 30,
+          "letter": "Y"
+        },
+        "wonLastUseful": true,
+        "lastUsefulResult": {
+          "round": 67,
+          "letter": "Y",
+          "winner": 2,
+          "paid": 11
+        },
+        "players": [
+          {
+            "name": "clone-A",
+            "seat": 0,
+            "score": 84
+          },
+          {
+            "name": "long",
+            "seat": 1,
+            "score": 84
+          },
+          {
+            "name": "exact-plus-denial",
+            "seat": 2,
+            "score": 78
+          },
+          {
+            "name": "liquid",
+            "seat": 3,
+            "score": 83
+          },
+          {
+            "name": "patient-seven",
+            "seat": 4,
+            "score": 45
+          },
+          {
+            "name": "pressure-16",
+            "seat": 5,
+            "score": 54
+          }
+        ],
+        "maxDecisionMs": 1.606583999999657,
+        "meanDecisionMs": 0.5436044782608656
+      }
+    },
+    {
+      "scenario": {
+        "seed": 1437523768,
+        "mode": "SecondPrice",
+        "seat": 3,
+        "roster": 0
+      },
+      "control": {
+        "score": 72,
+        "win": 0,
+        "rank": 5,
+        "balance": 9,
+        "prefixHash": "cf2b26d99cee2e4389e63e7fc68bebacc0c388cdeb7bb5645633f0e0bc27c743",
+        "lastBid": {
+          "original": 9,
+          "actual": 9,
+          "balance": 9,
+          "letter": "R"
+        },
+        "wonLastUseful": false,
+        "lastUsefulResult": {
+          "round": 67,
+          "letter": "R",
+          "winner": 0,
+          "paid": 9
+        },
+        "players": [
+          {
+            "name": "clone-A",
+            "seat": 0,
+            "score": 91
+          },
+          {
+            "name": "clone-B",
+            "seat": 1,
+            "score": 75
+          },
+          {
+            "name": "aggressive",
+            "seat": 2,
+            "score": 79
+          },
+          {
+            "name": "licensed-control",
+            "seat": 3,
+            "score": 72
+          },
+          {
+            "name": "liquid",
+            "seat": 4,
+            "score": 73
+          },
+          {
+            "name": "patient-seven",
+            "seat": 5,
+            "score": 38
+          }
+        ],
+        "maxDecisionMs": 1.362166999999772,
+        "meanDecisionMs": 0.4044359999999863
+      },
+      "candidate": {
+        "score": 72,
+        "win": 0,
+        "rank": 5,
+        "balance": 9,
+        "prefixHash": "cf2b26d99cee2e4389e63e7fc68bebacc0c388cdeb7bb5645633f0e0bc27c743",
+        "lastBid": {
+          "original": 9,
+          "actual": 9,
+          "balance": 9,
+          "letter": "R"
+        },
+        "wonLastUseful": false,
+        "lastUsefulResult": {
+          "round": 67,
+          "letter": "R",
+          "winner": 0,
+          "paid": 9
+        },
+        "players": [
+          {
+            "name": "clone-A",
+            "seat": 0,
+            "score": 91
+          },
+          {
+            "name": "clone-B",
+            "seat": 1,
+            "score": 75
+          },
+          {
+            "name": "aggressive",
+            "seat": 2,
+            "score": 79
+          },
+          {
+            "name": "exact-plus-denial",
+            "seat": 3,
+            "score": 72
+          },
+          {
+            "name": "liquid",
+            "seat": 4,
+            "score": 73
+          },
+          {
+            "name": "patient-seven",
+            "seat": 5,
+            "score": 38
+          }
+        ],
+        "maxDecisionMs": 1.1202920000000631,
+        "meanDecisionMs": 0.3804063768116132
+      }
+    },
+    {
+      "scenario": {
+        "seed": 1437531687,
+        "mode": "SecondPrice",
+        "seat": 4,
+        "roster": 1
+      },
+      "control": {
+        "score": 84,
+        "win": 1,
+        "rank": 1,
+        "balance": 0,
+        "prefixHash": "3b84ecca57df81bd091bbf7b38a6a6fe5688d53ec94bd306940136ed721cff8e",
+        "lastBid": {
+          "original": 0,
+          "actual": 0,
+          "balance": 0,
+          "letter": "V"
+        },
+        "wonLastUseful": false,
+        "lastUsefulResult": {
+          "round": 67,
+          "letter": "V",
+          "winner": 5,
+          "paid": 2
+        },
+        "players": [
+          {
+            "name": "clone-A",
+            "seat": 0,
+            "score": 81
+          },
+          {
+            "name": "aggressive",
+            "seat": 1,
+            "score": 78
+          },
+          {
+            "name": "pressure-14",
+            "seat": 2,
+            "score": 59
+          },
+          {
+            "name": "pressure-16",
+            "seat": 3,
+            "score": 62
+          },
+          {
+            "name": "licensed-control",
+            "seat": 4,
+            "score": 84
+          },
+          {
+            "name": "pressure-18",
+            "seat": 5,
+            "score": 22
+          }
+        ],
+        "maxDecisionMs": 2.012083999999959,
+        "meanDecisionMs": 0.42223133333333823
+      },
+      "candidate": {
+        "score": 84,
+        "win": 1,
+        "rank": 1,
+        "balance": 0,
+        "prefixHash": "3b84ecca57df81bd091bbf7b38a6a6fe5688d53ec94bd306940136ed721cff8e",
+        "lastBid": {
+          "original": 0,
+          "actual": 0,
+          "balance": 0,
+          "letter": "V"
+        },
+        "wonLastUseful": false,
+        "lastUsefulResult": {
+          "round": 67,
+          "letter": "V",
+          "winner": 5,
+          "paid": 2
+        },
+        "players": [
+          {
+            "name": "clone-A",
+            "seat": 0,
+            "score": 81
+          },
+          {
+            "name": "aggressive",
+            "seat": 1,
+            "score": 78
+          },
+          {
+            "name": "pressure-14",
+            "seat": 2,
+            "score": 59
+          },
+          {
+            "name": "pressure-16",
+            "seat": 3,
+            "score": 62
+          },
+          {
+            "name": "exact-plus-denial",
+            "seat": 4,
+            "score": 84
+          },
+          {
+            "name": "pressure-18",
+            "seat": 5,
+            "score": 22
+          }
+        ],
+        "maxDecisionMs": 2.180000000000291,
+        "meanDecisionMs": 0.4156929565217557
+      }
+    },
+    {
+      "scenario": {
+        "seed": 1437539606,
+        "mode": "SecondPrice",
+        "seat": 5,
+        "roster": 2
+      },
+      "control": {
+        "score": 92,
+        "win": 0,
+        "rank": 2,
+        "balance": 22,
+        "prefixHash": "fa3911194fbbd3627d7976feed4bfbbb3ef4ca2740faf21f6c0414fcffdc0c7d",
+        "lastBid": {
+          "original": 10,
+          "actual": 10,
+          "balance": 10,
+          "letter": "E"
+        },
+        "wonLastUseful": false,
+        "lastUsefulResult": {
+          "round": 67,
+          "letter": "E",
+          "winner": 1,
+          "paid": 10
+        },
+        "players": [
+          {
+            "name": "clone-A",
+            "seat": 0,
+            "score": 70
+          },
+          {
+            "name": "long",
+            "seat": 1,
+            "score": 90
+          },
+          {
+            "name": "liquid",
+            "seat": 2,
+            "score": 93
+          },
+          {
+            "name": "patient-seven",
+            "seat": 3,
+            "score": 56
+          },
+          {
+            "name": "pressure-16",
+            "seat": 4,
+            "score": 44
+          },
+          {
+            "name": "licensed-control",
+            "seat": 5,
+            "score": 92
+          }
+        ],
+        "maxDecisionMs": 3.1420419999999467,
+        "meanDecisionMs": 0.5220461726618897
+      },
+      "candidate": {
+        "score": 92,
+        "win": 0,
+        "rank": 2,
+        "balance": 22,
+        "prefixHash": "fa3911194fbbd3627d7976feed4bfbbb3ef4ca2740faf21f6c0414fcffdc0c7d",
+        "lastBid": {
+          "original": 10,
+          "actual": 10,
+          "balance": 10,
+          "letter": "E"
+        },
+        "wonLastUseful": false,
+        "lastUsefulResult": {
+          "round": 67,
+          "letter": "E",
+          "winner": 1,
+          "paid": 10
+        },
+        "players": [
+          {
+            "name": "clone-A",
+            "seat": 0,
+            "score": 70
+          },
+          {
+            "name": "long",
+            "seat": 1,
+            "score": 90
+          },
+          {
+            "name": "liquid",
+            "seat": 2,
+            "score": 93
+          },
+          {
+            "name": "patient-seven",
+            "seat": 3,
+            "score": 56
+          },
+          {
+            "name": "pressure-16",
+            "seat": 4,
+            "score": 44
+          },
+          {
+            "name": "exact-plus-denial",
+            "seat": 5,
+            "score": 92
+          }
+        ],
+        "maxDecisionMs": 3.1009579999999914,
+        "meanDecisionMs": 0.4770641223021583
+      }
+    },
+    {
+      "scenario": {
+        "seed": 1437547525,
+        "mode": "SecondPrice",
+        "seat": 0,
+        "roster": 0
+      },
+      "control": {
+        "score": 120,
+        "win": 1,
+        "rank": 1,
+        "balance": 1,
+        "prefixHash": "fa01d410f209411f1d37ea606164af2ce2528319a9abfb5acd44af6ed3d05f82",
+        "lastBid": {
+          "original": 0,
+          "actual": 0,
+          "balance": 1,
+          "letter": "I"
+        },
+        "wonLastUseful": false,
+        "lastUsefulResult": {
+          "round": 67,
+          "letter": "I",
+          "winner": 5,
+          "paid": 1
+        },
+        "players": [
+          {
+            "name": "licensed-control",
+            "seat": 0,
+            "score": 120
+          },
+          {
+            "name": "clone-A",
+            "seat": 1,
+            "score": 78
+          },
+          {
+            "name": "clone-B",
+            "seat": 2,
+            "score": 73
+          },
+          {
+            "name": "aggressive",
+            "seat": 3,
+            "score": 36
+          },
+          {
+            "name": "liquid",
+            "seat": 4,
+            "score": 51
+          },
+          {
+            "name": "patient-seven",
+            "seat": 5,
+            "score": 63
+          }
+        ],
+        "maxDecisionMs": 1.368874999999207,
+        "meanDecisionMs": 0.3827092517984828
+      },
+      "candidate": {
+        "score": 120,
+        "win": 1,
+        "rank": 1,
+        "balance": 1,
+        "prefixHash": "fa01d410f209411f1d37ea606164af2ce2528319a9abfb5acd44af6ed3d05f82",
+        "lastBid": {
+          "original": 0,
+          "actual": 1,
+          "balance": 1,
+          "letter": "I"
+        },
+        "wonLastUseful": false,
+        "lastUsefulResult": {
+          "round": 67,
+          "letter": "I",
+          "winner": 5,
+          "paid": 1
+        },
+        "players": [
+          {
+            "name": "exact-plus-denial",
+            "seat": 0,
+            "score": 120
+          },
+          {
+            "name": "clone-A",
+            "seat": 1,
+            "score": 78
+          },
+          {
+            "name": "clone-B",
+            "seat": 2,
+            "score": 73
+          },
+          {
+            "name": "aggressive",
+            "seat": 3,
+            "score": 36
+          },
+          {
+            "name": "liquid",
+            "seat": 4,
+            "score": 51
+          },
+          {
+            "name": "patient-seven",
+            "seat": 5,
+            "score": 63
+          }
+        ],
+        "maxDecisionMs": 1.4282499999999345,
+        "meanDecisionMs": 0.38536751798562735
+      }
+    },
+    {
+      "scenario": {
+        "seed": 1437555444,
+        "mode": "SecondPrice",
+        "seat": 1,
+        "roster": 1
+      },
+      "control": {
+        "score": 95,
+        "win": 0,
+        "rank": 2,
+        "balance": 4,
+        "prefixHash": "f752dc091fc1330be1c3d88735ae969be28ee73a14fdafa97f8845a049d2caee",
+        "lastBid": {
+          "original": 0,
+          "actual": 0,
+          "balance": 4,
+          "letter": "R"
+        },
+        "wonLastUseful": false,
+        "lastUsefulResult": {
+          "round": 67,
+          "letter": "R",
+          "winner": 3,
+          "paid": 3
+        },
+        "players": [
+          {
+            "name": "clone-A",
+            "seat": 0,
+            "score": 111
+          },
+          {
+            "name": "licensed-control",
+            "seat": 1,
+            "score": 95
+          },
+          {
+            "name": "aggressive",
+            "seat": 2,
+            "score": 49
+          },
+          {
+            "name": "pressure-14",
+            "seat": 3,
+            "score": 61
+          },
+          {
+            "name": "pressure-16",
+            "seat": 4,
+            "score": 32
+          },
+          {
+            "name": "pressure-18",
+            "seat": 5,
+            "score": 31
+          }
+        ],
+        "maxDecisionMs": 1.2824579999996786,
+        "meanDecisionMs": 0.5006697410072193
+      },
+      "candidate": {
+        "score": 95,
+        "win": 0,
+        "rank": 2,
+        "balance": 4,
+        "prefixHash": "f752dc091fc1330be1c3d88735ae969be28ee73a14fdafa97f8845a049d2caee",
+        "lastBid": {
+          "original": 0,
+          "actual": 4,
+          "balance": 4,
+          "letter": "R"
+        },
+        "wonLastUseful": false,
+        "lastUsefulResult": {
+          "round": 67,
+          "letter": "R",
+          "winner": 3,
+          "paid": 4
+        },
+        "players": [
+          {
+            "name": "clone-A",
+            "seat": 0,
+            "score": 111
+          },
+          {
+            "name": "exact-plus-denial",
+            "seat": 1,
+            "score": 95
+          },
+          {
+            "name": "aggressive",
+            "seat": 2,
+            "score": 49
+          },
+          {
+            "name": "pressure-14",
+            "seat": 3,
+            "score": 61
+          },
+          {
+            "name": "pressure-16",
+            "seat": 4,
+            "score": 32
+          },
+          {
+            "name": "pressure-18",
+            "seat": 5,
+            "score": 31
+          }
+        ],
+        "maxDecisionMs": 1.4732500000000073,
+        "meanDecisionMs": 0.5123098992805791
+      }
+    },
+    {
+      "scenario": {
+        "seed": 1437563363,
+        "mode": "SecondPrice",
+        "seat": 2,
+        "roster": 2
+      },
+      "control": {
+        "score": 126,
+        "win": 1,
+        "rank": 1,
+        "balance": 0,
+        "prefixHash": "41736d44287e532d178a96af00a731f55c7dfb6fa488a6850baaae2e4e4acb99",
+        "lastBid": {
+          "original": 0,
+          "actual": 0,
+          "balance": 0,
+          "letter": "T"
+        },
+        "wonLastUseful": false,
+        "lastUsefulResult": {
+          "round": 67,
+          "letter": "T",
+          "winner": 3,
+          "paid": 15
+        },
+        "players": [
+          {
+            "name": "clone-A",
+            "seat": 0,
+            "score": 59
+          },
+          {
+            "name": "long",
+            "seat": 1,
+            "score": 66
+          },
+          {
+            "name": "licensed-control",
+            "seat": 2,
+            "score": 126
+          },
+          {
+            "name": "liquid",
+            "seat": 3,
+            "score": 72
+          },
+          {
+            "name": "patient-seven",
+            "seat": 4,
+            "score": 83
+          },
+          {
+            "name": "pressure-16",
+            "seat": 5,
+            "score": 46
+          }
+        ],
+        "maxDecisionMs": 1.2107919999998558,
+        "meanDecisionMs": 0.26379352898554015
+      },
+      "candidate": {
+        "score": 126,
+        "win": 1,
+        "rank": 1,
+        "balance": 0,
+        "prefixHash": "41736d44287e532d178a96af00a731f55c7dfb6fa488a6850baaae2e4e4acb99",
+        "lastBid": {
+          "original": 0,
+          "actual": 0,
+          "balance": 0,
+          "letter": "T"
+        },
+        "wonLastUseful": false,
+        "lastUsefulResult": {
+          "round": 67,
+          "letter": "T",
+          "winner": 3,
+          "paid": 15
+        },
+        "players": [
+          {
+            "name": "clone-A",
+            "seat": 0,
+            "score": 59
+          },
+          {
+            "name": "long",
+            "seat": 1,
+            "score": 66
+          },
+          {
+            "name": "exact-plus-denial",
+            "seat": 2,
+            "score": 126
+          },
+          {
+            "name": "liquid",
+            "seat": 3,
+            "score": 72
+          },
+          {
+            "name": "patient-seven",
+            "seat": 4,
+            "score": 83
+          },
+          {
+            "name": "pressure-16",
+            "seat": 5,
+            "score": 46
+          }
+        ],
+        "maxDecisionMs": 1.1991250000000946,
+        "meanDecisionMs": 0.2569468913043568
+      }
+    },
+    {
+      "scenario": {
+        "seed": 1437571282,
+        "mode": "SecondPrice",
+        "seat": 3,
+        "roster": 0
+      },
+      "control": {
+        "score": 74,
+        "win": 0,
+        "rank": 3,
+        "balance": 4,
+        "prefixHash": "7b7485c0b0954ad902301d9a8700e3146e94fae7805d7bb1a61cfacc35e87447",
+        "lastBid": {
+          "original": 0,
+          "actual": 0,
+          "balance": 4,
+          "letter": "Y"
+        },
+        "wonLastUseful": false,
+        "lastUsefulResult": {
+          "round": 67,
+          "letter": "Y",
+          "winner": 1,
+          "paid": 5
+        },
+        "players": [
+          {
+            "name": "clone-A",
+            "seat": 0,
+            "score": 66
+          },
+          {
+            "name": "clone-B",
+            "seat": 1,
+            "score": 84
+          },
+          {
+            "name": "aggressive",
+            "seat": 2,
+            "score": 59
+          },
+          {
+            "name": "licensed-control",
+            "seat": 3,
+            "score": 74
+          },
+          {
+            "name": "liquid",
+            "seat": 4,
+            "score": 62
+          },
+          {
+            "name": "patient-seven",
+            "seat": 5,
+            "score": 87
+          }
+        ],
+        "maxDecisionMs": 1.4854999999997744,
+        "meanDecisionMs": 0.3618402446043403
+      },
+      "candidate": {
+        "score": 74,
+        "win": 0,
+        "rank": 3,
+        "balance": 4,
+        "prefixHash": "7b7485c0b0954ad902301d9a8700e3146e94fae7805d7bb1a61cfacc35e87447",
+        "lastBid": {
+          "original": 0,
+          "actual": 4,
+          "balance": 4,
+          "letter": "Y"
+        },
+        "wonLastUseful": false,
+        "lastUsefulResult": {
+          "round": 67,
+          "letter": "Y",
+          "winner": 1,
+          "paid": 5
+        },
+        "players": [
+          {
+            "name": "clone-A",
+            "seat": 0,
+            "score": 66
+          },
+          {
+            "name": "clone-B",
+            "seat": 1,
+            "score": 84
+          },
+          {
+            "name": "aggressive",
+            "seat": 2,
+            "score": 59
+          },
+          {
+            "name": "exact-plus-denial",
+            "seat": 3,
+            "score": 74
+          },
+          {
+            "name": "liquid",
+            "seat": 4,
+            "score": 62
+          },
+          {
+            "name": "patient-seven",
+            "seat": 5,
+            "score": 87
+          }
+        ],
+        "maxDecisionMs": 1.185167000000547,
+        "meanDecisionMs": 0.3428566978417418
+      }
+    },
+    {
+      "scenario": {
+        "seed": 1437579201,
+        "mode": "SecondPrice",
+        "seat": 4,
+        "roster": 1
+      },
+      "control": {
+        "score": 72,
+        "win": 0,
+        "rank": 2,
+        "balance": 3,
+        "prefixHash": "db975db4822bdeb7062fc957a38292f33003601f6b7ebe606e1ce2502231c95f",
+        "lastBid": {
+          "original": 0,
+          "actual": 0,
+          "balance": 3,
+          "letter": "L"
+        },
+        "wonLastUseful": false,
+        "lastUsefulResult": {
+          "round": 67,
+          "letter": "L",
+          "winner": 5,
+          "paid": 4
+        },
+        "players": [
+          {
+            "name": "clone-A",
+            "seat": 0,
+            "score": 102
+          },
+          {
+            "name": "aggressive",
+            "seat": 1,
+            "score": 41
+          },
+          {
+            "name": "pressure-14",
+            "seat": 2,
+            "score": 54
+          },
+          {
+            "name": "pressure-16",
+            "seat": 3,
+            "score": 47
+          },
+          {
+            "name": "licensed-control",
+            "seat": 4,
+            "score": 72
+          },
+          {
+            "name": "pressure-18",
+            "seat": 5,
+            "score": 42
+          }
+        ],
+        "maxDecisionMs": 2.5858330000000933,
+        "meanDecisionMs": 0.5831714357142768
+      },
+      "candidate": {
+        "score": 72,
+        "win": 0,
+        "rank": 2,
+        "balance": 3,
+        "prefixHash": "db975db4822bdeb7062fc957a38292f33003601f6b7ebe606e1ce2502231c95f",
+        "lastBid": {
+          "original": 0,
+          "actual": 3,
+          "balance": 3,
+          "letter": "L"
+        },
+        "wonLastUseful": false,
+        "lastUsefulResult": {
+          "round": 67,
+          "letter": "L",
+          "winner": 3,
+          "paid": 4
+        },
+        "players": [
+          {
+            "name": "clone-A",
+            "seat": 0,
+            "score": 102
+          },
+          {
+            "name": "aggressive",
+            "seat": 1,
+            "score": 41
+          },
+          {
+            "name": "pressure-14",
+            "seat": 2,
+            "score": 54
+          },
+          {
+            "name": "pressure-16",
+            "seat": 3,
+            "score": 47
+          },
+          {
+            "name": "exact-plus-denial",
+            "seat": 4,
+            "score": 72
+          },
+          {
+            "name": "pressure-18",
+            "seat": 5,
+            "score": 40
+          }
+        ],
+        "maxDecisionMs": 1.4984590000003664,
+        "meanDecisionMs": 0.5281124571428336
+      }
+    },
+    {
+      "scenario": {
+        "seed": 1437587120,
+        "mode": "SecondPrice",
+        "seat": 5,
+        "roster": 2
+      },
+      "control": {
+        "score": 88,
+        "win": 1,
+        "rank": 1,
+        "balance": 2,
+        "prefixHash": "e0282a444a7079921a871ae90551b15547d9ebb0382424b56942edd5d8da9c94",
+        "lastBid": {
+          "original": 2,
+          "actual": 2,
+          "balance": 2,
+          "letter": "T"
+        },
+        "wonLastUseful": false,
+        "lastUsefulResult": {
+          "round": 67,
+          "letter": "T",
+          "winner": 3,
+          "paid": 3
+        },
+        "players": [
+          {
+            "name": "clone-A",
+            "seat": 0,
+            "score": 70
+          },
+          {
+            "name": "long",
+            "seat": 1,
+            "score": 82
+          },
+          {
+            "name": "liquid",
+            "seat": 2,
+            "score": 42
+          },
+          {
+            "name": "patient-seven",
+            "seat": 3,
+            "score": 70
+          },
+          {
+            "name": "pressure-16",
+            "seat": 4,
+            "score": 53
+          },
+          {
+            "name": "licensed-control",
+            "seat": 5,
+            "score": 88
+          }
+        ],
+        "maxDecisionMs": 1.3332499999996799,
+        "meanDecisionMs": 0.4645138273381562
+      },
+      "candidate": {
+        "score": 88,
+        "win": 1,
+        "rank": 1,
+        "balance": 2,
+        "prefixHash": "e0282a444a7079921a871ae90551b15547d9ebb0382424b56942edd5d8da9c94",
+        "lastBid": {
+          "original": 2,
+          "actual": 2,
+          "balance": 2,
+          "letter": "T"
+        },
+        "wonLastUseful": false,
+        "lastUsefulResult": {
+          "round": 67,
+          "letter": "T",
+          "winner": 3,
+          "paid": 3
+        },
+        "players": [
+          {
+            "name": "clone-A",
+            "seat": 0,
+            "score": 70
+          },
+          {
+            "name": "long",
+            "seat": 1,
+            "score": 82
+          },
+          {
+            "name": "liquid",
+            "seat": 2,
+            "score": 42
+          },
+          {
+            "name": "patient-seven",
+            "seat": 3,
+            "score": 70
+          },
+          {
+            "name": "pressure-16",
+            "seat": 4,
+            "score": 53
+          },
+          {
+            "name": "exact-plus-denial",
+            "seat": 5,
+            "score": 88
+          }
+        ],
+        "maxDecisionMs": 2.0522919999993974,
+        "meanDecisionMs": 0.4778198992805085
+      }
+    },
+    {
+      "scenario": {
+        "seed": 1437595039,
+        "mode": "SecondPrice",
+        "seat": 0,
+        "roster": 0
+      },
+      "control": {
+        "score": 81,
+        "win": 0,
+        "rank": 3,
+        "balance": 11,
+        "prefixHash": "1a40a8d522fc64073828c1b5c421676169fee704758a4c0b15a478249f5d4876",
+        "lastBid": {
+          "original": 11,
+          "actual": 11,
+          "balance": 11,
+          "letter": "R"
+        },
+        "wonLastUseful": false,
+        "lastUsefulResult": {
+          "round": 67,
+          "letter": "R",
+          "winner": 1,
+          "paid": 11
+        },
+        "players": [
+          {
+            "name": "licensed-control",
+            "seat": 0,
+            "score": 81
+          },
+          {
+            "name": "clone-A",
+            "seat": 1,
+            "score": 87
+          },
+          {
+            "name": "clone-B",
+            "seat": 2,
+            "score": 77
+          },
+          {
+            "name": "aggressive",
+            "seat": 3,
+            "score": 83
+          },
+          {
+            "name": "liquid",
+            "seat": 4,
+            "score": 69
+          },
+          {
+            "name": "patient-seven",
+            "seat": 5,
+            "score": 57
+          }
+        ],
+        "maxDecisionMs": 2.5375420000000304,
+        "meanDecisionMs": 0.519422137681128
+      },
+      "candidate": {
+        "score": 81,
+        "win": 0,
+        "rank": 3,
+        "balance": 11,
+        "prefixHash": "1a40a8d522fc64073828c1b5c421676169fee704758a4c0b15a478249f5d4876",
+        "lastBid": {
+          "original": 11,
+          "actual": 11,
+          "balance": 11,
+          "letter": "R"
+        },
+        "wonLastUseful": false,
+        "lastUsefulResult": {
+          "round": 67,
+          "letter": "R",
+          "winner": 1,
+          "paid": 11
+        },
+        "players": [
+          {
+            "name": "exact-plus-denial",
+            "seat": 0,
+            "score": 81
+          },
+          {
+            "name": "clone-A",
+            "seat": 1,
+            "score": 87
+          },
+          {
+            "name": "clone-B",
+            "seat": 2,
+            "score": 77
+          },
+          {
+            "name": "aggressive",
+            "seat": 3,
+            "score": 83
+          },
+          {
+            "name": "liquid",
+            "seat": 4,
+            "score": 69
+          },
+          {
+            "name": "patient-seven",
+            "seat": 5,
+            "score": 57
+          }
+        ],
+        "maxDecisionMs": 2.165999999999258,
+        "meanDecisionMs": 0.5440410362318645
+      }
+    },
+    {
+      "scenario": {
+        "seed": 1437602958,
+        "mode": "SecondPrice",
+        "seat": 1,
+        "roster": 1
+      },
+      "control": {
+        "score": 64,
+        "win": 0,
+        "rank": 2,
+        "balance": 7,
+        "prefixHash": "5ab227faa2d0ca6b15821ffa24217e1194be71b7f89f457dae89bb64327254c9",
+        "lastBid": {
+          "original": 7,
+          "actual": 7,
+          "balance": 7,
+          "letter": "E"
+        },
+        "wonLastUseful": false,
+        "lastUsefulResult": {
+          "round": 67,
+          "letter": "E",
+          "winner": 0,
+          "paid": 7
+        },
+        "players": [
+          {
+            "name": "clone-A",
+            "seat": 0,
+            "score": 113
+          },
+          {
+            "name": "licensed-control",
+            "seat": 1,
+            "score": 64
+          },
+          {
+            "name": "aggressive",
+            "seat": 2,
+            "score": 48
+          },
+          {
+            "name": "pressure-14",
+            "seat": 3,
+            "score": 57
+          },
+          {
+            "name": "pressure-16",
+            "seat": 4,
+            "score": 39
+          },
+          {
+            "name": "pressure-18",
+            "seat": 5,
+            "score": 28
+          }
+        ],
+        "maxDecisionMs": 2.2252499999995052,
+        "meanDecisionMs": 0.49523310144929605
+      },
+      "candidate": {
+        "score": 64,
+        "win": 0,
+        "rank": 2,
+        "balance": 7,
+        "prefixHash": "5ab227faa2d0ca6b15821ffa24217e1194be71b7f89f457dae89bb64327254c9",
+        "lastBid": {
+          "original": 7,
+          "actual": 7,
+          "balance": 7,
+          "letter": "E"
+        },
+        "wonLastUseful": false,
+        "lastUsefulResult": {
+          "round": 67,
+          "letter": "E",
+          "winner": 0,
+          "paid": 7
+        },
+        "players": [
+          {
+            "name": "clone-A",
+            "seat": 0,
+            "score": 113
+          },
+          {
+            "name": "exact-plus-denial",
+            "seat": 1,
+            "score": 64
+          },
+          {
+            "name": "aggressive",
+            "seat": 2,
+            "score": 48
+          },
+          {
+            "name": "pressure-14",
+            "seat": 3,
+            "score": 57
+          },
+          {
+            "name": "pressure-16",
+            "seat": 4,
+            "score": 39
+          },
+          {
+            "name": "pressure-18",
+            "seat": 5,
+            "score": 28
+          }
+        ],
+        "maxDecisionMs": 1.4987500000006548,
+        "meanDecisionMs": 0.4777780797101751
+      }
+    },
+    {
+      "scenario": {
+        "seed": 1437610877,
+        "mode": "SecondPrice",
+        "seat": 2,
+        "roster": 2
+      },
+      "control": {
+        "score": 81,
+        "win": 0,
+        "rank": 3,
+        "balance": 5,
+        "prefixHash": "00ff5a8d7f5d680449d8271a62e3d51c5dc8267dae2f8a42e096bacc7715f02b",
+        "lastBid": {
+          "original": 5,
+          "actual": 5,
+          "balance": 5,
+          "letter": "I"
+        },
+        "wonLastUseful": false,
+        "lastUsefulResult": {
+          "round": 67,
+          "letter": "I",
+          "winner": 5,
+          "paid": 5
+        },
+        "players": [
+          {
+            "name": "clone-A",
+            "seat": 0,
+            "score": 99
+          },
+          {
+            "name": "long",
+            "seat": 1,
+            "score": 57
+          },
+          {
+            "name": "licensed-control",
+            "seat": 2,
+            "score": 81
+          },
+          {
+            "name": "liquid",
+            "seat": 3,
+            "score": 85
+          },
+          {
+            "name": "patient-seven",
+            "seat": 4,
+            "score": 65
+          },
+          {
+            "name": "pressure-16",
+            "seat": 5,
+            "score": 36
+          }
+        ],
+        "maxDecisionMs": 2.3299580000002607,
+        "meanDecisionMs": 0.4612744710145136
+      },
+      "candidate": {
+        "score": 81,
+        "win": 0,
+        "rank": 3,
+        "balance": 5,
+        "prefixHash": "00ff5a8d7f5d680449d8271a62e3d51c5dc8267dae2f8a42e096bacc7715f02b",
+        "lastBid": {
+          "original": 5,
+          "actual": 5,
+          "balance": 5,
+          "letter": "I"
+        },
+        "wonLastUseful": false,
+        "lastUsefulResult": {
+          "round": 67,
+          "letter": "I",
+          "winner": 5,
+          "paid": 5
+        },
+        "players": [
+          {
+            "name": "clone-A",
+            "seat": 0,
+            "score": 99
+          },
+          {
+            "name": "long",
+            "seat": 1,
+            "score": 57
+          },
+          {
+            "name": "exact-plus-denial",
+            "seat": 2,
+            "score": 81
+          },
+          {
+            "name": "liquid",
+            "seat": 3,
+            "score": 85
+          },
+          {
+            "name": "patient-seven",
+            "seat": 4,
+            "score": 65
+          },
+          {
+            "name": "pressure-16",
+            "seat": 5,
+            "score": 36
+          }
+        ],
+        "maxDecisionMs": 1.372665999999299,
+        "meanDecisionMs": 0.4347998478261761
+      }
+    },
+    {
+      "scenario": {
+        "seed": 1437618796,
+        "mode": "SecondPrice",
+        "seat": 3,
+        "roster": 0
+      },
+      "control": {
+        "score": 71,
+        "win": 0,
+        "rank": 4,
+        "balance": 10,
+        "prefixHash": "3dad5b1e2136643c13f9c215687c96e524ffce9a33e35cfc2464d6cc1057fc83",
+        "lastBid": {
+          "original": 0,
+          "actual": 0,
+          "balance": 10,
+          "letter": "E"
+        },
+        "wonLastUseful": false,
+        "lastUsefulResult": {
+          "round": 67,
+          "letter": "E",
+          "winner": 0,
+          "paid": 2
+        },
+        "players": [
+          {
+            "name": "clone-A",
+            "seat": 0,
+            "score": 78
+          },
+          {
+            "name": "clone-B",
+            "seat": 1,
+            "score": 75
+          },
+          {
+            "name": "aggressive",
+            "seat": 2,
+            "score": 96
+          },
+          {
+            "name": "licensed-control",
+            "seat": 3,
+            "score": 71
+          },
+          {
+            "name": "liquid",
+            "seat": 4,
+            "score": 57
+          },
+          {
+            "name": "patient-seven",
+            "seat": 5,
+            "score": 42
+          }
+        ],
+        "maxDecisionMs": 2.5100000000002183,
+        "meanDecisionMs": 0.5600150791367191
+      },
+      "candidate": {
+        "score": 71,
+        "win": 0,
+        "rank": 4,
+        "balance": 3,
+        "prefixHash": "3dad5b1e2136643c13f9c215687c96e524ffce9a33e35cfc2464d6cc1057fc83",
+        "lastBid": {
+          "original": 0,
+          "actual": 10,
+          "balance": 10,
+          "letter": "E"
+        },
+        "wonLastUseful": true,
+        "lastUsefulResult": {
+          "round": 67,
+          "letter": "E",
+          "winner": 3,
+          "paid": 7
+        },
+        "players": [
+          {
+            "name": "clone-A",
+            "seat": 0,
+            "score": 73
+          },
+          {
+            "name": "clone-B",
+            "seat": 1,
+            "score": 75
+          },
+          {
+            "name": "aggressive",
+            "seat": 2,
+            "score": 96
+          },
+          {
+            "name": "exact-plus-denial",
+            "seat": 3,
+            "score": 71
+          },
+          {
+            "name": "liquid",
+            "seat": 4,
+            "score": 57
+          },
+          {
+            "name": "patient-seven",
+            "seat": 5,
+            "score": 42
+          }
+        ],
+        "maxDecisionMs": 2.1548750000001746,
+        "meanDecisionMs": 0.4936792302157804
+      }
+    },
+    {
+      "scenario": {
+        "seed": 1437626715,
+        "mode": "SecondPrice",
+        "seat": 4,
+        "roster": 1
+      },
+      "control": {
+        "score": 87,
+        "win": 0,
+        "rank": 3,
+        "balance": 0,
+        "prefixHash": "b4b0980150c407045deda0131f8d1dbea161e85af34288a6e4e03435898c18dc",
+        "lastBid": {
+          "original": 0,
+          "actual": 0,
+          "balance": 0,
+          "letter": "E"
+        },
+        "wonLastUseful": false,
+        "lastUsefulResult": {
+          "round": 67,
+          "letter": "E",
+          "winner": 0,
+          "paid": 8
+        },
+        "players": [
+          {
+            "name": "clone-A",
+            "seat": 0,
+            "score": 89
+          },
+          {
+            "name": "aggressive",
+            "seat": 1,
+            "score": 64
+          },
+          {
+            "name": "pressure-14",
+            "seat": 2,
+            "score": 95
+          },
+          {
+            "name": "pressure-16",
+            "seat": 3,
+            "score": 42
+          },
+          {
+            "name": "licensed-control",
+            "seat": 4,
+            "score": 87
+          },
+          {
+            "name": "pressure-18",
+            "seat": 5,
+            "score": 31
+          }
+        ],
+        "maxDecisionMs": 1.3340000000007421,
+        "meanDecisionMs": 0.4461162246376472
+      },
+      "candidate": {
+        "score": 87,
+        "win": 0,
+        "rank": 3,
+        "balance": 0,
+        "prefixHash": "b4b0980150c407045deda0131f8d1dbea161e85af34288a6e4e03435898c18dc",
+        "lastBid": {
+          "original": 0,
+          "actual": 0,
+          "balance": 0,
+          "letter": "E"
+        },
+        "wonLastUseful": false,
+        "lastUsefulResult": {
+          "round": 67,
+          "letter": "E",
+          "winner": 0,
+          "paid": 8
+        },
+        "players": [
+          {
+            "name": "clone-A",
+            "seat": 0,
+            "score": 89
+          },
+          {
+            "name": "aggressive",
+            "seat": 1,
+            "score": 64
+          },
+          {
+            "name": "pressure-14",
+            "seat": 2,
+            "score": 95
+          },
+          {
+            "name": "pressure-16",
+            "seat": 3,
+            "score": 42
+          },
+          {
+            "name": "exact-plus-denial",
+            "seat": 4,
+            "score": 87
+          },
+          {
+            "name": "pressure-18",
+            "seat": 5,
+            "score": 31
+          }
+        ],
+        "maxDecisionMs": 1.339958000000479,
+        "meanDecisionMs": 0.4441866159420871
+      }
+    },
+    {
+      "scenario": {
+        "seed": 1437634634,
+        "mode": "SecondPrice",
+        "seat": 5,
+        "roster": 2
+      },
+      "control": {
+        "score": 93,
+        "win": 1,
+        "rank": 1,
+        "balance": 8,
+        "prefixHash": "c1b660151d6db284ae4899f71edc08656970d0ac6b05eb7cfb0296e411558ae5",
+        "lastBid": {
+          "original": 0,
+          "actual": 0,
+          "balance": 8,
+          "letter": "V"
+        },
+        "wonLastUseful": false,
+        "lastUsefulResult": {
+          "round": 67,
+          "letter": "V",
+          "winner": 4,
+          "paid": 1
+        },
+        "players": [
+          {
+            "name": "clone-A",
+            "seat": 0,
+            "score": 69
+          },
+          {
+            "name": "long",
+            "seat": 1,
+            "score": 91
+          },
+          {
+            "name": "liquid",
+            "seat": 2,
+            "score": 69
+          },
+          {
+            "name": "patient-seven",
+            "seat": 3,
+            "score": 54
+          },
+          {
+            "name": "pressure-16",
+            "seat": 4,
+            "score": 36
+          },
+          {
+            "name": "licensed-control",
+            "seat": 5,
+            "score": 93
+          }
+        ],
+        "maxDecisionMs": 1.1853330000012647,
+        "meanDecisionMs": 0.3550614676259095
+      },
+      "candidate": {
+        "score": 93,
+        "win": 1,
+        "rank": 1,
+        "balance": 8,
+        "prefixHash": "c1b660151d6db284ae4899f71edc08656970d0ac6b05eb7cfb0296e411558ae5",
+        "lastBid": {
+          "original": 0,
+          "actual": 8,
+          "balance": 8,
+          "letter": "V"
+        },
+        "wonLastUseful": false,
+        "lastUsefulResult": {
+          "round": 67,
+          "letter": "V",
+          "winner": 4,
+          "paid": 8
+        },
+        "players": [
+          {
+            "name": "clone-A",
+            "seat": 0,
+            "score": 69
+          },
+          {
+            "name": "long",
+            "seat": 1,
+            "score": 91
+          },
+          {
+            "name": "liquid",
+            "seat": 2,
+            "score": 69
+          },
+          {
+            "name": "patient-seven",
+            "seat": 3,
+            "score": 54
+          },
+          {
+            "name": "pressure-16",
+            "seat": 4,
+            "score": 36
+          },
+          {
+            "name": "exact-plus-denial",
+            "seat": 5,
+            "score": 93
+          }
+        ],
+        "maxDecisionMs": 1.2330419999998412,
+        "meanDecisionMs": 0.333400194244565
+      }
+    },
+    {
+      "scenario": {
+        "seed": 1437642553,
+        "mode": "SecondPrice",
+        "seat": 0,
+        "roster": 0
+      },
+      "control": {
+        "score": 73,
+        "win": 0,
+        "rank": 2,
+        "balance": 7,
+        "prefixHash": "446e709c0b6839a000f6974ab53f5e01ee82d1f705c895e8aa1d75a9b182a0ca",
+        "lastBid": {
+          "original": 7,
+          "actual": 7,
+          "balance": 7,
+          "letter": "S"
+        },
+        "wonLastUseful": false,
+        "lastUsefulResult": {
+          "round": 67,
+          "letter": "S",
+          "winner": 4,
+          "paid": 7
+        },
+        "players": [
+          {
+            "name": "licensed-control",
+            "seat": 0,
+            "score": 73
+          },
+          {
+            "name": "clone-A",
+            "seat": 1,
+            "score": 72
+          },
+          {
+            "name": "clone-B",
+            "seat": 2,
+            "score": 85
+          },
+          {
+            "name": "aggressive",
+            "seat": 3,
+            "score": 47
+          },
+          {
+            "name": "liquid",
+            "seat": 4,
+            "score": 60
+          },
+          {
+            "name": "patient-seven",
+            "seat": 5,
+            "score": 53
+          }
+        ],
+        "maxDecisionMs": 1.5195839999996679,
+        "meanDecisionMs": 0.4960665611511398
+      },
+      "candidate": {
+        "score": 73,
+        "win": 0,
+        "rank": 2,
+        "balance": 7,
+        "prefixHash": "446e709c0b6839a000f6974ab53f5e01ee82d1f705c895e8aa1d75a9b182a0ca",
+        "lastBid": {
+          "original": 7,
+          "actual": 7,
+          "balance": 7,
+          "letter": "S"
+        },
+        "wonLastUseful": false,
+        "lastUsefulResult": {
+          "round": 67,
+          "letter": "S",
+          "winner": 4,
+          "paid": 7
+        },
+        "players": [
+          {
+            "name": "exact-plus-denial",
+            "seat": 0,
+            "score": 73
+          },
+          {
+            "name": "clone-A",
+            "seat": 1,
+            "score": 72
+          },
+          {
+            "name": "clone-B",
+            "seat": 2,
+            "score": 85
+          },
+          {
+            "name": "aggressive",
+            "seat": 3,
+            "score": 47
+          },
+          {
+            "name": "liquid",
+            "seat": 4,
+            "score": 60
+          },
+          {
+            "name": "patient-seven",
+            "seat": 5,
+            "score": 53
+          }
+        ],
+        "maxDecisionMs": 1.6239999999997963,
+        "meanDecisionMs": 0.4813360215826153
+      }
+    },
+    {
+      "scenario": {
+        "seed": 1437650472,
+        "mode": "SecondPrice",
+        "seat": 1,
+        "roster": 1
+      },
+      "control": {
+        "score": 87,
+        "win": 1,
+        "rank": 1,
+        "balance": 1,
+        "prefixHash": "3410cad00fca829615dd762e8f025a3c2be205518058e1def5189a8624e2c2d2",
+        "lastBid": {
+          "original": 1,
+          "actual": 1,
+          "balance": 1,
+          "letter": "E"
+        },
+        "wonLastUseful": false,
+        "lastUsefulResult": {
+          "round": 67,
+          "letter": "E",
+          "winner": 4,
+          "paid": 2
+        },
+        "players": [
+          {
+            "name": "clone-A",
+            "seat": 0,
+            "score": 73
+          },
+          {
+            "name": "licensed-control",
+            "seat": 1,
+            "score": 87
+          },
+          {
+            "name": "aggressive",
+            "seat": 2,
+            "score": 78
+          },
+          {
+            "name": "pressure-14",
+            "seat": 3,
+            "score": 50
+          },
+          {
+            "name": "pressure-16",
+            "seat": 4,
+            "score": 43
+          },
+          {
+            "name": "pressure-18",
+            "seat": 5,
+            "score": 26
+          }
+        ],
+        "maxDecisionMs": 1.2817919999997684,
+        "meanDecisionMs": 0.37357146428566923
+      },
+      "candidate": {
+        "score": 87,
+        "win": 1,
+        "rank": 1,
+        "balance": 1,
+        "prefixHash": "3410cad00fca829615dd762e8f025a3c2be205518058e1def5189a8624e2c2d2",
+        "lastBid": {
+          "original": 1,
+          "actual": 1,
+          "balance": 1,
+          "letter": "E"
+        },
+        "wonLastUseful": false,
+        "lastUsefulResult": {
+          "round": 67,
+          "letter": "E",
+          "winner": 4,
+          "paid": 2
+        },
+        "players": [
+          {
+            "name": "clone-A",
+            "seat": 0,
+            "score": 73
+          },
+          {
+            "name": "exact-plus-denial",
+            "seat": 1,
+            "score": 87
+          },
+          {
+            "name": "aggressive",
+            "seat": 2,
+            "score": 78
+          },
+          {
+            "name": "pressure-14",
+            "seat": 3,
+            "score": 50
+          },
+          {
+            "name": "pressure-16",
+            "seat": 4,
+            "score": 43
+          },
+          {
+            "name": "pressure-18",
+            "seat": 5,
+            "score": 26
+          }
+        ],
+        "maxDecisionMs": 1.2060829999991256,
+        "meanDecisionMs": 0.3647521214284877
+      }
+    },
+    {
+      "scenario": {
+        "seed": 1437658391,
+        "mode": "SecondPrice",
+        "seat": 2,
+        "roster": 2
+      },
+      "control": {
+        "score": 108,
+        "win": 1,
+        "rank": 1,
+        "balance": 18,
+        "prefixHash": "3d7cf3fcdf20f1ee4a2f7d57ff9ac26e837b61367316bb61ed3ef5414580d34e",
+        "lastBid": {
+          "original": 6,
+          "actual": 6,
+          "balance": 6,
+          "letter": "P"
+        },
+        "wonLastUseful": false,
+        "lastUsefulResult": {
+          "round": 67,
+          "letter": "P",
+          "winner": 3,
+          "paid": 6
+        },
+        "players": [
+          {
+            "name": "clone-A",
+            "seat": 0,
+            "score": 77
+          },
+          {
+            "name": "long",
+            "seat": 1,
+            "score": 67
+          },
+          {
+            "name": "licensed-control",
+            "seat": 2,
+            "score": 108
+          },
+          {
+            "name": "liquid",
+            "seat": 3,
+            "score": 82
+          },
+          {
+            "name": "patient-seven",
+            "seat": 4,
+            "score": 63
+          },
+          {
+            "name": "pressure-16",
+            "seat": 5,
+            "score": 40
+          }
+        ],
+        "maxDecisionMs": 2.4579589999993914,
+        "meanDecisionMs": 0.49894063309350734
+      },
+      "candidate": {
+        "score": 108,
+        "win": 1,
+        "rank": 1,
+        "balance": 18,
+        "prefixHash": "3d7cf3fcdf20f1ee4a2f7d57ff9ac26e837b61367316bb61ed3ef5414580d34e",
+        "lastBid": {
+          "original": 6,
+          "actual": 6,
+          "balance": 6,
+          "letter": "P"
+        },
+        "wonLastUseful": false,
+        "lastUsefulResult": {
+          "round": 67,
+          "letter": "P",
+          "winner": 3,
+          "paid": 6
+        },
+        "players": [
+          {
+            "name": "clone-A",
+            "seat": 0,
+            "score": 77
+          },
+          {
+            "name": "long",
+            "seat": 1,
+            "score": 67
+          },
+          {
+            "name": "exact-plus-denial",
+            "seat": 2,
+            "score": 108
+          },
+          {
+            "name": "liquid",
+            "seat": 3,
+            "score": 82
+          },
+          {
+            "name": "patient-seven",
+            "seat": 4,
+            "score": 63
+          },
+          {
+            "name": "pressure-16",
+            "seat": 5,
+            "score": 40
+          }
+        ],
+        "maxDecisionMs": 1.8042089999999007,
+        "meanDecisionMs": 0.4422245323741349
+      }
+    },
+    {
+      "scenario": {
+        "seed": 1437666310,
+        "mode": "SecondPrice",
+        "seat": 3,
+        "roster": 0
+      },
+      "control": {
+        "score": 65,
+        "win": 0,
+        "rank": 5,
+        "balance": 1,
+        "prefixHash": "f79c00f5b46ba61c1db4759477f5ac0e3ce29bda93d40718cf8fbfc6faa34ca6",
+        "lastBid": {
+          "original": 1,
+          "actual": 1,
+          "balance": 1,
+          "letter": "I"
+        },
+        "wonLastUseful": false,
+        "lastUsefulResult": {
+          "round": 67,
+          "letter": "I",
+          "winner": 5,
+          "paid": 1
+        },
+        "players": [
+          {
+            "name": "clone-A",
+            "seat": 0,
+            "score": 88
+          },
+          {
+            "name": "clone-B",
+            "seat": 1,
+            "score": 76
+          },
+          {
+            "name": "aggressive",
+            "seat": 2,
+            "score": 49
+          },
+          {
+            "name": "licensed-control",
+            "seat": 3,
+            "score": 65
+          },
+          {
+            "name": "liquid",
+            "seat": 4,
+            "score": 86
+          },
+          {
+            "name": "patient-seven",
+            "seat": 5,
+            "score": 75
+          }
+        ],
+        "maxDecisionMs": 1.5077909999999974,
+        "meanDecisionMs": 0.5137988489208406
+      },
+      "candidate": {
+        "score": 65,
+        "win": 0,
+        "rank": 5,
+        "balance": 1,
+        "prefixHash": "f79c00f5b46ba61c1db4759477f5ac0e3ce29bda93d40718cf8fbfc6faa34ca6",
+        "lastBid": {
+          "original": 1,
+          "actual": 1,
+          "balance": 1,
+          "letter": "I"
+        },
+        "wonLastUseful": false,
+        "lastUsefulResult": {
+          "round": 67,
+          "letter": "I",
+          "winner": 5,
+          "paid": 1
+        },
+        "players": [
+          {
+            "name": "clone-A",
+            "seat": 0,
+            "score": 88
+          },
+          {
+            "name": "clone-B",
+            "seat": 1,
+            "score": 76
+          },
+          {
+            "name": "aggressive",
+            "seat": 2,
+            "score": 49
+          },
+          {
+            "name": "exact-plus-denial",
+            "seat": 3,
+            "score": 65
+          },
+          {
+            "name": "liquid",
+            "seat": 4,
+            "score": 86
+          },
+          {
+            "name": "patient-seven",
+            "seat": 5,
+            "score": 75
+          }
+        ],
+        "maxDecisionMs": 1.3863750000000437,
+        "meanDecisionMs": 0.480133402877681
+      }
+    },
+    {
+      "scenario": {
+        "seed": 1437674229,
+        "mode": "SecondPrice",
+        "seat": 4,
+        "roster": 1
+      },
+      "control": {
+        "score": 64,
+        "win": 0,
+        "rank": 3,
+        "balance": 7,
+        "prefixHash": "c07e47454e03d4f441430091f29356adb5d01f1ea30628abf3e52511ba39e77e",
+        "lastBid": {
+          "original": 5,
+          "actual": 5,
+          "balance": 5,
+          "letter": "R"
+        },
+        "wonLastUseful": true,
+        "lastUsefulResult": {
+          "round": 67,
+          "letter": "R",
+          "winner": 4,
+          "paid": 4
+        },
+        "players": [
+          {
+            "name": "clone-A",
+            "seat": 0,
+            "score": 93
+          },
+          {
+            "name": "aggressive",
+            "seat": 1,
+            "score": 86
+          },
+          {
+            "name": "pressure-14",
+            "seat": 2,
+            "score": 51
+          },
+          {
+            "name": "pressure-16",
+            "seat": 3,
+            "score": 37
+          },
+          {
+            "name": "licensed-control",
+            "seat": 4,
+            "score": 64
+          },
+          {
+            "name": "pressure-18",
+            "seat": 5,
+            "score": 53
+          }
+        ],
+        "maxDecisionMs": 2.017374999999447,
+        "meanDecisionMs": 0.4821618417266521
+      },
+      "candidate": {
+        "score": 64,
+        "win": 0,
+        "rank": 3,
+        "balance": 7,
+        "prefixHash": "c07e47454e03d4f441430091f29356adb5d01f1ea30628abf3e52511ba39e77e",
+        "lastBid": {
+          "original": 5,
+          "actual": 5,
+          "balance": 5,
+          "letter": "R"
+        },
+        "wonLastUseful": true,
+        "lastUsefulResult": {
+          "round": 67,
+          "letter": "R",
+          "winner": 4,
+          "paid": 4
+        },
+        "players": [
+          {
+            "name": "clone-A",
+            "seat": 0,
+            "score": 93
+          },
+          {
+            "name": "aggressive",
+            "seat": 1,
+            "score": 86
+          },
+          {
+            "name": "pressure-14",
+            "seat": 2,
+            "score": 51
+          },
+          {
+            "name": "pressure-16",
+            "seat": 3,
+            "score": 37
+          },
+          {
+            "name": "exact-plus-denial",
+            "seat": 4,
+            "score": 64
+          },
+          {
+            "name": "pressure-18",
+            "seat": 5,
+            "score": 53
+          }
+        ],
+        "maxDecisionMs": 1.4466249999986758,
+        "meanDecisionMs": 0.47794153237400877
+      }
+    },
+    {
+      "scenario": {
+        "seed": 1437682148,
+        "mode": "SecondPrice",
+        "seat": 5,
+        "roster": 2
+      },
+      "control": {
+        "score": 87,
+        "win": 0,
+        "rank": 2,
+        "balance": 5,
+        "prefixHash": "d7e15881fc9a0a95293aca020a734c2a0b9a62ae43f97f56615322d97590a241",
+        "lastBid": {
+          "original": 0,
+          "actual": 0,
+          "balance": 5,
+          "letter": "E"
+        },
+        "wonLastUseful": false,
+        "lastUsefulResult": {
+          "round": 67,
+          "letter": "E",
+          "winner": 1,
+          "paid": 7
+        },
+        "players": [
+          {
+            "name": "clone-A",
+            "seat": 0,
+            "score": 70
+          },
+          {
+            "name": "long",
+            "seat": 1,
+            "score": 123
+          },
+          {
+            "name": "liquid",
+            "seat": 2,
+            "score": 60
+          },
+          {
+            "name": "patient-seven",
+            "seat": 3,
+            "score": 36
+          },
+          {
+            "name": "pressure-16",
+            "seat": 4,
+            "score": 45
+          },
+          {
+            "name": "licensed-control",
+            "seat": 5,
+            "score": 87
+          }
+        ],
+        "maxDecisionMs": 1.3765419999999722,
+        "meanDecisionMs": 0.40968179710136243
+      },
+      "candidate": {
+        "score": 87,
+        "win": 0,
+        "rank": 2,
+        "balance": 5,
+        "prefixHash": "d7e15881fc9a0a95293aca020a734c2a0b9a62ae43f97f56615322d97590a241",
+        "lastBid": {
+          "original": 0,
+          "actual": 5,
+          "balance": 5,
+          "letter": "E"
+        },
+        "wonLastUseful": false,
+        "lastUsefulResult": {
+          "round": 67,
+          "letter": "E",
+          "winner": 1,
+          "paid": 7
+        },
+        "players": [
+          {
+            "name": "clone-A",
+            "seat": 0,
+            "score": 70
+          },
+          {
+            "name": "long",
+            "seat": 1,
+            "score": 123
+          },
+          {
+            "name": "liquid",
+            "seat": 2,
+            "score": 60
+          },
+          {
+            "name": "patient-seven",
+            "seat": 3,
+            "score": 36
+          },
+          {
+            "name": "pressure-16",
+            "seat": 4,
+            "score": 45
+          },
+          {
+            "name": "exact-plus-denial",
+            "seat": 5,
+            "score": 87
+          }
+        ],
+        "maxDecisionMs": 1.2573749999992287,
+        "meanDecisionMs": 0.3967234130434825
+      }
+    },
+    {
+      "scenario": {
+        "seed": 1438500014,
+        "mode": "FirstPrice",
+        "seat": 0,
+        "roster": 0
+      },
+      "control": {
+        "score": 81,
+        "win": 0,
+        "rank": 2,
+        "balance": 7,
+        "prefixHash": "78732f3205b791678fb221d5d1a427fa3dc5d5dfca9e931f8889c6a2c0fcd7b1",
+        "lastBid": {
+          "original": 0,
+          "actual": 0,
+          "balance": 7,
+          "letter": "O"
+        },
+        "wonLastUseful": false,
+        "lastUsefulResult": {
+          "round": 67,
+          "letter": "O",
+          "winner": 4,
+          "paid": 4
+        },
+        "players": [
+          {
+            "name": "licensed-control",
+            "seat": 0,
+            "score": 81
+          },
+          {
+            "name": "clone-A",
+            "seat": 1,
+            "score": 90
+          },
+          {
+            "name": "clone-B",
+            "seat": 2,
+            "score": 77
+          },
+          {
+            "name": "aggressive",
+            "seat": 3,
+            "score": 76
+          },
+          {
+            "name": "liquid",
+            "seat": 4,
+            "score": 44
+          },
+          {
+            "name": "patient-seven",
+            "seat": 5,
+            "score": 51
+          }
+        ],
+        "maxDecisionMs": 1.3453329999993002,
+        "meanDecisionMs": 0.4305560503597387
+      },
+      "candidate": {
+        "score": 81,
+        "win": 0,
+        "rank": 2,
+        "balance": 0,
+        "prefixHash": "78732f3205b791678fb221d5d1a427fa3dc5d5dfca9e931f8889c6a2c0fcd7b1",
+        "lastBid": {
+          "original": 0,
+          "actual": 7,
+          "balance": 7,
+          "letter": "O"
+        },
+        "wonLastUseful": true,
+        "lastUsefulResult": {
+          "round": 67,
+          "letter": "O",
+          "winner": 0,
+          "paid": 7
+        },
+        "players": [
+          {
+            "name": "exact-plus-denial",
+            "seat": 0,
+            "score": 81
+          },
+          {
+            "name": "clone-A",
+            "seat": 1,
+            "score": 90
+          },
+          {
+            "name": "clone-B",
+            "seat": 2,
+            "score": 77
+          },
+          {
+            "name": "aggressive",
+            "seat": 3,
+            "score": 76
+          },
+          {
+            "name": "liquid",
+            "seat": 4,
+            "score": 42
+          },
+          {
+            "name": "patient-seven",
+            "seat": 5,
+            "score": 51
+          }
+        ],
+        "maxDecisionMs": 1.1840420000007725,
+        "meanDecisionMs": 0.4091202517985373
+      }
+    },
+    {
+      "scenario": {
+        "seed": 1438507933,
+        "mode": "FirstPrice",
+        "seat": 1,
+        "roster": 1
+      },
+      "control": {
+        "score": 87,
+        "win": 0,
+        "rank": 2,
+        "balance": 0,
+        "prefixHash": "688b9c814b0c335a8261756d9891401ac6f842ac683b18a6588c3a9838819282",
+        "lastBid": {
+          "original": 0,
+          "actual": 0,
+          "balance": 0,
+          "letter": "E"
+        },
+        "wonLastUseful": false,
+        "lastUsefulResult": {
+          "round": 67,
+          "letter": "E",
+          "winner": 4,
+          "paid": 2
+        },
+        "players": [
+          {
+            "name": "clone-A",
+            "seat": 0,
+            "score": 98
+          },
+          {
+            "name": "licensed-control",
+            "seat": 1,
+            "score": 87
+          },
+          {
+            "name": "aggressive",
+            "seat": 2,
+            "score": 45
+          },
+          {
+            "name": "pressure-14",
+            "seat": 3,
+            "score": 57
+          },
+          {
+            "name": "pressure-16",
+            "seat": 4,
+            "score": 30
+          },
+          {
+            "name": "pressure-18",
+            "seat": 5,
+            "score": 28
+          }
+        ],
+        "maxDecisionMs": 1.5259170000008453,
+        "meanDecisionMs": 0.48063944604309783
+      },
+      "candidate": {
+        "score": 87,
+        "win": 0,
+        "rank": 2,
+        "balance": 0,
+        "prefixHash": "688b9c814b0c335a8261756d9891401ac6f842ac683b18a6588c3a9838819282",
+        "lastBid": {
+          "original": 0,
+          "actual": 0,
+          "balance": 0,
+          "letter": "E"
+        },
+        "wonLastUseful": false,
+        "lastUsefulResult": {
+          "round": 67,
+          "letter": "E",
+          "winner": 4,
+          "paid": 2
+        },
+        "players": [
+          {
+            "name": "clone-A",
+            "seat": 0,
+            "score": 98
+          },
+          {
+            "name": "exact-plus-denial",
+            "seat": 1,
+            "score": 87
+          },
+          {
+            "name": "aggressive",
+            "seat": 2,
+            "score": 45
+          },
+          {
+            "name": "pressure-14",
+            "seat": 3,
+            "score": 57
+          },
+          {
+            "name": "pressure-16",
+            "seat": 4,
+            "score": 30
+          },
+          {
+            "name": "pressure-18",
+            "seat": 5,
+            "score": 28
+          }
+        ],
+        "maxDecisionMs": 1.8050830000011047,
+        "meanDecisionMs": 0.5069625683451882
+      }
+    },
+    {
+      "scenario": {
+        "seed": 1438515852,
+        "mode": "FirstPrice",
+        "seat": 2,
+        "roster": 2
+      },
+      "control": {
+        "score": 74,
+        "win": 0,
+        "rank": 2,
+        "balance": 1,
+        "prefixHash": "41008c9ff1d5a81382ba7dbe9602bd3327cf1d238d52cb7601c3d7f45cd17a87",
+        "lastBid": {
+          "original": 1,
+          "actual": 1,
+          "balance": 1,
+          "letter": "I"
+        },
+        "wonLastUseful": false,
+        "lastUsefulResult": {
+          "round": 67,
+          "letter": "I",
+          "winner": 4,
+          "paid": 4
+        },
+        "players": [
+          {
+            "name": "clone-A",
+            "seat": 0,
+            "score": 94
+          },
+          {
+            "name": "long",
+            "seat": 1,
+            "score": 73
+          },
+          {
+            "name": "licensed-control",
+            "seat": 2,
+            "score": 74
+          },
+          {
+            "name": "liquid",
+            "seat": 3,
+            "score": 62
+          },
+          {
+            "name": "patient-seven",
+            "seat": 4,
+            "score": 51
+          },
+          {
+            "name": "pressure-16",
+            "seat": 5,
+            "score": 39
+          }
+        ],
+        "maxDecisionMs": 2.8532909999994445,
+        "meanDecisionMs": 0.557627374100723
+      },
+      "candidate": {
+        "score": 74,
+        "win": 0,
+        "rank": 2,
+        "balance": 1,
+        "prefixHash": "41008c9ff1d5a81382ba7dbe9602bd3327cf1d238d52cb7601c3d7f45cd17a87",
+        "lastBid": {
+          "original": 1,
+          "actual": 1,
+          "balance": 1,
+          "letter": "I"
+        },
+        "wonLastUseful": false,
+        "lastUsefulResult": {
+          "round": 67,
+          "letter": "I",
+          "winner": 4,
+          "paid": 4
+        },
+        "players": [
+          {
+            "name": "clone-A",
+            "seat": 0,
+            "score": 94
+          },
+          {
+            "name": "long",
+            "seat": 1,
+            "score": 73
+          },
+          {
+            "name": "exact-plus-denial",
+            "seat": 2,
+            "score": 74
+          },
+          {
+            "name": "liquid",
+            "seat": 3,
+            "score": 62
+          },
+          {
+            "name": "patient-seven",
+            "seat": 4,
+            "score": 51
+          },
+          {
+            "name": "pressure-16",
+            "seat": 5,
+            "score": 39
+          }
+        ],
+        "maxDecisionMs": 2.163542000002053,
+        "meanDecisionMs": 0.5312005611510665
+      }
+    },
+    {
+      "scenario": {
+        "seed": 1438523771,
+        "mode": "FirstPrice",
+        "seat": 3,
+        "roster": 0
+      },
+      "control": {
+        "score": 78,
+        "win": 0,
+        "rank": 2,
+        "balance": 3,
+        "prefixHash": "0e67536b8b4e985bc251f1cc2a7b3d1c3782738be176985faf91eddd0f48085d",
+        "lastBid": {
+          "original": 0,
+          "actual": 0,
+          "balance": 3,
+          "letter": "H"
+        },
+        "wonLastUseful": false,
+        "lastUsefulResult": {
+          "round": 67,
+          "letter": "H",
+          "winner": 0,
+          "paid": 9
+        },
+        "players": [
+          {
+            "name": "clone-A",
+            "seat": 0,
+            "score": 89
+          },
+          {
+            "name": "clone-B",
+            "seat": 1,
+            "score": 78
+          },
+          {
+            "name": "aggressive",
+            "seat": 2,
+            "score": 49
+          },
+          {
+            "name": "licensed-control",
+            "seat": 3,
+            "score": 78
+          },
+          {
+            "name": "liquid",
+            "seat": 4,
+            "score": 69
+          },
+          {
+            "name": "patient-seven",
+            "seat": 5,
+            "score": 37
+          }
+        ],
+        "maxDecisionMs": 2.152749999997468,
+        "meanDecisionMs": 0.5223681223019968
+      },
+      "candidate": {
+        "score": 78,
+        "win": 0,
+        "rank": 2,
+        "balance": 3,
+        "prefixHash": "0e67536b8b4e985bc251f1cc2a7b3d1c3782738be176985faf91eddd0f48085d",
+        "lastBid": {
+          "original": 0,
+          "actual": 3,
+          "balance": 3,
+          "letter": "H"
+        },
+        "wonLastUseful": false,
+        "lastUsefulResult": {
+          "round": 67,
+          "letter": "H",
+          "winner": 0,
+          "paid": 9
+        },
+        "players": [
+          {
+            "name": "clone-A",
+            "seat": 0,
+            "score": 89
+          },
+          {
+            "name": "clone-B",
+            "seat": 1,
+            "score": 78
+          },
+          {
+            "name": "aggressive",
+            "seat": 2,
+            "score": 49
+          },
+          {
+            "name": "exact-plus-denial",
+            "seat": 3,
+            "score": 78
+          },
+          {
+            "name": "liquid",
+            "seat": 4,
+            "score": 69
+          },
+          {
+            "name": "patient-seven",
+            "seat": 5,
+            "score": 37
+          }
+        ],
+        "maxDecisionMs": 1.8864170000015292,
+        "meanDecisionMs": 0.4844496474819764
+      }
+    },
+    {
+      "scenario": {
+        "seed": 1438531690,
+        "mode": "FirstPrice",
+        "seat": 4,
+        "roster": 1
+      },
+      "control": {
+        "score": 102,
+        "win": 1,
+        "rank": 1,
+        "balance": 0,
+        "prefixHash": "eecf7f2956853565c1feba48db3af22663d091c2ac599ac85a64c8b180cd9066",
+        "lastBid": {
+          "original": 0,
+          "actual": 0,
+          "balance": 0,
+          "letter": "D"
+        },
+        "wonLastUseful": false,
+        "lastUsefulResult": {
+          "round": 67,
+          "letter": "D",
+          "paid": 0
+        },
+        "players": [
+          {
+            "name": "clone-A",
+            "seat": 0,
+            "score": 93
+          },
+          {
+            "name": "aggressive",
+            "seat": 1,
+            "score": 72
+          },
+          {
+            "name": "pressure-14",
+            "seat": 2,
+            "score": 51
+          },
+          {
+            "name": "pressure-16",
+            "seat": 3,
+            "score": 48
+          },
+          {
+            "name": "licensed-control",
+            "seat": 4,
+            "score": 102
+          },
+          {
+            "name": "pressure-18",
+            "seat": 5,
+            "score": 28
+          }
+        ],
+        "maxDecisionMs": 1.1439170000012382,
+        "meanDecisionMs": 0.4890098992807959
+      },
+      "candidate": {
+        "score": 102,
+        "win": 1,
+        "rank": 1,
+        "balance": 0,
+        "prefixHash": "eecf7f2956853565c1feba48db3af22663d091c2ac599ac85a64c8b180cd9066",
+        "lastBid": {
+          "original": 0,
+          "actual": 0,
+          "balance": 0,
+          "letter": "D"
+        },
+        "wonLastUseful": false,
+        "lastUsefulResult": {
+          "round": 67,
+          "letter": "D",
+          "paid": 0
+        },
+        "players": [
+          {
+            "name": "clone-A",
+            "seat": 0,
+            "score": 93
+          },
+          {
+            "name": "aggressive",
+            "seat": 1,
+            "score": 72
+          },
+          {
+            "name": "pressure-14",
+            "seat": 2,
+            "score": 51
+          },
+          {
+            "name": "pressure-16",
+            "seat": 3,
+            "score": 48
+          },
+          {
+            "name": "exact-plus-denial",
+            "seat": 4,
+            "score": 102
+          },
+          {
+            "name": "pressure-18",
+            "seat": 5,
+            "score": 28
+          }
+        ],
+        "maxDecisionMs": 1.0890420000032464,
+        "meanDecisionMs": 0.4624103741007275
+      }
+    },
+    {
+      "scenario": {
+        "seed": 1438539609,
+        "mode": "FirstPrice",
+        "seat": 5,
+        "roster": 2
+      },
+      "control": {
+        "score": 78,
+        "win": 0,
+        "rank": 3,
+        "balance": 0,
+        "prefixHash": "dd0f3e2f06eeb55d1c6f0defc76e029b133c658f88d868df1561b5334f5839ae",
+        "lastBid": {
+          "original": 0,
+          "actual": 0,
+          "balance": 0,
+          "letter": "G"
+        },
+        "wonLastUseful": false,
+        "lastUsefulResult": {
+          "round": 67,
+          "letter": "G",
+          "winner": 3,
+          "paid": 2
+        },
+        "players": [
+          {
+            "name": "clone-A",
+            "seat": 0,
+            "score": 90
+          },
+          {
+            "name": "long",
+            "seat": 1,
+            "score": 104
+          },
+          {
+            "name": "liquid",
+            "seat": 2,
+            "score": 67
+          },
+          {
+            "name": "patient-seven",
+            "seat": 3,
+            "score": 23
+          },
+          {
+            "name": "pressure-16",
+            "seat": 4,
+            "score": 45
+          },
+          {
+            "name": "licensed-control",
+            "seat": 5,
+            "score": 78
+          }
+        ],
+        "maxDecisionMs": 1.3632499999985157,
+        "meanDecisionMs": 0.44227026811613934
+      },
+      "candidate": {
+        "score": 78,
+        "win": 0,
+        "rank": 3,
+        "balance": 0,
+        "prefixHash": "dd0f3e2f06eeb55d1c6f0defc76e029b133c658f88d868df1561b5334f5839ae",
+        "lastBid": {
+          "original": 0,
+          "actual": 0,
+          "balance": 0,
+          "letter": "G"
+        },
+        "wonLastUseful": false,
+        "lastUsefulResult": {
+          "round": 67,
+          "letter": "G",
+          "winner": 3,
+          "paid": 2
+        },
+        "players": [
+          {
+            "name": "clone-A",
+            "seat": 0,
+            "score": 90
+          },
+          {
+            "name": "long",
+            "seat": 1,
+            "score": 104
+          },
+          {
+            "name": "liquid",
+            "seat": 2,
+            "score": 67
+          },
+          {
+            "name": "patient-seven",
+            "seat": 3,
+            "score": 23
+          },
+          {
+            "name": "pressure-16",
+            "seat": 4,
+            "score": 45
+          },
+          {
+            "name": "exact-plus-denial",
+            "seat": 5,
+            "score": 78
+          }
+        ],
+        "maxDecisionMs": 1.3068749999983993,
+        "meanDecisionMs": 0.43009028260878596
+      }
+    },
+    {
+      "scenario": {
+        "seed": 1438547528,
+        "mode": "FirstPrice",
+        "seat": 0,
+        "roster": 0
+      },
+      "control": {
+        "score": 69,
+        "win": 0,
+        "rank": 2,
+        "balance": 3,
+        "prefixHash": "177ba2962c470c7724e18ded2c9e601c88be6059ed7d09dab7d3ca2e79070fbb",
+        "lastBid": {
+          "original": 24,
+          "actual": 24,
+          "balance": 24,
+          "letter": "T"
+        },
+        "wonLastUseful": true,
+        "lastUsefulResult": {
+          "round": 67,
+          "letter": "T",
+          "winner": 0,
+          "paid": 24
+        },
+        "players": [
+          {
+            "name": "licensed-control",
+            "seat": 0,
+            "score": 69
+          },
+          {
+            "name": "clone-A",
+            "seat": 1,
+            "score": 62
+          },
+          {
+            "name": "clone-B",
+            "seat": 2,
+            "score": 69
+          },
+          {
+            "name": "aggressive",
+            "seat": 3,
+            "score": 55
+          },
+          {
+            "name": "liquid",
+            "seat": 4,
+            "score": 121
+          },
+          {
+            "name": "patient-seven",
+            "seat": 5,
+            "score": 38
+          }
+        ],
+        "maxDecisionMs": 4.0989580000023125,
+        "meanDecisionMs": 0.437572251798445
+      },
+      "candidate": {
+        "score": 69,
+        "win": 0,
+        "rank": 2,
+        "balance": 3,
+        "prefixHash": "177ba2962c470c7724e18ded2c9e601c88be6059ed7d09dab7d3ca2e79070fbb",
+        "lastBid": {
+          "original": 24,
+          "actual": 24,
+          "balance": 24,
+          "letter": "T"
+        },
+        "wonLastUseful": true,
+        "lastUsefulResult": {
+          "round": 67,
+          "letter": "T",
+          "winner": 0,
+          "paid": 24
+        },
+        "players": [
+          {
+            "name": "exact-plus-denial",
+            "seat": 0,
+            "score": 69
+          },
+          {
+            "name": "clone-A",
+            "seat": 1,
+            "score": 62
+          },
+          {
+            "name": "clone-B",
+            "seat": 2,
+            "score": 69
+          },
+          {
+            "name": "aggressive",
+            "seat": 3,
+            "score": 55
+          },
+          {
+            "name": "liquid",
+            "seat": 4,
+            "score": 121
+          },
+          {
+            "name": "patient-seven",
+            "seat": 5,
+            "score": 38
+          }
+        ],
+        "maxDecisionMs": 4.983707999999751,
+        "meanDecisionMs": 0.42770174820124857
+      }
+    },
+    {
+      "scenario": {
+        "seed": 1438555447,
+        "mode": "FirstPrice",
+        "seat": 1,
+        "roster": 1
+      },
+      "control": {
+        "score": 120,
+        "win": 1,
+        "rank": 1,
+        "balance": 0,
+        "prefixHash": "b7d79b55449bee16ba6a8768c8f6b3b7b7db1585ce6aa0f5d52e87623e8f743d",
+        "lastBid": {
+          "original": 0,
+          "actual": 0,
+          "balance": 0,
+          "letter": "D"
+        },
+        "wonLastUseful": false,
+        "lastUsefulResult": {
+          "round": 67,
+          "letter": "D",
+          "winner": 2,
+          "paid": 4
+        },
+        "players": [
+          {
+            "name": "clone-A",
+            "seat": 0,
+            "score": 87
+          },
+          {
+            "name": "licensed-control",
+            "seat": 1,
+            "score": 120
+          },
+          {
+            "name": "aggressive",
+            "seat": 2,
+            "score": 45
+          },
+          {
+            "name": "pressure-14",
+            "seat": 3,
+            "score": 65
+          },
+          {
+            "name": "pressure-16",
+            "seat": 4,
+            "score": 59
+          },
+          {
+            "name": "pressure-18",
+            "seat": 5,
+            "score": 33
+          }
+        ],
+        "maxDecisionMs": 1.299250000000029,
+        "meanDecisionMs": 0.2901588928572892
+      },
+      "candidate": {
+        "score": 120,
+        "win": 1,
+        "rank": 1,
+        "balance": 0,
+        "prefixHash": "b7d79b55449bee16ba6a8768c8f6b3b7b7db1585ce6aa0f5d52e87623e8f743d",
+        "lastBid": {
+          "original": 0,
+          "actual": 0,
+          "balance": 0,
+          "letter": "D"
+        },
+        "wonLastUseful": false,
+        "lastUsefulResult": {
+          "round": 67,
+          "letter": "D",
+          "winner": 2,
+          "paid": 4
+        },
+        "players": [
+          {
+            "name": "clone-A",
+            "seat": 0,
+            "score": 87
+          },
+          {
+            "name": "exact-plus-denial",
+            "seat": 1,
+            "score": 120
+          },
+          {
+            "name": "aggressive",
+            "seat": 2,
+            "score": 45
+          },
+          {
+            "name": "pressure-14",
+            "seat": 3,
+            "score": 65
+          },
+          {
+            "name": "pressure-16",
+            "seat": 4,
+            "score": 59
+          },
+          {
+            "name": "pressure-18",
+            "seat": 5,
+            "score": 33
+          }
+        ],
+        "maxDecisionMs": 1.1869169999990845,
+        "meanDecisionMs": 0.2813624857141674
+      }
+    },
+    {
+      "scenario": {
+        "seed": 1438563366,
+        "mode": "FirstPrice",
+        "seat": 2,
+        "roster": 2
+      },
+      "control": {
+        "score": 93,
+        "win": 0,
+        "rank": 2,
+        "balance": 6,
+        "prefixHash": "157921abe6bc63f7fa6279840961acd829c065bd060a82d7080592a96b809e03",
+        "lastBid": {
+          "original": 0,
+          "actual": 0,
+          "balance": 6,
+          "letter": "T"
+        },
+        "wonLastUseful": false,
+        "lastUsefulResult": {
+          "round": 67,
+          "letter": "T",
+          "winner": 3,
+          "paid": 2
+        },
+        "players": [
+          {
+            "name": "clone-A",
+            "seat": 0,
+            "score": 71
+          },
+          {
+            "name": "long",
+            "seat": 1,
+            "score": 95
+          },
+          {
+            "name": "licensed-control",
+            "seat": 2,
+            "score": 93
+          },
+          {
+            "name": "liquid",
+            "seat": 3,
+            "score": 57
+          },
+          {
+            "name": "patient-seven",
+            "seat": 4,
+            "score": 48
+          },
+          {
+            "name": "pressure-16",
+            "seat": 5,
+            "score": 29
+          }
+        ],
+        "maxDecisionMs": 1.360499999998865,
+        "meanDecisionMs": 0.378533906474907
+      },
+      "candidate": {
+        "score": 93,
+        "win": 0,
+        "rank": 2,
+        "balance": 0,
+        "prefixHash": "157921abe6bc63f7fa6279840961acd829c065bd060a82d7080592a96b809e03",
+        "lastBid": {
+          "original": 0,
+          "actual": 6,
+          "balance": 6,
+          "letter": "T"
+        },
+        "wonLastUseful": true,
+        "lastUsefulResult": {
+          "round": 67,
+          "letter": "T",
+          "winner": 2,
+          "paid": 6
+        },
+        "players": [
+          {
+            "name": "clone-A",
+            "seat": 0,
+            "score": 71
+          },
+          {
+            "name": "long",
+            "seat": 1,
+            "score": 95
+          },
+          {
+            "name": "exact-plus-denial",
+            "seat": 2,
+            "score": 93
+          },
+          {
+            "name": "liquid",
+            "seat": 3,
+            "score": 55
+          },
+          {
+            "name": "patient-seven",
+            "seat": 4,
+            "score": 48
+          },
+          {
+            "name": "pressure-16",
+            "seat": 5,
+            "score": 29
+          }
+        ],
+        "maxDecisionMs": 1.4824580000022252,
+        "meanDecisionMs": 0.3878561007193953
+      }
+    },
+    {
+      "scenario": {
+        "seed": 1438571285,
+        "mode": "FirstPrice",
+        "seat": 3,
+        "roster": 0
+      },
+      "control": {
+        "score": 104,
+        "win": 1,
+        "rank": 1,
+        "balance": 12,
+        "prefixHash": "55a3422ca7bd1eb75b6fb698d6aab02d31215fb0dfe39cfcb7a7f447fda81542",
+        "lastBid": {
+          "original": 12,
+          "actual": 12,
+          "balance": 12,
+          "letter": "P"
+        },
+        "wonLastUseful": false,
+        "lastUsefulResult": {
+          "round": 67,
+          "letter": "P",
+          "winner": 2,
+          "paid": 13
+        },
+        "players": [
+          {
+            "name": "clone-A",
+            "seat": 0,
+            "score": 78
+          },
+          {
+            "name": "clone-B",
+            "seat": 1,
+            "score": 78
+          },
+          {
+            "name": "aggressive",
+            "seat": 2,
+            "score": 68
+          },
+          {
+            "name": "licensed-control",
+            "seat": 3,
+            "score": 104
+          },
+          {
+            "name": "liquid",
+            "seat": 4,
+            "score": 62
+          },
+          {
+            "name": "patient-seven",
+            "seat": 5,
+            "score": 79
+          }
+        ],
+        "maxDecisionMs": 1.3644580000000133,
+        "meanDecisionMs": 0.417947834532504
+      },
+      "candidate": {
+        "score": 104,
+        "win": 1,
+        "rank": 1,
+        "balance": 12,
+        "prefixHash": "55a3422ca7bd1eb75b6fb698d6aab02d31215fb0dfe39cfcb7a7f447fda81542",
+        "lastBid": {
+          "original": 12,
+          "actual": 12,
+          "balance": 12,
+          "letter": "P"
+        },
+        "wonLastUseful": false,
+        "lastUsefulResult": {
+          "round": 67,
+          "letter": "P",
+          "winner": 2,
+          "paid": 13
+        },
+        "players": [
+          {
+            "name": "clone-A",
+            "seat": 0,
+            "score": 78
+          },
+          {
+            "name": "clone-B",
+            "seat": 1,
+            "score": 78
+          },
+          {
+            "name": "aggressive",
+            "seat": 2,
+            "score": 68
+          },
+          {
+            "name": "exact-plus-denial",
+            "seat": 3,
+            "score": 104
+          },
+          {
+            "name": "liquid",
+            "seat": 4,
+            "score": 62
+          },
+          {
+            "name": "patient-seven",
+            "seat": 5,
+            "score": 79
+          }
+        ],
+        "maxDecisionMs": 1.258125000000291,
+        "meanDecisionMs": 0.40687109352519846
+      }
+    },
+    {
+      "scenario": {
+        "seed": 1438579204,
+        "mode": "FirstPrice",
+        "seat": 4,
+        "roster": 1
+      },
+      "control": {
+        "score": 90,
+        "win": 1,
+        "rank": 1,
+        "balance": 1,
+        "prefixHash": "807971077a7dc63bc090d7dbdfad8a5d6e8fc61564124262e3872ac321091f80",
+        "lastBid": {
+          "original": 0,
+          "actual": 0,
+          "balance": 1,
+          "letter": "M"
+        },
+        "wonLastUseful": false,
+        "lastUsefulResult": {
+          "round": 67,
+          "letter": "M",
+          "winner": 2,
+          "paid": 2
+        },
+        "players": [
+          {
+            "name": "clone-A",
+            "seat": 0,
+            "score": 69
+          },
+          {
+            "name": "aggressive",
+            "seat": 1,
+            "score": 77
+          },
+          {
+            "name": "pressure-14",
+            "seat": 2,
+            "score": 36
+          },
+          {
+            "name": "pressure-16",
+            "seat": 3,
+            "score": 41
+          },
+          {
+            "name": "licensed-control",
+            "seat": 4,
+            "score": 90
+          },
+          {
+            "name": "pressure-18",
+            "seat": 5,
+            "score": 62
+          }
+        ],
+        "maxDecisionMs": 1.6158340000001772,
+        "meanDecisionMs": 0.5295176906472976
+      },
+      "candidate": {
+        "score": 90,
+        "win": 1,
+        "rank": 1,
+        "balance": 1,
+        "prefixHash": "807971077a7dc63bc090d7dbdfad8a5d6e8fc61564124262e3872ac321091f80",
+        "lastBid": {
+          "original": 0,
+          "actual": 1,
+          "balance": 1,
+          "letter": "M"
+        },
+        "wonLastUseful": false,
+        "lastUsefulResult": {
+          "round": 67,
+          "letter": "M",
+          "winner": 2,
+          "paid": 2
+        },
+        "players": [
+          {
+            "name": "clone-A",
+            "seat": 0,
+            "score": 69
+          },
+          {
+            "name": "aggressive",
+            "seat": 1,
+            "score": 77
+          },
+          {
+            "name": "pressure-14",
+            "seat": 2,
+            "score": 36
+          },
+          {
+            "name": "pressure-16",
+            "seat": 3,
+            "score": 41
+          },
+          {
+            "name": "exact-plus-denial",
+            "seat": 4,
+            "score": 90
+          },
+          {
+            "name": "pressure-18",
+            "seat": 5,
+            "score": 62
+          }
+        ],
+        "maxDecisionMs": 1.3164160000014817,
+        "meanDecisionMs": 0.4910110791366187
+      }
+    },
+    {
+      "scenario": {
+        "seed": 1438587123,
+        "mode": "FirstPrice",
+        "seat": 5,
+        "roster": 2
+      },
+      "control": {
+        "score": 79,
+        "win": 0,
+        "rank": 3,
+        "balance": 0,
+        "prefixHash": "d541738dde58cd945d8bfdeb0b9106ca2d6d133c20a12f9fa988204678d6e2ec",
+        "lastBid": {
+          "original": 0,
+          "actual": 0,
+          "balance": 0,
+          "letter": "E"
+        },
+        "wonLastUseful": false,
+        "lastUsefulResult": {
+          "round": 67,
+          "letter": "E",
+          "winner": 2,
+          "paid": 5
+        },
+        "players": [
+          {
+            "name": "clone-A",
+            "seat": 0,
+            "score": 79
+          },
+          {
+            "name": "long",
+            "seat": 1,
+            "score": 90
+          },
+          {
+            "name": "liquid",
+            "seat": 2,
+            "score": 96
+          },
+          {
+            "name": "patient-seven",
+            "seat": 3,
+            "score": 50
+          },
+          {
+            "name": "pressure-16",
+            "seat": 4,
+            "score": 33
+          },
+          {
+            "name": "licensed-control",
+            "seat": 5,
+            "score": 79
+          }
+        ],
+        "maxDecisionMs": 1.3884159999979602,
+        "meanDecisionMs": 0.4394928417266181
+      },
+      "candidate": {
+        "score": 79,
+        "win": 0,
+        "rank": 3,
+        "balance": 0,
+        "prefixHash": "d541738dde58cd945d8bfdeb0b9106ca2d6d133c20a12f9fa988204678d6e2ec",
+        "lastBid": {
+          "original": 0,
+          "actual": 0,
+          "balance": 0,
+          "letter": "E"
+        },
+        "wonLastUseful": false,
+        "lastUsefulResult": {
+          "round": 67,
+          "letter": "E",
+          "winner": 2,
+          "paid": 5
+        },
+        "players": [
+          {
+            "name": "clone-A",
+            "seat": 0,
+            "score": 79
+          },
+          {
+            "name": "long",
+            "seat": 1,
+            "score": 90
+          },
+          {
+            "name": "liquid",
+            "seat": 2,
+            "score": 96
+          },
+          {
+            "name": "patient-seven",
+            "seat": 3,
+            "score": 50
+          },
+          {
+            "name": "pressure-16",
+            "seat": 4,
+            "score": 33
+          },
+          {
+            "name": "exact-plus-denial",
+            "seat": 5,
+            "score": 79
+          }
+        ],
+        "maxDecisionMs": 1.3464999999996508,
+        "meanDecisionMs": 0.42588033812965825
+      }
+    },
+    {
+      "scenario": {
+        "seed": 1438595042,
+        "mode": "FirstPrice",
+        "seat": 0,
+        "roster": 0
+      },
+      "control": {
+        "score": 100,
+        "win": 1,
+        "rank": 1,
+        "balance": 7,
+        "prefixHash": "e6bae95f5d4e250101b8c921bda622f0adeb10f03091dee34afbd8d37cb03e84",
+        "lastBid": {
+          "original": 0,
+          "actual": 0,
+          "balance": 7,
+          "letter": "A"
+        },
+        "wonLastUseful": false,
+        "lastUsefulResult": {
+          "round": 67,
+          "letter": "A",
+          "winner": 1,
+          "paid": 17
+        },
+        "players": [
+          {
+            "name": "licensed-control",
+            "seat": 0,
+            "score": 100
+          },
+          {
+            "name": "clone-A",
+            "seat": 1,
+            "score": 93
+          },
+          {
+            "name": "clone-B",
+            "seat": 2,
+            "score": 92
+          },
+          {
+            "name": "aggressive",
+            "seat": 3,
+            "score": 45
+          },
+          {
+            "name": "liquid",
+            "seat": 4,
+            "score": 75
+          },
+          {
+            "name": "patient-seven",
+            "seat": 5,
+            "score": 50
+          }
+        ],
+        "maxDecisionMs": 1.1277919999993173,
+        "meanDecisionMs": 0.33442358273357237
+      },
+      "candidate": {
+        "score": 100,
+        "win": 1,
+        "rank": 1,
+        "balance": 7,
+        "prefixHash": "e6bae95f5d4e250101b8c921bda622f0adeb10f03091dee34afbd8d37cb03e84",
+        "lastBid": {
+          "original": 0,
+          "actual": 7,
+          "balance": 7,
+          "letter": "A"
+        },
+        "wonLastUseful": false,
+        "lastUsefulResult": {
+          "round": 67,
+          "letter": "A",
+          "winner": 1,
+          "paid": 17
+        },
+        "players": [
+          {
+            "name": "exact-plus-denial",
+            "seat": 0,
+            "score": 100
+          },
+          {
+            "name": "clone-A",
+            "seat": 1,
+            "score": 93
+          },
+          {
+            "name": "clone-B",
+            "seat": 2,
+            "score": 92
+          },
+          {
+            "name": "aggressive",
+            "seat": 3,
+            "score": 45
+          },
+          {
+            "name": "liquid",
+            "seat": 4,
+            "score": 75
+          },
+          {
+            "name": "patient-seven",
+            "seat": 5,
+            "score": 50
+          }
+        ],
+        "maxDecisionMs": 1.2776660000017728,
+        "meanDecisionMs": 0.3232094748202942
+      }
+    },
+    {
+      "scenario": {
+        "seed": 1438602961,
+        "mode": "FirstPrice",
+        "seat": 1,
+        "roster": 1
+      },
+      "control": {
+        "score": 88,
+        "win": 1,
+        "rank": 1,
+        "balance": 3,
+        "prefixHash": "a1e5d7f2724b3ad691d70f744e671c1e8d28dd0766cb66e9fdefec7984778c78",
+        "lastBid": {
+          "original": 0,
+          "actual": 0,
+          "balance": 3,
+          "letter": "I"
+        },
+        "wonLastUseful": false,
+        "lastUsefulResult": {
+          "round": 67,
+          "letter": "I",
+          "paid": 0
+        },
+        "players": [
+          {
+            "name": "clone-A",
+            "seat": 0,
+            "score": 86
+          },
+          {
+            "name": "licensed-control",
+            "seat": 1,
+            "score": 88
+          },
+          {
+            "name": "aggressive",
+            "seat": 2,
+            "score": 78
+          },
+          {
+            "name": "pressure-14",
+            "seat": 3,
+            "score": 49
+          },
+          {
+            "name": "pressure-16",
+            "seat": 4,
+            "score": 67
+          },
+          {
+            "name": "pressure-18",
+            "seat": 5,
+            "score": 52
+          }
+        ],
+        "maxDecisionMs": 1.4668749999982538,
+        "meanDecisionMs": 0.3360095611510031
+      },
+      "candidate": {
+        "score": 88,
+        "win": 1,
+        "rank": 1,
+        "balance": 0,
+        "prefixHash": "a1e5d7f2724b3ad691d70f744e671c1e8d28dd0766cb66e9fdefec7984778c78",
+        "lastBid": {
+          "original": 0,
+          "actual": 3,
+          "balance": 3,
+          "letter": "I"
+        },
+        "wonLastUseful": true,
+        "lastUsefulResult": {
+          "round": 67,
+          "letter": "I",
+          "winner": 1,
+          "paid": 3
+        },
+        "players": [
+          {
+            "name": "clone-A",
+            "seat": 0,
+            "score": 86
+          },
+          {
+            "name": "exact-plus-denial",
+            "seat": 1,
+            "score": 88
+          },
+          {
+            "name": "aggressive",
+            "seat": 2,
+            "score": 78
+          },
+          {
+            "name": "pressure-14",
+            "seat": 3,
+            "score": 49
+          },
+          {
+            "name": "pressure-16",
+            "seat": 4,
+            "score": 67
+          },
+          {
+            "name": "pressure-18",
+            "seat": 5,
+            "score": 52
+          }
+        ],
+        "maxDecisionMs": 1.4162919999980659,
+        "meanDecisionMs": 0.3349604172663348
+      }
+    },
+    {
+      "scenario": {
+        "seed": 1438610880,
+        "mode": "FirstPrice",
+        "seat": 2,
+        "roster": 2
+      },
+      "control": {
+        "score": 108,
+        "win": 1,
+        "rank": 1,
+        "balance": 5,
+        "prefixHash": "725c6aa59a8d04ffdd24ee009de53a8561955b0c08b319d4c365eecbb913bc61",
+        "lastBid": {
+          "original": 0,
+          "actual": 0,
+          "balance": 5,
+          "letter": "O"
+        },
+        "wonLastUseful": false,
+        "lastUsefulResult": {
+          "round": 67,
+          "letter": "O",
+          "winner": 1,
+          "paid": 11
+        },
+        "players": [
+          {
+            "name": "clone-A",
+            "seat": 0,
+            "score": 82
+          },
+          {
+            "name": "long",
+            "seat": 1,
+            "score": 83
+          },
+          {
+            "name": "licensed-control",
+            "seat": 2,
+            "score": 108
+          },
+          {
+            "name": "liquid",
+            "seat": 3,
+            "score": 73
+          },
+          {
+            "name": "patient-seven",
+            "seat": 4,
+            "score": 61
+          },
+          {
+            "name": "pressure-16",
+            "seat": 5,
+            "score": 44
+          }
+        ],
+        "maxDecisionMs": 1.420125000000553,
+        "meanDecisionMs": 0.4308618345323941
+      },
+      "candidate": {
+        "score": 108,
+        "win": 1,
+        "rank": 1,
+        "balance": 5,
+        "prefixHash": "725c6aa59a8d04ffdd24ee009de53a8561955b0c08b319d4c365eecbb913bc61",
+        "lastBid": {
+          "original": 0,
+          "actual": 5,
+          "balance": 5,
+          "letter": "O"
+        },
+        "wonLastUseful": false,
+        "lastUsefulResult": {
+          "round": 67,
+          "letter": "O",
+          "winner": 1,
+          "paid": 11
+        },
+        "players": [
+          {
+            "name": "clone-A",
+            "seat": 0,
+            "score": 82
+          },
+          {
+            "name": "long",
+            "seat": 1,
+            "score": 83
+          },
+          {
+            "name": "exact-plus-denial",
+            "seat": 2,
+            "score": 108
+          },
+          {
+            "name": "liquid",
+            "seat": 3,
+            "score": 73
+          },
+          {
+            "name": "patient-seven",
+            "seat": 4,
+            "score": 61
+          },
+          {
+            "name": "pressure-16",
+            "seat": 5,
+            "score": 44
+          }
+        ],
+        "maxDecisionMs": 1.2098750000004657,
+        "meanDecisionMs": 0.40190674100732204
+      }
+    },
+    {
+      "scenario": {
+        "seed": 1438618799,
+        "mode": "FirstPrice",
+        "seat": 3,
+        "roster": 0
+      },
+      "control": {
+        "score": 96,
+        "win": 1,
+        "rank": 1,
+        "balance": 51,
+        "prefixHash": "9e540266403a680aa27e8656cc333e67700906b64cc73c0703c44dda62a9c948",
+        "lastBid": {
+          "original": 0,
+          "actual": 0,
+          "balance": 51,
+          "letter": "E"
+        },
+        "wonLastUseful": false,
+        "lastUsefulResult": {
+          "round": 67,
+          "letter": "E",
+          "winner": 0,
+          "paid": 1
+        },
+        "players": [
+          {
+            "name": "clone-A",
+            "seat": 0,
+            "score": 80
+          },
+          {
+            "name": "clone-B",
+            "seat": 1,
+            "score": 92
+          },
+          {
+            "name": "aggressive",
+            "seat": 2,
+            "score": 87
+          },
+          {
+            "name": "licensed-control",
+            "seat": 3,
+            "score": 96
+          },
+          {
+            "name": "liquid",
+            "seat": 4,
+            "score": 66
+          },
+          {
+            "name": "patient-seven",
+            "seat": 5,
+            "score": 52
+          }
+        ],
+        "maxDecisionMs": 5.005333000000974,
+        "meanDecisionMs": 0.4569791521739387
+      },
+      "candidate": {
+        "score": 96,
+        "win": 1,
+        "rank": 1,
+        "balance": 0,
+        "prefixHash": "9e540266403a680aa27e8656cc333e67700906b64cc73c0703c44dda62a9c948",
+        "lastBid": {
+          "original": 0,
+          "actual": 51,
+          "balance": 51,
+          "letter": "E"
+        },
+        "wonLastUseful": true,
+        "lastUsefulResult": {
+          "round": 67,
+          "letter": "E",
+          "winner": 3,
+          "paid": 51
+        },
+        "players": [
+          {
+            "name": "clone-A",
+            "seat": 0,
+            "score": 78
+          },
+          {
+            "name": "clone-B",
+            "seat": 1,
+            "score": 92
+          },
+          {
+            "name": "aggressive",
+            "seat": 2,
+            "score": 87
+          },
+          {
+            "name": "exact-plus-denial",
+            "seat": 3,
+            "score": 96
+          },
+          {
+            "name": "liquid",
+            "seat": 4,
+            "score": 66
+          },
+          {
+            "name": "patient-seven",
+            "seat": 5,
+            "score": 52
+          }
+        ],
+        "maxDecisionMs": 5.090041999999812,
+        "meanDecisionMs": 0.4859801086956092
+      }
+    },
+    {
+      "scenario": {
+        "seed": 1438626718,
+        "mode": "FirstPrice",
+        "seat": 4,
+        "roster": 1
+      },
+      "control": {
+        "score": 130,
+        "win": 1,
+        "rank": 1,
+        "balance": 5,
+        "prefixHash": "e7a4122a4ff38e139df2433c69ea1740ae86bdf6397659f25de98afa1e92c027",
+        "lastBid": {
+          "original": 5,
+          "actual": 5,
+          "balance": 5,
+          "letter": "I"
+        },
+        "wonLastUseful": false,
+        "lastUsefulResult": {
+          "round": 67,
+          "letter": "I",
+          "winner": 5,
+          "paid": 6
+        },
+        "players": [
+          {
+            "name": "clone-A",
+            "seat": 0,
+            "score": 92
+          },
+          {
+            "name": "aggressive",
+            "seat": 1,
+            "score": 72
+          },
+          {
+            "name": "pressure-14",
+            "seat": 2,
+            "score": 42
+          },
+          {
+            "name": "pressure-16",
+            "seat": 3,
+            "score": 65
+          },
+          {
+            "name": "licensed-control",
+            "seat": 4,
+            "score": 130
+          },
+          {
+            "name": "pressure-18",
+            "seat": 5,
+            "score": 32
+          }
+        ],
+        "maxDecisionMs": 1.5259589999986929,
+        "meanDecisionMs": 0.383744920863222
+      },
+      "candidate": {
+        "score": 130,
+        "win": 1,
+        "rank": 1,
+        "balance": 5,
+        "prefixHash": "e7a4122a4ff38e139df2433c69ea1740ae86bdf6397659f25de98afa1e92c027",
+        "lastBid": {
+          "original": 5,
+          "actual": 5,
+          "balance": 5,
+          "letter": "I"
+        },
+        "wonLastUseful": false,
+        "lastUsefulResult": {
+          "round": 67,
+          "letter": "I",
+          "winner": 5,
+          "paid": 6
+        },
+        "players": [
+          {
+            "name": "clone-A",
+            "seat": 0,
+            "score": 92
+          },
+          {
+            "name": "aggressive",
+            "seat": 1,
+            "score": 72
+          },
+          {
+            "name": "pressure-14",
+            "seat": 2,
+            "score": 42
+          },
+          {
+            "name": "pressure-16",
+            "seat": 3,
+            "score": 65
+          },
+          {
+            "name": "exact-plus-denial",
+            "seat": 4,
+            "score": 130
+          },
+          {
+            "name": "pressure-18",
+            "seat": 5,
+            "score": 32
+          }
+        ],
+        "maxDecisionMs": 1.4509580000012647,
+        "meanDecisionMs": 0.36494839568357546
+      }
+    },
+    {
+      "scenario": {
+        "seed": 1438634637,
+        "mode": "FirstPrice",
+        "seat": 5,
+        "roster": 2
+      },
+      "control": {
+        "score": 87,
+        "win": 0.5,
+        "rank": 1,
+        "balance": 2,
+        "prefixHash": "c18c6690cecf3fd70986c9308f2c5712340cd4ad00d0b6a2f00119a4e4013acb",
+        "lastBid": {
+          "original": 2,
+          "actual": 2,
+          "balance": 2,
+          "letter": "E"
+        },
+        "wonLastUseful": false,
+        "lastUsefulResult": {
+          "round": 67,
+          "letter": "E",
+          "winner": 1,
+          "paid": 11
+        },
+        "players": [
+          {
+            "name": "clone-A",
+            "seat": 0,
+            "score": 87
+          },
+          {
+            "name": "long",
+            "seat": 1,
+            "score": 56
+          },
+          {
+            "name": "liquid",
+            "seat": 2,
+            "score": 64
+          },
+          {
+            "name": "patient-seven",
+            "seat": 3,
+            "score": 55
+          },
+          {
+            "name": "pressure-16",
+            "seat": 4,
+            "score": 42
+          },
+          {
+            "name": "licensed-control",
+            "seat": 5,
+            "score": 87
+          }
+        ],
+        "maxDecisionMs": 1.4947079999983544,
+        "meanDecisionMs": 0.497505122302009
+      },
+      "candidate": {
+        "score": 87,
+        "win": 0.5,
+        "rank": 1,
+        "balance": 2,
+        "prefixHash": "c18c6690cecf3fd70986c9308f2c5712340cd4ad00d0b6a2f00119a4e4013acb",
+        "lastBid": {
+          "original": 2,
+          "actual": 2,
+          "balance": 2,
+          "letter": "E"
+        },
+        "wonLastUseful": false,
+        "lastUsefulResult": {
+          "round": 67,
+          "letter": "E",
+          "winner": 1,
+          "paid": 11
+        },
+        "players": [
+          {
+            "name": "clone-A",
+            "seat": 0,
+            "score": 87
+          },
+          {
+            "name": "long",
+            "seat": 1,
+            "score": 56
+          },
+          {
+            "name": "liquid",
+            "seat": 2,
+            "score": 64
+          },
+          {
+            "name": "patient-seven",
+            "seat": 3,
+            "score": 55
+          },
+          {
+            "name": "pressure-16",
+            "seat": 4,
+            "score": 42
+          },
+          {
+            "name": "exact-plus-denial",
+            "seat": 5,
+            "score": 87
+          }
+        ],
+        "maxDecisionMs": 1.4494999999988067,
+        "meanDecisionMs": 0.46897873381275657
+      }
+    },
+    {
+      "scenario": {
+        "seed": 1438642556,
+        "mode": "FirstPrice",
+        "seat": 0,
+        "roster": 0
+      },
+      "control": {
+        "score": 87,
+        "win": 1,
+        "rank": 1,
+        "balance": 11,
+        "prefixHash": "ec02bc65098d58d8afe9f79466271b76ad95c600eaf629fc74f1f68599f13b6b",
+        "lastBid": {
+          "original": 0,
+          "actual": 0,
+          "balance": 11,
+          "letter": "O"
+        },
+        "wonLastUseful": false,
+        "lastUsefulResult": {
+          "round": 67,
+          "letter": "O",
+          "winner": 5,
+          "paid": 7
+        },
+        "players": [
+          {
+            "name": "licensed-control",
+            "seat": 0,
+            "score": 87
+          },
+          {
+            "name": "clone-A",
+            "seat": 1,
+            "score": 76
+          },
+          {
+            "name": "clone-B",
+            "seat": 2,
+            "score": 75
+          },
+          {
+            "name": "aggressive",
+            "seat": 3,
+            "score": 69
+          },
+          {
+            "name": "liquid",
+            "seat": 4,
+            "score": 80
+          },
+          {
+            "name": "patient-seven",
+            "seat": 5,
+            "score": 47
+          }
+        ],
+        "maxDecisionMs": 1.804415999999037,
+        "meanDecisionMs": 0.3294163188406526
+      },
+      "candidate": {
+        "score": 87,
+        "win": 1,
+        "rank": 1,
+        "balance": 0,
+        "prefixHash": "ec02bc65098d58d8afe9f79466271b76ad95c600eaf629fc74f1f68599f13b6b",
+        "lastBid": {
+          "original": 0,
+          "actual": 11,
+          "balance": 11,
+          "letter": "O"
+        },
+        "wonLastUseful": true,
+        "lastUsefulResult": {
+          "round": 67,
+          "letter": "O",
+          "winner": 0,
+          "paid": 11
+        },
+        "players": [
+          {
+            "name": "exact-plus-denial",
+            "seat": 0,
+            "score": 87
+          },
+          {
+            "name": "clone-A",
+            "seat": 1,
+            "score": 76
+          },
+          {
+            "name": "clone-B",
+            "seat": 2,
+            "score": 75
+          },
+          {
+            "name": "aggressive",
+            "seat": 3,
+            "score": 69
+          },
+          {
+            "name": "liquid",
+            "seat": 4,
+            "score": 80
+          },
+          {
+            "name": "patient-seven",
+            "seat": 5,
+            "score": 47
+          }
+        ],
+        "maxDecisionMs": 2.2275829999998678,
+        "meanDecisionMs": 0.4032578333334759
+      }
+    },
+    {
+      "scenario": {
+        "seed": 1438650475,
+        "mode": "FirstPrice",
+        "seat": 1,
+        "roster": 1
+      },
+      "control": {
+        "score": 90,
+        "win": 1,
+        "rank": 1,
+        "balance": 2,
+        "prefixHash": "8e9bb031328fb1a5c345f8bab107437c62872e56008987148a7c09d4b9744b4a",
+        "lastBid": {
+          "original": 2,
+          "actual": 2,
+          "balance": 2,
+          "letter": "A"
+        },
+        "wonLastUseful": false,
+        "lastUsefulResult": {
+          "round": 67,
+          "letter": "A",
+          "winner": 5,
+          "paid": 3
+        },
+        "players": [
+          {
+            "name": "clone-A",
+            "seat": 0,
+            "score": 77
+          },
+          {
+            "name": "licensed-control",
+            "seat": 1,
+            "score": 90
+          },
+          {
+            "name": "aggressive",
+            "seat": 2,
+            "score": 88
+          },
+          {
+            "name": "pressure-14",
+            "seat": 3,
+            "score": 56
+          },
+          {
+            "name": "pressure-16",
+            "seat": 4,
+            "score": 28
+          },
+          {
+            "name": "pressure-18",
+            "seat": 5,
+            "score": 37
+          }
+        ],
+        "maxDecisionMs": 1.420124999996915,
+        "meanDecisionMs": 0.41075062142845126
+      },
+      "candidate": {
+        "score": 90,
+        "win": 1,
+        "rank": 1,
+        "balance": 2,
+        "prefixHash": "8e9bb031328fb1a5c345f8bab107437c62872e56008987148a7c09d4b9744b4a",
+        "lastBid": {
+          "original": 2,
+          "actual": 2,
+          "balance": 2,
+          "letter": "A"
+        },
+        "wonLastUseful": false,
+        "lastUsefulResult": {
+          "round": 67,
+          "letter": "A",
+          "winner": 5,
+          "paid": 3
+        },
+        "players": [
+          {
+            "name": "clone-A",
+            "seat": 0,
+            "score": 77
+          },
+          {
+            "name": "exact-plus-denial",
+            "seat": 1,
+            "score": 90
+          },
+          {
+            "name": "aggressive",
+            "seat": 2,
+            "score": 88
+          },
+          {
+            "name": "pressure-14",
+            "seat": 3,
+            "score": 56
+          },
+          {
+            "name": "pressure-16",
+            "seat": 4,
+            "score": 28
+          },
+          {
+            "name": "pressure-18",
+            "seat": 5,
+            "score": 37
+          }
+        ],
+        "maxDecisionMs": 1.2733329999973648,
+        "meanDecisionMs": 0.3974937999999903
+      }
+    },
+    {
+      "scenario": {
+        "seed": 1438658394,
+        "mode": "FirstPrice",
+        "seat": 2,
+        "roster": 2
+      },
+      "control": {
+        "score": 81,
+        "win": 0,
+        "rank": 2,
+        "balance": 3,
+        "prefixHash": "9ecf677891a14c237ece45033137423f0e43a92747c03302ad344c5ed3af47e5",
+        "lastBid": {
+          "original": 9,
+          "actual": 9,
+          "balance": 9,
+          "letter": "D"
+        },
+        "wonLastUseful": true,
+        "lastUsefulResult": {
+          "round": 67,
+          "letter": "D",
+          "winner": 2,
+          "paid": 9
+        },
+        "players": [
+          {
+            "name": "clone-A",
+            "seat": 0,
+            "score": 90
+          },
+          {
+            "name": "long",
+            "seat": 1,
+            "score": 73
+          },
+          {
+            "name": "licensed-control",
+            "seat": 2,
+            "score": 81
+          },
+          {
+            "name": "liquid",
+            "seat": 3,
+            "score": 68
+          },
+          {
+            "name": "patient-seven",
+            "seat": 4,
+            "score": 44
+          },
+          {
+            "name": "pressure-16",
+            "seat": 5,
+            "score": 44
+          }
+        ],
+        "maxDecisionMs": 1.4347500000003492,
+        "meanDecisionMs": 0.4661750431653757
+      },
+      "candidate": {
+        "score": 81,
+        "win": 0,
+        "rank": 2,
+        "balance": 3,
+        "prefixHash": "9ecf677891a14c237ece45033137423f0e43a92747c03302ad344c5ed3af47e5",
+        "lastBid": {
+          "original": 9,
+          "actual": 9,
+          "balance": 9,
+          "letter": "D"
+        },
+        "wonLastUseful": true,
+        "lastUsefulResult": {
+          "round": 67,
+          "letter": "D",
+          "winner": 2,
+          "paid": 9
+        },
+        "players": [
+          {
+            "name": "clone-A",
+            "seat": 0,
+            "score": 90
+          },
+          {
+            "name": "long",
+            "seat": 1,
+            "score": 73
+          },
+          {
+            "name": "exact-plus-denial",
+            "seat": 2,
+            "score": 81
+          },
+          {
+            "name": "liquid",
+            "seat": 3,
+            "score": 68
+          },
+          {
+            "name": "patient-seven",
+            "seat": 4,
+            "score": 44
+          },
+          {
+            "name": "pressure-16",
+            "seat": 5,
+            "score": 44
+          }
+        ],
+        "maxDecisionMs": 1.3540830000019923,
+        "meanDecisionMs": 0.45476525179851673
+      }
+    },
+    {
+      "scenario": {
+        "seed": 1438666313,
+        "mode": "FirstPrice",
+        "seat": 3,
+        "roster": 0
+      },
+      "control": {
+        "score": 89,
+        "win": 1,
+        "rank": 1,
+        "balance": 12,
+        "prefixHash": "f6ddb9d80ac056e06d2c3fab60654197930c4d9de83474a89959b85402aeb7cb",
+        "lastBid": {
+          "original": 0,
+          "actual": 0,
+          "balance": 12,
+          "letter": "O"
+        },
+        "wonLastUseful": false,
+        "lastUsefulResult": {
+          "round": 67,
+          "letter": "O",
+          "winner": 0,
+          "paid": 24
+        },
+        "players": [
+          {
+            "name": "clone-A",
+            "seat": 0,
+            "score": 81
+          },
+          {
+            "name": "clone-B",
+            "seat": 1,
+            "score": 56
+          },
+          {
+            "name": "aggressive",
+            "seat": 2,
+            "score": 74
+          },
+          {
+            "name": "licensed-control",
+            "seat": 3,
+            "score": 89
+          },
+          {
+            "name": "liquid",
+            "seat": 4,
+            "score": 71
+          },
+          {
+            "name": "patient-seven",
+            "seat": 5,
+            "score": 52
+          }
+        ],
+        "maxDecisionMs": 2.636000000002241,
+        "meanDecisionMs": 0.6321243453238684
+      },
+      "candidate": {
+        "score": 89,
+        "win": 1,
+        "rank": 1,
+        "balance": 12,
+        "prefixHash": "f6ddb9d80ac056e06d2c3fab60654197930c4d9de83474a89959b85402aeb7cb",
+        "lastBid": {
+          "original": 0,
+          "actual": 12,
+          "balance": 12,
+          "letter": "O"
+        },
+        "wonLastUseful": false,
+        "lastUsefulResult": {
+          "round": 67,
+          "letter": "O",
+          "winner": 0,
+          "paid": 24
+        },
+        "players": [
+          {
+            "name": "clone-A",
+            "seat": 0,
+            "score": 81
+          },
+          {
+            "name": "clone-B",
+            "seat": 1,
+            "score": 56
+          },
+          {
+            "name": "aggressive",
+            "seat": 2,
+            "score": 74
+          },
+          {
+            "name": "exact-plus-denial",
+            "seat": 3,
+            "score": 89
+          },
+          {
+            "name": "liquid",
+            "seat": 4,
+            "score": 71
+          },
+          {
+            "name": "patient-seven",
+            "seat": 5,
+            "score": 52
+          }
+        ],
+        "maxDecisionMs": 1.9891250000000582,
+        "meanDecisionMs": 0.5974218057553438
+      }
+    },
+    {
+      "scenario": {
+        "seed": 1438674232,
+        "mode": "FirstPrice",
+        "seat": 4,
+        "roster": 1
+      },
+      "control": {
+        "score": 93,
+        "win": 1,
+        "rank": 1,
+        "balance": 2,
+        "prefixHash": "9944d76ad3631d85253258ae27e343b5e45ae812dc3a9a87b1f59ce460e0e4e2",
+        "lastBid": {
+          "original": 0,
+          "actual": 0,
+          "balance": 2,
+          "letter": "M"
+        },
+        "wonLastUseful": false,
+        "lastUsefulResult": {
+          "round": 67,
+          "letter": "M",
+          "winner": 1,
+          "paid": 2
+        },
+        "players": [
+          {
+            "name": "clone-A",
+            "seat": 0,
+            "score": 92
+          },
+          {
+            "name": "aggressive",
+            "seat": 1,
+            "score": 43
+          },
+          {
+            "name": "pressure-14",
+            "seat": 2,
+            "score": 54
+          },
+          {
+            "name": "pressure-16",
+            "seat": 3,
+            "score": 43
+          },
+          {
+            "name": "licensed-control",
+            "seat": 4,
+            "score": 93
+          },
+          {
+            "name": "pressure-18",
+            "seat": 5,
+            "score": 27
+          }
+        ],
+        "maxDecisionMs": 1.4029579999987618,
+        "meanDecisionMs": 0.4946837697842436
+      },
+      "candidate": {
+        "score": 93,
+        "win": 1,
+        "rank": 1,
+        "balance": 2,
+        "prefixHash": "9944d76ad3631d85253258ae27e343b5e45ae812dc3a9a87b1f59ce460e0e4e2",
+        "lastBid": {
+          "original": 0,
+          "actual": 2,
+          "balance": 2,
+          "letter": "M"
+        },
+        "wonLastUseful": false,
+        "lastUsefulResult": {
+          "round": 67,
+          "letter": "M",
+          "winner": 1,
+          "paid": 2
+        },
+        "players": [
+          {
+            "name": "clone-A",
+            "seat": 0,
+            "score": 92
+          },
+          {
+            "name": "aggressive",
+            "seat": 1,
+            "score": 43
+          },
+          {
+            "name": "pressure-14",
+            "seat": 2,
+            "score": 54
+          },
+          {
+            "name": "pressure-16",
+            "seat": 3,
+            "score": 43
+          },
+          {
+            "name": "exact-plus-denial",
+            "seat": 4,
+            "score": 93
+          },
+          {
+            "name": "pressure-18",
+            "seat": 5,
+            "score": 27
+          }
+        ],
+        "maxDecisionMs": 1.4070409999985714,
+        "meanDecisionMs": 0.4935093309352151
+      }
+    },
+    {
+      "scenario": {
+        "seed": 1438682151,
+        "mode": "FirstPrice",
+        "seat": 5,
+        "roster": 2
+      },
+      "control": {
+        "score": 77,
+        "win": 0,
+        "rank": 3,
+        "balance": 0,
+        "prefixHash": "6815deccbe2b6d7f01e2c7b4a96ad90cc5ed3526c6b11be959662c8c4e068cfe",
+        "lastBid": {
+          "original": 0,
+          "actual": 0,
+          "balance": 0,
+          "letter": "S"
+        },
+        "wonLastUseful": false,
+        "lastUsefulResult": {
+          "round": 67,
+          "letter": "S",
+          "winner": 3,
+          "paid": 4
+        },
+        "players": [
+          {
+            "name": "clone-A",
+            "seat": 0,
+            "score": 90
+          },
+          {
+            "name": "long",
+            "seat": 1,
+            "score": 108
+          },
+          {
+            "name": "liquid",
+            "seat": 2,
+            "score": 55
+          },
+          {
+            "name": "patient-seven",
+            "seat": 3,
+            "score": 33
+          },
+          {
+            "name": "pressure-16",
+            "seat": 4,
+            "score": 31
+          },
+          {
+            "name": "licensed-control",
+            "seat": 5,
+            "score": 77
+          }
+        ],
+        "maxDecisionMs": 1.3556659999994736,
+        "meanDecisionMs": 0.48541814388496646
+      },
+      "candidate": {
+        "score": 77,
+        "win": 0,
+        "rank": 3,
+        "balance": 0,
+        "prefixHash": "6815deccbe2b6d7f01e2c7b4a96ad90cc5ed3526c6b11be959662c8c4e068cfe",
+        "lastBid": {
+          "original": 0,
+          "actual": 0,
+          "balance": 0,
+          "letter": "S"
+        },
+        "wonLastUseful": false,
+        "lastUsefulResult": {
+          "round": 67,
+          "letter": "S",
+          "winner": 3,
+          "paid": 4
+        },
+        "players": [
+          {
+            "name": "clone-A",
+            "seat": 0,
+            "score": 90
+          },
+          {
+            "name": "long",
+            "seat": 1,
+            "score": 108
+          },
+          {
+            "name": "liquid",
+            "seat": 2,
+            "score": 55
+          },
+          {
+            "name": "patient-seven",
+            "seat": 3,
+            "score": 33
+          },
+          {
+            "name": "pressure-16",
+            "seat": 4,
+            "score": 31
+          },
+          {
+            "name": "exact-plus-denial",
+            "seat": 5,
+            "score": 77
+          }
+        ],
+        "maxDecisionMs": 1.2710000000006403,
+        "meanDecisionMs": 0.46094810791364843
+      }
+    }
+  ],
+  "errors": [],
+  "elapsedMs": 29327.903167,
+  "summary": {
+    "control": {
+      "games": 48,
+      "wins": 21.5,
+      "winRate": 0.4479166666666667,
+      "meanScore": 87.89583333333333,
+      "meanRank": 1.9166666666666667,
+      "maxDecisionMs": 5.005333000000974,
+      "meanDecisionMs": 0.4516039977474051
+    },
+    "candidate": {
+      "games": 48,
+      "wins": 21.5,
+      "winRate": 0.4479166666666667,
+      "meanScore": 87.89583333333333,
+      "meanRank": 1.9166666666666667,
+      "maxDecisionMs": 5.090041999999812,
+      "meanDecisionMs": 0.4375469409556309
+    },
+    "meanScoreDelta": 0,
+    "meanWinDelta": 0,
+    "winDeltaSE": 0,
+    "scoreDeltaSE": 0,
+    "improvedWins": 0,
+    "reducedWins": 0,
+    "ownScoreLosses": 0,
+    "ownScoreGains": 0,
+    "changedBids": 20,
+    "changedLastUsefulWinner": 8,
+    "prefixDifferences": 0
+  },
+  "byMode": {
+    "SecondPrice": {
+      "control": {
+        "games": 24,
+        "wins": 8,
+        "winRate": 0.3333333333333333,
+        "meanScore": 84.91666666666667,
+        "meanRank": 2.2916666666666665,
+        "maxDecisionMs": 4.335749999999962,
+        "meanDecisionMs": 0.4584668707271749
+      },
+      "candidate": {
+        "games": 24,
+        "wins": 8,
+        "winRate": 0.3333333333333333,
+        "meanScore": 84.91666666666667,
+        "meanRank": 2.2916666666666665,
+        "maxDecisionMs": 3.1009579999999914,
+        "meanDecisionMs": 0.4404148597473178
+      },
+      "meanScoreDelta": 0,
+      "meanWinDelta": 0,
+      "winDeltaSE": 0,
+      "scoreDeltaSE": 0,
+      "improvedWins": 0,
+      "reducedWins": 0,
+      "ownScoreLosses": 0,
+      "ownScoreGains": 0,
+      "changedBids": 9,
+      "changedLastUsefulWinner": 3,
+      "prefixDifferences": 0
+    },
+    "FirstPrice": {
+      "control": {
+        "games": 24,
+        "wins": 13.5,
+        "winRate": 0.5625,
+        "meanScore": 90.875,
+        "meanRank": 1.5416666666666667,
+        "maxDecisionMs": 5.005333000000974,
+        "meanDecisionMs": 0.44474112476763544
+      },
+      "candidate": {
+        "games": 24,
+        "wins": 13.5,
+        "winRate": 0.5625,
+        "meanScore": 90.875,
+        "meanRank": 1.5416666666666667,
+        "maxDecisionMs": 5.090041999999812,
+        "meanDecisionMs": 0.43467902216394366
+      },
+      "meanScoreDelta": 0,
+      "meanWinDelta": 0,
+      "winDeltaSE": 0,
+      "scoreDeltaSE": 0,
+      "improvedWins": 0,
+      "reducedWins": 0,
+      "ownScoreLosses": 0,
+      "ownScoreGains": 0,
+      "changedBids": 11,
+      "changedLastUsefulWinner": 5,
+      "prefixDifferences": 0
+    }
+  },
+  "finishedAt": "2026-10-25T07:12:31.008Z"
+}

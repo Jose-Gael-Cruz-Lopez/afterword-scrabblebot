@@ -1,7 +1,9 @@
 import { parentPort, workerData } from "node:worker_threads";
 import { readFileSync } from "node:fs";
 import { createStrategy, type BidContext } from "./strategy.js";
-import { createGauchoStrategy, type GauchoReference } from "./reference-gaucho/adapter.js";
+import { createGauchoStrategy } from "./reference-gaucho/adapter.js";
+import { ExactTerminalStrategy } from "./reference-gaucho/terminal-exact.js";
+import { LastTileDenial, type LastTilePolicy } from "./last-tile-denial.js";
 
 if (!parentPort) throw new Error("The planner must run in a worker thread");
 const dictionary = readFileSync(workerData.dictionaryPath, "utf8").split(/\r?\n/)
@@ -13,14 +15,17 @@ if (!dictionary.length) throw new Error("The official dictionary is empty");
 const policy = process.env.BOT_POLICY ?? "licensed";
 if(!["licensed","original"].includes(policy))throw new Error("BOT_POLICY must be licensed or original");
 const original = policy === "original" ? createStrategy(dictionary, { marketRebuild: process.env.MARKET_REBUILD === "1" }) : undefined;
-const matches = new Map<string,GauchoReference>();
+const matches = new Map<string,LastTilePolicy>();
 // Compile the shared dictionary before connecting, outside auction latency.
 createGauchoStrategy(dictionary);
-function reference(ctx:BidContext):GauchoReference{
+function reference(ctx:BidContext):LastTilePolicy{
   const key=ctx.matchId??"test";
   let planner=matches.get(key);
   if(!planner){
-    planner=createGauchoStrategy(dictionary,{name:"Afterword", terminalSafe:true});
+    planner = new LastTileDenial(new ExactTerminalStrategy(
+      createGauchoStrategy(dictionary, { name: "Afterword", terminalSafe: true }),
+      { timeBudgetMs: 18, maxNodes: 8000 },
+    ));
     if(matches.size>=16)matches.delete(matches.keys().next().value!);
     matches.set(key,planner);
   }

@@ -10,13 +10,18 @@ Our client supplies the official 172,820-word ENABLE dictionary, private initial
 
 Our final-auction adapter preserves useful last-purchase combinations. With one usable purchase remaining, it sells a word only when exact bounded search certifies that both winning and losing the current tile retain the optimal partition value. It holds other combinations while cash remains; zero-cash fallback can fund a last purchase. The adapter option is explicit in the live worker, and defaults off in untouched reference benchmarks. The final awarded tile is unusable because the server ends the match atomically.
 
+The live endgame now wraps that policy with bounded **exact partition search** (18ms /8,000 nodes), anagram deduplication and cached feasible payout sequences. It fixes real-dictionary beam-search failures such as52→73points on `NKDTSHEOQIHP`. Exhaustion falls back to a retained legal payout rather than pretending an approximate answer is exact. On the last usable auction the bot bids its remaining balance even for an unneeded tile: that cash has no later scoring use, and denying a completion can help placement. It still bids zero on the final unusable award.
+
+Bid delivery no longer holds the match planner waiting for the previous auction's acknowledgement. Different auctions can progress independently, same-auction replacements stay serialized, and stale errors cannot impose backoff on a newer auction. Delivery latency is now logged separately from search time.
+
 The original Afterword word engine and policy remain available with `BOT_POLICY=original`. Monte Carlo, global price floors and adaptive market experiments remain research only: their controlled results did not justify deployment.
 
 ## Evidence and limits
 
-- **64 tests pass**, including independent exhaustive packing checks, exact auction-rule simulation, adapter invariants, scoped subscriptions and real worker termination/recovery. Typecheck passes.
+- **83 tests pass**, including independent exhaustive packing checks, exact auction-rule simulation, adapter invariants, scoped subscriptions and real worker termination/recovery. Typecheck passes.
 - In a final fresh, seat-balanced 24-game confirmation, the untouched licensed reference won **10/12 Vickrey** and **7/12 first-price** games against the original candidate and four completion-aware opponents. The original won 2/12 and 3/12 respectively. Zero invalid actions. [Runner and results](bot-starter/src/reference-gaucho/final-confirmation.json).
 - A matched 24-seed / 48-run comparison isolated our terminal adapter: **2 score improvements, 22 unchanged, zero regressions**, with identical pre-terminal histories. [Methodology](docs/experiments/gaucho-terminal-safe-methodology.md).
+- A further48-pair /96-game heldout comparison of exact search plus denial found zero score regressions or earlier-game differences. Both arms had21.5 tie-adjusted wins: this sample demonstrates compatibility, **not an increased win rate**. [Results](docs/experiments/exact-denial-combo.md). Another408-game tuning experiment rejected broad parameter changes after their apparent training advantage vanished in holdout.
 - **Two verified live wins:** match16502 scored131 (runner-up90); match16511 scored147 (runner-up97), both against five real opponents. Earlier live losses are preserved in the [operating report](docs/RUN-STATUS.md) and [diagnosis](docs/experiments/live-diagnosis.md). Synthetic win rates do not establish a live or tournament win rate.
 
 Research covers the official game, auction-specific public bots, Macondo, Quackle, Wolges and MAGPIE. [Research notes](docs/bot-research.md), [failed experiments](docs/experiments/RESULTS.md), [policy decomposition](bot-starter/src/reference-gaucho/benchmark-cross-results.json). Only appropriately licensed code is included.
@@ -34,7 +39,7 @@ cd bot-starter
 BOT_NAME=Afterword BOT_TOKEN='<your own bot token>' TOURNAMENT_ID=auto npm start
 ```
 
-The first run privately saves the bot credential to `.token-Afterword` (mode0600, ignored). Later runs omit `BOT_TOKEN`. [Official credential instructions](https://scrabblebot.spacetimedb.com/docs). `TOURNAMENT_ID=auto` registers for open tournaments and stays free for them; `none` plays casual matches; a numeric ID selects that event. No open tournament existed at the last recorded check, so tournament entry is not yet confirmed.
+The first run privately saves the bot credential to `.token-Afterword` (mode0600, ignored). Later runs omit `BOT_TOKEN`. [Official credential instructions](https://scrabblebot.spacetimedb.com/docs). `TOURNAMENT_ID=auto` registers for open tournaments and stays free for them; `none` plays casual matches; a numeric ID selects that event. Afterword automatically entered **Tournament1**, entry14, when registration opened on2026-10-25 at00:06PDT. The database confirmed that it is registered and not eliminated; tournament results are pending.
 
 Run the final comparison from `bot-starter/` with `node --import tsx src/reference-gaucho/final-confirmation.ts`. The original tuning suite is `npx tsx src/tune.ts`; its controls are frozen independently of production defaults. Dictionary startup is outside measured auction latency.
 

@@ -1,0 +1,64 @@
+{
+  "candidate": "ExactTerminalStrategy around GauchoReference terminalSafe:true; new optional wrapper, no vendored policy edits",
+  "commands": [
+    "cd bot-starter && node --import tsx ../docs/experiments/gaucho-terminal-exact-matched.mts",
+    "cd bot-starter && node --import tsx ../docs/experiments/gaucho-terminal-exact-racks.mts",
+    "cd bot-starter && npm test",
+    "cd bot-starter && npx tsc --noEmit"
+  ],
+  "matchedValidation": {
+    "freshSeeds": "2026110701\u20132026110724",
+    "pairs": 48,
+    "games": 96,
+    "opponents": "Five independent licensed GauchoReference instances, all terminalSafe:true, same names/order/racks/seed per counterfactual pair",
+    "rotation": "Candidate occupies all six seats four times per auction mode",
+    "modes": [
+      "SecondPrice",
+      "FirstPrice"
+    ],
+    "prefixCheck": "Every player word/bid event before the last two auctions must be byte identical between paired traces",
+    "result": "48 equal candidate scores and ranks; zero improved or worse outcomes, no illegal actions or prefix differences",
+    "meanScoreBoth": 83.66666666666667,
+    "maxCandidateBidMs": 18.071500000001834,
+    "maxCandidateWordMs": 4.628083000000515,
+    "limitation": "No demonstrated whole-match gain in this heldout clone roster. Latency is observed wall-clock time, not a hard scheduler bound."
+  },
+  "structuralCorrections": [
+    "Deduplicate equivalent anagrams locally to avoid exhausting beam branches",
+    "Certify exact whole-rack payout with memoized, bounded branch-and-bound; never call an unfinished result exact",
+    "Cache the whole optimal suffix so later calls cannot lose the chosen payout",
+    "Retain a complete feasible pre-purchase plan in both outcome racks; a denial wrapper must call inner bid before replacing the amount",
+    "On timeout after an unwanted purchase, compare retained floor with full repeated baseline liquidation and follow the higher feasible sequence"
+  ],
+  "realEnableCounterexample": {
+    "rack": "NKDTSHEOQIHP",
+    "base": {
+      "words": [
+        "HIPSHOT",
+        "KEN"
+      ],
+      "score": 52
+    },
+    "exact": {
+      "words": [
+        "QOPHS",
+        "KITHED"
+      ],
+      "score": 73
+    }
+  },
+  "rackSearchLimitation": "The search stops after eight examples; its success fraction is not an estimate of actual match prevalence.",
+  "defaults": {
+    "timeBudgetMs": 18,
+    "maximumAllowedTimeBudgetMs": 25,
+    "maxNodes": 8000,
+    "cachedPlans": 128
+  },
+  "testEvidence": "83/83 full-suite tests passed; current TypeScript check passed; eight vendored upstream files matched recorded Git blobs",
+  "sourceHashes": {
+    "bot-starter/src/reference-gaucho/adapter.ts": "1a3f1cd2603aa8b51b4398e8ea1e076ff890284dbf4db6e9bdfeae4d2ea66617",
+    "bot-starter/src/reference-gaucho/terminal-exact.ts": "37ab933e256686d067d6e72273c6e89ca3f55c0f4f05f2d49f3ae0d3087544d2",
+    "bot-starter/src/reference-gaucho/core/dict.ts": "e21d69d89477fa0f0f51153552e334140ae6a097e34aedf993f7b2e9c206cb2b",
+    "bot-starter/src/simulate.ts": "6e882e20b8f9ce1ca30200836db12f63eb7653ec09a2a74dcfa5bba1c183d5d7"
+  }
+}

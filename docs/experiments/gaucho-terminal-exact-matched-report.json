@@ -1,0 +1,2372 @@
+{
+  "method": "Counterfactual paired candidate replacement; five identical licensed Gaucho rivals; terminalSafe true for all; balanced six seats; fresh deterministic seeds; both auction modes",
+  "count": 24,
+  "seedStart": 2026110701,
+  "hashes": {
+    "bot-starter/src/reference-gaucho/adapter.ts": "1a3f1cd2603aa8b51b4398e8ea1e076ff890284dbf4db6e9bdfeae4d2ea66617",
+    "bot-starter/src/reference-gaucho/terminal-exact.ts": "37ab933e256686d067d6e72273c6e89ca3f55c0f4f05f2d49f3ae0d3087544d2",
+    "bot-starter/src/reference-gaucho/core/dict.ts": "e21d69d89477fa0f0f51153552e334140ae6a097e34aedf993f7b2e9c206cb2b",
+    "bot-starter/src/simulate.ts": "6e882e20b8f9ce1ca30200836db12f63eb7653ec09a2a74dcfa5bba1c183d5d7"
+  },
+  "matches": 96,
+  "errors": [],
+  "paired": [
+    {
+      "seed": 2026110701,
+      "mode": "SecondPrice",
+      "seat": 0,
+      "controlScore": 70,
+      "exactScore": 70,
+      "delta": 0,
+      "controlRank": 4,
+      "exactRank": 4,
+      "samePrefix": true,
+      "maxBidMs": 1.067583999999897,
+      "maxWordMs": 1.137124999999969,
+      "controlTail": [
+        {
+          "kind": "bid",
+          "seat": 0,
+          "round": 67,
+          "amount": 0
+        },
+        {
+          "kind": "bid",
+          "seat": 0,
+          "round": 68,
+          "amount": 0
+        }
+      ],
+      "exactTail": [
+        {
+          "kind": "bid",
+          "seat": 0,
+          "round": 67,
+          "amount": 0
+        },
+        {
+          "kind": "bid",
+          "seat": 0,
+          "round": 68,
+          "amount": 0
+        }
+      ]
+    },
+    {
+      "seed": 2026110701,
+      "mode": "FirstPrice",
+      "seat": 0,
+      "controlScore": 63,
+      "exactScore": 63,
+      "delta": 0,
+      "controlRank": 5,
+      "exactRank": 5,
+      "samePrefix": true,
+      "maxBidMs": 3.6425830000000587,
+      "maxWordMs": 0.8440000000000509,
+      "controlTail": [
+        {
+          "kind": "bid",
+          "seat": 0,
+          "round": 67,
+          "amount": 23
+        },
+        {
+          "kind": "word",
+          "seat": 0,
+          "round": 68,
+          "word": "ADOWN",
+          "reward": 18
+        },
+        {
+          "kind": "bid",
+          "seat": 0,
+          "round": 68,
+          "amount": 0
+        }
+      ],
+      "exactTail": [
+        {
+          "kind": "bid",
+          "seat": 0,
+          "round": 67,
+          "amount": 23
+        },
+        {
+          "kind": "word",
+          "seat": 0,
+          "round": 68,
+          "word": "ADOWN",
+          "reward": 18
+        },
+        {
+          "kind": "bid",
+          "seat": 0,
+          "round": 68,
+          "amount": 0
+        }
+      ]
+    },
+    {
+      "seed": 2026110702,
+      "mode": "SecondPrice",
+      "seat": 5,
+      "controlScore": 56,
+      "exactScore": 56,
+      "delta": 0,
+      "controlRank": 5,
+      "exactRank": 5,
+      "samePrefix": true,
+      "maxBidMs": 1.9780000000000655,
+      "maxWordMs": 1.1381250000004002,
+      "controlTail": [
+        {
+          "kind": "bid",
+          "seat": 5,
+          "round": 67,
+          "amount": 10
+        },
+        {
+          "kind": "word",
+          "seat": 5,
+          "round": 68,
+          "word": "UT",
+          "reward": 2
+        },
+        {
+          "kind": "bid",
+          "seat": 5,
+          "round": 68,
+          "amount": 0
+        }
+      ],
+      "exactTail": [
+        {
+          "kind": "bid",
+          "seat": 5,
+          "round": 67,
+          "amount": 10
+        },
+        {
+          "kind": "word",
+          "seat": 5,
+          "round": 68,
+          "word": "UT",
+          "reward": 2
+        },
+        {
+          "kind": "bid",
+          "seat": 5,
+          "round": 68,
+          "amount": 0
+        }
+      ]
+    },
+    {
+      "seed": 2026110702,
+      "mode": "FirstPrice",
+      "seat": 5,
+      "controlScore": 78,
+      "exactScore": 78,
+      "delta": 0,
+      "controlRank": 4,
+      "exactRank": 4,
+      "samePrefix": true,
+      "maxBidMs": 1.5658750000002328,
+      "maxWordMs": 1.2535419999999249,
+      "controlTail": [
+        {
+          "kind": "bid",
+          "seat": 5,
+          "round": 67,
+          "amount": 0
+        },
+        {
+          "kind": "bid",
+          "seat": 5,
+          "round": 68,
+          "amount": 0
+        }
+      ],
+      "exactTail": [
+        {
+          "kind": "bid",
+          "seat": 5,
+          "round": 67,
+          "amount": 0
+        },
+        {
+          "kind": "bid",
+          "seat": 5,
+          "round": 68,
+          "amount": 0
+        }
+      ]
+    },
+    {
+      "seed": 2026110703,
+      "mode": "SecondPrice",
+      "seat": 4,
+      "controlScore": 102,
+      "exactScore": 102,
+      "delta": 0,
+      "controlRank": 2,
+      "exactRank": 2,
+      "samePrefix": true,
+      "maxBidMs": 3.1875,
+      "maxWordMs": 0.8807919999999285,
+      "controlTail": [
+        {
+          "kind": "bid",
+          "seat": 4,
+          "round": 67,
+          "amount": 5
+        },
+        {
+          "kind": "word",
+          "seat": 4,
+          "round": 68,
+          "word": "CION",
+          "reward": 9
+        },
+        {
+          "kind": "bid",
+          "seat": 4,
+          "round": 68,
+          "amount": 0
+        }
+      ],
+      "exactTail": [
+        {
+          "kind": "bid",
+          "seat": 4,
+          "round": 67,
+          "amount": 5
+        },
+        {
+          "kind": "word",
+          "seat": 4,
+          "round": 68,
+          "word": "CION",
+          "reward": 9
+        },
+        {
+          "kind": "bid",
+          "seat": 4,
+          "round": 68,
+          "amount": 0
+        }
+      ]
+    },
+    {
+      "seed": 2026110703,
+      "mode": "FirstPrice",
+      "seat": 4,
+      "controlScore": 104,
+      "exactScore": 104,
+      "delta": 0,
+      "controlRank": 1,
+      "exactRank": 1,
+      "samePrefix": true,
+      "maxBidMs": 2.0095830000000205,
+      "maxWordMs": 0.8192499999995562,
+      "controlTail": [
+        {
+          "kind": "word",
+          "seat": 4,
+          "round": 67,
+          "word": "AW",
+          "reward": 5
+        },
+        {
+          "kind": "bid",
+          "seat": 4,
+          "round": 67,
+          "amount": 0
+        },
+        {
+          "kind": "bid",
+          "seat": 4,
+          "round": 68,
+          "amount": 0
+        }
+      ],
+      "exactTail": [
+        {
+          "kind": "word",
+          "seat": 4,
+          "round": 67,
+          "word": "AW",
+          "reward": 5
+        },
+        {
+          "kind": "bid",
+          "seat": 4,
+          "round": 67,
+          "amount": 0
+        },
+        {
+          "kind": "bid",
+          "seat": 4,
+          "round": 68,
+          "amount": 0
+        }
+      ]
+    },
+    {
+      "seed": 2026110704,
+      "mode": "SecondPrice",
+      "seat": 3,
+      "controlScore": 81,
+      "exactScore": 81,
+      "delta": 0,
+      "controlRank": 3,
+      "exactRank": 3,
+      "samePrefix": true,
+      "maxBidMs": 3.3893330000000788,
+      "maxWordMs": 4.628083000000515,
+      "controlTail": [
+        {
+          "kind": "bid",
+          "seat": 3,
+          "round": 67,
+          "amount": 3
+        },
+        {
+          "kind": "word",
+          "seat": 3,
+          "round": 68,
+          "word": "TROPHIES",
+          "reward": 39
+        },
+        {
+          "kind": "bid",
+          "seat": 3,
+          "round": 68,
+          "amount": 0
+        }
+      ],
+      "exactTail": [
+        {
+          "kind": "bid",
+          "seat": 3,
+          "round": 67,
+          "amount": 3
+        },
+        {
+          "kind": "word",
+          "seat": 3,
+          "round": 68,
+          "word": "TROPHIES",
+          "reward": 39
+        },
+        {
+          "kind": "bid",
+          "seat": 3,
+          "round": 68,
+          "amount": 0
+        }
+      ]
+    },
+    {
+      "seed": 2026110704,
+      "mode": "FirstPrice",
+      "seat": 3,
+      "controlScore": 87,
+      "exactScore": 87,
+      "delta": 0,
+      "controlRank": 3,
+      "exactRank": 3,
+      "samePrefix": true,
+      "maxBidMs": 1.777165999999852,
+      "maxWordMs": 0.86779099999967,
+      "controlTail": [
+        {
+          "kind": "bid",
+          "seat": 3,
+          "round": 67,
+          "amount": 2
+        },
+        {
+          "kind": "bid",
+          "seat": 3,
+          "round": 68,
+          "amount": 0
+        }
+      ],
+      "exactTail": [
+        {
+          "kind": "bid",
+          "seat": 3,
+          "round": 67,
+          "amount": 2
+        },
+        {
+          "kind": "bid",
+          "seat": 3,
+          "round": 68,
+          "amount": 0
+        }
+      ]
+    },
+    {
+      "seed": 2026110705,
+      "mode": "SecondPrice",
+      "seat": 2,
+      "controlScore": 51,
+      "exactScore": 51,
+      "delta": 0,
+      "controlRank": 6,
+      "exactRank": 6,
+      "samePrefix": true,
+      "maxBidMs": 1.2463750000006257,
+      "maxWordMs": 1.059541999999965,
+      "controlTail": [
+        {
+          "kind": "bid",
+          "seat": 2,
+          "round": 67,
+          "amount": 0
+        },
+        {
+          "kind": "bid",
+          "seat": 2,
+          "round": 68,
+          "amount": 0
+        }
+      ],
+      "exactTail": [
+        {
+          "kind": "bid",
+          "seat": 2,
+          "round": 67,
+          "amount": 0
+        },
+        {
+          "kind": "bid",
+          "seat": 2,
+          "round": 68,
+          "amount": 0
+        }
+      ]
+    },
+    {
+      "seed": 2026110705,
+      "mode": "FirstPrice",
+      "seat": 2,
+      "controlScore": 58,
+      "exactScore": 58,
+      "delta": 0,
+      "controlRank": 6,
+      "exactRank": 6,
+      "samePrefix": true,
+      "maxBidMs": 1.6565000000009604,
+      "maxWordMs": 1.2779999999984284,
+      "controlTail": [
+        {
+          "kind": "bid",
+          "seat": 2,
+          "round": 67,
+          "amount": 12
+        },
+        {
+          "kind": "bid",
+          "seat": 2,
+          "round": 68,
+          "amount": 0
+        }
+      ],
+      "exactTail": [
+        {
+          "kind": "bid",
+          "seat": 2,
+          "round": 67,
+          "amount": 12
+        },
+        {
+          "kind": "bid",
+          "seat": 2,
+          "round": 68,
+          "amount": 0
+        }
+      ]
+    },
+    {
+      "seed": 2026110706,
+      "mode": "SecondPrice",
+      "seat": 1,
+      "controlScore": 60,
+      "exactScore": 60,
+      "delta": 0,
+      "controlRank": 5,
+      "exactRank": 5,
+      "samePrefix": true,
+      "maxBidMs": 1.58995799999866,
+      "maxWordMs": 1.1799579999988055,
+      "controlTail": [
+        {
+          "kind": "bid",
+          "seat": 1,
+          "round": 67,
+          "amount": 0
+        },
+        {
+          "kind": "bid",
+          "seat": 1,
+          "round": 68,
+          "amount": 0
+        }
+      ],
+      "exactTail": [
+        {
+          "kind": "bid",
+          "seat": 1,
+          "round": 67,
+          "amount": 0
+        },
+        {
+          "kind": "bid",
+          "seat": 1,
+          "round": 68,
+          "amount": 0
+        }
+      ]
+    },
+    {
+      "seed": 2026110706,
+      "mode": "FirstPrice",
+      "seat": 1,
+      "controlScore": 81,
+      "exactScore": 81,
+      "delta": 0,
+      "controlRank": 4,
+      "exactRank": 4,
+      "samePrefix": true,
+      "maxBidMs": 1.1457080000000133,
+      "maxWordMs": 0.8675830000011047,
+      "controlTail": [
+        {
+          "kind": "bid",
+          "seat": 1,
+          "round": 67,
+          "amount": 11
+        },
+        {
+          "kind": "bid",
+          "seat": 1,
+          "round": 68,
+          "amount": 0
+        }
+      ],
+      "exactTail": [
+        {
+          "kind": "bid",
+          "seat": 1,
+          "round": 67,
+          "amount": 11
+        },
+        {
+          "kind": "bid",
+          "seat": 1,
+          "round": 68,
+          "amount": 0
+        }
+      ]
+    },
+    {
+      "seed": 2026110707,
+      "mode": "SecondPrice",
+      "seat": 0,
+      "controlScore": 78,
+      "exactScore": 78,
+      "delta": 0,
+      "controlRank": 4,
+      "exactRank": 4,
+      "samePrefix": true,
+      "maxBidMs": 1.3936670000002778,
+      "maxWordMs": 1.2475839999988239,
+      "controlTail": [
+        {
+          "kind": "bid",
+          "seat": 0,
+          "round": 67,
+          "amount": 0
+        },
+        {
+          "kind": "bid",
+          "seat": 0,
+          "round": 68,
+          "amount": 0
+        }
+      ],
+      "exactTail": [
+        {
+          "kind": "bid",
+          "seat": 0,
+          "round": 67,
+          "amount": 0
+        },
+        {
+          "kind": "bid",
+          "seat": 0,
+          "round": 68,
+          "amount": 0
+        }
+      ]
+    },
+    {
+      "seed": 2026110707,
+      "mode": "FirstPrice",
+      "seat": 0,
+      "controlScore": 93,
+      "exactScore": 93,
+      "delta": 0,
+      "controlRank": 2,
+      "exactRank": 2,
+      "samePrefix": true,
+      "maxBidMs": 1.580707999999504,
+      "maxWordMs": 0.7971249999991414,
+      "controlTail": [
+        {
+          "kind": "bid",
+          "seat": 0,
+          "round": 67,
+          "amount": 2
+        },
+        {
+          "kind": "bid",
+          "seat": 0,
+          "round": 68,
+          "amount": 0
+        }
+      ],
+      "exactTail": [
+        {
+          "kind": "bid",
+          "seat": 0,
+          "round": 67,
+          "amount": 2
+        },
+        {
+          "kind": "bid",
+          "seat": 0,
+          "round": 68,
+          "amount": 0
+        }
+      ]
+    },
+    {
+      "seed": 2026110708,
+      "mode": "SecondPrice",
+      "seat": 5,
+      "controlScore": 104,
+      "exactScore": 104,
+      "delta": 0,
+      "controlRank": 1,
+      "exactRank": 1,
+      "samePrefix": true,
+      "maxBidMs": 2.097042000001238,
+      "maxWordMs": 1.1147499999988213,
+      "controlTail": [
+        {
+          "kind": "bid",
+          "seat": 5,
+          "round": 67,
+          "amount": 0
+        },
+        {
+          "kind": "bid",
+          "seat": 5,
+          "round": 68,
+          "amount": 0
+        }
+      ],
+      "exactTail": [
+        {
+          "kind": "bid",
+          "seat": 5,
+          "round": 67,
+          "amount": 0
+        },
+        {
+          "kind": "bid",
+          "seat": 5,
+          "round": 68,
+          "amount": 0
+        }
+      ]
+    },
+    {
+      "seed": 2026110708,
+      "mode": "FirstPrice",
+      "seat": 5,
+      "controlScore": 86,
+      "exactScore": 86,
+      "delta": 0,
+      "controlRank": 2,
+      "exactRank": 2,
+      "samePrefix": true,
+      "maxBidMs": 2.370042000000467,
+      "maxWordMs": 1.096625000000131,
+      "controlTail": [
+        {
+          "kind": "bid",
+          "seat": 5,
+          "round": 67,
+          "amount": 13
+        },
+        {
+          "kind": "bid",
+          "seat": 5,
+          "round": 68,
+          "amount": 0
+        }
+      ],
+      "exactTail": [
+        {
+          "kind": "bid",
+          "seat": 5,
+          "round": 67,
+          "amount": 13
+        },
+        {
+          "kind": "bid",
+          "seat": 5,
+          "round": 68,
+          "amount": 0
+        }
+      ]
+    },
+    {
+      "seed": 2026110709,
+      "mode": "SecondPrice",
+      "seat": 4,
+      "controlScore": 81,
+      "exactScore": 81,
+      "delta": 0,
+      "controlRank": 4,
+      "exactRank": 4,
+      "samePrefix": true,
+      "maxBidMs": 1.7275410000002012,
+      "maxWordMs": 1.2700420000001031,
+      "controlTail": [
+        {
+          "kind": "bid",
+          "seat": 4,
+          "round": 67,
+          "amount": 16
+        },
+        {
+          "kind": "word",
+          "seat": 4,
+          "round": 68,
+          "word": "AY",
+          "reward": 5
+        },
+        {
+          "kind": "bid",
+          "seat": 4,
+          "round": 68,
+          "amount": 0
+        }
+      ],
+      "exactTail": [
+        {
+          "kind": "bid",
+          "seat": 4,
+          "round": 67,
+          "amount": 16
+        },
+        {
+          "kind": "word",
+          "seat": 4,
+          "round": 68,
+          "word": "AY",
+          "reward": 5
+        },
+        {
+          "kind": "bid",
+          "seat": 4,
+          "round": 68,
+          "amount": 0
+        }
+      ]
+    },
+    {
+      "seed": 2026110709,
+      "mode": "FirstPrice",
+      "seat": 4,
+      "controlScore": 87,
+      "exactScore": 87,
+      "delta": 0,
+      "controlRank": 3,
+      "exactRank": 3,
+      "samePrefix": true,
+      "maxBidMs": 1.5288340000006428,
+      "maxWordMs": 1.1772089999994932,
+      "controlTail": [
+        {
+          "kind": "bid",
+          "seat": 4,
+          "round": 67,
+          "amount": 15
+        },
+        {
+          "kind": "bid",
+          "seat": 4,
+          "round": 68,
+          "amount": 0
+        }
+      ],
+      "exactTail": [
+        {
+          "kind": "bid",
+          "seat": 4,
+          "round": 67,
+          "amount": 15
+        },
+        {
+          "kind": "bid",
+          "seat": 4,
+          "round": 68,
+          "amount": 0
+        }
+      ]
+    },
+    {
+      "seed": 2026110710,
+      "mode": "SecondPrice",
+      "seat": 3,
+      "controlScore": 69,
+      "exactScore": 69,
+      "delta": 0,
+      "controlRank": 6,
+      "exactRank": 6,
+      "samePrefix": true,
+      "maxBidMs": 18.071500000001834,
+      "maxWordMs": 4.574125000002823,
+      "controlTail": [
+        {
+          "kind": "bid",
+          "seat": 3,
+          "round": 67,
+          "amount": 0
+        },
+        {
+          "kind": "bid",
+          "seat": 3,
+          "round": 68,
+          "amount": 0
+        }
+      ],
+      "exactTail": [
+        {
+          "kind": "bid",
+          "seat": 3,
+          "round": 67,
+          "amount": 0
+        },
+        {
+          "kind": "bid",
+          "seat": 3,
+          "round": 68,
+          "amount": 0
+        }
+      ]
+    },
+    {
+      "seed": 2026110710,
+      "mode": "FirstPrice",
+      "seat": 3,
+      "controlScore": 86,
+      "exactScore": 86,
+      "delta": 0,
+      "controlRank": 4,
+      "exactRank": 4,
+      "samePrefix": true,
+      "maxBidMs": 2.637957999999344,
+      "maxWordMs": 1.3640830000003916,
+      "controlTail": [
+        {
+          "kind": "bid",
+          "seat": 3,
+          "round": 67,
+          "amount": 11
+        },
+        {
+          "kind": "word",
+          "seat": 3,
+          "round": 68,
+          "word": "IN",
+          "reward": 2
+        },
+        {
+          "kind": "bid",
+          "seat": 3,
+          "round": 68,
+          "amount": 0
+        }
+      ],
+      "exactTail": [
+        {
+          "kind": "bid",
+          "seat": 3,
+          "round": 67,
+          "amount": 11
+        },
+        {
+          "kind": "word",
+          "seat": 3,
+          "round": 68,
+          "word": "IN",
+          "reward": 2
+        },
+        {
+          "kind": "bid",
+          "seat": 3,
+          "round": 68,
+          "amount": 0
+        }
+      ]
+    },
+    {
+      "seed": 2026110711,
+      "mode": "SecondPrice",
+      "seat": 2,
+      "controlScore": 114,
+      "exactScore": 114,
+      "delta": 0,
+      "controlRank": 1,
+      "exactRank": 1,
+      "samePrefix": true,
+      "maxBidMs": 1.417583000002196,
+      "maxWordMs": 0.6642079999983252,
+      "controlTail": [
+        {
+          "kind": "bid",
+          "seat": 2,
+          "round": 67,
+          "amount": 17
+        },
+        {
+          "kind": "bid",
+          "seat": 2,
+          "round": 68,
+          "amount": 0
+        }
+      ],
+      "exactTail": [
+        {
+          "kind": "bid",
+          "seat": 2,
+          "round": 67,
+          "amount": 17
+        },
+        {
+          "kind": "bid",
+          "seat": 2,
+          "round": 68,
+          "amount": 0
+        }
+      ]
+    },
+    {
+      "seed": 2026110711,
+      "mode": "FirstPrice",
+      "seat": 2,
+      "controlScore": 114,
+      "exactScore": 114,
+      "delta": 0,
+      "controlRank": 2,
+      "exactRank": 2,
+      "samePrefix": true,
+      "maxBidMs": 2.766958000000159,
+      "maxWordMs": 0.6651249999995343,
+      "controlTail": [
+        {
+          "kind": "bid",
+          "seat": 2,
+          "round": 67,
+          "amount": 13
+        },
+        {
+          "kind": "word",
+          "seat": 2,
+          "round": 68,
+          "word": "ETHOXYL",
+          "reward": 60
+        },
+        {
+          "kind": "bid",
+          "seat": 2,
+          "round": 68,
+          "amount": 0
+        }
+      ],
+      "exactTail": [
+        {
+          "kind": "bid",
+          "seat": 2,
+          "round": 67,
+          "amount": 13
+        },
+        {
+          "kind": "word",
+          "seat": 2,
+          "round": 68,
+          "word": "ETHOXYL",
+          "reward": 60
+        },
+        {
+          "kind": "bid",
+          "seat": 2,
+          "round": 68,
+          "amount": 0
+        }
+      ]
+    },
+    {
+      "seed": 2026110712,
+      "mode": "SecondPrice",
+      "seat": 1,
+      "controlScore": 79,
+      "exactScore": 79,
+      "delta": 0,
+      "controlRank": 2,
+      "exactRank": 2,
+      "samePrefix": true,
+      "maxBidMs": 1.3789580000011483,
+      "maxWordMs": 1.0762500000018917,
+      "controlTail": [
+        {
+          "kind": "bid",
+          "seat": 1,
+          "round": 67,
+          "amount": 0
+        },
+        {
+          "kind": "bid",
+          "seat": 1,
+          "round": 68,
+          "amount": 0
+        }
+      ],
+      "exactTail": [
+        {
+          "kind": "bid",
+          "seat": 1,
+          "round": 67,
+          "amount": 0
+        },
+        {
+          "kind": "bid",
+          "seat": 1,
+          "round": 68,
+          "amount": 0
+        }
+      ]
+    },
+    {
+      "seed": 2026110712,
+      "mode": "FirstPrice",
+      "seat": 1,
+      "controlScore": 97,
+      "exactScore": 97,
+      "delta": 0,
+      "controlRank": 1,
+      "exactRank": 1,
+      "samePrefix": true,
+      "maxBidMs": 1.4038330000003043,
+      "maxWordMs": 1.1764579999980924,
+      "controlTail": [
+        {
+          "kind": "bid",
+          "seat": 1,
+          "round": 67,
+          "amount": 0
+        },
+        {
+          "kind": "bid",
+          "seat": 1,
+          "round": 68,
+          "amount": 0
+        }
+      ],
+      "exactTail": [
+        {
+          "kind": "bid",
+          "seat": 1,
+          "round": 67,
+          "amount": 0
+        },
+        {
+          "kind": "bid",
+          "seat": 1,
+          "round": 68,
+          "amount": 0
+        }
+      ]
+    },
+    {
+      "seed": 2026110713,
+      "mode": "SecondPrice",
+      "seat": 0,
+      "controlScore": 78,
+      "exactScore": 78,
+      "delta": 0,
+      "controlRank": 5,
+      "exactRank": 5,
+      "samePrefix": true,
+      "maxBidMs": 2.1640840000000026,
+      "maxWordMs": 1.5789159999985714,
+      "controlTail": [
+        {
+          "kind": "bid",
+          "seat": 0,
+          "round": 67,
+          "amount": 0
+        },
+        {
+          "kind": "bid",
+          "seat": 0,
+          "round": 68,
+          "amount": 0
+        }
+      ],
+      "exactTail": [
+        {
+          "kind": "bid",
+          "seat": 0,
+          "round": 67,
+          "amount": 0
+        },
+        {
+          "kind": "bid",
+          "seat": 0,
+          "round": 68,
+          "amount": 0
+        }
+      ]
+    },
+    {
+      "seed": 2026110713,
+      "mode": "FirstPrice",
+      "seat": 0,
+      "controlScore": 87,
+      "exactScore": 87,
+      "delta": 0,
+      "controlRank": 4,
+      "exactRank": 4,
+      "samePrefix": true,
+      "maxBidMs": 3.9935000000004948,
+      "maxWordMs": 0.7119999999995343,
+      "controlTail": [
+        {
+          "kind": "bid",
+          "seat": 0,
+          "round": 67,
+          "amount": 11
+        },
+        {
+          "kind": "word",
+          "seat": 0,
+          "round": 68,
+          "word": "TOWERED",
+          "reward": 33
+        },
+        {
+          "kind": "bid",
+          "seat": 0,
+          "round": 68,
+          "amount": 0
+        }
+      ],
+      "exactTail": [
+        {
+          "kind": "bid",
+          "seat": 0,
+          "round": 67,
+          "amount": 11
+        },
+        {
+          "kind": "word",
+          "seat": 0,
+          "round": 68,
+          "word": "TOWERED",
+          "reward": 33
+        },
+        {
+          "kind": "bid",
+          "seat": 0,
+          "round": 68,
+          "amount": 0
+        }
+      ]
+    },
+    {
+      "seed": 2026110714,
+      "mode": "SecondPrice",
+      "seat": 5,
+      "controlScore": 114,
+      "exactScore": 114,
+      "delta": 0,
+      "controlRank": 1,
+      "exactRank": 1,
+      "samePrefix": true,
+      "maxBidMs": 2.7154999999984284,
+      "maxWordMs": 0.7662080000009155,
+      "controlTail": [
+        {
+          "kind": "bid",
+          "seat": 5,
+          "round": 67,
+          "amount": 15
+        },
+        {
+          "kind": "word",
+          "seat": 5,
+          "round": 68,
+          "word": "HEW",
+          "reward": 9
+        },
+        {
+          "kind": "bid",
+          "seat": 5,
+          "round": 68,
+          "amount": 0
+        }
+      ],
+      "exactTail": [
+        {
+          "kind": "bid",
+          "seat": 5,
+          "round": 67,
+          "amount": 15
+        },
+        {
+          "kind": "word",
+          "seat": 5,
+          "round": 68,
+          "word": "HEW",
+          "reward": 9
+        },
+        {
+          "kind": "bid",
+          "seat": 5,
+          "round": 68,
+          "amount": 0
+        }
+      ]
+    },
+    {
+      "seed": 2026110714,
+      "mode": "FirstPrice",
+      "seat": 5,
+      "controlScore": 117,
+      "exactScore": 117,
+      "delta": 0,
+      "controlRank": 1,
+      "exactRank": 1,
+      "samePrefix": true,
+      "maxBidMs": 3.3749169999973674,
+      "maxWordMs": 0.8564169999990554,
+      "controlTail": [
+        {
+          "kind": "bid",
+          "seat": 5,
+          "round": 67,
+          "amount": 21
+        },
+        {
+          "kind": "word",
+          "seat": 5,
+          "round": 68,
+          "word": "GLOST",
+          "reward": 12
+        },
+        {
+          "kind": "bid",
+          "seat": 5,
+          "round": 68,
+          "amount": 0
+        }
+      ],
+      "exactTail": [
+        {
+          "kind": "bid",
+          "seat": 5,
+          "round": 67,
+          "amount": 21
+        },
+        {
+          "kind": "word",
+          "seat": 5,
+          "round": 68,
+          "word": "GLOST",
+          "reward": 12
+        },
+        {
+          "kind": "bid",
+          "seat": 5,
+          "round": 68,
+          "amount": 0
+        }
+      ]
+    },
+    {
+      "seed": 2026110715,
+      "mode": "SecondPrice",
+      "seat": 4,
+      "controlScore": 71,
+      "exactScore": 71,
+      "delta": 0,
+      "controlRank": 5,
+      "exactRank": 5,
+      "samePrefix": true,
+      "maxBidMs": 3.3530829999981506,
+      "maxWordMs": 0.6133340000014869,
+      "controlTail": [
+        {
+          "kind": "bid",
+          "seat": 4,
+          "round": 67,
+          "amount": 17
+        },
+        {
+          "kind": "word",
+          "seat": 4,
+          "round": 68,
+          "word": "BRO",
+          "reward": 5
+        },
+        {
+          "kind": "bid",
+          "seat": 4,
+          "round": 68,
+          "amount": 0
+        }
+      ],
+      "exactTail": [
+        {
+          "kind": "bid",
+          "seat": 4,
+          "round": 67,
+          "amount": 17
+        },
+        {
+          "kind": "word",
+          "seat": 4,
+          "round": 68,
+          "word": "BRO",
+          "reward": 5
+        },
+        {
+          "kind": "bid",
+          "seat": 4,
+          "round": 68,
+          "amount": 0
+        }
+      ]
+    },
+    {
+      "seed": 2026110715,
+      "mode": "FirstPrice",
+      "seat": 4,
+      "controlScore": 95,
+      "exactScore": 95,
+      "delta": 0,
+      "controlRank": 2,
+      "exactRank": 2,
+      "samePrefix": true,
+      "maxBidMs": 2.2498750000013388,
+      "maxWordMs": 0.9020419999978913,
+      "controlTail": [
+        {
+          "kind": "word",
+          "seat": 4,
+          "round": 67,
+          "word": "ARB",
+          "reward": 5
+        },
+        {
+          "kind": "bid",
+          "seat": 4,
+          "round": 67,
+          "amount": 0
+        },
+        {
+          "kind": "bid",
+          "seat": 4,
+          "round": 68,
+          "amount": 0
+        }
+      ],
+      "exactTail": [
+        {
+          "kind": "word",
+          "seat": 4,
+          "round": 67,
+          "word": "ARB",
+          "reward": 5
+        },
+        {
+          "kind": "bid",
+          "seat": 4,
+          "round": 67,
+          "amount": 0
+        },
+        {
+          "kind": "bid",
+          "seat": 4,
+          "round": 68,
+          "amount": 0
+        }
+      ]
+    },
+    {
+      "seed": 2026110716,
+      "mode": "SecondPrice",
+      "seat": 3,
+      "controlScore": 89,
+      "exactScore": 89,
+      "delta": 0,
+      "controlRank": 1,
+      "exactRank": 1,
+      "samePrefix": true,
+      "maxBidMs": 1.125541000001249,
+      "maxWordMs": 1.1288329999988491,
+      "controlTail": [
+        {
+          "kind": "bid",
+          "seat": 3,
+          "round": 67,
+          "amount": 0
+        },
+        {
+          "kind": "bid",
+          "seat": 3,
+          "round": 68,
+          "amount": 0
+        }
+      ],
+      "exactTail": [
+        {
+          "kind": "bid",
+          "seat": 3,
+          "round": 67,
+          "amount": 0
+        },
+        {
+          "kind": "bid",
+          "seat": 3,
+          "round": 68,
+          "amount": 0
+        }
+      ]
+    },
+    {
+      "seed": 2026110716,
+      "mode": "FirstPrice",
+      "seat": 3,
+      "controlScore": 90,
+      "exactScore": 90,
+      "delta": 0,
+      "controlRank": 1,
+      "exactRank": 1,
+      "samePrefix": true,
+      "maxBidMs": 3.1213749999988067,
+      "maxWordMs": 0.7069999999985157,
+      "controlTail": [
+        {
+          "kind": "word",
+          "seat": 3,
+          "round": 67,
+          "word": "FACINGS",
+          "reward": 39
+        },
+        {
+          "kind": "bid",
+          "seat": 3,
+          "round": 67,
+          "amount": 0
+        },
+        {
+          "kind": "bid",
+          "seat": 3,
+          "round": 68,
+          "amount": 0
+        }
+      ],
+      "exactTail": [
+        {
+          "kind": "word",
+          "seat": 3,
+          "round": 67,
+          "word": "FACINGS",
+          "reward": 39
+        },
+        {
+          "kind": "bid",
+          "seat": 3,
+          "round": 67,
+          "amount": 0
+        },
+        {
+          "kind": "bid",
+          "seat": 3,
+          "round": 68,
+          "amount": 0
+        }
+      ]
+    },
+    {
+      "seed": 2026110717,
+      "mode": "SecondPrice",
+      "seat": 2,
+      "controlScore": 80,
+      "exactScore": 80,
+      "delta": 0,
+      "controlRank": 4,
+      "exactRank": 4,
+      "samePrefix": true,
+      "maxBidMs": 1.7691669999985606,
+      "maxWordMs": 1.183708000000479,
+      "controlTail": [
+        {
+          "kind": "bid",
+          "seat": 2,
+          "round": 67,
+          "amount": 0
+        },
+        {
+          "kind": "bid",
+          "seat": 2,
+          "round": 68,
+          "amount": 0
+        }
+      ],
+      "exactTail": [
+        {
+          "kind": "bid",
+          "seat": 2,
+          "round": 67,
+          "amount": 0
+        },
+        {
+          "kind": "bid",
+          "seat": 2,
+          "round": 68,
+          "amount": 0
+        }
+      ]
+    },
+    {
+      "seed": 2026110717,
+      "mode": "FirstPrice",
+      "seat": 2,
+      "controlScore": 100,
+      "exactScore": 100,
+      "delta": 0,
+      "controlRank": 1,
+      "exactRank": 1,
+      "samePrefix": true,
+      "maxBidMs": 3.590542000001733,
+      "maxWordMs": 0.9350420000009763,
+      "controlTail": [
+        {
+          "kind": "word",
+          "seat": 2,
+          "round": 67,
+          "word": "LOUD",
+          "reward": 7
+        },
+        {
+          "kind": "bid",
+          "seat": 2,
+          "round": 67,
+          "amount": 0
+        },
+        {
+          "kind": "bid",
+          "seat": 2,
+          "round": 68,
+          "amount": 0
+        }
+      ],
+      "exactTail": [
+        {
+          "kind": "word",
+          "seat": 2,
+          "round": 67,
+          "word": "LOUD",
+          "reward": 7
+        },
+        {
+          "kind": "bid",
+          "seat": 2,
+          "round": 67,
+          "amount": 0
+        },
+        {
+          "kind": "bid",
+          "seat": 2,
+          "round": 68,
+          "amount": 0
+        }
+      ]
+    },
+    {
+      "seed": 2026110718,
+      "mode": "SecondPrice",
+      "seat": 1,
+      "controlScore": 70,
+      "exactScore": 70,
+      "delta": 0,
+      "controlRank": 5,
+      "exactRank": 5,
+      "samePrefix": true,
+      "maxBidMs": 1.8207499999989523,
+      "maxWordMs": 1.7465830000001006,
+      "controlTail": [
+        {
+          "kind": "word",
+          "seat": 1,
+          "round": 67,
+          "word": "IN",
+          "reward": 2
+        },
+        {
+          "kind": "bid",
+          "seat": 1,
+          "round": 67,
+          "amount": 0
+        },
+        {
+          "kind": "bid",
+          "seat": 1,
+          "round": 68,
+          "amount": 0
+        }
+      ],
+      "exactTail": [
+        {
+          "kind": "word",
+          "seat": 1,
+          "round": 67,
+          "word": "IN",
+          "reward": 2
+        },
+        {
+          "kind": "bid",
+          "seat": 1,
+          "round": 67,
+          "amount": 0
+        },
+        {
+          "kind": "bid",
+          "seat": 1,
+          "round": 68,
+          "amount": 0
+        }
+      ]
+    },
+    {
+      "seed": 2026110718,
+      "mode": "FirstPrice",
+      "seat": 1,
+      "controlScore": 75,
+      "exactScore": 75,
+      "delta": 0,
+      "controlRank": 6,
+      "exactRank": 6,
+      "samePrefix": true,
+      "maxBidMs": 3.6950830000023416,
+      "maxWordMs": 1.53845800000272,
+      "controlTail": [
+        {
+          "kind": "bid",
+          "seat": 1,
+          "round": 67,
+          "amount": 0
+        },
+        {
+          "kind": "bid",
+          "seat": 1,
+          "round": 68,
+          "amount": 0
+        }
+      ],
+      "exactTail": [
+        {
+          "kind": "bid",
+          "seat": 1,
+          "round": 67,
+          "amount": 0
+        },
+        {
+          "kind": "bid",
+          "seat": 1,
+          "round": 68,
+          "amount": 0
+        }
+      ]
+    },
+    {
+      "seed": 2026110719,
+      "mode": "SecondPrice",
+      "seat": 0,
+      "controlScore": 87,
+      "exactScore": 87,
+      "delta": 0,
+      "controlRank": 2,
+      "exactRank": 2,
+      "samePrefix": true,
+      "maxBidMs": 2.159749999998894,
+      "maxWordMs": 0.9835420000017621,
+      "controlTail": [
+        {
+          "kind": "bid",
+          "seat": 0,
+          "round": 67,
+          "amount": 8
+        },
+        {
+          "kind": "word",
+          "seat": 0,
+          "round": 68,
+          "word": "HAT",
+          "reward": 6
+        },
+        {
+          "kind": "bid",
+          "seat": 0,
+          "round": 68,
+          "amount": 0
+        }
+      ],
+      "exactTail": [
+        {
+          "kind": "bid",
+          "seat": 0,
+          "round": 67,
+          "amount": 8
+        },
+        {
+          "kind": "word",
+          "seat": 0,
+          "round": 68,
+          "word": "HAT",
+          "reward": 6
+        },
+        {
+          "kind": "bid",
+          "seat": 0,
+          "round": 68,
+          "amount": 0
+        }
+      ]
+    },
+    {
+      "seed": 2026110719,
+      "mode": "FirstPrice",
+      "seat": 0,
+      "controlScore": 47,
+      "exactScore": 47,
+      "delta": 0,
+      "controlRank": 6,
+      "exactRank": 6,
+      "samePrefix": true,
+      "maxBidMs": 3.721166000002995,
+      "maxWordMs": 1.2337079999997513,
+      "controlTail": [
+        {
+          "kind": "word",
+          "seat": 0,
+          "round": 67,
+          "word": "NAP",
+          "reward": 5
+        },
+        {
+          "kind": "bid",
+          "seat": 0,
+          "round": 67,
+          "amount": 5
+        },
+        {
+          "kind": "bid",
+          "seat": 0,
+          "round": 68,
+          "amount": 0
+        }
+      ],
+      "exactTail": [
+        {
+          "kind": "word",
+          "seat": 0,
+          "round": 67,
+          "word": "NAP",
+          "reward": 5
+        },
+        {
+          "kind": "bid",
+          "seat": 0,
+          "round": 67,
+          "amount": 5
+        },
+        {
+          "kind": "bid",
+          "seat": 0,
+          "round": 68,
+          "amount": 0
+        }
+      ]
+    },
+    {
+      "seed": 2026110720,
+      "mode": "SecondPrice",
+      "seat": 5,
+      "controlScore": 88,
+      "exactScore": 88,
+      "delta": 0,
+      "controlRank": 2,
+      "exactRank": 2,
+      "samePrefix": true,
+      "maxBidMs": 2.1442500000048312,
+      "maxWordMs": 0.8476670000018203,
+      "controlTail": [
+        {
+          "kind": "bid",
+          "seat": 5,
+          "round": 67,
+          "amount": 9
+        },
+        {
+          "kind": "bid",
+          "seat": 5,
+          "round": 68,
+          "amount": 0
+        }
+      ],
+      "exactTail": [
+        {
+          "kind": "bid",
+          "seat": 5,
+          "round": 67,
+          "amount": 9
+        },
+        {
+          "kind": "bid",
+          "seat": 5,
+          "round": 68,
+          "amount": 0
+        }
+      ]
+    },
+    {
+      "seed": 2026110720,
+      "mode": "FirstPrice",
+      "seat": 5,
+      "controlScore": 120,
+      "exactScore": 120,
+      "delta": 0,
+      "controlRank": 1,
+      "exactRank": 1,
+      "samePrefix": true,
+      "maxBidMs": 1.2860419999997248,
+      "maxWordMs": 1.3597909999953117,
+      "controlTail": [
+        {
+          "kind": "bid",
+          "seat": 5,
+          "round": 67,
+          "amount": 0
+        },
+        {
+          "kind": "bid",
+          "seat": 5,
+          "round": 68,
+          "amount": 0
+        }
+      ],
+      "exactTail": [
+        {
+          "kind": "bid",
+          "seat": 5,
+          "round": 67,
+          "amount": 0
+        },
+        {
+          "kind": "bid",
+          "seat": 5,
+          "round": 68,
+          "amount": 0
+        }
+      ]
+    },
+    {
+      "seed": 2026110721,
+      "mode": "SecondPrice",
+      "seat": 4,
+      "controlScore": 93,
+      "exactScore": 93,
+      "delta": 0,
+      "controlRank": 1,
+      "exactRank": 1,
+      "samePrefix": true,
+      "maxBidMs": 3.321541999997862,
+      "maxWordMs": 1.6440000000002328,
+      "controlTail": [
+        {
+          "kind": "bid",
+          "seat": 4,
+          "round": 67,
+          "amount": 16
+        },
+        {
+          "kind": "word",
+          "seat": 4,
+          "round": 68,
+          "word": "MISKEPT",
+          "reward": 45
+        },
+        {
+          "kind": "bid",
+          "seat": 4,
+          "round": 68,
+          "amount": 0
+        }
+      ],
+      "exactTail": [
+        {
+          "kind": "bid",
+          "seat": 4,
+          "round": 67,
+          "amount": 16
+        },
+        {
+          "kind": "word",
+          "seat": 4,
+          "round": 68,
+          "word": "MISKEPT",
+          "reward": 45
+        },
+        {
+          "kind": "bid",
+          "seat": 4,
+          "round": 68,
+          "amount": 0
+        }
+      ]
+    },
+    {
+      "seed": 2026110721,
+      "mode": "FirstPrice",
+      "seat": 4,
+      "controlScore": 84,
+      "exactScore": 84,
+      "delta": 0,
+      "controlRank": 2,
+      "exactRank": 2,
+      "samePrefix": true,
+      "maxBidMs": 4.60858300000109,
+      "maxWordMs": 0.7607500000012806,
+      "controlTail": [
+        {
+          "kind": "bid",
+          "seat": 4,
+          "round": 67,
+          "amount": 15
+        },
+        {
+          "kind": "word",
+          "seat": 4,
+          "round": 68,
+          "word": "ATHEISM",
+          "reward": 36
+        },
+        {
+          "kind": "bid",
+          "seat": 4,
+          "round": 68,
+          "amount": 0
+        }
+      ],
+      "exactTail": [
+        {
+          "kind": "bid",
+          "seat": 4,
+          "round": 67,
+          "amount": 15
+        },
+        {
+          "kind": "word",
+          "seat": 4,
+          "round": 68,
+          "word": "ATHEISM",
+          "reward": 36
+        },
+        {
+          "kind": "bid",
+          "seat": 4,
+          "round": 68,
+          "amount": 0
+        }
+      ]
+    },
+    {
+      "seed": 2026110722,
+      "mode": "SecondPrice",
+      "seat": 3,
+      "controlScore": 63,
+      "exactScore": 63,
+      "delta": 0,
+      "controlRank": 6,
+      "exactRank": 6,
+      "samePrefix": true,
+      "maxBidMs": 5.129249999998137,
+      "maxWordMs": 0.987583000001905,
+      "controlTail": [
+        {
+          "kind": "word",
+          "seat": 3,
+          "round": 67,
+          "word": "RAYAS",
+          "reward": 16
+        },
+        {
+          "kind": "bid",
+          "seat": 3,
+          "round": 67,
+          "amount": 27
+        },
+        {
+          "kind": "word",
+          "seat": 3,
+          "round": 68,
+          "word": "IN",
+          "reward": 2
+        },
+        {
+          "kind": "bid",
+          "seat": 3,
+          "round": 68,
+          "amount": 0
+        }
+      ],
+      "exactTail": [
+        {
+          "kind": "word",
+          "seat": 3,
+          "round": 67,
+          "word": "RAYAS",
+          "reward": 16
+        },
+        {
+          "kind": "bid",
+          "seat": 3,
+          "round": 67,
+          "amount": 27
+        },
+        {
+          "kind": "word",
+          "seat": 3,
+          "round": 68,
+          "word": "IN",
+          "reward": 2
+        },
+        {
+          "kind": "bid",
+          "seat": 3,
+          "round": 68,
+          "amount": 0
+        }
+      ]
+    },
+    {
+      "seed": 2026110722,
+      "mode": "FirstPrice",
+      "seat": 3,
+      "controlScore": 73,
+      "exactScore": 73,
+      "delta": 0,
+      "controlRank": 4,
+      "exactRank": 4,
+      "samePrefix": true,
+      "maxBidMs": 3.1610409999993863,
+      "maxWordMs": 1.454874999995809,
+      "controlTail": [
+        {
+          "kind": "bid",
+          "seat": 3,
+          "round": 67,
+          "amount": 13
+        },
+        {
+          "kind": "word",
+          "seat": 3,
+          "round": 68,
+          "word": "IONS",
+          "reward": 6
+        },
+        {
+          "kind": "bid",
+          "seat": 3,
+          "round": 68,
+          "amount": 0
+        }
+      ],
+      "exactTail": [
+        {
+          "kind": "bid",
+          "seat": 3,
+          "round": 67,
+          "amount": 13
+        },
+        {
+          "kind": "word",
+          "seat": 3,
+          "round": 68,
+          "word": "IONS",
+          "reward": 6
+        },
+        {
+          "kind": "bid",
+          "seat": 3,
+          "round": 68,
+          "amount": 0
+        }
+      ]
+    },
+    {
+      "seed": 2026110723,
+      "mode": "SecondPrice",
+      "seat": 2,
+      "controlScore": 79,
+      "exactScore": 79,
+      "delta": 0,
+      "controlRank": 3,
+      "exactRank": 3,
+      "samePrefix": true,
+      "maxBidMs": 1.7402080000028946,
+      "maxWordMs": 0.9539169999989099,
+      "controlTail": [
+        {
+          "kind": "word",
+          "seat": 2,
+          "round": 67,
+          "word": "OE",
+          "reward": 2
+        },
+        {
+          "kind": "bid",
+          "seat": 2,
+          "round": 67,
+          "amount": 18
+        },
+        {
+          "kind": "word",
+          "seat": 2,
+          "round": 68,
+          "word": "IN",
+          "reward": 2
+        },
+        {
+          "kind": "bid",
+          "seat": 2,
+          "round": 68,
+          "amount": 0
+        }
+      ],
+      "exactTail": [
+        {
+          "kind": "word",
+          "seat": 2,
+          "round": 67,
+          "word": "OE",
+          "reward": 2
+        },
+        {
+          "kind": "bid",
+          "seat": 2,
+          "round": 67,
+          "amount": 18
+        },
+        {
+          "kind": "word",
+          "seat": 2,
+          "round": 68,
+          "word": "IN",
+          "reward": 2
+        },
+        {
+          "kind": "bid",
+          "seat": 2,
+          "round": 68,
+          "amount": 0
+        }
+      ]
+    },
+    {
+      "seed": 2026110723,
+      "mode": "FirstPrice",
+      "seat": 2,
+      "controlScore": 96,
+      "exactScore": 96,
+      "delta": 0,
+      "controlRank": 1,
+      "exactRank": 1,
+      "samePrefix": true,
+      "maxBidMs": 1.314542000000074,
+      "maxWordMs": 1.4216249999954016,
+      "controlTail": [
+        {
+          "kind": "bid",
+          "seat": 2,
+          "round": 67,
+          "amount": 9
+        },
+        {
+          "kind": "bid",
+          "seat": 2,
+          "round": 68,
+          "amount": 0
+        }
+      ],
+      "exactTail": [
+        {
+          "kind": "bid",
+          "seat": 2,
+          "round": 67,
+          "amount": 9
+        },
+        {
+          "kind": "bid",
+          "seat": 2,
+          "round": 68,
+          "amount": 0
+        }
+      ]
+    },
+    {
+      "seed": 2026110724,
+      "mode": "SecondPrice",
+      "seat": 1,
+      "controlScore": 69,
+      "exactScore": 69,
+      "delta": 0,
+      "controlRank": 6,
+      "exactRank": 6,
+      "samePrefix": true,
+      "maxBidMs": 4.5824589999974705,
+      "maxWordMs": 1.0002080000049318,
+      "controlTail": [
+        {
+          "kind": "bid",
+          "seat": 1,
+          "round": 67,
+          "amount": 13
+        },
+        {
+          "kind": "word",
+          "seat": 1,
+          "round": 68,
+          "word": "AMOSITE",
+          "reward": 27
+        },
+        {
+          "kind": "bid",
+          "seat": 1,
+          "round": 68,
+          "amount": 0
+        }
+      ],
+      "exactTail": [
+        {
+          "kind": "bid",
+          "seat": 1,
+          "round": 67,
+          "amount": 13
+        },
+        {
+          "kind": "word",
+          "seat": 1,
+          "round": 68,
+          "word": "AMOSITE",
+          "reward": 27
+        },
+        {
+          "kind": "bid",
+          "seat": 1,
+          "round": 68,
+          "amount": 0
+        }
+      ]
+    },
+    {
+      "seed": 2026110724,
+      "mode": "FirstPrice",
+      "seat": 1,
+      "controlScore": 72,
+      "exactScore": 72,
+      "delta": 0,
+      "controlRank": 6,
+      "exactRank": 6,
+      "samePrefix": true,
+      "maxBidMs": 5.0462920000063605,
+      "maxWordMs": 0.9071669999975711,
+      "controlTail": [
+        {
+          "kind": "word",
+          "seat": 1,
+          "round": 67,
+          "word": "TAUTOMER",
+          "reward": 30
+        },
+        {
+          "kind": "bid",
+          "seat": 1,
+          "round": 67,
+          "amount": 0
+        },
+        {
+          "kind": "bid",
+          "seat": 1,
+          "round": 68,
+          "amount": 0
+        }
+      ],
+      "exactTail": [
+        {
+          "kind": "word",
+          "seat": 1,
+          "round": 67,
+          "word": "TAUTOMER",
+          "reward": 30
+        },
+        {
+          "kind": "bid",
+          "seat": 1,
+          "round": 67,
+          "amount": 0
+        },
+        {
+          "kind": "bid",
+          "seat": 1,
+          "round": 68,
+          "amount": 0
+        }
+      ]
+    }
+  ],
+  "exactScore": 4016,
+  "controlScore": 4016,
+  "better": 0,
+  "worse": 0,
+  "equal": 48,
+  "prefixDifferences": 0,
+  "maxBidMs": 18.071500000001834,
+  "maxWordMs": 4.628083000000515,
+  "elapsedMs": 43611.836,
+  "exactMean": 83.66666666666667,
+  "controlMean": 83.66666666666667
+}

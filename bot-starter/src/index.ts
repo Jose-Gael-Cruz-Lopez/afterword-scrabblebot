@@ -4,6 +4,7 @@ import type { Match, Auction, MatchParticipant } from "./module_bindings/types.j
 import type { Identity } from "spacetimedb";
 import type { BidContext } from "./strategy.js";
 import { RuntimePlanner } from "./runtime-planner.js";
+import { AuctionBidDispatcher } from "./runtime-bids.js";
 import { auctionsRemaining, cappedBid, rackKey, reconstructInitialRack } from "./runtime-state.js";
 import { credentialQueries, coreQueries, matchQueries } from "./runtime-subscriptions.js";
 import * as fs from "node:fs";
@@ -31,6 +32,7 @@ function saveToken(token: string) {
 }
 
 interface MatchWork {
+  auctionId?: bigint;
   running: boolean;
   dirty: boolean;
   initialRack?: Map<string, number>;
@@ -62,6 +64,7 @@ class BotSession {
   private readonly activityInFlight = new Set<string>();
   private readonly activityRetryAt = new Map<string, number>();
   private readonly loggedMatches = new Set<bigint>();
+  private readonly bidDispatcher = new AuctionBidDispatcher();
   private readonly watchdog: NodeJS.Timeout;
   constructor(private readonly conn: DbConnection, private readonly identity: Identity, private readonly planner: RuntimePlanner) {
     const changed = () => this.schedule();
@@ -98,6 +101,7 @@ class BotSession {
   }
   close() {
     this.closed = true;
+    this.bidDispatcher.close();
     clearInterval(this.watchdog);
     if (this.pendingImmediate) clearImmediate(this.pendingImmediate);
   }
@@ -166,11 +170,19 @@ class BotSession {
         this.work.set(match.id, work);
         log(`match ${match.id}: running ${match.auctionType.tag}, round ${match.currentRound}`);
       }
+      // A closed auction's retry delay must never suppress the next auction.
+      if (work.auctionId !== match.currentAuctionId) {
+        work.auctionId = match.currentAuctionId;
+        work.retryAt = 0;
+        work.failures = 0;
+      }
       if (work.running) { work.dirty = true; continue; }
       if (Date.now() < work.retryAt) continue;
+      const attemptedAuctionId = match.currentAuctionId;
       void this.processMatch(match.id, work).catch(error => {
         log(`match ${match.id}: planning failed: ${errorMessage(error)}`);
-        work!.retryAt = Date.now() + 500;
+        if (this.snapshot(match.id, work!)?.auction.id === attemptedAuctionId) work!.retryAt = Date.now() + 500;
+        else this.schedule();
       });
     }
     for (const [id, state] of this.matchSubscriptions) {
@@ -239,7 +251,8 @@ class BotSession {
           work.dirty = true;
         } catch (error) {
           work.wordSnapshot = undefined;
-          this.retry(work, `word '${word}' in match ${matchId}`, error);
+          if (this.snapshot(matchId, work)?.auction.id === snapshot.auction.id) this.retry(work, `word '${word}' in match ${matchId}`, error);
+          else { log(`stale word in match ${matchId} failed (${errorMessage(error)}); replanning current auction`); work.dirty = true; }
         }
         return;
       }
@@ -248,13 +261,25 @@ class BotSession {
       // A zero replacement withdraws a no-longer-useful prior bid after a word
       // changed the rack. An initial zero doesn't need a network round trip.
       if (previous !== amount && (amount > 0 || previous !== undefined)) {
-        try {
-          await this.conn.reducers.submitBid({ auctionId: fresh.auction.id, amount: BigInt(amount) });
-          work.bids.set(fresh.auction.id, amount);
-          work.failures = 0;
-          work.retryAt = 0;
-          log(`match ${matchId}: bid ${amount} on '${fresh.auction.letter}' (computed ${elapsedMs.toFixed(1)}ms, ${fresh.context.roundsRemaining} auctions left)`);
-        } catch (error) { this.retry(work, `bid in match ${matchId}`, error); return; }
+        const auctionId = fresh.auction.id;
+        this.bidDispatcher.submit(auctionId,
+          () => this.conn.reducers.submitBid({ auctionId, amount: BigInt(amount) }),
+          deliveryMs => {
+            work.bids.set(auctionId, amount);
+            if (this.snapshot(matchId, work)?.auction.id === auctionId) {
+              work.failures = 0;
+              work.retryAt = 0;
+            }
+            log(`match ${matchId}: bid ${amount} on '${fresh.auction.letter}' (computed ${elapsedMs.toFixed(1)}ms, ${fresh.context.roundsRemaining} auctions left); delivery ${deliveryMs.toFixed(0)}ms`);
+          },
+          (error, deliveryMs) => {
+            if (this.snapshot(matchId, work)?.auction.id === auctionId) {
+              work.lastFingerprint = undefined;
+              this.retry(work, `bid in match ${matchId}`, error);
+            } else log(`stale bid in match ${matchId} ended (${errorMessage(error)}, delivery ${deliveryMs.toFixed(0)}ms); current auction remains active`);
+          },
+          () => { work.lastFingerprint = undefined; this.schedule(); },
+        );
       }
       work.lastFingerprint = snapshot.fingerprint;
     } finally {
@@ -366,7 +391,7 @@ async function main() {
   if (TOURNAMENT_ID !== "auto" && TOURNAMENT_ID !== "none" && !/^\d+$/.test(TOURNAMENT_ID)) throw new Error("TOURNAMENT_ID must be auto, none, or a numeric id");
   if (!fs.existsSync(DICTIONARY_PATH)) throw new Error(`Missing official dictionary: ${DICTIONARY_PATH}`);
   planner = new RuntimePlanner(DICTIONARY_PATH);
-  log(`indexed ${await planner.ready} official words in the planner worker; policy=${process.env.BOT_POLICY ?? "licensed"}; terminalSafe=${process.env.BOT_POLICY !== "original"}`);
+  log(`indexed ${await planner.ready} official words in the planner worker; policy=${process.env.BOT_POLICY ?? "licensed"}; endgame=${process.env.BOT_POLICY === "original" ? "original" : "exact+denial"}; nonBlockingBids=true`);
   connect();
 }
 void main().catch(async error => { log(`startup failed: ${errorMessage(error)}`); await shutdown(1); });
