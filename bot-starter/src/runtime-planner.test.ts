@@ -4,6 +4,7 @@ import { mkdtempSync, writeFileSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { RuntimePlanner } from './runtime-planner.js';
+import { canonicalAuctionType } from './runtime-state.js';
 import type { BidContext } from './strategy.js';
 
 test('the real planner worker accepts funded policy and preserves final auction semantics', { timeout: 20_000 }, async () => {
@@ -18,7 +19,7 @@ test('the real planner worker accepts funded policy and preserves final auction 
   const context: BidContext = {
     matchId: 'runtime-test', myRack: new Map([['Z', 1]]), initialRack: new Map([['Z', 1]]),
     myBalance: 23, letter: 'A', seat: 0, round: 67, roundsRemaining: 2,
-    auctionType: 'SecondPrice', players: [{ seat: 0, balance: 23, score: 0 }, { seat: 1, balance: 15, score: 0 }],
+    auctionType: canonicalAuctionType('Vickrey'), players: [{ seat: 0, balance: 23, score: 0 }, { seat: 1, balance: 15, score: 0 }],
     history: [], publicWords: [],
   };
   try {
