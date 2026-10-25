@@ -5,7 +5,7 @@ import type { Identity } from "spacetimedb";
 import type { BidContext } from "./strategy.js";
 import { RuntimePlanner } from "./runtime-planner.js";
 import { AuctionBidDispatcher } from "./runtime-bids.js";
-import { auctionsRemaining, cappedBid, rackKey, reconstructInitialRack } from "./runtime-state.js";
+import { auctionsRemaining, canonicalAuctionType, cappedBid, rackKey, reconstructInitialRack } from "./runtime-state.js";
 import { credentialQueries, coreQueries, matchQueries } from "./runtime-subscriptions.js";
 import * as fs from "node:fs";
 import * as path from "node:path";
@@ -221,7 +221,7 @@ class BotSession {
       seat: participants.findIndex(p => p.botId === this.botId),
       initialRack: work.initialRack, round: match.currentRound,
       roundsRemaining: auctionsRemaining(match.startingRackSize, participants.length, match.currentRound),
-      auctionType: match.auctionType.tag,
+      auctionType: canonicalAuctionType(match.auctionType.tag),
       players: participants.map((p, seat) => ({ seat, name: this.conn.db.bot.id.find(p.botId)?.name, balance: Number(p.balance), score: Number(p.score) })),
       history: results.map((r, i) => {
         const winner = participants.findIndex(p => p.botId === r.winnerBotId);

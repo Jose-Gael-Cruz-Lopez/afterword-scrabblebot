@@ -1,8 +1,15 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { auctionsRemaining, cappedBid, rackKey, reconstructInitialRack } from "./runtime-state.js";
+import { auctionsRemaining, canonicalAuctionType, cappedBid, rackKey, reconstructInitialRack } from "./runtime-state.js";
 import { RuntimePlanner } from "./runtime-planner.js";
 import { fileURLToPath } from "node:url";
+
+test("server Vickrey snapshots reach the tested SecondPrice policy without changing other modes", () => {
+  assert.equal(canonicalAuctionType("Vickrey"), "SecondPrice");
+  assert.equal(canonicalAuctionType("SecondPrice"), "SecondPrice");
+  assert.equal(canonicalAuctionType("FirstPrice"), "FirstPrice");
+  assert.equal(canonicalAuctionType("unknown"), "unknown");
+});
 
 test("auction horizon includes the current tile, excludes dealt racks, and reaches one before match end", () => {
   assert.equal(auctionsRemaining(5, 6, 1), 68);

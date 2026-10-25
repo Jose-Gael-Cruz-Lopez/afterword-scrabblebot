@@ -1,5 +1,9 @@
 /** Public-state bookkeeping used by the live bot. No opponent-private state. */
 export const STANDARD_BAG_SIZE = 98;
+/** The server calls second-price auctions Vickrey; policies use SecondPrice. */
+export function canonicalAuctionType(serverTag: string): string {
+  return serverTag === "Vickrey" ? "SecondPrice" : serverTag;
+}
 export function auctionsRemaining(startingRackSize: number, participantCount: number, currentRound: number): number {
   // bagTotal is the *remaining* bag in the current server implementation; use
   // the official fixed distribution to also resume older constant-total rows.
