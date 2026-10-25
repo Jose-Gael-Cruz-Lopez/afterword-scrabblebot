@@ -1,0 +1,144 @@
+{
+  "dictionary": 172820,
+  "seeds": [
+    1930071,
+    1937990,
+    1945909,
+    1953828,
+    1961747,
+    1969666,
+    1977585,
+    1985504,
+    1993423,
+    2001342,
+    2009261,
+    2017180,
+    2025099,
+    2033018,
+    2040937,
+    2048856,
+    2056775,
+    2064694,
+    2072613,
+    2080532,
+    2088451,
+    2096370,
+    2104289,
+    2112208
+  ],
+  "matches": 24,
+  "errors": [],
+  "rows": [
+    {
+      "name": "Afterword",
+      "wins": 22,
+      "score": 3901,
+      "balance": 1883,
+      "maxDecisionMs": 187.81583299999693,
+      "seats": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "winRate": 0.9166666666666666,
+      "meanScore": 162.54166666666666,
+      "meanBalance": 78.45833333333333
+    },
+    {
+      "name": "completion-85",
+      "wins": 0,
+      "score": 701,
+      "balance": 2043,
+      "maxDecisionMs": 152.941916,
+      "seats": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "winRate": 0,
+      "meanScore": 29.208333333333332,
+      "meanBalance": 85.125
+    },
+    {
+      "name": "patient-six",
+      "wins": 0,
+      "score": 844,
+      "balance": 2561,
+      "maxDecisionMs": 21.597583000000668,
+      "seats": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "winRate": 0,
+      "meanScore": 35.166666666666664,
+      "meanBalance": 106.70833333333333
+    },
+    {
+      "name": "patient-seven",
+      "wins": 2,
+      "score": 1576,
+      "balance": 2428,
+      "maxDecisionMs": 91.35770899999989,
+      "seats": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "winRate": 0.08333333333333333,
+      "meanScore": 65.66666666666667,
+      "meanBalance": 101.16666666666667
+    },
+    {
+      "name": "score-leave",
+      "wins": 0,
+      "score": 253,
+      "balance": 2623,
+      "maxDecisionMs": 27.141999999999825,
+      "seats": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "winRate": 0,
+      "meanScore": 10.541666666666666,
+      "meanBalance": 109.29166666666667
+    },
+    {
+      "name": "score-greedy",
+      "wins": 0,
+      "score": 500,
+      "balance": 2023,
+      "maxDecisionMs": 3.5079580000019632,
+      "seats": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "winRate": 0,
+      "meanScore": 20.833333333333332,
+      "meanBalance": 84.29166666666667
+    }
+  ],
+  "startedAt": "2026-10-25T06:12:48.879Z",
+  "elapsedMs": 27119.619124999997,
+  "finishedAt": "2026-10-25T06:13:16.000Z"
+}

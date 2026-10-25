@@ -1,3 +1,57 @@
+# Afterword — auction-aware ScrabbleBot
+
+Afterword is Jose Cruz's bot for the Clockwork Labs ScrabbleBot competition. It competes as [bot #145](https://scrabblebot.spacetimedb.com/bots/145). This is a fork of the official MIT-licensed game/starter; the game module is unchanged. All bot changes are in `bot-starter/`.
+
+## Strategy
+
+- Full official ENABLE dictionary, indexed once; equivalent anagrams share one count vector.
+- Bounded branch-and-bound multiword packing, so one tempting word cannot destroy two better ones.
+- Explicit hold-or-play decisions, based on missing-letter completion probabilities, reward tiers, remaining auctions and working capital.
+- Marginal rack valuation for sealed bids, with separate first-price shading and a rebuild floor to prevent starvation after cashouts.
+- Counts only our own initial rack and public auction outcomes. No hidden opponent holdings, private bids, spectator accounts or server modifications.
+- Final-auction liquidation: the last awarded letter cannot be used because the server ends the match in the same transaction.
+- A worker isolates dictionary search from WebSocket events. Serialized submissions, stale-state checks, retry/backoff, reconnect recovery, and tournament auto-entry.
+
+## Measured performance
+
+Forty-three behavioral, exact-rule, exhaustive-search and real-worker tests pass. All 216 seat-balanced tuning matches completed without illegal actions. In the final untouched 60-match confirmation, the selected parameters won 63.33% of Vickrey matches and 83.33% of first-price matches against our prior strong variant, original planner and three completion-aware opponents. Maximum selected-policy decision time in that confirmation was 66ms. These are simulated opponents and results, not a promise of tournament wins. Full methodology/results: [benchmark-tuning.json](docs/benchmark-tuning.json), [research](docs/bot-research.md).
+
+Selected settings: bid scale2.0, acquisition share0.6, hold margin2.5, minimum bid4, maximum spend fraction0.7, future cost1.2. Controls in the tuning runner are frozen independently of production defaults.
+
+## Run
+
+Requires Node24+, npm and the official SpacetimeDB CLI. Do not publish the game module; this client connects to the existing competition database.
+
+```sh
+npm install --prefix bot-starter
+npm run generate --prefix bot-starter
+npm test --prefix bot-starter
+npm run build --prefix bot-starter
+cd bot-starter
+BOT_NAME=Afterword BOT_TOKEN='<your own bot token>' TOURNAMENT_ID=auto npm start
+```
+
+The first run privately saves the bot credential to `.token-Afterword` (mode0600; ignored by Git). Subsequent runs omit `BOT_TOKEN`. Tokens and nonces must never be committed. Official team/token instructions: https://scrabblebot.spacetimedb.com/docs . `TOURNAMENT_ID=auto` enters open tournaments and stays free for the event; `none` runs casual games only; a numeric ID enters that event.
+
+Reproduce benchmarks with `npm run benchmark --prefix bot-starter`, or run `cd bot-starter && npx tsx src/tune.ts` for the tuning suite. The tuning suite takes several minutes. Dictionary startup is outside measured auction decisions.
+
+## Current local operation
+
+The registered bot runs under the user's LaunchAgent `dev.afterword.scrabblebot`, with automatic process restart, reconnect and idle-sleep inhibition while running. Logs: `bot-starter/logs/live.log` and `error.log` (ignored). It requires this Mac and its network connection; it is not a cloud deployment.
+
+```sh
+# Inspect the supervisor:
+launchctl print gui/$(id -u)/dev.afterword.scrabblebot
+# Stop and remove it from this login session:
+launchctl bootout gui/$(id -u)/dev.afterword.scrabblebot
+# Start it again:
+launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/dev.afterword.scrabblebot.plist
+```
+
+[Official project and API documentation continue below.](#scrabblebot)
+
+---
+
 # ScrabbleBot
 
 A Scrabble-style auction game where AI bots compete for letters.

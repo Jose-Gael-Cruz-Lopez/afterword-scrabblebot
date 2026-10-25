@@ -1,0 +1,1044 @@
+{
+  "runs": [
+    {
+      "stage": "isolated",
+      "auctionType": "SecondPrice",
+      "seeds": {
+        "start": 28001,
+        "count": 10
+      },
+      "defaultParams": {
+        "bidScale": 1.15,
+        "acquisitionShare": 0.6,
+        "holdMargin": 2.5,
+        "minimumBid": 2,
+        "maximumSpendFraction": 0.5,
+        "futureCost": 1.2
+      },
+      "variants": [
+        {
+          "name": "default",
+          "params": {}
+        },
+        {
+          "name": "bid-1.6",
+          "params": {
+            "bidScale": 1.6
+          }
+        },
+        {
+          "name": "bid-2.0",
+          "params": {
+            "bidScale": 2
+          }
+        },
+        {
+          "name": "acquisition-0.8",
+          "params": {
+            "acquisitionShare": 0.8
+          }
+        },
+        {
+          "name": "hold-0",
+          "params": {
+            "holdMargin": 0
+          }
+        },
+        {
+          "name": "hold-4",
+          "params": {
+            "holdMargin": 4
+          }
+        }
+      ],
+      "report": {
+        "matches": 60,
+        "elapsedMs": 226837.34483299998,
+        "errors": [],
+        "rows": [
+          {
+            "name": "default",
+            "matches": 60,
+            "wins": 0,
+            "winRate": 0,
+            "meanScore": 40.6,
+            "meanBalance": 112.16666666666667,
+            "meanDecisionMs": 3.935224109146078,
+            "maxDecisionMs": 319.27929200000654,
+            "seatCounts": [
+              10,
+              10,
+              10,
+              10,
+              10,
+              10
+            ]
+          },
+          {
+            "name": "bid-1.6",
+            "matches": 60,
+            "wins": 13.5,
+            "winRate": 0.225,
+            "meanScore": 95.1,
+            "meanBalance": 74.8,
+            "meanDecisionMs": 4.6030243632276235,
+            "maxDecisionMs": 787.7690409999996,
+            "seatCounts": [
+              10,
+              10,
+              10,
+              10,
+              10,
+              10
+            ]
+          },
+          {
+            "name": "bid-2.0",
+            "matches": 60,
+            "wins": 45.5,
+            "winRate": 0.7583333333333333,
+            "meanScore": 143.75,
+            "meanBalance": 18.266666666666666,
+            "meanDecisionMs": 5.593764766296344,
+            "maxDecisionMs": 722.6389999999956,
+            "seatCounts": [
+              10,
+              10,
+              10,
+              10,
+              10,
+              10
+            ]
+          },
+          {
+            "name": "acquisition-0.8",
+            "matches": 60,
+            "wins": 1,
+            "winRate": 0.016666666666666666,
+            "meanScore": 59.15,
+            "meanBalance": 112.33333333333333,
+            "meanDecisionMs": 4.740491910573894,
+            "maxDecisionMs": 301.39758300000176,
+            "seatCounts": [
+              10,
+              10,
+              10,
+              10,
+              10,
+              10
+            ]
+          },
+          {
+            "name": "hold-0",
+            "matches": 60,
+            "wins": 0,
+            "winRate": 0,
+            "meanScore": 51.266666666666666,
+            "meanBalance": 112.56666666666666,
+            "meanDecisionMs": 4.36677164980627,
+            "maxDecisionMs": 433.607290999993,
+            "seatCounts": [
+              10,
+              10,
+              10,
+              10,
+              10,
+              10
+            ]
+          },
+          {
+            "name": "hold-4",
+            "matches": 60,
+            "wins": 0,
+            "winRate": 0,
+            "meanScore": 40.21666666666667,
+            "meanBalance": 112.6,
+            "meanDecisionMs": 3.6383215497459975,
+            "maxDecisionMs": 198.84191700001247,
+            "seatCounts": [
+              10,
+              10,
+              10,
+              10,
+              10,
+              10
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "stage": "isolated",
+      "auctionType": "FirstPrice",
+      "seeds": {
+        "start": 28001,
+        "count": 10
+      },
+      "defaultParams": {
+        "bidScale": 1.15,
+        "acquisitionShare": 0.6,
+        "holdMargin": 2.5,
+        "minimumBid": 2,
+        "maximumSpendFraction": 0.5,
+        "futureCost": 1.2
+      },
+      "variants": [
+        {
+          "name": "default",
+          "params": {}
+        },
+        {
+          "name": "bid-1.6",
+          "params": {
+            "bidScale": 1.6
+          }
+        },
+        {
+          "name": "bid-2.0",
+          "params": {
+            "bidScale": 2
+          }
+        },
+        {
+          "name": "acquisition-0.8",
+          "params": {
+            "acquisitionShare": 0.8
+          }
+        },
+        {
+          "name": "hold-0",
+          "params": {
+            "holdMargin": 0
+          }
+        },
+        {
+          "name": "hold-4",
+          "params": {
+            "holdMargin": 4
+          }
+        }
+      ],
+      "report": {
+        "matches": 60,
+        "elapsedMs": 219304.061208,
+        "errors": [],
+        "rows": [
+          {
+            "name": "default",
+            "matches": 60,
+            "wins": 3,
+            "winRate": 0.05,
+            "meanScore": 47.46666666666667,
+            "meanBalance": 113.13333333333334,
+            "meanDecisionMs": 4.099239102154584,
+            "maxDecisionMs": 226.58829200000037,
+            "seatCounts": [
+              10,
+              10,
+              10,
+              10,
+              10,
+              10
+            ]
+          },
+          {
+            "name": "bid-1.6",
+            "matches": 60,
+            "wins": 15,
+            "winRate": 0.25,
+            "meanScore": 91.08333333333333,
+            "meanBalance": 78.26666666666667,
+            "meanDecisionMs": 4.557223827312418,
+            "maxDecisionMs": 350.4994999999999,
+            "seatCounts": [
+              10,
+              10,
+              10,
+              10,
+              10,
+              10
+            ]
+          },
+          {
+            "name": "bid-2.0",
+            "matches": 60,
+            "wins": 39,
+            "winRate": 0.65,
+            "meanScore": 125.9,
+            "meanBalance": 12.3,
+            "meanDecisionMs": 5.056131052083225,
+            "maxDecisionMs": 221.20337500001187,
+            "seatCounts": [
+              10,
+              10,
+              10,
+              10,
+              10,
+              10
+            ]
+          },
+          {
+            "name": "acquisition-0.8",
+            "matches": 60,
+            "wins": 2,
+            "winRate": 0.03333333333333333,
+            "meanScore": 65.61666666666666,
+            "meanBalance": 111.08333333333333,
+            "meanDecisionMs": 4.7343532164511615,
+            "maxDecisionMs": 696.9317080000001,
+            "seatCounts": [
+              10,
+              10,
+              10,
+              10,
+              10,
+              10
+            ]
+          },
+          {
+            "name": "hold-0",
+            "matches": 60,
+            "wins": 1,
+            "winRate": 0.016666666666666666,
+            "meanScore": 53,
+            "meanBalance": 112.91666666666667,
+            "meanDecisionMs": 4.128854151155951,
+            "maxDecisionMs": 301.68612500000745,
+            "seatCounts": [
+              10,
+              10,
+              10,
+              10,
+              10,
+              10
+            ]
+          },
+          {
+            "name": "hold-4",
+            "matches": 60,
+            "wins": 0,
+            "winRate": 0,
+            "meanScore": 44.4,
+            "meanBalance": 113.93333333333334,
+            "meanDecisionMs": 3.3923851376845633,
+            "maxDecisionMs": 231.67916600000171,
+            "seatCounts": [
+              10,
+              10,
+              10,
+              10,
+              10,
+              10
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "stage": "heldout",
+      "auctionType": "SecondPrice",
+      "seeds": {
+        "start": 39001,
+        "count": 3
+      },
+      "defaultParams": {
+        "bidScale": 1.15,
+        "acquisitionShare": 0.6,
+        "holdMargin": 2.5,
+        "minimumBid": 2,
+        "maximumSpendFraction": 0.5,
+        "futureCost": 1.2
+      },
+      "variants": [
+        {
+          "name": "default",
+          "params": {}
+        },
+        {
+          "name": "bid-2.0",
+          "params": {
+            "bidScale": 2
+          }
+        },
+        {
+          "name": "bid-3.0",
+          "params": {
+            "bidScale": 3
+          }
+        },
+        {
+          "name": "lower-acquisition",
+          "params": {
+            "bidScale": 2,
+            "acquisitionShare": 0.3
+          }
+        },
+        {
+          "name": "buy-more",
+          "params": {
+            "bidScale": 2,
+            "maximumSpendFraction": 0.7,
+            "minimumBid": 4
+          }
+        },
+        {
+          "name": "completion",
+          "params": {},
+          "baseline": "completion"
+        }
+      ],
+      "report": {
+        "matches": 18,
+        "elapsedMs": 41066.5965,
+        "errors": [],
+        "rows": [
+          {
+            "name": "default",
+            "matches": 18,
+            "wins": 0,
+            "winRate": 0,
+            "meanScore": 39.333333333333336,
+            "meanBalance": 109.72222222222223,
+            "meanDecisionMs": 3.1604576237863933,
+            "maxDecisionMs": 65.54987499999697,
+            "seatCounts": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          },
+          {
+            "name": "bid-2.0",
+            "matches": 18,
+            "wins": 7,
+            "winRate": 0.3888888888888889,
+            "meanScore": 85.33333333333333,
+            "meanBalance": 41.111111111111114,
+            "meanDecisionMs": 3.1126284423380346,
+            "maxDecisionMs": 34.905040999998164,
+            "seatCounts": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          },
+          {
+            "name": "bid-3.0",
+            "matches": 18,
+            "wins": 2.5,
+            "winRate": 0.1388888888888889,
+            "meanScore": 83.83333333333333,
+            "meanBalance": 5.222222222222222,
+            "meanDecisionMs": 4.914329856191297,
+            "maxDecisionMs": 62.55791599999793,
+            "seatCounts": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          },
+          {
+            "name": "lower-acquisition",
+            "matches": 18,
+            "wins": 0,
+            "winRate": 0,
+            "meanScore": 34.77777777777778,
+            "meanBalance": 78.83333333333333,
+            "meanDecisionMs": 1.2794501074970621,
+            "maxDecisionMs": 102.69579199999862,
+            "seatCounts": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          },
+          {
+            "name": "buy-more",
+            "matches": 18,
+            "wins": 8.5,
+            "winRate": 0.4722222222222222,
+            "meanScore": 103,
+            "meanBalance": 5.444444444444445,
+            "meanDecisionMs": 3.5320596147829146,
+            "maxDecisionMs": 83.63487499999974,
+            "seatCounts": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          },
+          {
+            "name": "completion",
+            "matches": 18,
+            "wins": 0,
+            "winRate": 0,
+            "meanScore": 17.944444444444443,
+            "meanBalance": 101,
+            "meanDecisionMs": 0.05420032475884775,
+            "maxDecisionMs": 98.17316599999998,
+            "seatCounts": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "stage": "heldout",
+      "auctionType": "FirstPrice",
+      "seeds": {
+        "start": 39001,
+        "count": 3
+      },
+      "defaultParams": {
+        "bidScale": 1.15,
+        "acquisitionShare": 0.6,
+        "holdMargin": 2.5,
+        "minimumBid": 2,
+        "maximumSpendFraction": 0.5,
+        "futureCost": 1.2
+      },
+      "variants": [
+        {
+          "name": "default",
+          "params": {}
+        },
+        {
+          "name": "bid-2.0",
+          "params": {
+            "bidScale": 2
+          }
+        },
+        {
+          "name": "bid-3.0",
+          "params": {
+            "bidScale": 3
+          }
+        },
+        {
+          "name": "lower-acquisition",
+          "params": {
+            "bidScale": 2,
+            "acquisitionShare": 0.3
+          }
+        },
+        {
+          "name": "buy-more",
+          "params": {
+            "bidScale": 2,
+            "maximumSpendFraction": 0.7,
+            "minimumBid": 4
+          }
+        },
+        {
+          "name": "completion",
+          "params": {},
+          "baseline": "completion"
+        }
+      ],
+      "report": {
+        "matches": 18,
+        "elapsedMs": 40353.167375,
+        "errors": [],
+        "rows": [
+          {
+            "name": "default",
+            "matches": 18,
+            "wins": 0,
+            "winRate": 0,
+            "meanScore": 51.833333333333336,
+            "meanBalance": 113.44444444444444,
+            "meanDecisionMs": 3.353810213505826,
+            "maxDecisionMs": 33.32554200000004,
+            "seatCounts": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          },
+          {
+            "name": "bid-2.0",
+            "matches": 18,
+            "wins": 4.5,
+            "winRate": 0.25,
+            "meanScore": 69,
+            "meanBalance": 84.27777777777777,
+            "meanDecisionMs": 2.897701655324289,
+            "maxDecisionMs": 49.474834000000556,
+            "seatCounts": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          },
+          {
+            "name": "bid-3.0",
+            "matches": 18,
+            "wins": 4.5,
+            "winRate": 0.25,
+            "meanScore": 97.22222222222223,
+            "meanBalance": 4.333333333333333,
+            "meanDecisionMs": 4.083993721593118,
+            "maxDecisionMs": 95.95816700000432,
+            "seatCounts": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          },
+          {
+            "name": "lower-acquisition",
+            "matches": 18,
+            "wins": 0,
+            "winRate": 0,
+            "meanScore": 29.555555555555557,
+            "meanBalance": 95.27777777777777,
+            "meanDecisionMs": 1.11762394509018,
+            "maxDecisionMs": 69.95737499999996,
+            "seatCounts": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          },
+          {
+            "name": "buy-more",
+            "matches": 18,
+            "wins": 9,
+            "winRate": 0.5,
+            "meanScore": 111.5,
+            "meanBalance": 6.111111111111111,
+            "meanDecisionMs": 4.263848834045798,
+            "maxDecisionMs": 67.52095900000131,
+            "seatCounts": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          },
+          {
+            "name": "completion",
+            "matches": 18,
+            "wins": 0,
+            "winRate": 0,
+            "meanScore": 21.22222222222222,
+            "meanBalance": 92.27777777777777,
+            "meanDecisionMs": 0.055005619200050294,
+            "maxDecisionMs": 106.623625,
+            "seatCounts": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "stage": "confirmation",
+      "auctionType": "FirstPrice",
+      "seeds": {
+        "start": 47001,
+        "count": 5
+      },
+      "defaultParams": {
+        "bidScale": 1.15,
+        "acquisitionShare": 0.6,
+        "holdMargin": 2.5,
+        "minimumBid": 2,
+        "maximumSpendFraction": 0.5,
+        "futureCost": 1.2
+      },
+      "variants": [
+        {
+          "name": "default",
+          "params": {}
+        },
+        {
+          "name": "bid-2.0",
+          "params": {
+            "bidScale": 2
+          }
+        },
+        {
+          "name": "buy-more",
+          "params": {
+            "bidScale": 2,
+            "maximumSpendFraction": 0.7,
+            "minimumBid": 4
+          }
+        },
+        {
+          "name": "completion-1",
+          "params": {},
+          "baseline": "completion"
+        },
+        {
+          "name": "completion-2",
+          "params": {},
+          "baseline": "completion"
+        },
+        {
+          "name": "completion-3",
+          "params": {},
+          "baseline": "completion"
+        }
+      ],
+      "report": {
+        "matches": 30,
+        "elapsedMs": 40512.56725,
+        "errors": [],
+        "rows": [
+          {
+            "name": "default",
+            "matches": 30,
+            "wins": 0,
+            "winRate": 0,
+            "meanScore": 47.96666666666667,
+            "meanBalance": 115.86666666666666,
+            "meanDecisionMs": 2.4638986088327663,
+            "maxDecisionMs": 48.01591600000029,
+            "seatCounts": [
+              5,
+              5,
+              5,
+              5,
+              5,
+              5
+            ]
+          },
+          {
+            "name": "bid-2.0",
+            "matches": 30,
+            "wins": 5,
+            "winRate": 0.16666666666666666,
+            "meanScore": 99.4,
+            "meanBalance": 38.766666666666666,
+            "meanDecisionMs": 3.306562186530913,
+            "maxDecisionMs": 60.736833999995724,
+            "seatCounts": [
+              5,
+              5,
+              5,
+              5,
+              5,
+              5
+            ]
+          },
+          {
+            "name": "buy-more",
+            "matches": 30,
+            "wins": 25,
+            "winRate": 0.8333333333333334,
+            "meanScore": 128.93333333333334,
+            "meanBalance": 3.966666666666667,
+            "meanDecisionMs": 3.584287314499176,
+            "maxDecisionMs": 65.96670799999993,
+            "seatCounts": [
+              5,
+              5,
+              5,
+              5,
+              5,
+              5
+            ]
+          },
+          {
+            "name": "completion-1",
+            "matches": 30,
+            "wins": 0,
+            "winRate": 0,
+            "meanScore": 20.633333333333333,
+            "meanBalance": 99.16666666666667,
+            "meanDecisionMs": 0.030960907976955818,
+            "maxDecisionMs": 103.43025,
+            "seatCounts": [
+              5,
+              5,
+              5,
+              5,
+              5,
+              5
+            ]
+          },
+          {
+            "name": "completion-2",
+            "matches": 30,
+            "wins": 0,
+            "winRate": 0,
+            "meanScore": 20.966666666666665,
+            "meanBalance": 97.63333333333334,
+            "meanDecisionMs": 0.008373537611119265,
+            "maxDecisionMs": 1.0058329999999387,
+            "seatCounts": [
+              5,
+              5,
+              5,
+              5,
+              5,
+              5
+            ]
+          },
+          {
+            "name": "completion-3",
+            "matches": 30,
+            "wins": 0,
+            "winRate": 0,
+            "meanScore": 20.833333333333332,
+            "meanBalance": 98.46666666666667,
+            "meanDecisionMs": 0.005941452318024881,
+            "maxDecisionMs": 1.819499999997788,
+            "seatCounts": [
+              5,
+              5,
+              5,
+              5,
+              5,
+              5
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "stage": "confirmation",
+      "auctionType": "SecondPrice",
+      "seeds": {
+        "start": 47001,
+        "count": 5
+      },
+      "defaultParams": {
+        "bidScale": 1.15,
+        "acquisitionShare": 0.6,
+        "holdMargin": 2.5,
+        "minimumBid": 2,
+        "maximumSpendFraction": 0.5,
+        "futureCost": 1.2
+      },
+      "variants": [
+        {
+          "name": "default",
+          "params": {}
+        },
+        {
+          "name": "bid-2.0",
+          "params": {
+            "bidScale": 2
+          }
+        },
+        {
+          "name": "buy-more",
+          "params": {
+            "bidScale": 2,
+            "maximumSpendFraction": 0.7,
+            "minimumBid": 4
+          }
+        },
+        {
+          "name": "completion-1",
+          "params": {},
+          "baseline": "completion"
+        },
+        {
+          "name": "completion-2",
+          "params": {},
+          "baseline": "completion"
+        },
+        {
+          "name": "completion-3",
+          "params": {},
+          "baseline": "completion"
+        }
+      ],
+      "report": {
+        "matches": 30,
+        "elapsedMs": 44042.569917,
+        "errors": [],
+        "rows": [
+          {
+            "name": "default",
+            "matches": 30,
+            "wins": 0,
+            "winRate": 0,
+            "meanScore": 44.266666666666666,
+            "meanBalance": 112.16666666666667,
+            "meanDecisionMs": 2.8244819910238386,
+            "maxDecisionMs": 51.57549999999901,
+            "seatCounts": [
+              5,
+              5,
+              5,
+              5,
+              5,
+              5
+            ]
+          },
+          {
+            "name": "bid-2.0",
+            "matches": 30,
+            "wins": 11,
+            "winRate": 0.36666666666666664,
+            "meanScore": 107.2,
+            "meanBalance": 44.06666666666667,
+            "meanDecisionMs": 3.515361209275428,
+            "maxDecisionMs": 92.48670800000036,
+            "seatCounts": [
+              5,
+              5,
+              5,
+              5,
+              5,
+              5
+            ]
+          },
+          {
+            "name": "buy-more",
+            "matches": 30,
+            "wins": 19,
+            "winRate": 0.6333333333333333,
+            "meanScore": 140.5,
+            "meanBalance": 7.633333333333334,
+            "meanDecisionMs": 3.8015661168051467,
+            "maxDecisionMs": 58.73475000000326,
+            "seatCounts": [
+              5,
+              5,
+              5,
+              5,
+              5,
+              5
+            ]
+          },
+          {
+            "name": "completion-1",
+            "matches": 30,
+            "wins": 0,
+            "winRate": 0,
+            "meanScore": 17.8,
+            "meanBalance": 104.13333333333334,
+            "meanDecisionMs": 0.02785571232219264,
+            "maxDecisionMs": 89.28037499999999,
+            "seatCounts": [
+              5,
+              5,
+              5,
+              5,
+              5,
+              5
+            ]
+          },
+          {
+            "name": "completion-2",
+            "matches": 30,
+            "wins": 0,
+            "winRate": 0,
+            "meanScore": 17.033333333333335,
+            "meanBalance": 103.73333333333333,
+            "meanDecisionMs": 0.009063498188820846,
+            "maxDecisionMs": 1.8127089999979944,
+            "seatCounts": [
+              5,
+              5,
+              5,
+              5,
+              5,
+              5
+            ]
+          },
+          {
+            "name": "completion-3",
+            "matches": 30,
+            "wins": 0,
+            "winRate": 0,
+            "meanScore": 15.633333333333333,
+            "meanBalance": 104.23333333333333,
+            "meanDecisionMs": 0.005778156597376525,
+            "maxDecisionMs": 0.17066699999850243,
+            "seatCounts": [
+              5,
+              5,
+              5,
+              5,
+              5,
+              5
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "methodology": {
+    "control": "Original parameters frozen in tune.ts: bidScale1.15, acquisitionShare0.6, holdMargin2.5, minimumBid2, maximumSpendFraction0.5, futureCost1.2.",
+    "totalMatches": 216,
+    "seatBalance": "For each seed a seeded shuffled roster is rotated through all six seats. Every strategy has the same number of starting-rack/seat opportunities.",
+    "freshState": "Fresh ChampionStrategy instances per match; immutable dictionary/WordEngine index shared per process.",
+    "hiddenInformation": "Only own rack/initial rack plus public scores, balances and auction results. No opponent hidden holdings or sealed bids.",
+    "selectionAndConfirmation": "120 isolated self-play matches; 36 heldout-roster matches to compare combinations; 60 final confirmation matches on previously untouched seeds 47001-47005.",
+    "timing": "CPU-local decision timings; no network latency. Auction-type sweeps ran concurrently in separate processes. Rare cold-cache/GC spikes are included. Real one-second deadlines still require live observation.",
+    "limitations": "A finite local benchmark against specified baselines and same-engine variants is evidence of improvement, not a guarantee against unknown tournament strategies. Seeded games are reproducible except possible effects of bounded wall-clock packing search under different CPU load."
+  },
+  "recommendation": {
+    "params": {
+      "bidScale": 2,
+      "acquisitionShare": 0.6,
+      "holdMargin": 2.5,
+      "minimumBid": 4,
+      "maximumSpendFraction": 0.7,
+      "futureCost": 1.2
+    },
+    "reason": "Higher acquisition pressure avoids ending with an unused bankroll; bidScale3 was weaker. Higher minimum useful-tile bid plus 70% spending cap beat plain bidScale2 on independent confirmation seeds in both auction types.",
+    "confirmed": {
+      "SecondPrice": {
+        "matches": 30,
+        "winShare": 0.6333333333333333,
+        "meanScore": 140.5,
+        "maxDecisionMs": 58.73475000000326
+      },
+      "FirstPrice": {
+        "matches": 30,
+        "winShare": 0.8333333333333334,
+        "meanScore": 128.93333333333334,
+        "maxDecisionMs": 65.96670799999993
+      }
+    },
+    "liveStrategyModifiedByTuningAgent": false
+  }
+}
