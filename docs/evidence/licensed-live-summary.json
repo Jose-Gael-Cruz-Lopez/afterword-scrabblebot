@@ -1,0 +1,75 @@
+{
+  "checkedAt": "2026-10-25T06:49:48.933307+00:00",
+  "policy": "Licensed Gaucho from match16465; explicit terminalSafe adapter enabled after match16511",
+  "matches": [
+    {
+      "time": "2026-10-25T06:42:28.688Z",
+      "match": 16465,
+      "rank": 4,
+      "players": 6,
+      "score": 70,
+      "balance": 17,
+      "standings": "Karthik=92, maverick-bot=83, daddy=78, Afterword=70, guesser=62, keanu_reeves=44"
+    },
+    {
+      "time": "2026-10-25T06:43:37.288Z",
+      "match": 16474,
+      "rank": 5,
+      "players": 6,
+      "score": 73,
+      "balance": 7,
+      "standings": "Torch=97, keanu_reeves=81, Karthik=78, LUCENT=75, Afterword=73, daddy=64"
+    },
+    {
+      "time": "2026-10-25T06:44:56.455Z",
+      "match": 16484,
+      "rank": 5,
+      "players": 6,
+      "score": 56,
+      "balance": 5,
+      "standings": "Torch=93, keanu_reeves=84, daddy=79, ace_bot=69, Afterword=56, LUCENT=52"
+    },
+    {
+      "time": "2026-10-25T06:46:05.145Z",
+      "match": 16493,
+      "rank": 2,
+      "players": 6,
+      "score": 86,
+      "balance": 16,
+      "standings": "swanbot=129, Afterword=86, ace_bot=72, ClaudeLab=71, postturing=66, hinsonloo=59"
+    },
+    {
+      "time": "2026-10-25T06:47:14.215Z",
+      "match": 16502,
+      "rank": 1,
+      "players": 6,
+      "score": 131,
+      "balance": 8,
+      "standings": "Afterword=131, Jobs=90, Lala=89, bot=69, swanbot=54, ace_bot=44"
+    },
+    {
+      "time": "2026-10-25T06:48:23.091Z",
+      "match": 16511,
+      "rank": 1,
+      "players": 6,
+      "score": 147,
+      "balance": 2,
+      "standings": "Afterword=147, swanbot=97, ace_bot=69, TaylorMason=58, richard=12, scrabby=0"
+    },
+    {
+      "time": "2026-10-25T06:49:34.345Z",
+      "match": 16521,
+      "rank": 4,
+      "players": 6,
+      "score": 78,
+      "balance": 23,
+      "standings": "Tessera=111, swanbot=108, Ambees=87, Afterword=78, TaylorMason=51, richard=8"
+    }
+  ],
+  "summary": {
+    "games": 7,
+    "wins": 2,
+    "meanScore": 91.57142857142857
+  },
+  "note": "Observed local acknowledgements; win16502 independently verified against public ended match_state and match_participant rows. These casual games are not tournament wins and are not controlled head-to-head policy experiments."
+}

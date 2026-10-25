@@ -5,7 +5,7 @@ const DISTRIBUTION: Record<string,number> = {A:9,B:2,C:2,D:4,E:12,F:2,G:3,H:2,I:
 export interface PublicPlayer { seat?:number; name?:string; balance:number; score:number }
 export interface PublicAuction { round?:number; letter:string; winner?:number; paid:number }
 export interface PlanningContext {
-  myRack:Map<string,number>; myBalance?:number; dictionary?:string[];
+  myRack:Map<string,number>; myBalance?:number; dictionary?:string[]; matchId?:string;
   roundsRemaining?:number; round?:number; auctionType?:string; letter?:string;
   players?:ReadonlyArray<PublicPlayer>; history?:ReadonlyArray<PublicAuction>;
   initialRack?:ReadonlyMap<string,number>;
@@ -15,6 +15,8 @@ export interface WordContext extends PlanningContext { dictionary:string[] }
 export interface StrategyParams {
   bidScale:number; acquisitionShare:number; holdMargin:number;
   minimumBid:number; maximumSpendFraction:number; futureCost:number;
+  /** Optional live market calibration; frozen benchmark controls leave it off. */
+  marketRebuild?:boolean;
 }
 export const DEFAULT_PARAMS: StrategyParams = {
   bidScale:2.0, acquisitionShare:0.6, holdMargin:2.5,
@@ -54,6 +56,10 @@ export class ChampionStrategy {
   private readonly cache=new Map<string,RackAnalysis>();
   constructor(dictionary:readonly string[],params:Partial<StrategyParams>={},engine?:WordEngine){
     this.engine=engine??new WordEngine(dictionary);this.params={...DEFAULT_PARAMS,...params};
+  }
+  private marketPrice(ctx:PlanningContext):number{
+    const prices=(ctx.history??[]).filter(a=>a.paid>0&&(LETTER_VALUE[a.letter]??10)<=4).slice(-24).map(a=>a.paid).sort((a,b)=>a-b);
+    return prices.length>=4?prices[Math.floor((prices.length-1)*.65)]:0;
   }
   private analyze(rack:ReadonlyMap<string,number>):RackAnalysis{
     const key=keyFor(rack),old=this.cache.get(key);if(old)return old;
@@ -99,6 +105,9 @@ export class ChampionStrategy {
     const current=this.analyze(ctx.myRack),next=new Map(ctx.myRack);
     next.set(ctx.letter,(next.get(ctx.letter)??0)+1);
     const added=this.analyze(next);
+    // This is the last tile an external bot can use. Unspent currency has no
+    // final value, so every affordable bid is justified by any positive gain.
+    if(ctx.roundsRemaining===2)return added.packingScore>current.packingScore?balance:0;
     const marginal=Math.max(0,this.equity(next,ctx,added)-this.equity(ctx.myRack,ctx,current));
     const completion=Math.max(0,added.packingScore-current.packingScore);
     const n=tiles(ctx.myRack),left=ctx.roundsRemaining??60;
@@ -119,6 +128,18 @@ export class ChampionStrategy {
       const median=prices.length?prices[Math.floor(prices.length*.65)]:4;
       bid=Math.min(bid*.78,Math.max(2,median+1,marginal*.72));
     }
+    if(this.params.marketRebuild&&left>8&&n<=6&&have<2&&balance>=15&&(LETTER_VALUE[ctx.letter]??10)<=4){
+      const market=this.marketPrice(ctx);
+      const vowels=[...ctx.myRack].reduce((sum,[c,k])=>sum+('AEIOU'.includes(c)?k:0),0);
+      const vowel='AEIOU'.includes(ctx.letter);
+      const balanced=n<3||(vowel?vowels/n<.65:vowels/n>.15);
+      if(market>=6&&balanced){
+        // Paid prices are public and lagged, never opponents' live sealed bids.
+        // Raise only a starved rack's acquisition floor, bounded to35% cash.
+        const target=market+(ctx.auctionType==='FirstPrice'?1:2);
+        bid=Math.max(bid,Math.min(balance*.35,target));
+      }
+    }
     // Replenishing currency is useful; hoarding an unused balance at the finish isn't.
     const cap=left<=6?balance:Math.max(3,balance*this.params.maximumSpendFraction);
     return Math.max(0,Math.min(balance,Math.floor(Math.min(cap,bid))));
@@ -127,7 +148,10 @@ export class ChampionStrategy {
     const analysis=this.analyze(ctx.myRack);
     if(!analysis.playable.length)return null;
     const left=ctx.roundsRemaining??60;
-    if(left<=2)return analysis.packing[0]??analysis.playable[0].word;
+    if(left<=1)return analysis.packing[0]??analysis.playable[0].word;
+    // Preserve combinations through the last usable auction. Cash out early
+    // only if a zero bankroll prevents us from bidding at all.
+    if(left===2)return (ctx.myBalance??100)>0?null:analysis.packing[0]??analysis.playable[0].word;
     // At max multiplier there is no bonus for waiting to extend this word.
     const seven=analysis.playable.find(w=>w.length>=7);
     if(seven)return analysis.packing[0]??seven.word;
@@ -139,7 +163,7 @@ export class ChampionStrategy {
       const score=w.score+leave(after)*.7;
       if(score>best){best=score;bestWord=w.word;}
     }
-    const cashNeeded=(ctx.myBalance??100)<8;
+    const cashNeeded=(ctx.myBalance??100)<Math.max(8,this.params.marketRebuild?this.marketPrice(ctx)*1.4:0);
     const crowded=tiles(ctx.myRack)>=15;
     if(cashNeeded||crowded||left<=5||best>=before-this.params.holdMargin)return bestWord;
     return null;

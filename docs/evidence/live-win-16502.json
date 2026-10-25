@@ -1,0 +1,52 @@
+{
+  "checkedAt": "2026-10-25T06:49:48.933307+00:00",
+  "source": "https://scrabblebot.spacetimedb.com/matches/16502",
+  "verification": [
+    "SELECT * FROM match_state WHERE id = 16502",
+    "SELECT * FROM match_participant WHERE match_id = 16502"
+  ],
+  "status": "Ended",
+  "round": 68,
+  "bagTotal": 0,
+  "auctionType": "Vickrey",
+  "startingRackSize": 5,
+  "endedAt": "2026-10-25T06:47:14.159840+00:00",
+  "standings": [
+    {
+      "botId": 145,
+      "name": "Afterword",
+      "score": 131,
+      "balance": 8
+    },
+    {
+      "botId": 133,
+      "name": "Jobs",
+      "score": 90,
+      "balance": 14
+    },
+    {
+      "botId": 88,
+      "name": "Lala",
+      "score": 89,
+      "balance": 18
+    },
+    {
+      "botId": 7,
+      "name": "bot",
+      "score": 69,
+      "balance": 9
+    },
+    {
+      "botId": 47,
+      "name": "swanbot",
+      "score": 54,
+      "balance": 47
+    },
+    {
+      "botId": 139,
+      "name": "ace_bot",
+      "score": 44,
+      "balance": 19
+    }
+  ]
+}

@@ -1,0 +1,497 @@
+{
+  "sourceSha256": {
+    "strategy.ts": "86e0c79600d51ee0f91c56574968210e20f4a433b3ec06dc19bc36f047119b34",
+    "engine.ts": "1012c5b8a76e10d0e09b0460e2c39d0a4ac4c3dd0eb1914f0b256b59d91161ff",
+    "simulate.ts": "6e882e20b8f9ce1ca30200836db12f63eb7653ec09a2a74dcfa5bba1c183d5d7"
+  },
+  "params": {
+    "bidScale": 2,
+    "minimumBid": 4,
+    "maximumSpendFraction": 0.7,
+    "acquisitionShare": 0.6,
+    "holdMargin": 2.5,
+    "futureCost": 1.2
+  },
+  "adaptive": {
+    "maximumRack": 4,
+    "minimumAuctionsLeft": 9,
+    "history": 18,
+    "percentile": 0.65,
+    "premium": 2,
+    "cashCap": 0.35,
+    "firstPriceDiscount": 0.75
+  },
+  "dictionaryWords": 172820,
+  "seedStart": 2930071,
+  "seedCount": 24,
+  "matches": 4,
+  "errors": [],
+  "matchesDetail": [
+    {
+      "seed": 2930071,
+      "auctionType": "SecondPrice",
+      "scores": [
+        {
+          "name": "adaptive-market-cold",
+          "score": 114,
+          "balance": 10,
+          "spent": 204,
+          "tilesWon": 18
+        },
+        {
+          "name": "composite-control",
+          "score": 67,
+          "balance": 6,
+          "spent": 161,
+          "tilesWon": 18
+        },
+        {
+          "name": "composite-floor6",
+          "score": 61,
+          "balance": 2,
+          "spent": 159,
+          "tilesWon": 12
+        },
+        {
+          "name": "composite-floor8",
+          "score": 60,
+          "balance": 12,
+          "spent": 148,
+          "tilesWon": 13
+        },
+        {
+          "name": "patient-seven",
+          "score": 38,
+          "balance": 110,
+          "spent": 28,
+          "tilesWon": 4
+        },
+        {
+          "name": "patient-six",
+          "score": 45,
+          "balance": 115,
+          "spent": 30,
+          "tilesWon": 2
+        }
+      ]
+    },
+    {
+      "seed": 2930071,
+      "auctionType": "FirstPrice",
+      "scores": [
+        {
+          "name": "composite-control",
+          "score": 84,
+          "balance": 22,
+          "spent": 162,
+          "tilesWon": 19
+        },
+        {
+          "name": "composite-floor6",
+          "score": 94,
+          "balance": 5,
+          "spent": 189,
+          "tilesWon": 17
+        },
+        {
+          "name": "composite-floor8",
+          "score": 58,
+          "balance": 7,
+          "spent": 151,
+          "tilesWon": 13
+        },
+        {
+          "name": "patient-seven",
+          "score": 18,
+          "balance": 108,
+          "spent": 10,
+          "tilesWon": 2
+        },
+        {
+          "name": "patient-six",
+          "score": 14,
+          "balance": 114,
+          "spent": 0,
+          "tilesWon": 0
+        },
+        {
+          "name": "adaptive-market-cold",
+          "score": 98,
+          "balance": 10,
+          "spent": 188,
+          "tilesWon": 16
+        }
+      ]
+    },
+    {
+      "seed": 2937990,
+      "auctionType": "SecondPrice",
+      "scores": [
+        {
+          "name": "patient-six",
+          "score": 25,
+          "balance": 107,
+          "spent": 18,
+          "tilesWon": 4
+        },
+        {
+          "name": "adaptive-market-cold",
+          "score": 64,
+          "balance": 2,
+          "spent": 162,
+          "tilesWon": 15
+        },
+        {
+          "name": "composite-control",
+          "score": 66,
+          "balance": 4,
+          "spent": 162,
+          "tilesWon": 12
+        },
+        {
+          "name": "composite-floor6",
+          "score": 82,
+          "balance": 3,
+          "spent": 179,
+          "tilesWon": 17
+        },
+        {
+          "name": "composite-floor8",
+          "score": 38,
+          "balance": 7,
+          "spent": 131,
+          "tilesWon": 9
+        },
+        {
+          "name": "patient-seven",
+          "score": 64,
+          "balance": 102,
+          "spent": 62,
+          "tilesWon": 10
+        }
+      ]
+    },
+    {
+      "seed": 2937990,
+      "auctionType": "FirstPrice",
+      "scores": [
+        {
+          "name": "adaptive-market-cold",
+          "score": 65,
+          "balance": 5,
+          "spent": 160,
+          "tilesWon": 14
+        },
+        {
+          "name": "composite-control",
+          "score": 93,
+          "balance": 28,
+          "spent": 165,
+          "tilesWon": 13
+        },
+        {
+          "name": "composite-floor6",
+          "score": 115,
+          "balance": 4,
+          "spent": 211,
+          "tilesWon": 17
+        },
+        {
+          "name": "composite-floor8",
+          "score": 96,
+          "balance": 1,
+          "spent": 195,
+          "tilesWon": 16
+        },
+        {
+          "name": "patient-seven",
+          "score": 35,
+          "balance": 98,
+          "spent": 37,
+          "tilesWon": 4
+        },
+        {
+          "name": "patient-six",
+          "score": 22,
+          "balance": 106,
+          "spent": 16,
+          "tilesWon": 3
+        }
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "name": "adaptive-market-cold",
+      "wins": 2,
+      "score": 341,
+      "spent": 714,
+      "tilesWon": 63,
+      "balance": 27,
+      "maxDecisionMs": 92.75562499999978,
+      "seats": [
+        2,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "byMode": {
+        "FirstPrice": {
+          "matches": 2,
+          "wins": 1,
+          "score": 163,
+          "seats": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        "SecondPrice": {
+          "matches": 2,
+          "wins": 1,
+          "score": 178,
+          "seats": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "name": "composite-control",
+      "wins": 0,
+      "score": 310,
+      "spent": 650,
+      "tilesWon": 62,
+      "balance": 60,
+      "maxDecisionMs": 85.4869579999995,
+      "seats": [
+        1,
+        2,
+        1,
+        0,
+        0,
+        0
+      ],
+      "byMode": {
+        "FirstPrice": {
+          "matches": 2,
+          "wins": 0,
+          "score": 177,
+          "seats": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "SecondPrice": {
+          "matches": 2,
+          "wins": 0,
+          "score": 133,
+          "seats": [
+            0,
+            1,
+            1,
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "name": "composite-floor6",
+      "wins": 2,
+      "score": 352,
+      "spent": 738,
+      "tilesWon": 63,
+      "balance": 14,
+      "maxDecisionMs": 87.69404200000008,
+      "seats": [
+        0,
+        1,
+        2,
+        1,
+        0,
+        0
+      ],
+      "byMode": {
+        "FirstPrice": {
+          "matches": 2,
+          "wins": 1,
+          "score": 209,
+          "seats": [
+            0,
+            1,
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        "SecondPrice": {
+          "matches": 2,
+          "wins": 1,
+          "score": 143,
+          "seats": [
+            0,
+            0,
+            1,
+            1,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "name": "composite-floor8",
+      "wins": 0,
+      "score": 252,
+      "spent": 625,
+      "tilesWon": 51,
+      "balance": 27,
+      "maxDecisionMs": 113.53170899999986,
+      "seats": [
+        0,
+        0,
+        1,
+        2,
+        1,
+        0
+      ],
+      "byMode": {
+        "FirstPrice": {
+          "matches": 2,
+          "wins": 0,
+          "score": 154,
+          "seats": [
+            0,
+            0,
+            1,
+            1,
+            0,
+            0
+          ]
+        },
+        "SecondPrice": {
+          "matches": 2,
+          "wins": 0,
+          "score": 98,
+          "seats": [
+            0,
+            0,
+            0,
+            1,
+            1,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "name": "patient-seven",
+      "wins": 0,
+      "score": 155,
+      "spent": 137,
+      "tilesWon": 20,
+      "balance": 418,
+      "maxDecisionMs": 6.283917000000656,
+      "seats": [
+        0,
+        0,
+        0,
+        1,
+        2,
+        1
+      ],
+      "byMode": {
+        "FirstPrice": {
+          "matches": 2,
+          "wins": 0,
+          "score": 53,
+          "seats": [
+            0,
+            0,
+            0,
+            1,
+            1,
+            0
+          ]
+        },
+        "SecondPrice": {
+          "matches": 2,
+          "wins": 0,
+          "score": 102,
+          "seats": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "name": "patient-six",
+      "wins": 0,
+      "score": 106,
+      "spent": 64,
+      "tilesWon": 9,
+      "balance": 442,
+      "maxDecisionMs": 5.666332999999895,
+      "seats": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        2
+      ],
+      "byMode": {
+        "FirstPrice": {
+          "matches": 2,
+          "wins": 0,
+          "score": 36,
+          "seats": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            1
+          ]
+        },
+        "SecondPrice": {
+          "matches": 2,
+          "wins": 0,
+          "score": 70,
+          "seats": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      }
+    }
+  ],
+  "startedAt": "2026-10-25T06:19:24.734Z",
+  "stoppedFor": "Expanded cold-rack threshold experiment at parent request"
+}

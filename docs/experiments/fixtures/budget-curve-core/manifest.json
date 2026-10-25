@@ -1,0 +1,9 @@
+{
+  "sourceSha256": {
+    "bot-starter/src/strategy.ts": "de5ccd6d3d5c627ea1f4e2a44b6e5e89784e7068ee0b4fc9c9c8542b63312aca",
+    "bot-starter/src/engine.ts": "1012c5b8a76e10d0e09b0460e2c39d0a4ac4c3dd0eb1914f0b256b59d91161ff",
+    "bot-starter/src/simulate.ts": "6e882e20b8f9ce1ca30200836db12f63eb7653ec09a2a74dcfa5bba1c183d5d7",
+    "spacetimedb/wordlist.txt": "b819e7b67f8f2c80640ae76f0edbe59a4a1befb6de0f348463642ad49bdd2ad3"
+  },
+  "purpose": "Frozen current composite with terminal fix, market calibration disabled by explicit params. Offline experiments only."
+}

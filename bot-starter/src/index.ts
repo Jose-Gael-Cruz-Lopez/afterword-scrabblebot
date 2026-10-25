@@ -205,7 +205,7 @@ class BotSession {
     const myWords = [...this.conn.db.wordPlay.iter()].filter(w => w.matchId === matchId && w.botId === this.botId);
     work.initialRack ??= reconstructInitialRack(rack, myWords.map(w => w.word), results.filter(r => r.winnerBotId === this.botId).map(r => r.letter), match.startingRackSize);
     const context: BidContext = {
-      myRack: rack, myBalance: Number(participant.balance), letter: auction.letter,
+      matchId: String(matchId), myRack: rack, myBalance: Number(participant.balance), letter: auction.letter,
       initialRack: work.initialRack, round: match.currentRound,
       roundsRemaining: auctionsRemaining(match.startingRackSize, participants.length, match.currentRound),
       auctionType: match.auctionType.tag,
@@ -366,7 +366,7 @@ async function main() {
   if (TOURNAMENT_ID !== "auto" && TOURNAMENT_ID !== "none" && !/^\d+$/.test(TOURNAMENT_ID)) throw new Error("TOURNAMENT_ID must be auto, none, or a numeric id");
   if (!fs.existsSync(DICTIONARY_PATH)) throw new Error(`Missing official dictionary: ${DICTIONARY_PATH}`);
   planner = new RuntimePlanner(DICTIONARY_PATH);
-  log(`indexed ${await planner.ready} official words in the planner worker`);
+  log(`indexed ${await planner.ready} official words in the planner worker; policy=${process.env.BOT_POLICY ?? "licensed"}; terminalSafe=${process.env.BOT_POLICY !== "original"}`);
   connect();
 }
 void main().catch(async error => { log(`startup failed: ${errorMessage(error)}`); await shutdown(1); });

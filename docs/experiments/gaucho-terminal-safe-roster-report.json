@@ -1,0 +1,966 @@
+{
+  "seedStart": 2026103101,
+  "games": 24,
+  "matches": 24,
+  "auctionType": "SecondPrice",
+  "errors": [],
+  "details": [
+    {
+      "seed": 2026103101,
+      "players": [
+        {
+          "name": "licensed-terminal-safe",
+          "score": 68,
+          "balance": 1
+        },
+        {
+          "name": "licensed-untouched",
+          "score": 133,
+          "balance": 2
+        },
+        {
+          "name": "corrected-original",
+          "score": 31,
+          "balance": 49
+        },
+        {
+          "name": "pressure-14",
+          "score": 18,
+          "balance": 5
+        },
+        {
+          "name": "pressure-16",
+          "score": 23,
+          "balance": 1
+        },
+        {
+          "name": "pressure-18",
+          "score": 17,
+          "balance": 0
+        }
+      ]
+    },
+    {
+      "seed": 2026103102,
+      "players": [
+        {
+          "name": "licensed-untouched",
+          "score": 112,
+          "balance": 1
+        },
+        {
+          "name": "corrected-original",
+          "score": 60,
+          "balance": 23
+        },
+        {
+          "name": "pressure-14",
+          "score": 32,
+          "balance": 6
+        },
+        {
+          "name": "pressure-16",
+          "score": 15,
+          "balance": 3
+        },
+        {
+          "name": "pressure-18",
+          "score": 15,
+          "balance": 2
+        },
+        {
+          "name": "licensed-terminal-safe",
+          "score": 82,
+          "balance": 2
+        }
+      ]
+    },
+    {
+      "seed": 2026103103,
+      "players": [
+        {
+          "name": "corrected-original",
+          "score": 51,
+          "balance": 52
+        },
+        {
+          "name": "pressure-14",
+          "score": 18,
+          "balance": 2
+        },
+        {
+          "name": "pressure-16",
+          "score": 22,
+          "balance": 0
+        },
+        {
+          "name": "pressure-18",
+          "score": 28,
+          "balance": 2
+        },
+        {
+          "name": "licensed-terminal-safe",
+          "score": 88,
+          "balance": 17
+        },
+        {
+          "name": "licensed-untouched",
+          "score": 90,
+          "balance": 0
+        }
+      ]
+    },
+    {
+      "seed": 2026103104,
+      "players": [
+        {
+          "name": "pressure-14",
+          "score": 20,
+          "balance": 5
+        },
+        {
+          "name": "pressure-16",
+          "score": 22,
+          "balance": 0
+        },
+        {
+          "name": "pressure-18",
+          "score": 14,
+          "balance": 1
+        },
+        {
+          "name": "licensed-terminal-safe",
+          "score": 66,
+          "balance": 12
+        },
+        {
+          "name": "licensed-untouched",
+          "score": 110,
+          "balance": 1
+        },
+        {
+          "name": "corrected-original",
+          "score": 90,
+          "balance": 59
+        }
+      ]
+    },
+    {
+      "seed": 2026103105,
+      "players": [
+        {
+          "name": "pressure-16",
+          "score": 20,
+          "balance": 0
+        },
+        {
+          "name": "pressure-18",
+          "score": 21,
+          "balance": 0
+        },
+        {
+          "name": "licensed-terminal-safe",
+          "score": 88,
+          "balance": 1
+        },
+        {
+          "name": "licensed-untouched",
+          "score": 81,
+          "balance": 5
+        },
+        {
+          "name": "corrected-original",
+          "score": 88,
+          "balance": 28
+        },
+        {
+          "name": "pressure-14",
+          "score": 21,
+          "balance": 0
+        }
+      ]
+    },
+    {
+      "seed": 2026103106,
+      "players": [
+        {
+          "name": "pressure-18",
+          "score": 22,
+          "balance": 1
+        },
+        {
+          "name": "licensed-terminal-safe",
+          "score": 99,
+          "balance": 0
+        },
+        {
+          "name": "licensed-untouched",
+          "score": 100,
+          "balance": 1
+        },
+        {
+          "name": "corrected-original",
+          "score": 37,
+          "balance": 63
+        },
+        {
+          "name": "pressure-14",
+          "score": 22,
+          "balance": 4
+        },
+        {
+          "name": "pressure-16",
+          "score": 21,
+          "balance": 0
+        }
+      ]
+    },
+    {
+      "seed": 2026103107,
+      "players": [
+        {
+          "name": "licensed-terminal-safe",
+          "score": 99,
+          "balance": 37
+        },
+        {
+          "name": "licensed-untouched",
+          "score": 110,
+          "balance": 1
+        },
+        {
+          "name": "corrected-original",
+          "score": 65,
+          "balance": 9
+        },
+        {
+          "name": "pressure-14",
+          "score": 30,
+          "balance": 2
+        },
+        {
+          "name": "pressure-16",
+          "score": 20,
+          "balance": 7
+        },
+        {
+          "name": "pressure-18",
+          "score": 20,
+          "balance": 6
+        }
+      ]
+    },
+    {
+      "seed": 2026103108,
+      "players": [
+        {
+          "name": "licensed-untouched",
+          "score": 95,
+          "balance": 1
+        },
+        {
+          "name": "corrected-original",
+          "score": 75,
+          "balance": 37
+        },
+        {
+          "name": "pressure-14",
+          "score": 21,
+          "balance": 7
+        },
+        {
+          "name": "pressure-16",
+          "score": 21,
+          "balance": 7
+        },
+        {
+          "name": "pressure-18",
+          "score": 22,
+          "balance": 1
+        },
+        {
+          "name": "licensed-terminal-safe",
+          "score": 129,
+          "balance": 69
+        }
+      ]
+    },
+    {
+      "seed": 2026103109,
+      "players": [
+        {
+          "name": "corrected-original",
+          "score": 62,
+          "balance": 45
+        },
+        {
+          "name": "pressure-14",
+          "score": 34,
+          "balance": 6
+        },
+        {
+          "name": "pressure-16",
+          "score": 19,
+          "balance": 0
+        },
+        {
+          "name": "pressure-18",
+          "score": 23,
+          "balance": 2
+        },
+        {
+          "name": "licensed-terminal-safe",
+          "score": 100,
+          "balance": 1
+        },
+        {
+          "name": "licensed-untouched",
+          "score": 111,
+          "balance": 5
+        }
+      ]
+    },
+    {
+      "seed": 2026103110,
+      "players": [
+        {
+          "name": "pressure-14",
+          "score": 18,
+          "balance": 3
+        },
+        {
+          "name": "pressure-16",
+          "score": 23,
+          "balance": 3
+        },
+        {
+          "name": "pressure-18",
+          "score": 13,
+          "balance": 1
+        },
+        {
+          "name": "licensed-terminal-safe",
+          "score": 136,
+          "balance": 48
+        },
+        {
+          "name": "licensed-untouched",
+          "score": 64,
+          "balance": 4
+        },
+        {
+          "name": "corrected-original",
+          "score": 86,
+          "balance": 12
+        }
+      ]
+    },
+    {
+      "seed": 2026103111,
+      "players": [
+        {
+          "name": "pressure-16",
+          "score": 33,
+          "balance": 6
+        },
+        {
+          "name": "pressure-18",
+          "score": 19,
+          "balance": 7
+        },
+        {
+          "name": "licensed-terminal-safe",
+          "score": 114,
+          "balance": 19
+        },
+        {
+          "name": "licensed-untouched",
+          "score": 110,
+          "balance": 20
+        },
+        {
+          "name": "corrected-original",
+          "score": 80,
+          "balance": 58
+        },
+        {
+          "name": "pressure-14",
+          "score": 14,
+          "balance": 6
+        }
+      ]
+    },
+    {
+      "seed": 2026103112,
+      "players": [
+        {
+          "name": "pressure-18",
+          "score": 15,
+          "balance": 1
+        },
+        {
+          "name": "licensed-terminal-safe",
+          "score": 39,
+          "balance": 1
+        },
+        {
+          "name": "licensed-untouched",
+          "score": 95,
+          "balance": 2
+        },
+        {
+          "name": "corrected-original",
+          "score": 57,
+          "balance": 19
+        },
+        {
+          "name": "pressure-14",
+          "score": 23,
+          "balance": 1
+        },
+        {
+          "name": "pressure-16",
+          "score": 21,
+          "balance": 2
+        }
+      ]
+    },
+    {
+      "seed": 2026103113,
+      "players": [
+        {
+          "name": "licensed-terminal-safe",
+          "score": 77,
+          "balance": 7
+        },
+        {
+          "name": "licensed-untouched",
+          "score": 129,
+          "balance": 4
+        },
+        {
+          "name": "corrected-original",
+          "score": 24,
+          "balance": 53
+        },
+        {
+          "name": "pressure-14",
+          "score": 19,
+          "balance": 2
+        },
+        {
+          "name": "pressure-16",
+          "score": 22,
+          "balance": 1
+        },
+        {
+          "name": "pressure-18",
+          "score": 23,
+          "balance": 1
+        }
+      ]
+    },
+    {
+      "seed": 2026103114,
+      "players": [
+        {
+          "name": "licensed-untouched",
+          "score": 149,
+          "balance": 33
+        },
+        {
+          "name": "corrected-original",
+          "score": 28,
+          "balance": 37
+        },
+        {
+          "name": "pressure-14",
+          "score": 19,
+          "balance": 3
+        },
+        {
+          "name": "pressure-16",
+          "score": 20,
+          "balance": 4
+        },
+        {
+          "name": "pressure-18",
+          "score": 18,
+          "balance": 6
+        },
+        {
+          "name": "licensed-terminal-safe",
+          "score": 104,
+          "balance": 7
+        }
+      ]
+    },
+    {
+      "seed": 2026103115,
+      "players": [
+        {
+          "name": "corrected-original",
+          "score": 60,
+          "balance": 21
+        },
+        {
+          "name": "pressure-14",
+          "score": 14,
+          "balance": 0
+        },
+        {
+          "name": "pressure-16",
+          "score": 32,
+          "balance": 10
+        },
+        {
+          "name": "pressure-18",
+          "score": 22,
+          "balance": 0
+        },
+        {
+          "name": "licensed-terminal-safe",
+          "score": 109,
+          "balance": 7
+        },
+        {
+          "name": "licensed-untouched",
+          "score": 93,
+          "balance": 7
+        }
+      ]
+    },
+    {
+      "seed": 2026103116,
+      "players": [
+        {
+          "name": "pressure-14",
+          "score": 28,
+          "balance": 5
+        },
+        {
+          "name": "pressure-16",
+          "score": 14,
+          "balance": 2
+        },
+        {
+          "name": "pressure-18",
+          "score": 23,
+          "balance": 1
+        },
+        {
+          "name": "licensed-terminal-safe",
+          "score": 99,
+          "balance": 0
+        },
+        {
+          "name": "licensed-untouched",
+          "score": 128,
+          "balance": 8
+        },
+        {
+          "name": "corrected-original",
+          "score": 43,
+          "balance": 68
+        }
+      ]
+    },
+    {
+      "seed": 2026103117,
+      "players": [
+        {
+          "name": "pressure-16",
+          "score": 24,
+          "balance": 0
+        },
+        {
+          "name": "pressure-18",
+          "score": 17,
+          "balance": 4
+        },
+        {
+          "name": "licensed-terminal-safe",
+          "score": 99,
+          "balance": 11
+        },
+        {
+          "name": "licensed-untouched",
+          "score": 130,
+          "balance": 18
+        },
+        {
+          "name": "corrected-original",
+          "score": 36,
+          "balance": 47
+        },
+        {
+          "name": "pressure-14",
+          "score": 31,
+          "balance": 2
+        }
+      ]
+    },
+    {
+      "seed": 2026103118,
+      "players": [
+        {
+          "name": "pressure-18",
+          "score": 23,
+          "balance": 5
+        },
+        {
+          "name": "licensed-terminal-safe",
+          "score": 81,
+          "balance": 1
+        },
+        {
+          "name": "licensed-untouched",
+          "score": 129,
+          "balance": 0
+        },
+        {
+          "name": "corrected-original",
+          "score": 60,
+          "balance": 56
+        },
+        {
+          "name": "pressure-14",
+          "score": 17,
+          "balance": 0
+        },
+        {
+          "name": "pressure-16",
+          "score": 35,
+          "balance": 1
+        }
+      ]
+    },
+    {
+      "seed": 2026103119,
+      "players": [
+        {
+          "name": "licensed-terminal-safe",
+          "score": 57,
+          "balance": 0
+        },
+        {
+          "name": "licensed-untouched",
+          "score": 98,
+          "balance": 1
+        },
+        {
+          "name": "corrected-original",
+          "score": 59,
+          "balance": 10
+        },
+        {
+          "name": "pressure-14",
+          "score": 30,
+          "balance": 3
+        },
+        {
+          "name": "pressure-16",
+          "score": 26,
+          "balance": 2
+        },
+        {
+          "name": "pressure-18",
+          "score": 24,
+          "balance": 2
+        }
+      ]
+    },
+    {
+      "seed": 2026103120,
+      "players": [
+        {
+          "name": "licensed-untouched",
+          "score": 137,
+          "balance": 1
+        },
+        {
+          "name": "corrected-original",
+          "score": 62,
+          "balance": 40
+        },
+        {
+          "name": "pressure-14",
+          "score": 22,
+          "balance": 2
+        },
+        {
+          "name": "pressure-16",
+          "score": 19,
+          "balance": 2
+        },
+        {
+          "name": "pressure-18",
+          "score": 42,
+          "balance": 0
+        },
+        {
+          "name": "licensed-terminal-safe",
+          "score": 47,
+          "balance": 0
+        }
+      ]
+    },
+    {
+      "seed": 2026103121,
+      "players": [
+        {
+          "name": "corrected-original",
+          "score": 80,
+          "balance": 36
+        },
+        {
+          "name": "pressure-14",
+          "score": 20,
+          "balance": 6
+        },
+        {
+          "name": "pressure-16",
+          "score": 22,
+          "balance": 0
+        },
+        {
+          "name": "pressure-18",
+          "score": 20,
+          "balance": 0
+        },
+        {
+          "name": "licensed-terminal-safe",
+          "score": 146,
+          "balance": 5
+        },
+        {
+          "name": "licensed-untouched",
+          "score": 96,
+          "balance": 51
+        }
+      ]
+    },
+    {
+      "seed": 2026103122,
+      "players": [
+        {
+          "name": "pressure-14",
+          "score": 18,
+          "balance": 3
+        },
+        {
+          "name": "pressure-16",
+          "score": 23,
+          "balance": 1
+        },
+        {
+          "name": "pressure-18",
+          "score": 19,
+          "balance": 1
+        },
+        {
+          "name": "licensed-terminal-safe",
+          "score": 97,
+          "balance": 2
+        },
+        {
+          "name": "licensed-untouched",
+          "score": 148,
+          "balance": 1
+        },
+        {
+          "name": "corrected-original",
+          "score": 41,
+          "balance": 72
+        }
+      ]
+    },
+    {
+      "seed": 2026103123,
+      "players": [
+        {
+          "name": "pressure-16",
+          "score": 16,
+          "balance": 4
+        },
+        {
+          "name": "pressure-18",
+          "score": 24,
+          "balance": 1
+        },
+        {
+          "name": "licensed-terminal-safe",
+          "score": 85,
+          "balance": 15
+        },
+        {
+          "name": "licensed-untouched",
+          "score": 124,
+          "balance": 1
+        },
+        {
+          "name": "corrected-original",
+          "score": 40,
+          "balance": 61
+        },
+        {
+          "name": "pressure-14",
+          "score": 28,
+          "balance": 2
+        }
+      ]
+    },
+    {
+      "seed": 2026103124,
+      "players": [
+        {
+          "name": "pressure-18",
+          "score": 20,
+          "balance": 0
+        },
+        {
+          "name": "licensed-terminal-safe",
+          "score": 118,
+          "balance": 9
+        },
+        {
+          "name": "licensed-untouched",
+          "score": 118,
+          "balance": 22
+        },
+        {
+          "name": "corrected-original",
+          "score": 37,
+          "balance": 67
+        },
+        {
+          "name": "pressure-14",
+          "score": 25,
+          "balance": 3
+        },
+        {
+          "name": "pressure-16",
+          "score": 29,
+          "balance": 2
+        }
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "name": "licensed-terminal-safe",
+      "wins": 6,
+      "score": 2227,
+      "balance": 272,
+      "maxDecisionMs": 13.824667000000773,
+      "seats": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "meanScore": 92.79166666666667,
+      "meanBalance": 11.333333333333334,
+      "winRate": 0.25
+    },
+    {
+      "name": "licensed-untouched",
+      "wins": 17.5,
+      "score": 2690,
+      "balance": 190,
+      "maxDecisionMs": 19.3924590000006,
+      "seats": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "meanScore": 112.08333333333333,
+      "meanBalance": 7.916666666666667,
+      "winRate": 0.7291666666666666
+    },
+    {
+      "name": "corrected-original",
+      "wins": 0.5,
+      "score": 1352,
+      "balance": 1022,
+      "maxDecisionMs": 62.14899999999943,
+      "seats": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "meanScore": 56.333333333333336,
+      "meanBalance": 42.583333333333336,
+      "winRate": 0.020833333333333332
+    },
+    {
+      "name": "pressure-14",
+      "wins": 0,
+      "score": 542,
+      "balance": 78,
+      "maxDecisionMs": 4.66820800000005,
+      "seats": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "meanScore": 22.583333333333332,
+      "meanBalance": 3.25,
+      "winRate": 0
+    },
+    {
+      "name": "pressure-16",
+      "wins": 0,
+      "score": 542,
+      "balance": 58,
+      "maxDecisionMs": 17.563457999998718,
+      "seats": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "meanScore": 22.583333333333332,
+      "meanBalance": 2.4166666666666665,
+      "winRate": 0
+    },
+    {
+      "name": "pressure-18",
+      "wins": 0,
+      "score": 504,
+      "balance": 45,
+      "maxDecisionMs": 8.792875000000095,
+      "seats": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "meanScore": 21,
+      "meanBalance": 1.875,
+      "winRate": 0
+    }
+  ],
+  "headToHead": {
+    "patchedAhead": 6,
+    "untouchedAhead": 17,
+    "equal": 1
+  },
+  "adapterSha256": "b812c4056f1848fe682545fc39ae95deb1a05def6795e1e2db2013bbcf321d91",
+  "elapsedMs": 12870.879208999999
+}

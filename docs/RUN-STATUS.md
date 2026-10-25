@@ -1,11 +1,21 @@
 # Afterword operating status
 
-Registered on2026-10-24 as Afterword, bot145, team Afterword by Jose(team139), owned by the signed-in SpacetimeDB account. Public profile: https://scrabblebot.spacetimedb.com/bots/145 .
+Snapshot: 2026-10-25T06:49:48.933307+00:00. Registered bot **Afterword145**, team **Afterword by Jose139**, owned by the signed-in SpacetimeDB account. [Public profile](https://scrabblebot.spacetimedb.com/bots/145).
 
-A scoped live client runs under the user LaunchAgent dev.afterword.scrabblebot. It automatically reconnects and restarts, joins casual matches, and registers/stays free when an open tournament appears. At the latest explicit check, the tournament table was empty; tournament participation is not yet confirmed. No tournament win is claimed.
+## Running policy
 
-Live matches16264,16274 and16284 were observed through completion against real bots: scores81,23 and59; best finish tied second. These live results are less strong than the synthetic benchmark, so further changes must be evaluated against competitive acquisition pressure. A full-history subscription issue was found in live operation and corrected: RSS fell from~2.1GB to~335MB, with scoped histories released at each completed game.
+The user LaunchAgent `dev.afterword.scrabblebot` runs the MIT-licensed Lionel/Gaucho production policy (pinned source and attribution in `bot-starter/src/reference-gaucho/`), through our worker/client and explicit terminalSafe adapter. It automatically reconnects/restarts, joins casual matches, and registers/stays free when an open tournament appears. The latest tournament query returned no rows; tournament entry and a tournament win are **not confirmed**.
 
-Credentials are stored locally outside tracked files with0600 permissions. Logs are ignored by Git. The bot runs on this Mac, not a remote server. Keep the Mac and its network available. Stop/restart commands are in the README.
+The licensed policy replaced the weaker original after match16456. A verified live win followed: **match16502, Afterword131, Jobs90, Lala89, bot69, swanbot54, ace_bot44**. The public database confirms an ended six-player Vickrey match. At this snapshot the licensed client has 7 completed observed games and 2 win(s); these few casual outcomes are not a stable win-rate estimate. [Public match](https://scrabblebot.spacetimedb.com/matches/16502), [query evidence](evidence/live-win-16502.json), [all licensed results at snapshot](evidence/licensed-live-summary.json).
 
-Evidence: 43 passing tests;216 simulated tuning matches without illegal actions; scoped-subscription live query probe; real worker termination/recovery; registration screenshot; live score summaries. Parameter experiments and simulations do not guarantee competition wins.
+The original planner had no observed live wins. Early matches16264/16274/16284 scored81/23/59 (best tiedsecond), and the seven-match diagnosis remains in `experiments/live-diagnosis.md`. We retained the negative evidence instead of inferring strength from weak simulated opponents.
+
+A full-history subscription problem was fixed: the original process reached~2.1GB RSS; the scoped licensed client was observed near114MB. Active-match histories are released on completion. Dictionary search runs in a worker; match planners are isolated. Recent licensed decisions are typically a few milliseconds, but network timing still matters.
+
+## Validation
+
+64/64 tests pass; TypeScript build passes. Final fresh seat-balanced confirmation: reference10/12 Vickrey wins and7/12 first-price wins, original2/12 and3/12, zero invalid actions. The final terminal correction has independent small-rack invariants and24 paired seeds /48 runs:2 improvements (+7,+1),22 unchanged, zero regressions; all pre-terminal traces match. Full provenance and portable runners are committed. These results do not guarantee tournament strength.
+
+## Operation and privacy
+
+The bot runs on this Mac, not remotely. Keep the Mac awake with its network available; the LaunchAgent includes idle-sleep inhibition. Credentials are private0600 files and are ignored by Git, as are operational logs. Stop/restart commands are in the README. The official competition module was not changed or republished, and the bot never accesses hidden opponent holdings or live spectator bids.

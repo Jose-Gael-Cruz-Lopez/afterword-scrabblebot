@@ -1,0 +1,16 @@
+{
+  "checkedAt": "2026-10-25T06:50:45.904771+00:00",
+  "source": "https://scrabblebot.spacetimedb.com/matches/16511",
+  "verification": "SELECT * FROM match_participant WHERE match_id = 16511",
+  "afterwordBotId": 145,
+  "score": 147,
+  "balance": 2,
+  "otherScores": [
+    97,
+    69,
+    58,
+    12,
+    0
+  ],
+  "note": "Match completion independently observed in local live log at2026-10-25T06:48:23.091Z; score rows independently queried from public database."
+}

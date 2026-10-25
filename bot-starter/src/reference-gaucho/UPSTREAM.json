@@ -1,0 +1,46 @@
+{
+  "repository": "https://github.com/JoaquinGiorgis/scrabblebot-gaucho",
+  "commit": "f2dce03a99e01a88ef9fdf2e300b50ef592c4c50",
+  "files": [
+    {
+      "path": "core/policy.ts",
+      "source": "bot-starter/src/core/policy.ts",
+      "git_blob_sha": "3866076a06205389fd58db1d02f19467389017ae"
+    },
+    {
+      "path": "core/dict.ts",
+      "source": "bot-starter/src/core/dict.ts",
+      "git_blob_sha": "bf1f1f41c768312adb588daaad06eed8d6da0605"
+    },
+    {
+      "path": "core/prices.ts",
+      "source": "bot-starter/src/core/prices.ts",
+      "git_blob_sha": "b158cf5dbf405c68d069cdd7aaddde21523704c3"
+    },
+    {
+      "path": "core/rules.ts",
+      "source": "bot-starter/src/core/rules.ts",
+      "git_blob_sha": "5f841d05f127e3766318bc18a659ddff3428b787"
+    },
+    {
+      "path": "params/vickrey.json",
+      "source": "bot-starter/params/vickrey.json",
+      "git_blob_sha": "ffd359bd6d74d200cfd2bfb45087ac8ae005d87b"
+    },
+    {
+      "path": "params/firstprice.json",
+      "source": "bot-starter/params/firstprice.json",
+      "git_blob_sha": "1f39fe39716fd6fef069ceb13f0f9efb015eb2a5"
+    },
+    {
+      "path": "params/market-paid.json",
+      "source": "bot-starter/params/market-paid.json",
+      "git_blob_sha": "eb84d07502409bfd7a73ab6eb17fc1f1b17ec660"
+    },
+    {
+      "path": "LICENSE",
+      "source": "LICENSE",
+      "git_blob_sha": "34b721d67363e2b8812617903772c81df3f4c551"
+    }
+  ]
+}

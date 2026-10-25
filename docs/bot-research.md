@@ -7,8 +7,7 @@ real opponents and reproducible offline baselines.
 ## This is an auction game, not board Scrabble
 
 The [official repository](https://github.com/clockworklabs/scrabblebot) includes
-the actual rules, a starter client and the authoritative ENABLE wordlist. Its
-README describes an older Rust implementation; current game code is TypeScript.
+the actual rules, a starter client and the authoritative ENABLE wordlist. The current game code is TypeScript; some README rule descriptions are stale.
 The reusable client/reducer structure is more relevant than a board-game engine.
 
 Current source: [game.ts](https://github.com/clockworklabs/scrabblebot/blob/main/spacetimedb/src/game.ts),
@@ -95,3 +94,9 @@ uses native score-plus-leave search with baseline bidding;
 [Phaslyr](https://github.com/Phaslyr/scrabblebot/blob/main/bot-starter/src/strategy.ts)
 uses cached counts and immediate completion values. Their current revisions may
 change; pin commits when recording benchmark results.
+
+## Final selection: an auction-specific licensed policy
+
+Direct public-arena research found [Lionel/Gaucho](https://github.com/JoaquinGiorgis/scrabblebot-gaucho) (MIT) and [Nijello](https://github.com/bananatruck/scrabblebot-evo) (no license found). Nijello was reviewed for ideas only; no code or weights were copied. Board-game engine techniques were less decisive than auction-specific acquisition/cashout alignment. The Gaucho production policy beat our original candidate in48 fresh games, the full policy beat bid/word hybrids in24 further games, and a final24-game confirmation supported selecting it. Full source attribution and pinned blob hashes are in `bot-starter/src/reference-gaucho/`.
+
+Live diagnosis found that paying slightly more was not the central issue: the original planner converted tiles into low-value two-letter cashouts and acquired fewer high-value tiles than winners. Global bid floors, adaptive floors, budget curves and Monte Carlo experiments did not pass stricter tests and remain off. Our final runtime therefore uses the complete licensed policy with our robust client and an independently tested terminal adapter, rather than claiming the weaker original planner is strongest. See `docs/experiments/live-diagnosis.md` and `docs/experiments/RESULTS.md` for negative evidence as well as successes.

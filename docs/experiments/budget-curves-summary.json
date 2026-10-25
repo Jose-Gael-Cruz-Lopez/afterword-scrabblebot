@@ -1,0 +1,194 @@
+{
+  "matches": 144,
+  "errors": 0,
+  "variants": {
+    "cold6": {
+      "SecondPrice": {
+        "control": {
+          "winRate": 0.2916666666666667,
+          "meanScore": 78.16666666666667,
+          "meanBalance": 25.291666666666668,
+          "meanSpent": 152.875,
+          "meanTilesWon": 13.791666666666666,
+          "meanPlace": 1.9583333333333333
+        },
+        "candidate": {
+          "winRate": 0.25,
+          "meanScore": 70.33333333333333,
+          "meanBalance": 7.416666666666667,
+          "meanSpent": 162.91666666666666,
+          "meanTilesWon": 12.625,
+          "meanPlace": 2.5
+        },
+        "pairedScoreDifference": -7.833333333333333,
+        "scoreDifferenceApprox95CI": [
+          -16.72536874260869,
+          1.0587020759420236
+        ],
+        "pairedPlaceDifference": 0.5416666666666666,
+        "placeDifferenceApprox95CI": [
+          -0.11498703363936524,
+          1.1983203669726985
+        ],
+        "pairwiseWinShare": 0.3333333333333333,
+        "games": 24
+      },
+      "FirstPrice": {
+        "control": {
+          "winRate": 0.375,
+          "meanScore": 76.25,
+          "meanBalance": 5.833333333333333,
+          "meanSpent": 170.41666666666666,
+          "meanTilesWon": 18,
+          "meanPlace": 2.2291666666666665
+        },
+        "candidate": {
+          "winRate": 0.4166666666666667,
+          "meanScore": 75.29166666666667,
+          "meanBalance": 3.2083333333333335,
+          "meanSpent": 172.08333333333334,
+          "meanTilesWon": 14.416666666666666,
+          "meanPlace": 2
+        },
+        "pairedScoreDifference": -0.9583333333333334,
+        "scoreDifferenceApprox95CI": [
+          -16.039003267932678,
+          14.12233660126601
+        ],
+        "pairedPlaceDifference": -0.22916666666666666,
+        "placeDifferenceApprox95CI": [
+          -1.0612663150737713,
+          0.6029329817404381
+        ],
+        "pairwiseWinShare": 0.5416666666666666,
+        "games": 24
+      }
+    },
+    "open-floor": {
+      "SecondPrice": {
+        "control": {
+          "winRate": 0.3333333333333333,
+          "meanScore": 80.125,
+          "meanBalance": 21.958333333333332,
+          "meanSpent": 158.16666666666666,
+          "meanTilesWon": 14.375,
+          "meanPlace": 1.9166666666666667
+        },
+        "candidate": {
+          "winRate": 0.25,
+          "meanScore": 69.75,
+          "meanBalance": 7.25,
+          "meanSpent": 162.5,
+          "meanTilesWon": 12.583333333333334,
+          "meanPlace": 2.5416666666666665
+        },
+        "pairedScoreDifference": -10.375,
+        "scoreDifferenceApprox95CI": [
+          -19.89460930038014,
+          -0.8553906996198588
+        ],
+        "pairedPlaceDifference": 0.625,
+        "placeDifferenceApprox95CI": [
+          -0.06102536185001883,
+          1.3110253618500187
+        ],
+        "pairwiseWinShare": 0.3333333333333333,
+        "games": 24
+      },
+      "FirstPrice": {
+        "control": {
+          "winRate": 0.3541666666666667,
+          "meanScore": 75.375,
+          "meanBalance": 5.333333333333333,
+          "meanSpent": 170.04166666666666,
+          "meanTilesWon": 17.916666666666668,
+          "meanPlace": 2.2291666666666665
+        },
+        "candidate": {
+          "winRate": 0.4375,
+          "meanScore": 76.54166666666667,
+          "meanBalance": 3.3333333333333335,
+          "meanSpent": 173.20833333333334,
+          "meanTilesWon": 14.333333333333334,
+          "meanPlace": 1.8958333333333333
+        },
+        "pairedScoreDifference": 1.1666666666666667,
+        "scoreDifferenceApprox95CI": [
+          -13.342086047264663,
+          15.675419380597996
+        ],
+        "pairedPlaceDifference": -0.3333333333333333,
+        "placeDifferenceApprox95CI": [
+          -1.0948789267295895,
+          0.42821226006292296
+        ],
+        "pairwiseWinShare": 0.5625,
+        "games": 24
+      }
+    },
+    "sqrt": {
+      "SecondPrice": {
+        "control": {
+          "winRate": 0.2916666666666667,
+          "meanScore": 75.5,
+          "meanBalance": 26.916666666666668,
+          "meanSpent": 148.58333333333334,
+          "meanTilesWon": 11.666666666666666,
+          "meanPlace": 2.3333333333333335
+        },
+        "candidate": {
+          "winRate": 0.2916666666666667,
+          "meanScore": 72.54166666666667,
+          "meanBalance": 27.791666666666668,
+          "meanSpent": 144.75,
+          "meanTilesWon": 14.041666666666666,
+          "meanPlace": 2.375
+        },
+        "pairedScoreDifference": -2.9583333333333335,
+        "scoreDifferenceApprox95CI": [
+          -13.299087792161654,
+          7.382421125494986
+        ],
+        "pairedPlaceDifference": 0.041666666666666664,
+        "placeDifferenceApprox95CI": [
+          -0.8150298167709039,
+          0.8983631501042372
+        ],
+        "pairwiseWinShare": 0.4166666666666667,
+        "games": 24
+      },
+      "FirstPrice": {
+        "control": {
+          "winRate": 0.5,
+          "meanScore": 81.08333333333333,
+          "meanBalance": 10.333333333333334,
+          "meanSpent": 170.75,
+          "meanTilesWon": 16.375,
+          "meanPlace": 1.7708333333333333
+        },
+        "candidate": {
+          "winRate": 0.20833333333333334,
+          "meanScore": 74.41666666666667,
+          "meanBalance": 18.083333333333332,
+          "meanSpent": 156.33333333333334,
+          "meanTilesWon": 17.041666666666668,
+          "meanPlace": 2.0833333333333335
+        },
+        "pairedScoreDifference": -6.666666666666667,
+        "scoreDifferenceApprox95CI": [
+          -16.907458831074134,
+          3.574125497740801
+        ],
+        "pairedPlaceDifference": 0.3125,
+        "placeDifferenceApprox95CI": [
+          -0.1732652151018006,
+          0.7982652151018006
+        ],
+        "pairwiseWinShare": 0.3541666666666667,
+        "games": 24
+      }
+    }
+  },
+  "recommendation": "Do not promote any tested budget curve. None improves mean score and mean place in both auction types; reduced leftover balance alone is not useful evidence.",
+  "limitations": "Synthetic fixed-floor and patient-seven baselines are stress tests, not exact models of actual leading bots. Normal-approximation intervals across 24 seed-paired games per mode are descriptive; initial data uses balanced seats across seeds rather than all six seats for each seed. All variants were tested once; no selection on these seeds is validated on independent confirmation seeds."
+}

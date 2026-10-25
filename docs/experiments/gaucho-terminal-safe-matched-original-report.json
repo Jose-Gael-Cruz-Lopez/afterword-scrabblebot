@@ -1,0 +1,961 @@
+{
+  "matches": 48,
+  "seeds": [
+    2026110101,
+    2026110102,
+    2026110103,
+    2026110104,
+    2026110105,
+    2026110106,
+    2026110107,
+    2026110108,
+    2026110109,
+    2026110110,
+    2026110111,
+    2026110112,
+    2026110113,
+    2026110114,
+    2026110115,
+    2026110116,
+    2026110117,
+    2026110118,
+    2026110119,
+    2026110120,
+    2026110121,
+    2026110122,
+    2026110123,
+    2026110124
+  ],
+  "errors": [],
+  "paired": [
+    {
+      "seed": 2026110101,
+      "seat": 0,
+      "oldScore": 111,
+      "newScore": 111,
+      "delta": 0,
+      "samePrefix": true,
+      "oldTail": [
+        {
+          "kind": "bid",
+          "seat": 0,
+          "round": 67,
+          "amount": 0
+        },
+        {
+          "kind": "bid",
+          "seat": 0,
+          "round": 68,
+          "amount": 0
+        }
+      ],
+      "newTail": [
+        {
+          "kind": "bid",
+          "seat": 0,
+          "round": 67,
+          "amount": 0
+        },
+        {
+          "kind": "bid",
+          "seat": 0,
+          "round": 68,
+          "amount": 0
+        }
+      ]
+    },
+    {
+      "seed": 2026110102,
+      "seat": 5,
+      "oldScore": 93,
+      "newScore": 93,
+      "delta": 0,
+      "samePrefix": true,
+      "oldTail": [
+        {
+          "kind": "bid",
+          "seat": 5,
+          "round": 67,
+          "amount": 21
+        },
+        {
+          "kind": "bid",
+          "seat": 5,
+          "round": 68,
+          "amount": 0
+        }
+      ],
+      "newTail": [
+        {
+          "kind": "bid",
+          "seat": 5,
+          "round": 67,
+          "amount": 21
+        },
+        {
+          "kind": "bid",
+          "seat": 5,
+          "round": 68,
+          "amount": 0
+        }
+      ]
+    },
+    {
+      "seed": 2026110103,
+      "seat": 4,
+      "oldScore": 60,
+      "newScore": 60,
+      "delta": 0,
+      "samePrefix": true,
+      "oldTail": [
+        {
+          "kind": "bid",
+          "seat": 4,
+          "round": 67,
+          "amount": 0
+        },
+        {
+          "kind": "bid",
+          "seat": 4,
+          "round": 68,
+          "amount": 0
+        }
+      ],
+      "newTail": [
+        {
+          "kind": "bid",
+          "seat": 4,
+          "round": 67,
+          "amount": 0
+        },
+        {
+          "kind": "bid",
+          "seat": 4,
+          "round": 68,
+          "amount": 0
+        }
+      ]
+    },
+    {
+      "seed": 2026110104,
+      "seat": 3,
+      "oldScore": 97,
+      "newScore": 97,
+      "delta": 0,
+      "samePrefix": true,
+      "oldTail": [
+        {
+          "kind": "bid",
+          "seat": 3,
+          "round": 67,
+          "amount": 0
+        },
+        {
+          "kind": "bid",
+          "seat": 3,
+          "round": 68,
+          "amount": 0
+        }
+      ],
+      "newTail": [
+        {
+          "kind": "bid",
+          "seat": 3,
+          "round": 67,
+          "amount": 0
+        },
+        {
+          "kind": "bid",
+          "seat": 3,
+          "round": 68,
+          "amount": 0
+        }
+      ]
+    },
+    {
+      "seed": 2026110105,
+      "seat": 2,
+      "oldScore": 132,
+      "newScore": 132,
+      "delta": 0,
+      "samePrefix": true,
+      "oldTail": [
+        {
+          "kind": "bid",
+          "seat": 2,
+          "round": 67,
+          "amount": 0
+        },
+        {
+          "kind": "bid",
+          "seat": 2,
+          "round": 68,
+          "amount": 0
+        }
+      ],
+      "newTail": [
+        {
+          "kind": "bid",
+          "seat": 2,
+          "round": 67,
+          "amount": 0
+        },
+        {
+          "kind": "bid",
+          "seat": 2,
+          "round": 68,
+          "amount": 0
+        }
+      ]
+    },
+    {
+      "seed": 2026110106,
+      "seat": 1,
+      "oldScore": 95,
+      "newScore": 95,
+      "delta": 0,
+      "samePrefix": true,
+      "oldTail": [
+        {
+          "kind": "bid",
+          "seat": 1,
+          "round": 67,
+          "amount": 0
+        },
+        {
+          "kind": "bid",
+          "seat": 1,
+          "round": 68,
+          "amount": 0
+        }
+      ],
+      "newTail": [
+        {
+          "kind": "bid",
+          "seat": 1,
+          "round": 67,
+          "amount": 0
+        },
+        {
+          "kind": "bid",
+          "seat": 1,
+          "round": 68,
+          "amount": 0
+        }
+      ]
+    },
+    {
+      "seed": 2026110107,
+      "seat": 0,
+      "oldScore": 99,
+      "newScore": 106,
+      "delta": 7,
+      "samePrefix": true,
+      "oldTail": [
+        {
+          "kind": "word",
+          "seat": 0,
+          "round": 67,
+          "word": "LAR",
+          "reward": 3
+        },
+        {
+          "kind": "bid",
+          "seat": 0,
+          "round": 67,
+          "amount": 0
+        },
+        {
+          "kind": "bid",
+          "seat": 0,
+          "round": 68,
+          "amount": 0
+        }
+      ],
+      "newTail": [
+        {
+          "kind": "bid",
+          "seat": 0,
+          "round": 67,
+          "amount": 13
+        },
+        {
+          "kind": "word",
+          "seat": 0,
+          "round": 68,
+          "word": "HARL",
+          "reward": 10
+        },
+        {
+          "kind": "bid",
+          "seat": 0,
+          "round": 68,
+          "amount": 0
+        }
+      ]
+    },
+    {
+      "seed": 2026110108,
+      "seat": 5,
+      "oldScore": 97,
+      "newScore": 97,
+      "delta": 0,
+      "samePrefix": true,
+      "oldTail": [
+        {
+          "kind": "bid",
+          "seat": 5,
+          "round": 67,
+          "amount": 8
+        },
+        {
+          "kind": "bid",
+          "seat": 5,
+          "round": 68,
+          "amount": 0
+        }
+      ],
+      "newTail": [
+        {
+          "kind": "bid",
+          "seat": 5,
+          "round": 67,
+          "amount": 8
+        },
+        {
+          "kind": "bid",
+          "seat": 5,
+          "round": 68,
+          "amount": 0
+        }
+      ]
+    },
+    {
+      "seed": 2026110109,
+      "seat": 4,
+      "oldScore": 68,
+      "newScore": 68,
+      "delta": 0,
+      "samePrefix": true,
+      "oldTail": [
+        {
+          "kind": "bid",
+          "seat": 4,
+          "round": 67,
+          "amount": 0
+        },
+        {
+          "kind": "bid",
+          "seat": 4,
+          "round": 68,
+          "amount": 0
+        }
+      ],
+      "newTail": [
+        {
+          "kind": "bid",
+          "seat": 4,
+          "round": 67,
+          "amount": 0
+        },
+        {
+          "kind": "bid",
+          "seat": 4,
+          "round": 68,
+          "amount": 0
+        }
+      ]
+    },
+    {
+      "seed": 2026110110,
+      "seat": 3,
+      "oldScore": 106,
+      "newScore": 106,
+      "delta": 0,
+      "samePrefix": true,
+      "oldTail": [
+        {
+          "kind": "bid",
+          "seat": 3,
+          "round": 67,
+          "amount": 3
+        },
+        {
+          "kind": "bid",
+          "seat": 3,
+          "round": 68,
+          "amount": 0
+        }
+      ],
+      "newTail": [
+        {
+          "kind": "bid",
+          "seat": 3,
+          "round": 67,
+          "amount": 3
+        },
+        {
+          "kind": "bid",
+          "seat": 3,
+          "round": 68,
+          "amount": 0
+        }
+      ]
+    },
+    {
+      "seed": 2026110111,
+      "seat": 2,
+      "oldScore": 66,
+      "newScore": 66,
+      "delta": 0,
+      "samePrefix": true,
+      "oldTail": [
+        {
+          "kind": "bid",
+          "seat": 2,
+          "round": 67,
+          "amount": 0
+        },
+        {
+          "kind": "bid",
+          "seat": 2,
+          "round": 68,
+          "amount": 0
+        }
+      ],
+      "newTail": [
+        {
+          "kind": "bid",
+          "seat": 2,
+          "round": 67,
+          "amount": 0
+        },
+        {
+          "kind": "bid",
+          "seat": 2,
+          "round": 68,
+          "amount": 0
+        }
+      ]
+    },
+    {
+      "seed": 2026110112,
+      "seat": 1,
+      "oldScore": 88,
+      "newScore": 88,
+      "delta": 0,
+      "samePrefix": true,
+      "oldTail": [
+        {
+          "kind": "bid",
+          "seat": 1,
+          "round": 67,
+          "amount": 0
+        },
+        {
+          "kind": "bid",
+          "seat": 1,
+          "round": 68,
+          "amount": 0
+        }
+      ],
+      "newTail": [
+        {
+          "kind": "bid",
+          "seat": 1,
+          "round": 67,
+          "amount": 0
+        },
+        {
+          "kind": "bid",
+          "seat": 1,
+          "round": 68,
+          "amount": 0
+        }
+      ]
+    },
+    {
+      "seed": 2026110113,
+      "seat": 0,
+      "oldScore": 117,
+      "newScore": 117,
+      "delta": 0,
+      "samePrefix": true,
+      "oldTail": [
+        {
+          "kind": "bid",
+          "seat": 0,
+          "round": 67,
+          "amount": 0
+        },
+        {
+          "kind": "bid",
+          "seat": 0,
+          "round": 68,
+          "amount": 0
+        }
+      ],
+      "newTail": [
+        {
+          "kind": "bid",
+          "seat": 0,
+          "round": 67,
+          "amount": 0
+        },
+        {
+          "kind": "bid",
+          "seat": 0,
+          "round": 68,
+          "amount": 0
+        }
+      ]
+    },
+    {
+      "seed": 2026110114,
+      "seat": 5,
+      "oldScore": 123,
+      "newScore": 124,
+      "delta": 1,
+      "samePrefix": true,
+      "oldTail": [
+        {
+          "kind": "word",
+          "seat": 5,
+          "round": 67,
+          "word": "AR",
+          "reward": 2
+        },
+        {
+          "kind": "bid",
+          "seat": 5,
+          "round": 67,
+          "amount": 0
+        },
+        {
+          "kind": "bid",
+          "seat": 5,
+          "round": 68,
+          "amount": 0
+        }
+      ],
+      "newTail": [
+        {
+          "kind": "bid",
+          "seat": 5,
+          "round": 67,
+          "amount": 3
+        },
+        {
+          "kind": "word",
+          "seat": 5,
+          "round": 68,
+          "word": "ARE",
+          "reward": 3
+        },
+        {
+          "kind": "bid",
+          "seat": 5,
+          "round": 68,
+          "amount": 0
+        }
+      ]
+    },
+    {
+      "seed": 2026110115,
+      "seat": 4,
+      "oldScore": 92,
+      "newScore": 92,
+      "delta": 0,
+      "samePrefix": true,
+      "oldTail": [
+        {
+          "kind": "bid",
+          "seat": 4,
+          "round": 67,
+          "amount": 5
+        },
+        {
+          "kind": "bid",
+          "seat": 4,
+          "round": 68,
+          "amount": 0
+        }
+      ],
+      "newTail": [
+        {
+          "kind": "bid",
+          "seat": 4,
+          "round": 67,
+          "amount": 5
+        },
+        {
+          "kind": "bid",
+          "seat": 4,
+          "round": 68,
+          "amount": 0
+        }
+      ]
+    },
+    {
+      "seed": 2026110116,
+      "seat": 3,
+      "oldScore": 57,
+      "newScore": 57,
+      "delta": 0,
+      "samePrefix": true,
+      "oldTail": [
+        {
+          "kind": "bid",
+          "seat": 3,
+          "round": 67,
+          "amount": 0
+        },
+        {
+          "kind": "bid",
+          "seat": 3,
+          "round": 68,
+          "amount": 0
+        }
+      ],
+      "newTail": [
+        {
+          "kind": "bid",
+          "seat": 3,
+          "round": 67,
+          "amount": 0
+        },
+        {
+          "kind": "bid",
+          "seat": 3,
+          "round": 68,
+          "amount": 0
+        }
+      ]
+    },
+    {
+      "seed": 2026110117,
+      "seat": 2,
+      "oldScore": 146,
+      "newScore": 146,
+      "delta": 0,
+      "samePrefix": true,
+      "oldTail": [
+        {
+          "kind": "bid",
+          "seat": 2,
+          "round": 67,
+          "amount": 5
+        },
+        {
+          "kind": "bid",
+          "seat": 2,
+          "round": 68,
+          "amount": 0
+        }
+      ],
+      "newTail": [
+        {
+          "kind": "bid",
+          "seat": 2,
+          "round": 67,
+          "amount": 5
+        },
+        {
+          "kind": "bid",
+          "seat": 2,
+          "round": 68,
+          "amount": 0
+        }
+      ]
+    },
+    {
+      "seed": 2026110118,
+      "seat": 1,
+      "oldScore": 98,
+      "newScore": 98,
+      "delta": 0,
+      "samePrefix": true,
+      "oldTail": [
+        {
+          "kind": "bid",
+          "seat": 1,
+          "round": 67,
+          "amount": 6
+        },
+        {
+          "kind": "word",
+          "seat": 1,
+          "round": 68,
+          "word": "NOG",
+          "reward": 4
+        },
+        {
+          "kind": "bid",
+          "seat": 1,
+          "round": 68,
+          "amount": 0
+        }
+      ],
+      "newTail": [
+        {
+          "kind": "bid",
+          "seat": 1,
+          "round": 67,
+          "amount": 6
+        },
+        {
+          "kind": "word",
+          "seat": 1,
+          "round": 68,
+          "word": "NOG",
+          "reward": 4
+        },
+        {
+          "kind": "bid",
+          "seat": 1,
+          "round": 68,
+          "amount": 0
+        }
+      ]
+    },
+    {
+      "seed": 2026110119,
+      "seat": 0,
+      "oldScore": 70,
+      "newScore": 70,
+      "delta": 0,
+      "samePrefix": true,
+      "oldTail": [
+        {
+          "kind": "bid",
+          "seat": 0,
+          "round": 67,
+          "amount": 4
+        },
+        {
+          "kind": "bid",
+          "seat": 0,
+          "round": 68,
+          "amount": 0
+        }
+      ],
+      "newTail": [
+        {
+          "kind": "bid",
+          "seat": 0,
+          "round": 67,
+          "amount": 4
+        },
+        {
+          "kind": "bid",
+          "seat": 0,
+          "round": 68,
+          "amount": 0
+        }
+      ]
+    },
+    {
+      "seed": 2026110120,
+      "seat": 5,
+      "oldScore": 80,
+      "newScore": 80,
+      "delta": 0,
+      "samePrefix": true,
+      "oldTail": [
+        {
+          "kind": "bid",
+          "seat": 5,
+          "round": 67,
+          "amount": 1
+        },
+        {
+          "kind": "bid",
+          "seat": 5,
+          "round": 68,
+          "amount": 0
+        }
+      ],
+      "newTail": [
+        {
+          "kind": "bid",
+          "seat": 5,
+          "round": 67,
+          "amount": 1
+        },
+        {
+          "kind": "bid",
+          "seat": 5,
+          "round": 68,
+          "amount": 0
+        }
+      ]
+    },
+    {
+      "seed": 2026110121,
+      "seat": 4,
+      "oldScore": 67,
+      "newScore": 67,
+      "delta": 0,
+      "samePrefix": true,
+      "oldTail": [
+        {
+          "kind": "bid",
+          "seat": 4,
+          "round": 67,
+          "amount": 0
+        },
+        {
+          "kind": "bid",
+          "seat": 4,
+          "round": 68,
+          "amount": 0
+        }
+      ],
+      "newTail": [
+        {
+          "kind": "bid",
+          "seat": 4,
+          "round": 67,
+          "amount": 0
+        },
+        {
+          "kind": "bid",
+          "seat": 4,
+          "round": 68,
+          "amount": 0
+        }
+      ]
+    },
+    {
+      "seed": 2026110122,
+      "seat": 3,
+      "oldScore": 78,
+      "newScore": 78,
+      "delta": 0,
+      "samePrefix": true,
+      "oldTail": [
+        {
+          "kind": "bid",
+          "seat": 3,
+          "round": 67,
+          "amount": 1
+        },
+        {
+          "kind": "bid",
+          "seat": 3,
+          "round": 68,
+          "amount": 0
+        }
+      ],
+      "newTail": [
+        {
+          "kind": "bid",
+          "seat": 3,
+          "round": 67,
+          "amount": 1
+        },
+        {
+          "kind": "bid",
+          "seat": 3,
+          "round": 68,
+          "amount": 0
+        }
+      ]
+    },
+    {
+      "seed": 2026110123,
+      "seat": 2,
+      "oldScore": 99,
+      "newScore": 99,
+      "delta": 0,
+      "samePrefix": true,
+      "oldTail": [
+        {
+          "kind": "word",
+          "seat": 2,
+          "round": 67,
+          "word": "MM",
+          "reward": 6
+        },
+        {
+          "kind": "bid",
+          "seat": 2,
+          "round": 67,
+          "amount": 0
+        },
+        {
+          "kind": "bid",
+          "seat": 2,
+          "round": 68,
+          "amount": 0
+        }
+      ],
+      "newTail": [
+        {
+          "kind": "word",
+          "seat": 2,
+          "round": 67,
+          "word": "MM",
+          "reward": 6
+        },
+        {
+          "kind": "bid",
+          "seat": 2,
+          "round": 67,
+          "amount": 0
+        },
+        {
+          "kind": "bid",
+          "seat": 2,
+          "round": 68,
+          "amount": 0
+        }
+      ]
+    },
+    {
+      "seed": 2026110124,
+      "seat": 1,
+      "oldScore": 74,
+      "newScore": 74,
+      "delta": 0,
+      "samePrefix": true,
+      "oldTail": [
+        {
+          "kind": "bid",
+          "seat": 1,
+          "round": 67,
+          "amount": 0
+        },
+        {
+          "kind": "bid",
+          "seat": 1,
+          "round": 68,
+          "amount": 0
+        }
+      ],
+      "newTail": [
+        {
+          "kind": "bid",
+          "seat": 1,
+          "round": 67,
+          "amount": 0
+        },
+        {
+          "kind": "bid",
+          "seat": 1,
+          "round": 68,
+          "amount": 0
+        }
+      ]
+    }
+  ],
+  "safeScore": 2221,
+  "untouchedScore": 2213,
+  "safeBetter": 2,
+  "untouchedBetter": 0,
+  "equal": 22,
+  "prefixDifferences": 0,
+  "elapsedMs": 21472.289500000003,
+  "safeMean": 92.54166666666667,
+  "untouchedMean": 92.20833333333333
+}

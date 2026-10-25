@@ -130,7 +130,7 @@ test("planning preserves caller-owned rack, initial rack and public history", ()
   const letters = rack("TAC"), initialRack = rack("TAC");
   const history = [{ round: 1, letter: "Z", winner: 2, paid: 4 }];
   const snapshot = structuredClone({ letters, initialRack, history });
-  const ctx: BidContext = { myRack: letters, initialRack, history, letter: "T", myBalance: 100, roundsRemaining: 20 };
+  const ctx: BidContext = { myRack: letters, initialRack, history, letter: "T", myBalance: 100, roundsRemaining: 10 };
   planner.decideBid(ctx);
   planner.chooseWord(ctx);
   assert.deepEqual({ letters, initialRack, history }, snapshot);
@@ -164,4 +164,27 @@ test("prewarmed full-dictionary planning remains responsive on varied late-game 
     if (word) { assert.ok(dictionary.includes(word)); consume(new Map(ctx.myRack), word); }
   }
   console.info(`ChampionStrategy: longest paired bid/word decision ${longestMs.toFixed(1)}ms wall / ${longestCpuMs.toFixed(1)}ms CPU after startup`);
+});
+
+// Public price pressure in live matches can be higher than synthetic opponents.
+test("market calibration raises only a cold affordable rack in a high-price market", () => {
+  const dictionary=['AT','ATE','LATE','SLATE','SLATER','RELATES'];
+  const normal=createStrategy(dictionary,{marketRebuild:false});
+  const live=createStrategy(dictionary,{marketRebuild:true});
+  const context={letter:'E',myBalance:100,myRack:rack('ALT'),roundsRemaining:50,history:[{letter:'A',paid:14},{letter:'R',paid:16},{letter:'N',paid:15},{letter:'T',paid:14}]};
+  assert.ok(live.decideBid(context)>normal.decideBid(context));
+  assert.equal(live.decideBid({...context,myBalance:0}),0);
+  assert.equal(live.decideBid({...context,roundsRemaining:1}),0);
+  assert.equal(live.decideBid({...context,history:[]}),normal.decideBid({...context,history:[]}));
+  assert.ok(live.decideBid({...context,myRack:rack('EEEEA'),letter:'I'})<=normal.decideBid({...context,myRack:rack('EEEEA'),letter:'I'}));
+});
+
+test("the last usable tile gets all remaining money for a strict packing improvement", () => {
+ const planner=createStrategy(['AT','ART','TARS']);
+ const context={letter:'S',myBalance:97,myRack:rack('ART'),roundsRemaining:2};
+ assert.equal(planner.chooseWord(context),null);
+ assert.equal(planner.decideBid(context),97);
+ assert.equal(planner.decideBid({...context,letter:'Z'}),0);
+ assert.equal(planner.chooseWord({...context,roundsRemaining:1}),'ART');
+ assert.equal(planner.chooseWord({...context,myBalance:0}),'ART');
 });

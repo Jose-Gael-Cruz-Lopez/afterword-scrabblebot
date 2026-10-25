@@ -1,0 +1,270 @@
+{
+  "upstreamCommit": "f2dce03a99e01a88ef9fdf2e300b50ef592c4c50",
+  "params": {
+    "bidScale": 2,
+    "minimumBid": 4,
+    "maximumSpendFraction": 0.7,
+    "marketRebuild": false
+  },
+  "seedStart": 2026120101,
+  "gamesPerMode": 12,
+  "referenceOptions": {
+    "terminalSafe": false
+  },
+  "sourceHashes": {
+    "./adapter.ts": "1a3f1cd2603aa8b51b4398e8ea1e076ff890284dbf4db6e9bdfeae4d2ea66617",
+    "./core/policy.ts": "a96b54bc8ae7aff795542c93f62a21162c5f2c6d0ac3eebc87cf8ab2ee29874b",
+    "../strategy.ts": "a4c5cf80d53e2bbffc59a849917fc593e9e2568f81b3d087e75e2ca07f130169"
+  },
+  "description": "Final confirmation: licensed reference explicitly terminalSafe=false versus frozen original2/4/.7/marketRebuildfalse, pressure14/16/18 and patient7. Twelve fresh seeds per mode, all six seats exactly twice per mode. Public learned market table enabled for licensed reference. Patient holds for 7+ letters unless low cash or final two auctions.",
+  "modes": [
+    {
+      "mode": "SecondPrice",
+      "games": 12,
+      "referenceAhead": 10,
+      "oursAhead": 2,
+      "equal": 0,
+      "rows": [
+        {
+          "name": "Afterword terminal-corrected",
+          "wins": 2,
+          "winRate": 0.16666666666666666,
+          "meanScore": 70.91666666666667,
+          "meanBalance": 43.333333333333336,
+          "meanRank": 2.1666666666666665,
+          "maxDecisionMs": 47.88758400000006,
+          "meanDecisionMs": 2.9732003120525183,
+          "decisionCalls": 1676,
+          "seatCounts": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        {
+          "name": "Lionel MIT reference",
+          "wins": 10,
+          "winRate": 0.8333333333333334,
+          "meanScore": 123.41666666666667,
+          "meanBalance": 8.25,
+          "meanRank": 1.1666666666666667,
+          "maxDecisionMs": 14.448250000000371,
+          "meanDecisionMs": 0.49087230124775905,
+          "decisionCalls": 1683,
+          "seatCounts": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        {
+          "name": "pressure-14",
+          "wins": 0,
+          "winRate": 0,
+          "meanScore": 22.333333333333332,
+          "meanBalance": 1.5833333333333333,
+          "meanRank": 4.666666666666667,
+          "maxDecisionMs": 30.340000000000146,
+          "meanDecisionMs": 0.09805229899349796,
+          "decisionCalls": 1689,
+          "seatCounts": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        {
+          "name": "pressure-16",
+          "wins": 0,
+          "winRate": 0,
+          "meanScore": 20.333333333333332,
+          "meanBalance": 1.9166666666666667,
+          "meanRank": 5.083333333333333,
+          "maxDecisionMs": 8.76733299999978,
+          "meanDecisionMs": 0.0773797238717254,
+          "decisionCalls": 1684,
+          "seatCounts": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        {
+          "name": "pressure-18",
+          "wins": 0,
+          "winRate": 0,
+          "meanScore": 22.333333333333332,
+          "meanBalance": 1.25,
+          "meanRank": 4.916666666666667,
+          "maxDecisionMs": 6.468540999999959,
+          "meanDecisionMs": 0.08418395121950843,
+          "decisionCalls": 1681,
+          "seatCounts": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        {
+          "name": "patient-7",
+          "wins": 0,
+          "winRate": 0,
+          "meanScore": 56.666666666666664,
+          "meanBalance": 1.1666666666666667,
+          "meanRank": 2.75,
+          "maxDecisionMs": 8.149083000000246,
+          "meanDecisionMs": 0.1383331018573917,
+          "decisionCalls": 1669,
+          "seatCounts": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "FirstPrice",
+      "games": 12,
+      "referenceAhead": 8,
+      "oursAhead": 4,
+      "equal": 0,
+      "rows": [
+        {
+          "name": "Afterword terminal-corrected",
+          "wins": 3,
+          "winRate": 0.25,
+          "meanScore": 59.833333333333336,
+          "meanBalance": 20.75,
+          "meanRank": 2.25,
+          "maxDecisionMs": 78.95270799999889,
+          "meanDecisionMs": 2.586335552831284,
+          "decisionCalls": 1713,
+          "seatCounts": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        {
+          "name": "Lionel MIT reference",
+          "wins": 7,
+          "winRate": 0.5833333333333334,
+          "meanScore": 84.25,
+          "meanBalance": 0.3333333333333333,
+          "meanRank": 1.6666666666666667,
+          "maxDecisionMs": 12.894542000000001,
+          "meanDecisionMs": 0.45243606642730794,
+          "decisionCalls": 1671,
+          "seatCounts": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        {
+          "name": "pressure-14",
+          "wins": 0,
+          "winRate": 0,
+          "meanScore": 24.583333333333332,
+          "meanBalance": 0.16666666666666666,
+          "meanRank": 4.916666666666667,
+          "maxDecisionMs": 3.5349590000005264,
+          "meanDecisionMs": 0.057642514201179114,
+          "decisionCalls": 1690,
+          "seatCounts": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        {
+          "name": "pressure-16",
+          "wins": 0,
+          "winRate": 0,
+          "meanScore": 22.666666666666668,
+          "meanBalance": 0,
+          "meanRank": 4.583333333333333,
+          "maxDecisionMs": 24.31304100000125,
+          "meanDecisionMs": 0.06268385374554497,
+          "decisionCalls": 1682,
+          "seatCounts": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        {
+          "name": "pressure-18",
+          "wins": 0,
+          "winRate": 0,
+          "meanScore": 20.166666666666668,
+          "meanBalance": 0.16666666666666666,
+          "meanRank": 5.25,
+          "maxDecisionMs": 10.402291999998852,
+          "meanDecisionMs": 0.05728804844498669,
+          "decisionCalls": 1672,
+          "seatCounts": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        {
+          "name": "patient-7",
+          "wins": 2,
+          "winRate": 0.16666666666666666,
+          "meanScore": 57.5,
+          "meanBalance": 0,
+          "meanRank": 2.1666666666666665,
+          "maxDecisionMs": 24.269000000000233,
+          "meanDecisionMs": 0.11798695269458848,
+          "decisionCalls": 1670,
+          "seatCounts": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "elapsedMs": 12739.738833000001
+}

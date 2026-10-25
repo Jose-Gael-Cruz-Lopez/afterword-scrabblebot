@@ -1,0 +1,3066 @@
+{
+  "variant": "open-floor",
+  "params": {
+    "bidScale": 2,
+    "minimumBid": 4,
+    "maximumSpendFraction": 0.7,
+    "acquisitionShare": 0.6,
+    "holdMargin": 2.5,
+    "futureCost": 1.2,
+    "marketRebuild": false
+  },
+  "sourceManifest": {
+    "sourceSha256": {
+      "bot-starter/src/strategy.ts": "de5ccd6d3d5c627ea1f4e2a44b6e5e89784e7068ee0b4fc9c9c8542b63312aca",
+      "bot-starter/src/engine.ts": "1012c5b8a76e10d0e09b0460e2c39d0a4ac4c3dd0eb1914f0b256b59d91161ff",
+      "bot-starter/src/simulate.ts": "6e882e20b8f9ce1ca30200836db12f63eb7653ec09a2a74dcfa5bba1c183d5d7",
+      "spacetimedb/wordlist.txt": "b819e7b67f8f2c80640ae76f0edbe59a4a1befb6de0f348463642ad49bdd2ad3"
+    },
+    "purpose": "Frozen current composite with terminal fix, market calibration disabled by explicit params. Offline experiments only."
+  },
+  "seeds": {
+    "start": 8130071,
+    "count": 24,
+    "stride": 7919
+  },
+  "methodology": "Each seed runs both auction modes with the same bag and a rotating six-player roster. At 24 seeds each policy occupies each seat four times per mode. Fresh strategy state each match. No network or private opponent state.",
+  "matches": 48,
+  "errors": [],
+  "matchesDetail": [
+    {
+      "seed": 8130071,
+      "auctionType": "SecondPrice",
+      "players": [
+        {
+          "name": "control",
+          "seat": 0,
+          "score": 81,
+          "balance": 6,
+          "spent": 175,
+          "tilesWon": 15
+        },
+        {
+          "name": "budget-open-floor",
+          "seat": 1,
+          "score": 68,
+          "balance": 3,
+          "spent": 165,
+          "tilesWon": 13
+        },
+        {
+          "name": "pressure-14",
+          "seat": 2,
+          "score": 74,
+          "balance": 0,
+          "spent": 174,
+          "tilesWon": 15
+        },
+        {
+          "name": "pressure-16",
+          "seat": 3,
+          "score": 42,
+          "balance": 0,
+          "spent": 142,
+          "tilesWon": 10
+        },
+        {
+          "name": "pressure-18",
+          "seat": 4,
+          "score": 14,
+          "balance": 1,
+          "spent": 113,
+          "tilesWon": 8
+        },
+        {
+          "name": "patient-seven",
+          "seat": 5,
+          "score": 38,
+          "balance": 115,
+          "spent": 23,
+          "tilesWon": 6
+        }
+      ]
+    },
+    {
+      "seed": 8130071,
+      "auctionType": "FirstPrice",
+      "players": [
+        {
+          "name": "budget-open-floor",
+          "seat": 0,
+          "score": 83,
+          "balance": 7,
+          "spent": 176,
+          "tilesWon": 14
+        },
+        {
+          "name": "pressure-14",
+          "seat": 1,
+          "score": 68,
+          "balance": 0,
+          "spent": 168,
+          "tilesWon": 11
+        },
+        {
+          "name": "pressure-16",
+          "seat": 2,
+          "score": 42,
+          "balance": 0,
+          "spent": 142,
+          "tilesWon": 10
+        },
+        {
+          "name": "pressure-18",
+          "seat": 3,
+          "score": 31,
+          "balance": 0,
+          "spent": 131,
+          "tilesWon": 8
+        },
+        {
+          "name": "patient-seven",
+          "seat": 4,
+          "score": 29,
+          "balance": 87,
+          "spent": 42,
+          "tilesWon": 7
+        },
+        {
+          "name": "control",
+          "seat": 5,
+          "score": 94,
+          "balance": 3,
+          "spent": 191,
+          "tilesWon": 17
+        }
+      ]
+    },
+    {
+      "seed": 8137990,
+      "auctionType": "SecondPrice",
+      "players": [
+        {
+          "name": "patient-seven",
+          "seat": 0,
+          "score": 47,
+          "balance": 122,
+          "spent": 25,
+          "tilesWon": 8
+        },
+        {
+          "name": "control",
+          "seat": 1,
+          "score": 64,
+          "balance": 27,
+          "spent": 137,
+          "tilesWon": 12
+        },
+        {
+          "name": "budget-open-floor",
+          "seat": 2,
+          "score": 84,
+          "balance": 4,
+          "spent": 180,
+          "tilesWon": 14
+        },
+        {
+          "name": "pressure-14",
+          "seat": 3,
+          "score": 66,
+          "balance": 1,
+          "spent": 165,
+          "tilesWon": 13
+        },
+        {
+          "name": "pressure-16",
+          "seat": 4,
+          "score": 31,
+          "balance": 1,
+          "spent": 130,
+          "tilesWon": 10
+        },
+        {
+          "name": "pressure-18",
+          "seat": 5,
+          "score": 45,
+          "balance": 1,
+          "spent": 144,
+          "tilesWon": 10
+        }
+      ]
+    },
+    {
+      "seed": 8137990,
+      "auctionType": "FirstPrice",
+      "players": [
+        {
+          "name": "control",
+          "seat": 0,
+          "score": 64,
+          "balance": 2,
+          "spent": 162,
+          "tilesWon": 19
+        },
+        {
+          "name": "budget-open-floor",
+          "seat": 1,
+          "score": 59,
+          "balance": 6,
+          "spent": 153,
+          "tilesWon": 13
+        },
+        {
+          "name": "pressure-14",
+          "seat": 2,
+          "score": 50,
+          "balance": 0,
+          "spent": 150,
+          "tilesWon": 11
+        },
+        {
+          "name": "pressure-16",
+          "seat": 3,
+          "score": 68,
+          "balance": 0,
+          "spent": 168,
+          "tilesWon": 10
+        },
+        {
+          "name": "pressure-18",
+          "seat": 4,
+          "score": 24,
+          "balance": 0,
+          "spent": 124,
+          "tilesWon": 8
+        },
+        {
+          "name": "patient-seven",
+          "seat": 5,
+          "score": 29,
+          "balance": 94,
+          "spent": 35,
+          "tilesWon": 6
+        }
+      ]
+    },
+    {
+      "seed": 8145909,
+      "auctionType": "SecondPrice",
+      "players": [
+        {
+          "name": "pressure-18",
+          "seat": 0,
+          "score": 43,
+          "balance": 2,
+          "spent": 141,
+          "tilesWon": 10
+        },
+        {
+          "name": "patient-seven",
+          "seat": 1,
+          "score": 44,
+          "balance": 111,
+          "spent": 33,
+          "tilesWon": 6
+        },
+        {
+          "name": "control",
+          "seat": 2,
+          "score": 66,
+          "balance": 20,
+          "spent": 146,
+          "tilesWon": 16
+        },
+        {
+          "name": "budget-open-floor",
+          "seat": 3,
+          "score": 64,
+          "balance": 7,
+          "spent": 157,
+          "tilesWon": 10
+        },
+        {
+          "name": "pressure-14",
+          "seat": 4,
+          "score": 53,
+          "balance": 3,
+          "spent": 150,
+          "tilesWon": 12
+        },
+        {
+          "name": "pressure-16",
+          "seat": 5,
+          "score": 77,
+          "balance": 0,
+          "spent": 177,
+          "tilesWon": 13
+        }
+      ]
+    },
+    {
+      "seed": 8145909,
+      "auctionType": "FirstPrice",
+      "players": [
+        {
+          "name": "patient-seven",
+          "seat": 0,
+          "score": 59,
+          "balance": 100,
+          "spent": 59,
+          "tilesWon": 7
+        },
+        {
+          "name": "control",
+          "seat": 1,
+          "score": 86,
+          "balance": 2,
+          "spent": 184,
+          "tilesWon": 17
+        },
+        {
+          "name": "budget-open-floor",
+          "seat": 2,
+          "score": 58,
+          "balance": 3,
+          "spent": 155,
+          "tilesWon": 13
+        },
+        {
+          "name": "pressure-14",
+          "seat": 3,
+          "score": 47,
+          "balance": 2,
+          "spent": 145,
+          "tilesWon": 11
+        },
+        {
+          "name": "pressure-16",
+          "seat": 4,
+          "score": 50,
+          "balance": 0,
+          "spent": 150,
+          "tilesWon": 10
+        },
+        {
+          "name": "pressure-18",
+          "seat": 5,
+          "score": 58,
+          "balance": 0,
+          "spent": 158,
+          "tilesWon": 9
+        }
+      ]
+    },
+    {
+      "seed": 8153828,
+      "auctionType": "SecondPrice",
+      "players": [
+        {
+          "name": "pressure-16",
+          "seat": 0,
+          "score": 90,
+          "balance": 0,
+          "spent": 190,
+          "tilesWon": 13
+        },
+        {
+          "name": "pressure-18",
+          "seat": 1,
+          "score": 45,
+          "balance": 1,
+          "spent": 144,
+          "tilesWon": 9
+        },
+        {
+          "name": "patient-seven",
+          "seat": 2,
+          "score": 29,
+          "balance": 100,
+          "spent": 29,
+          "tilesWon": 5
+        },
+        {
+          "name": "control",
+          "seat": 3,
+          "score": 97,
+          "balance": 23,
+          "spent": 174,
+          "tilesWon": 17
+        },
+        {
+          "name": "budget-open-floor",
+          "seat": 4,
+          "score": 50,
+          "balance": 2,
+          "spent": 148,
+          "tilesWon": 12
+        },
+        {
+          "name": "pressure-14",
+          "seat": 5,
+          "score": 57,
+          "balance": 2,
+          "spent": 155,
+          "tilesWon": 11
+        }
+      ]
+    },
+    {
+      "seed": 8153828,
+      "auctionType": "FirstPrice",
+      "players": [
+        {
+          "name": "pressure-18",
+          "seat": 0,
+          "score": 48,
+          "balance": 2,
+          "spent": 146,
+          "tilesWon": 8
+        },
+        {
+          "name": "patient-seven",
+          "seat": 1,
+          "score": 45,
+          "balance": 98,
+          "spent": 47,
+          "tilesWon": 8
+        },
+        {
+          "name": "control",
+          "seat": 2,
+          "score": 42,
+          "balance": 2,
+          "spent": 140,
+          "tilesWon": 17
+        },
+        {
+          "name": "budget-open-floor",
+          "seat": 3,
+          "score": 67,
+          "balance": 0,
+          "spent": 167,
+          "tilesWon": 15
+        },
+        {
+          "name": "pressure-14",
+          "seat": 4,
+          "score": 24,
+          "balance": 0,
+          "spent": 124,
+          "tilesWon": 9
+        },
+        {
+          "name": "pressure-16",
+          "seat": 5,
+          "score": 69,
+          "balance": 0,
+          "spent": 169,
+          "tilesWon": 10
+        }
+      ]
+    },
+    {
+      "seed": 8161747,
+      "auctionType": "SecondPrice",
+      "players": [
+        {
+          "name": "pressure-14",
+          "seat": 0,
+          "score": 87,
+          "balance": 1,
+          "spent": 186,
+          "tilesWon": 16
+        },
+        {
+          "name": "pressure-16",
+          "seat": 1,
+          "score": 54,
+          "balance": 1,
+          "spent": 153,
+          "tilesWon": 11
+        },
+        {
+          "name": "pressure-18",
+          "seat": 2,
+          "score": 27,
+          "balance": 1,
+          "spent": 126,
+          "tilesWon": 8
+        },
+        {
+          "name": "patient-seven",
+          "seat": 3,
+          "score": 51,
+          "balance": 104,
+          "spent": 47,
+          "tilesWon": 7
+        },
+        {
+          "name": "control",
+          "seat": 4,
+          "score": 71,
+          "balance": 5,
+          "spent": 166,
+          "tilesWon": 13
+        },
+        {
+          "name": "budget-open-floor",
+          "seat": 5,
+          "score": 68,
+          "balance": 6,
+          "spent": 162,
+          "tilesWon": 12
+        }
+      ]
+    },
+    {
+      "seed": 8161747,
+      "auctionType": "FirstPrice",
+      "players": [
+        {
+          "name": "pressure-16",
+          "seat": 0,
+          "score": 61,
+          "balance": 0,
+          "spent": 161,
+          "tilesWon": 10
+        },
+        {
+          "name": "pressure-18",
+          "seat": 1,
+          "score": 33,
+          "balance": 0,
+          "spent": 133,
+          "tilesWon": 9
+        },
+        {
+          "name": "patient-seven",
+          "seat": 2,
+          "score": 27,
+          "balance": 95,
+          "spent": 32,
+          "tilesWon": 4
+        },
+        {
+          "name": "control",
+          "seat": 3,
+          "score": 41,
+          "balance": 4,
+          "spent": 137,
+          "tilesWon": 18
+        },
+        {
+          "name": "budget-open-floor",
+          "seat": 4,
+          "score": 83,
+          "balance": 4,
+          "spent": 179,
+          "tilesWon": 15
+        },
+        {
+          "name": "pressure-14",
+          "seat": 5,
+          "score": 43,
+          "balance": 0,
+          "spent": 143,
+          "tilesWon": 11
+        }
+      ]
+    },
+    {
+      "seed": 8169666,
+      "auctionType": "SecondPrice",
+      "players": [
+        {
+          "name": "budget-open-floor",
+          "seat": 0,
+          "score": 74,
+          "balance": 6,
+          "spent": 168,
+          "tilesWon": 13
+        },
+        {
+          "name": "pressure-14",
+          "seat": 1,
+          "score": 88,
+          "balance": 1,
+          "spent": 187,
+          "tilesWon": 15
+        },
+        {
+          "name": "pressure-16",
+          "seat": 2,
+          "score": 50,
+          "balance": 1,
+          "spent": 149,
+          "tilesWon": 13
+        },
+        {
+          "name": "pressure-18",
+          "seat": 3,
+          "score": 46,
+          "balance": 2,
+          "spent": 144,
+          "tilesWon": 9
+        },
+        {
+          "name": "patient-seven",
+          "seat": 4,
+          "score": 30,
+          "balance": 98,
+          "spent": 32,
+          "tilesWon": 3
+        },
+        {
+          "name": "control",
+          "seat": 5,
+          "score": 81,
+          "balance": 30,
+          "spent": 151,
+          "tilesWon": 14
+        }
+      ]
+    },
+    {
+      "seed": 8169666,
+      "auctionType": "FirstPrice",
+      "players": [
+        {
+          "name": "pressure-14",
+          "seat": 0,
+          "score": 84,
+          "balance": 2,
+          "spent": 182,
+          "tilesWon": 12
+        },
+        {
+          "name": "pressure-16",
+          "seat": 1,
+          "score": 55,
+          "balance": 0,
+          "spent": 155,
+          "tilesWon": 11
+        },
+        {
+          "name": "pressure-18",
+          "seat": 2,
+          "score": 29,
+          "balance": 0,
+          "spent": 129,
+          "tilesWon": 8
+        },
+        {
+          "name": "patient-seven",
+          "seat": 3,
+          "score": 27,
+          "balance": 114,
+          "spent": 13,
+          "tilesWon": 2
+        },
+        {
+          "name": "control",
+          "seat": 4,
+          "score": 116,
+          "balance": 7,
+          "spent": 209,
+          "tilesWon": 21
+        },
+        {
+          "name": "budget-open-floor",
+          "seat": 5,
+          "score": 50,
+          "balance": 3,
+          "spent": 147,
+          "tilesWon": 13
+        }
+      ]
+    },
+    {
+      "seed": 8177585,
+      "auctionType": "SecondPrice",
+      "players": [
+        {
+          "name": "control",
+          "seat": 0,
+          "score": 74,
+          "balance": 33,
+          "spent": 141,
+          "tilesWon": 8
+        },
+        {
+          "name": "budget-open-floor",
+          "seat": 1,
+          "score": 46,
+          "balance": 24,
+          "spent": 122,
+          "tilesWon": 7
+        },
+        {
+          "name": "pressure-14",
+          "seat": 2,
+          "score": 185,
+          "balance": 3,
+          "spent": 282,
+          "tilesWon": 33
+        },
+        {
+          "name": "pressure-16",
+          "seat": 3,
+          "score": 57,
+          "balance": 0,
+          "spent": 157,
+          "tilesWon": 10
+        },
+        {
+          "name": "pressure-18",
+          "seat": 4,
+          "score": 36,
+          "balance": 5,
+          "spent": 131,
+          "tilesWon": 9
+        },
+        {
+          "name": "patient-seven",
+          "seat": 5,
+          "score": 6,
+          "balance": 106,
+          "spent": 0,
+          "tilesWon": 0
+        }
+      ]
+    },
+    {
+      "seed": 8177585,
+      "auctionType": "FirstPrice",
+      "players": [
+        {
+          "name": "budget-open-floor",
+          "seat": 0,
+          "score": 69,
+          "balance": 3,
+          "spent": 166,
+          "tilesWon": 13
+        },
+        {
+          "name": "pressure-14",
+          "seat": 1,
+          "score": 68,
+          "balance": 0,
+          "spent": 168,
+          "tilesWon": 12
+        },
+        {
+          "name": "pressure-16",
+          "seat": 2,
+          "score": 44,
+          "balance": 2,
+          "spent": 142,
+          "tilesWon": 9
+        },
+        {
+          "name": "pressure-18",
+          "seat": 3,
+          "score": 37,
+          "balance": 0,
+          "spent": 137,
+          "tilesWon": 9
+        },
+        {
+          "name": "patient-seven",
+          "seat": 4,
+          "score": 46,
+          "balance": 106,
+          "spent": 40,
+          "tilesWon": 7
+        },
+        {
+          "name": "control",
+          "seat": 5,
+          "score": 114,
+          "balance": 3,
+          "spent": 211,
+          "tilesWon": 17
+        }
+      ]
+    },
+    {
+      "seed": 8185504,
+      "auctionType": "SecondPrice",
+      "players": [
+        {
+          "name": "patient-seven",
+          "seat": 0,
+          "score": 39,
+          "balance": 99,
+          "spent": 40,
+          "tilesWon": 3
+        },
+        {
+          "name": "control",
+          "seat": 1,
+          "score": 105,
+          "balance": 28,
+          "spent": 177,
+          "tilesWon": 13
+        },
+        {
+          "name": "budget-open-floor",
+          "seat": 2,
+          "score": 68,
+          "balance": 8,
+          "spent": 160,
+          "tilesWon": 11
+        },
+        {
+          "name": "pressure-14",
+          "seat": 3,
+          "score": 106,
+          "balance": 1,
+          "spent": 205,
+          "tilesWon": 20
+        },
+        {
+          "name": "pressure-16",
+          "seat": 4,
+          "score": 53,
+          "balance": 3,
+          "spent": 150,
+          "tilesWon": 10
+        },
+        {
+          "name": "pressure-18",
+          "seat": 5,
+          "score": 55,
+          "balance": 3,
+          "spent": 152,
+          "tilesWon": 10
+        }
+      ]
+    },
+    {
+      "seed": 8185504,
+      "auctionType": "FirstPrice",
+      "players": [
+        {
+          "name": "control",
+          "seat": 0,
+          "score": 65,
+          "balance": 0,
+          "spent": 165,
+          "tilesWon": 14
+        },
+        {
+          "name": "budget-open-floor",
+          "seat": 1,
+          "score": 83,
+          "balance": 2,
+          "spent": 181,
+          "tilesWon": 16
+        },
+        {
+          "name": "pressure-14",
+          "seat": 2,
+          "score": 65,
+          "balance": 0,
+          "spent": 165,
+          "tilesWon": 11
+        },
+        {
+          "name": "pressure-16",
+          "seat": 3,
+          "score": 41,
+          "balance": 0,
+          "spent": 141,
+          "tilesWon": 9
+        },
+        {
+          "name": "pressure-18",
+          "seat": 4,
+          "score": 40,
+          "balance": 2,
+          "spent": 138,
+          "tilesWon": 8
+        },
+        {
+          "name": "patient-seven",
+          "seat": 5,
+          "score": 43,
+          "balance": 93,
+          "spent": 50,
+          "tilesWon": 9
+        }
+      ]
+    },
+    {
+      "seed": 8193423,
+      "auctionType": "SecondPrice",
+      "players": [
+        {
+          "name": "pressure-18",
+          "seat": 0,
+          "score": 50,
+          "balance": 5,
+          "spent": 145,
+          "tilesWon": 9
+        },
+        {
+          "name": "patient-seven",
+          "seat": 1,
+          "score": 40,
+          "balance": 83,
+          "spent": 57,
+          "tilesWon": 7
+        },
+        {
+          "name": "control",
+          "seat": 2,
+          "score": 84,
+          "balance": 36,
+          "spent": 148,
+          "tilesWon": 11
+        },
+        {
+          "name": "budget-open-floor",
+          "seat": 3,
+          "score": 92,
+          "balance": 9,
+          "spent": 183,
+          "tilesWon": 13
+        },
+        {
+          "name": "pressure-14",
+          "seat": 4,
+          "score": 80,
+          "balance": 2,
+          "spent": 178,
+          "tilesWon": 15
+        },
+        {
+          "name": "pressure-16",
+          "seat": 5,
+          "score": 77,
+          "balance": 1,
+          "spent": 176,
+          "tilesWon": 12
+        }
+      ]
+    },
+    {
+      "seed": 8193423,
+      "auctionType": "FirstPrice",
+      "players": [
+        {
+          "name": "patient-seven",
+          "seat": 0,
+          "score": 31,
+          "balance": 93,
+          "spent": 38,
+          "tilesWon": 5
+        },
+        {
+          "name": "control",
+          "seat": 1,
+          "score": 54,
+          "balance": 13,
+          "spent": 141,
+          "tilesWon": 15
+        },
+        {
+          "name": "budget-open-floor",
+          "seat": 2,
+          "score": 88,
+          "balance": 3,
+          "spent": 185,
+          "tilesWon": 15
+        },
+        {
+          "name": "pressure-14",
+          "seat": 3,
+          "score": 86,
+          "balance": 2,
+          "spent": 184,
+          "tilesWon": 12
+        },
+        {
+          "name": "pressure-16",
+          "seat": 4,
+          "score": 66,
+          "balance": 0,
+          "spent": 166,
+          "tilesWon": 10
+        },
+        {
+          "name": "pressure-18",
+          "seat": 5,
+          "score": 54,
+          "balance": 0,
+          "spent": 154,
+          "tilesWon": 10
+        }
+      ]
+    },
+    {
+      "seed": 8201342,
+      "auctionType": "SecondPrice",
+      "players": [
+        {
+          "name": "pressure-16",
+          "seat": 0,
+          "score": 43,
+          "balance": 1,
+          "spent": 142,
+          "tilesWon": 10
+        },
+        {
+          "name": "pressure-18",
+          "seat": 1,
+          "score": 57,
+          "balance": 1,
+          "spent": 156,
+          "tilesWon": 13
+        },
+        {
+          "name": "patient-seven",
+          "seat": 2,
+          "score": 41,
+          "balance": 102,
+          "spent": 39,
+          "tilesWon": 7
+        },
+        {
+          "name": "control",
+          "seat": 3,
+          "score": 56,
+          "balance": 7,
+          "spent": 149,
+          "tilesWon": 12
+        },
+        {
+          "name": "budget-open-floor",
+          "seat": 4,
+          "score": 86,
+          "balance": 3,
+          "spent": 183,
+          "tilesWon": 13
+        },
+        {
+          "name": "pressure-14",
+          "seat": 5,
+          "score": 67,
+          "balance": 1,
+          "spent": 166,
+          "tilesWon": 12
+        }
+      ]
+    },
+    {
+      "seed": 8201342,
+      "auctionType": "FirstPrice",
+      "players": [
+        {
+          "name": "pressure-18",
+          "seat": 0,
+          "score": 33,
+          "balance": 0,
+          "spent": 133,
+          "tilesWon": 9
+        },
+        {
+          "name": "patient-seven",
+          "seat": 1,
+          "score": 20,
+          "balance": 118,
+          "spent": 2,
+          "tilesWon": 1
+        },
+        {
+          "name": "control",
+          "seat": 2,
+          "score": 75,
+          "balance": 5,
+          "spent": 170,
+          "tilesWon": 20
+        },
+        {
+          "name": "budget-open-floor",
+          "seat": 3,
+          "score": 92,
+          "balance": 6,
+          "spent": 186,
+          "tilesWon": 15
+        },
+        {
+          "name": "pressure-14",
+          "seat": 4,
+          "score": 68,
+          "balance": 0,
+          "spent": 168,
+          "tilesWon": 13
+        },
+        {
+          "name": "pressure-16",
+          "seat": 5,
+          "score": 58,
+          "balance": 0,
+          "spent": 158,
+          "tilesWon": 9
+        }
+      ]
+    },
+    {
+      "seed": 8209261,
+      "auctionType": "SecondPrice",
+      "players": [
+        {
+          "name": "pressure-14",
+          "seat": 0,
+          "score": 82,
+          "balance": 0,
+          "spent": 182,
+          "tilesWon": 16
+        },
+        {
+          "name": "pressure-16",
+          "seat": 1,
+          "score": 52,
+          "balance": 1,
+          "spent": 151,
+          "tilesWon": 13
+        },
+        {
+          "name": "pressure-18",
+          "seat": 2,
+          "score": 53,
+          "balance": 3,
+          "spent": 150,
+          "tilesWon": 10
+        },
+        {
+          "name": "patient-seven",
+          "seat": 3,
+          "score": 36,
+          "balance": 102,
+          "spent": 34,
+          "tilesWon": 4
+        },
+        {
+          "name": "control",
+          "seat": 4,
+          "score": 102,
+          "balance": 27,
+          "spent": 175,
+          "tilesWon": 13
+        },
+        {
+          "name": "budget-open-floor",
+          "seat": 5,
+          "score": 61,
+          "balance": 9,
+          "spent": 152,
+          "tilesWon": 11
+        }
+      ]
+    },
+    {
+      "seed": 8209261,
+      "auctionType": "FirstPrice",
+      "players": [
+        {
+          "name": "pressure-16",
+          "seat": 0,
+          "score": 32,
+          "balance": 0,
+          "spent": 132,
+          "tilesWon": 9
+        },
+        {
+          "name": "pressure-18",
+          "seat": 1,
+          "score": 47,
+          "balance": 0,
+          "spent": 147,
+          "tilesWon": 9
+        },
+        {
+          "name": "patient-seven",
+          "seat": 2,
+          "score": 44,
+          "balance": 101,
+          "spent": 43,
+          "tilesWon": 6
+        },
+        {
+          "name": "control",
+          "seat": 3,
+          "score": 78,
+          "balance": 2,
+          "spent": 176,
+          "tilesWon": 19
+        },
+        {
+          "name": "budget-open-floor",
+          "seat": 4,
+          "score": 55,
+          "balance": 0,
+          "spent": 155,
+          "tilesWon": 13
+        },
+        {
+          "name": "pressure-14",
+          "seat": 5,
+          "score": 50,
+          "balance": 0,
+          "spent": 150,
+          "tilesWon": 11
+        }
+      ]
+    },
+    {
+      "seed": 8217180,
+      "auctionType": "SecondPrice",
+      "players": [
+        {
+          "name": "budget-open-floor",
+          "seat": 0,
+          "score": 40,
+          "balance": 5,
+          "spent": 135,
+          "tilesWon": 12
+        },
+        {
+          "name": "pressure-14",
+          "seat": 1,
+          "score": 72,
+          "balance": 3,
+          "spent": 169,
+          "tilesWon": 15
+        },
+        {
+          "name": "pressure-16",
+          "seat": 2,
+          "score": 36,
+          "balance": 0,
+          "spent": 136,
+          "tilesWon": 10
+        },
+        {
+          "name": "pressure-18",
+          "seat": 3,
+          "score": 34,
+          "balance": 4,
+          "spent": 130,
+          "tilesWon": 8
+        },
+        {
+          "name": "patient-seven",
+          "seat": 4,
+          "score": 41,
+          "balance": 90,
+          "spent": 51,
+          "tilesWon": 5
+        },
+        {
+          "name": "control",
+          "seat": 5,
+          "score": 82,
+          "balance": 13,
+          "spent": 169,
+          "tilesWon": 17
+        }
+      ]
+    },
+    {
+      "seed": 8217180,
+      "auctionType": "FirstPrice",
+      "players": [
+        {
+          "name": "pressure-14",
+          "seat": 0,
+          "score": 39,
+          "balance": 0,
+          "spent": 139,
+          "tilesWon": 10
+        },
+        {
+          "name": "pressure-16",
+          "seat": 1,
+          "score": 48,
+          "balance": 3,
+          "spent": 145,
+          "tilesWon": 10
+        },
+        {
+          "name": "pressure-18",
+          "seat": 2,
+          "score": 36,
+          "balance": 0,
+          "spent": 136,
+          "tilesWon": 8
+        },
+        {
+          "name": "patient-seven",
+          "seat": 3,
+          "score": 40,
+          "balance": 93,
+          "spent": 47,
+          "tilesWon": 8
+        },
+        {
+          "name": "control",
+          "seat": 4,
+          "score": 71,
+          "balance": 0,
+          "spent": 171,
+          "tilesWon": 17
+        },
+        {
+          "name": "budget-open-floor",
+          "seat": 5,
+          "score": 71,
+          "balance": 0,
+          "spent": 171,
+          "tilesWon": 14
+        }
+      ]
+    },
+    {
+      "seed": 8225099,
+      "auctionType": "SecondPrice",
+      "players": [
+        {
+          "name": "control",
+          "seat": 0,
+          "score": 75,
+          "balance": 27,
+          "spent": 148,
+          "tilesWon": 15
+        },
+        {
+          "name": "budget-open-floor",
+          "seat": 1,
+          "score": 93,
+          "balance": 3,
+          "spent": 190,
+          "tilesWon": 15
+        },
+        {
+          "name": "pressure-14",
+          "seat": 2,
+          "score": 63,
+          "balance": 2,
+          "spent": 161,
+          "tilesWon": 13
+        },
+        {
+          "name": "pressure-16",
+          "seat": 3,
+          "score": 59,
+          "balance": 2,
+          "spent": 157,
+          "tilesWon": 11
+        },
+        {
+          "name": "pressure-18",
+          "seat": 4,
+          "score": 48,
+          "balance": 1,
+          "spent": 147,
+          "tilesWon": 11
+        },
+        {
+          "name": "patient-seven",
+          "seat": 5,
+          "score": 18,
+          "balance": 110,
+          "spent": 8,
+          "tilesWon": 2
+        }
+      ]
+    },
+    {
+      "seed": 8225099,
+      "auctionType": "FirstPrice",
+      "players": [
+        {
+          "name": "budget-open-floor",
+          "seat": 0,
+          "score": 68,
+          "balance": 3,
+          "spent": 165,
+          "tilesWon": 14
+        },
+        {
+          "name": "pressure-14",
+          "seat": 1,
+          "score": 73,
+          "balance": 2,
+          "spent": 171,
+          "tilesWon": 12
+        },
+        {
+          "name": "pressure-16",
+          "seat": 2,
+          "score": 16,
+          "balance": 2,
+          "spent": 114,
+          "tilesWon": 8
+        },
+        {
+          "name": "pressure-18",
+          "seat": 3,
+          "score": 45,
+          "balance": 0,
+          "spent": 145,
+          "tilesWon": 8
+        },
+        {
+          "name": "patient-seven",
+          "seat": 4,
+          "score": 50,
+          "balance": 106,
+          "spent": 44,
+          "tilesWon": 5
+        },
+        {
+          "name": "control",
+          "seat": 5,
+          "score": 62,
+          "balance": 2,
+          "spent": 160,
+          "tilesWon": 20
+        }
+      ]
+    },
+    {
+      "seed": 8233018,
+      "auctionType": "SecondPrice",
+      "players": [
+        {
+          "name": "patient-seven",
+          "seat": 0,
+          "score": 30,
+          "balance": 111,
+          "spent": 19,
+          "tilesWon": 4
+        },
+        {
+          "name": "control",
+          "seat": 1,
+          "score": 77,
+          "balance": 40,
+          "spent": 137,
+          "tilesWon": 14
+        },
+        {
+          "name": "budget-open-floor",
+          "seat": 2,
+          "score": 82,
+          "balance": 11,
+          "spent": 171,
+          "tilesWon": 15
+        },
+        {
+          "name": "pressure-14",
+          "seat": 3,
+          "score": 84,
+          "balance": 2,
+          "spent": 182,
+          "tilesWon": 14
+        },
+        {
+          "name": "pressure-16",
+          "seat": 4,
+          "score": 54,
+          "balance": 3,
+          "spent": 151,
+          "tilesWon": 11
+        },
+        {
+          "name": "pressure-18",
+          "seat": 5,
+          "score": 31,
+          "balance": 2,
+          "spent": 129,
+          "tilesWon": 9
+        }
+      ]
+    },
+    {
+      "seed": 8233018,
+      "auctionType": "FirstPrice",
+      "players": [
+        {
+          "name": "control",
+          "seat": 0,
+          "score": 96,
+          "balance": 5,
+          "spent": 191,
+          "tilesWon": 17
+        },
+        {
+          "name": "budget-open-floor",
+          "seat": 1,
+          "score": 97,
+          "balance": 3,
+          "spent": 194,
+          "tilesWon": 16
+        },
+        {
+          "name": "pressure-14",
+          "seat": 2,
+          "score": 43,
+          "balance": 0,
+          "spent": 143,
+          "tilesWon": 11
+        },
+        {
+          "name": "pressure-16",
+          "seat": 3,
+          "score": 57,
+          "balance": 0,
+          "spent": 157,
+          "tilesWon": 11
+        },
+        {
+          "name": "pressure-18",
+          "seat": 4,
+          "score": 46,
+          "balance": 2,
+          "spent": 144,
+          "tilesWon": 8
+        },
+        {
+          "name": "patient-seven",
+          "seat": 5,
+          "score": 57,
+          "balance": 99,
+          "spent": 58,
+          "tilesWon": 4
+        }
+      ]
+    },
+    {
+      "seed": 8240937,
+      "auctionType": "SecondPrice",
+      "players": [
+        {
+          "name": "pressure-18",
+          "seat": 0,
+          "score": 50,
+          "balance": 1,
+          "spent": 149,
+          "tilesWon": 10
+        },
+        {
+          "name": "patient-seven",
+          "seat": 1,
+          "score": 73,
+          "balance": 114,
+          "spent": 59,
+          "tilesWon": 7
+        },
+        {
+          "name": "control",
+          "seat": 2,
+          "score": 83,
+          "balance": 49,
+          "spent": 134,
+          "tilesWon": 12
+        },
+        {
+          "name": "budget-open-floor",
+          "seat": 3,
+          "score": 82,
+          "balance": 6,
+          "spent": 176,
+          "tilesWon": 14
+        },
+        {
+          "name": "pressure-14",
+          "seat": 4,
+          "score": 64,
+          "balance": 0,
+          "spent": 164,
+          "tilesWon": 14
+        },
+        {
+          "name": "pressure-16",
+          "seat": 5,
+          "score": 34,
+          "balance": 0,
+          "spent": 134,
+          "tilesWon": 10
+        }
+      ]
+    },
+    {
+      "seed": 8240937,
+      "auctionType": "FirstPrice",
+      "players": [
+        {
+          "name": "patient-seven",
+          "seat": 0,
+          "score": 42,
+          "balance": 97,
+          "spent": 45,
+          "tilesWon": 7
+        },
+        {
+          "name": "control",
+          "seat": 1,
+          "score": 131,
+          "balance": 6,
+          "spent": 225,
+          "tilesWon": 17
+        },
+        {
+          "name": "budget-open-floor",
+          "seat": 2,
+          "score": 74,
+          "balance": 6,
+          "spent": 168,
+          "tilesWon": 15
+        },
+        {
+          "name": "pressure-14",
+          "seat": 3,
+          "score": 57,
+          "balance": 0,
+          "spent": 157,
+          "tilesWon": 11
+        },
+        {
+          "name": "pressure-16",
+          "seat": 4,
+          "score": 46,
+          "balance": 2,
+          "spent": 144,
+          "tilesWon": 9
+        },
+        {
+          "name": "pressure-18",
+          "seat": 5,
+          "score": 26,
+          "balance": 0,
+          "spent": 126,
+          "tilesWon": 8
+        }
+      ]
+    },
+    {
+      "seed": 8248856,
+      "auctionType": "SecondPrice",
+      "players": [
+        {
+          "name": "pressure-16",
+          "seat": 0,
+          "score": 68,
+          "balance": 4,
+          "spent": 164,
+          "tilesWon": 11
+        },
+        {
+          "name": "pressure-18",
+          "seat": 1,
+          "score": 30,
+          "balance": 0,
+          "spent": 130,
+          "tilesWon": 8
+        },
+        {
+          "name": "patient-seven",
+          "seat": 2,
+          "score": 49,
+          "balance": 116,
+          "spent": 33,
+          "tilesWon": 3
+        },
+        {
+          "name": "control",
+          "seat": 3,
+          "score": 107,
+          "balance": 8,
+          "spent": 199,
+          "tilesWon": 16
+        },
+        {
+          "name": "budget-open-floor",
+          "seat": 4,
+          "score": 58,
+          "balance": 9,
+          "spent": 149,
+          "tilesWon": 13
+        },
+        {
+          "name": "pressure-14",
+          "seat": 5,
+          "score": 73,
+          "balance": 4,
+          "spent": 169,
+          "tilesWon": 16
+        }
+      ]
+    },
+    {
+      "seed": 8248856,
+      "auctionType": "FirstPrice",
+      "players": [
+        {
+          "name": "pressure-18",
+          "seat": 0,
+          "score": 34,
+          "balance": 0,
+          "spent": 134,
+          "tilesWon": 8
+        },
+        {
+          "name": "patient-seven",
+          "seat": 1,
+          "score": 9,
+          "balance": 94,
+          "spent": 15,
+          "tilesWon": 4
+        },
+        {
+          "name": "control",
+          "seat": 2,
+          "score": 68,
+          "balance": 1,
+          "spent": 167,
+          "tilesWon": 21
+        },
+        {
+          "name": "budget-open-floor",
+          "seat": 3,
+          "score": 94,
+          "balance": 0,
+          "spent": 194,
+          "tilesWon": 13
+        },
+        {
+          "name": "pressure-14",
+          "seat": 4,
+          "score": 75,
+          "balance": 0,
+          "spent": 175,
+          "tilesWon": 12
+        },
+        {
+          "name": "pressure-16",
+          "seat": 5,
+          "score": 33,
+          "balance": 0,
+          "spent": 133,
+          "tilesWon": 9
+        }
+      ]
+    },
+    {
+      "seed": 8256775,
+      "auctionType": "SecondPrice",
+      "players": [
+        {
+          "name": "pressure-14",
+          "seat": 0,
+          "score": 74,
+          "balance": 3,
+          "spent": 171,
+          "tilesWon": 15
+        },
+        {
+          "name": "pressure-16",
+          "seat": 1,
+          "score": 41,
+          "balance": 2,
+          "spent": 139,
+          "tilesWon": 10
+        },
+        {
+          "name": "pressure-18",
+          "seat": 2,
+          "score": 37,
+          "balance": 2,
+          "spent": 135,
+          "tilesWon": 9
+        },
+        {
+          "name": "patient-seven",
+          "seat": 3,
+          "score": 24,
+          "balance": 112,
+          "spent": 12,
+          "tilesWon": 3
+        },
+        {
+          "name": "control",
+          "seat": 4,
+          "score": 85,
+          "balance": 4,
+          "spent": 181,
+          "tilesWon": 16
+        },
+        {
+          "name": "budget-open-floor",
+          "seat": 5,
+          "score": 67,
+          "balance": 5,
+          "spent": 162,
+          "tilesWon": 14
+        }
+      ]
+    },
+    {
+      "seed": 8256775,
+      "auctionType": "FirstPrice",
+      "players": [
+        {
+          "name": "pressure-16",
+          "seat": 0,
+          "score": 50,
+          "balance": 0,
+          "spent": 150,
+          "tilesWon": 10
+        },
+        {
+          "name": "pressure-18",
+          "seat": 1,
+          "score": 30,
+          "balance": 0,
+          "spent": 130,
+          "tilesWon": 8
+        },
+        {
+          "name": "patient-seven",
+          "seat": 2,
+          "score": 21,
+          "balance": 104,
+          "spent": 17,
+          "tilesWon": 4
+        },
+        {
+          "name": "control",
+          "seat": 3,
+          "score": 59,
+          "balance": 4,
+          "spent": 155,
+          "tilesWon": 19
+        },
+        {
+          "name": "budget-open-floor",
+          "seat": 4,
+          "score": 74,
+          "balance": 0,
+          "spent": 174,
+          "tilesWon": 15
+        },
+        {
+          "name": "pressure-14",
+          "seat": 5,
+          "score": 58,
+          "balance": 0,
+          "spent": 158,
+          "tilesWon": 11
+        }
+      ]
+    },
+    {
+      "seed": 8264694,
+      "auctionType": "SecondPrice",
+      "players": [
+        {
+          "name": "budget-open-floor",
+          "seat": 0,
+          "score": 87,
+          "balance": 7,
+          "spent": 180,
+          "tilesWon": 14
+        },
+        {
+          "name": "pressure-14",
+          "seat": 1,
+          "score": 60,
+          "balance": 0,
+          "spent": 160,
+          "tilesWon": 14
+        },
+        {
+          "name": "pressure-16",
+          "seat": 2,
+          "score": 43,
+          "balance": 2,
+          "spent": 141,
+          "tilesWon": 9
+        },
+        {
+          "name": "pressure-18",
+          "seat": 3,
+          "score": 59,
+          "balance": 2,
+          "spent": 157,
+          "tilesWon": 11
+        },
+        {
+          "name": "patient-seven",
+          "seat": 4,
+          "score": 45,
+          "balance": 99,
+          "spent": 46,
+          "tilesWon": 4
+        },
+        {
+          "name": "control",
+          "seat": 5,
+          "score": 84,
+          "balance": 23,
+          "spent": 161,
+          "tilesWon": 15
+        }
+      ]
+    },
+    {
+      "seed": 8264694,
+      "auctionType": "FirstPrice",
+      "players": [
+        {
+          "name": "pressure-14",
+          "seat": 0,
+          "score": 49,
+          "balance": 0,
+          "spent": 149,
+          "tilesWon": 11
+        },
+        {
+          "name": "pressure-16",
+          "seat": 1,
+          "score": 62,
+          "balance": 0,
+          "spent": 162,
+          "tilesWon": 11
+        },
+        {
+          "name": "pressure-18",
+          "seat": 2,
+          "score": 70,
+          "balance": 0,
+          "spent": 170,
+          "tilesWon": 9
+        },
+        {
+          "name": "patient-seven",
+          "seat": 3,
+          "score": 43,
+          "balance": 100,
+          "spent": 43,
+          "tilesWon": 7
+        },
+        {
+          "name": "control",
+          "seat": 4,
+          "score": 64,
+          "balance": 2,
+          "spent": 162,
+          "tilesWon": 17
+        },
+        {
+          "name": "budget-open-floor",
+          "seat": 5,
+          "score": 62,
+          "balance": 6,
+          "spent": 156,
+          "tilesWon": 12
+        }
+      ]
+    },
+    {
+      "seed": 8272613,
+      "auctionType": "SecondPrice",
+      "players": [
+        {
+          "name": "control",
+          "seat": 0,
+          "score": 63,
+          "balance": 9,
+          "spent": 154,
+          "tilesWon": 18
+        },
+        {
+          "name": "budget-open-floor",
+          "seat": 1,
+          "score": 90,
+          "balance": 14,
+          "spent": 176,
+          "tilesWon": 14
+        },
+        {
+          "name": "pressure-14",
+          "seat": 2,
+          "score": 48,
+          "balance": 4,
+          "spent": 144,
+          "tilesWon": 11
+        },
+        {
+          "name": "pressure-16",
+          "seat": 3,
+          "score": 31,
+          "balance": 0,
+          "spent": 131,
+          "tilesWon": 10
+        },
+        {
+          "name": "pressure-18",
+          "seat": 4,
+          "score": 68,
+          "balance": 3,
+          "spent": 165,
+          "tilesWon": 11
+        },
+        {
+          "name": "patient-seven",
+          "seat": 5,
+          "score": 20,
+          "balance": 105,
+          "spent": 15,
+          "tilesWon": 3
+        }
+      ]
+    },
+    {
+      "seed": 8272613,
+      "auctionType": "FirstPrice",
+      "players": [
+        {
+          "name": "budget-open-floor",
+          "seat": 0,
+          "score": 42,
+          "balance": 3,
+          "spent": 139,
+          "tilesWon": 12
+        },
+        {
+          "name": "pressure-14",
+          "seat": 1,
+          "score": 41,
+          "balance": 0,
+          "spent": 141,
+          "tilesWon": 10
+        },
+        {
+          "name": "pressure-16",
+          "seat": 2,
+          "score": 40,
+          "balance": 0,
+          "spent": 140,
+          "tilesWon": 9
+        },
+        {
+          "name": "pressure-18",
+          "seat": 3,
+          "score": 26,
+          "balance": 0,
+          "spent": 126,
+          "tilesWon": 7
+        },
+        {
+          "name": "patient-seven",
+          "seat": 4,
+          "score": 52,
+          "balance": 106,
+          "spent": 46,
+          "tilesWon": 8
+        },
+        {
+          "name": "control",
+          "seat": 5,
+          "score": 119,
+          "balance": 6,
+          "spent": 213,
+          "tilesWon": 21
+        }
+      ]
+    },
+    {
+      "seed": 8280532,
+      "auctionType": "SecondPrice",
+      "players": [
+        {
+          "name": "patient-seven",
+          "seat": 0,
+          "score": 20,
+          "balance": 99,
+          "spent": 21,
+          "tilesWon": 2
+        },
+        {
+          "name": "control",
+          "seat": 1,
+          "score": 74,
+          "balance": 43,
+          "spent": 131,
+          "tilesWon": 16
+        },
+        {
+          "name": "budget-open-floor",
+          "seat": 2,
+          "score": 69,
+          "balance": 6,
+          "spent": 163,
+          "tilesWon": 13
+        },
+        {
+          "name": "pressure-14",
+          "seat": 3,
+          "score": 92,
+          "balance": 3,
+          "spent": 189,
+          "tilesWon": 15
+        },
+        {
+          "name": "pressure-16",
+          "seat": 4,
+          "score": 44,
+          "balance": 4,
+          "spent": 140,
+          "tilesWon": 10
+        },
+        {
+          "name": "pressure-18",
+          "seat": 5,
+          "score": 67,
+          "balance": 0,
+          "spent": 167,
+          "tilesWon": 11
+        }
+      ]
+    },
+    {
+      "seed": 8280532,
+      "auctionType": "FirstPrice",
+      "players": [
+        {
+          "name": "control",
+          "seat": 0,
+          "score": 60,
+          "balance": 0,
+          "spent": 160,
+          "tilesWon": 18
+        },
+        {
+          "name": "budget-open-floor",
+          "seat": 1,
+          "score": 69,
+          "balance": 1,
+          "spent": 168,
+          "tilesWon": 14
+        },
+        {
+          "name": "pressure-14",
+          "seat": 2,
+          "score": 46,
+          "balance": 0,
+          "spent": 146,
+          "tilesWon": 11
+        },
+        {
+          "name": "pressure-16",
+          "seat": 3,
+          "score": 63,
+          "balance": 0,
+          "spent": 163,
+          "tilesWon": 10
+        },
+        {
+          "name": "pressure-18",
+          "seat": 4,
+          "score": 39,
+          "balance": 0,
+          "spent": 139,
+          "tilesWon": 8
+        },
+        {
+          "name": "patient-seven",
+          "seat": 5,
+          "score": 73,
+          "balance": 112,
+          "spent": 61,
+          "tilesWon": 6
+        }
+      ]
+    },
+    {
+      "seed": 8288451,
+      "auctionType": "SecondPrice",
+      "players": [
+        {
+          "name": "pressure-18",
+          "seat": 0,
+          "score": 43,
+          "balance": 1,
+          "spent": 142,
+          "tilesWon": 9
+        },
+        {
+          "name": "patient-seven",
+          "seat": 1,
+          "score": 42,
+          "balance": 108,
+          "spent": 34,
+          "tilesWon": 2
+        },
+        {
+          "name": "control",
+          "seat": 2,
+          "score": 74,
+          "balance": 14,
+          "spent": 160,
+          "tilesWon": 17
+        },
+        {
+          "name": "budget-open-floor",
+          "seat": 3,
+          "score": 50,
+          "balance": 2,
+          "spent": 148,
+          "tilesWon": 13
+        },
+        {
+          "name": "pressure-14",
+          "seat": 4,
+          "score": 81,
+          "balance": 0,
+          "spent": 181,
+          "tilesWon": 15
+        },
+        {
+          "name": "pressure-16",
+          "seat": 5,
+          "score": 51,
+          "balance": 2,
+          "spent": 149,
+          "tilesWon": 11
+        }
+      ]
+    },
+    {
+      "seed": 8288451,
+      "auctionType": "FirstPrice",
+      "players": [
+        {
+          "name": "patient-seven",
+          "seat": 0,
+          "score": 39,
+          "balance": 116,
+          "spent": 23,
+          "tilesWon": 3
+        },
+        {
+          "name": "control",
+          "seat": 1,
+          "score": 60,
+          "balance": 15,
+          "spent": 145,
+          "tilesWon": 17
+        },
+        {
+          "name": "budget-open-floor",
+          "seat": 2,
+          "score": 106,
+          "balance": 2,
+          "spent": 204,
+          "tilesWon": 17
+        },
+        {
+          "name": "pressure-14",
+          "seat": 3,
+          "score": 48,
+          "balance": 0,
+          "spent": 148,
+          "tilesWon": 12
+        },
+        {
+          "name": "pressure-16",
+          "seat": 4,
+          "score": 48,
+          "balance": 0,
+          "spent": 148,
+          "tilesWon": 10
+        },
+        {
+          "name": "pressure-18",
+          "seat": 5,
+          "score": 48,
+          "balance": 0,
+          "spent": 148,
+          "tilesWon": 8
+        }
+      ]
+    },
+    {
+      "seed": 8296370,
+      "auctionType": "SecondPrice",
+      "players": [
+        {
+          "name": "pressure-16",
+          "seat": 0,
+          "score": 57,
+          "balance": 1,
+          "spent": 156,
+          "tilesWon": 11
+        },
+        {
+          "name": "pressure-18",
+          "seat": 1,
+          "score": 47,
+          "balance": 2,
+          "spent": 145,
+          "tilesWon": 9
+        },
+        {
+          "name": "patient-seven",
+          "seat": 2,
+          "score": 30,
+          "balance": 109,
+          "spent": 21,
+          "tilesWon": 3
+        },
+        {
+          "name": "control",
+          "seat": 3,
+          "score": 63,
+          "balance": 36,
+          "spent": 127,
+          "tilesWon": 12
+        },
+        {
+          "name": "budget-open-floor",
+          "seat": 4,
+          "score": 66,
+          "balance": 6,
+          "spent": 160,
+          "tilesWon": 13
+        },
+        {
+          "name": "pressure-14",
+          "seat": 5,
+          "score": 112,
+          "balance": 1,
+          "spent": 211,
+          "tilesWon": 19
+        }
+      ]
+    },
+    {
+      "seed": 8296370,
+      "auctionType": "FirstPrice",
+      "players": [
+        {
+          "name": "pressure-18",
+          "seat": 0,
+          "score": 57,
+          "balance": 2,
+          "spent": 155,
+          "tilesWon": 9
+        },
+        {
+          "name": "patient-seven",
+          "seat": 1,
+          "score": 32,
+          "balance": 104,
+          "spent": 28,
+          "tilesWon": 4
+        },
+        {
+          "name": "control",
+          "seat": 2,
+          "score": 61,
+          "balance": 17,
+          "spent": 144,
+          "tilesWon": 16
+        },
+        {
+          "name": "budget-open-floor",
+          "seat": 3,
+          "score": 101,
+          "balance": 6,
+          "spent": 195,
+          "tilesWon": 17
+        },
+        {
+          "name": "pressure-14",
+          "seat": 4,
+          "score": 51,
+          "balance": 0,
+          "spent": 151,
+          "tilesWon": 11
+        },
+        {
+          "name": "pressure-16",
+          "seat": 5,
+          "score": 55,
+          "balance": 0,
+          "spent": 155,
+          "tilesWon": 10
+        }
+      ]
+    },
+    {
+      "seed": 8304289,
+      "auctionType": "SecondPrice",
+      "players": [
+        {
+          "name": "pressure-14",
+          "seat": 0,
+          "score": 48,
+          "balance": 1,
+          "spent": 147,
+          "tilesWon": 13
+        },
+        {
+          "name": "pressure-16",
+          "seat": 1,
+          "score": 58,
+          "balance": 2,
+          "spent": 156,
+          "tilesWon": 11
+        },
+        {
+          "name": "pressure-18",
+          "seat": 2,
+          "score": 53,
+          "balance": 0,
+          "spent": 153,
+          "tilesWon": 10
+        },
+        {
+          "name": "patient-seven",
+          "seat": 3,
+          "score": 17,
+          "balance": 97,
+          "spent": 20,
+          "tilesWon": 3
+        },
+        {
+          "name": "control",
+          "seat": 4,
+          "score": 110,
+          "balance": 4,
+          "spent": 206,
+          "tilesWon": 18
+        },
+        {
+          "name": "budget-open-floor",
+          "seat": 5,
+          "score": 68,
+          "balance": 6,
+          "spent": 162,
+          "tilesWon": 12
+        }
+      ]
+    },
+    {
+      "seed": 8304289,
+      "auctionType": "FirstPrice",
+      "players": [
+        {
+          "name": "pressure-16",
+          "seat": 0,
+          "score": 45,
+          "balance": 1,
+          "spent": 144,
+          "tilesWon": 9
+        },
+        {
+          "name": "pressure-18",
+          "seat": 1,
+          "score": 53,
+          "balance": 26,
+          "spent": 127,
+          "tilesWon": 8
+        },
+        {
+          "name": "patient-seven",
+          "seat": 2,
+          "score": 28,
+          "balance": 98,
+          "spent": 30,
+          "tilesWon": 5
+        },
+        {
+          "name": "control",
+          "seat": 3,
+          "score": 50,
+          "balance": 16,
+          "spent": 134,
+          "tilesWon": 16
+        },
+        {
+          "name": "budget-open-floor",
+          "seat": 4,
+          "score": 116,
+          "balance": 8,
+          "spent": 208,
+          "tilesWon": 17
+        },
+        {
+          "name": "pressure-14",
+          "seat": 5,
+          "score": 87,
+          "balance": 0,
+          "spent": 187,
+          "tilesWon": 12
+        }
+      ]
+    },
+    {
+      "seed": 8312208,
+      "auctionType": "SecondPrice",
+      "players": [
+        {
+          "name": "budget-open-floor",
+          "seat": 0,
+          "score": 61,
+          "balance": 13,
+          "spent": 148,
+          "tilesWon": 11
+        },
+        {
+          "name": "pressure-14",
+          "seat": 1,
+          "score": 50,
+          "balance": 0,
+          "spent": 150,
+          "tilesWon": 13
+        },
+        {
+          "name": "pressure-16",
+          "seat": 2,
+          "score": 70,
+          "balance": 3,
+          "spent": 167,
+          "tilesWon": 12
+        },
+        {
+          "name": "pressure-18",
+          "seat": 3,
+          "score": 45,
+          "balance": 3,
+          "spent": 142,
+          "tilesWon": 9
+        },
+        {
+          "name": "patient-seven",
+          "seat": 4,
+          "score": 53,
+          "balance": 117,
+          "spent": 36,
+          "tilesWon": 7
+        },
+        {
+          "name": "control",
+          "seat": 5,
+          "score": 65,
+          "balance": 15,
+          "spent": 150,
+          "tilesWon": 15
+        }
+      ]
+    },
+    {
+      "seed": 8312208,
+      "auctionType": "FirstPrice",
+      "players": [
+        {
+          "name": "pressure-14",
+          "seat": 0,
+          "score": 46,
+          "balance": 0,
+          "spent": 146,
+          "tilesWon": 11
+        },
+        {
+          "name": "pressure-16",
+          "seat": 1,
+          "score": 40,
+          "balance": 0,
+          "spent": 140,
+          "tilesWon": 9
+        },
+        {
+          "name": "pressure-18",
+          "seat": 2,
+          "score": 41,
+          "balance": 2,
+          "spent": 139,
+          "tilesWon": 8
+        },
+        {
+          "name": "patient-seven",
+          "seat": 3,
+          "score": 77,
+          "balance": 105,
+          "spent": 72,
+          "tilesWon": 6
+        },
+        {
+          "name": "control",
+          "seat": 4,
+          "score": 79,
+          "balance": 11,
+          "spent": 168,
+          "tilesWon": 20
+        },
+        {
+          "name": "budget-open-floor",
+          "seat": 5,
+          "score": 76,
+          "balance": 5,
+          "spent": 171,
+          "tilesWon": 13
+        }
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "name": "control",
+      "matches": 48,
+      "wins": 16.5,
+      "score": 3732,
+      "balance": 655,
+      "spent": 7877,
+      "tilesWon": 775,
+      "place": 99.5,
+      "maxDecisionMs": 151.0965000000001,
+      "seats": [
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ],
+      "byMode": {
+        "SecondPrice": {
+          "matches": 24,
+          "wins": 8,
+          "score": 1923,
+          "balance": 527,
+          "spent": 3796,
+          "tilesWon": 345,
+          "place": 46,
+          "seats": [
+            4,
+            4,
+            4,
+            4,
+            4,
+            4
+          ],
+          "winRate": 0.3333333333333333,
+          "meanScore": 80.125,
+          "meanBalance": 21.958333333333332,
+          "meanSpent": 158.16666666666666,
+          "meanTilesWon": 14.375,
+          "meanPlace": 1.9166666666666667
+        },
+        "FirstPrice": {
+          "matches": 24,
+          "wins": 8.5,
+          "score": 1809,
+          "balance": 128,
+          "spent": 4081,
+          "tilesWon": 430,
+          "place": 53.5,
+          "seats": [
+            4,
+            4,
+            4,
+            4,
+            4,
+            4
+          ],
+          "winRate": 0.3541666666666667,
+          "meanScore": 75.375,
+          "meanBalance": 5.333333333333333,
+          "meanSpent": 170.04166666666666,
+          "meanTilesWon": 17.916666666666668,
+          "meanPlace": 2.2291666666666665
+        }
+      },
+      "winRate": 0.34375,
+      "meanScore": 77.75,
+      "meanBalance": 13.645833333333334,
+      "meanSpent": 164.10416666666666,
+      "meanTilesWon": 16.145833333333332,
+      "meanPlace": 2.0729166666666665
+    },
+    {
+      "name": "budget-open-floor",
+      "matches": 48,
+      "wins": 16.5,
+      "score": 3511,
+      "balance": 254,
+      "spent": 8057,
+      "tilesWon": 646,
+      "place": 106.5,
+      "maxDecisionMs": 218.68387500000244,
+      "seats": [
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ],
+      "byMode": {
+        "SecondPrice": {
+          "matches": 24,
+          "wins": 6,
+          "score": 1674,
+          "balance": 174,
+          "spent": 3900,
+          "tilesWon": 302,
+          "place": 61,
+          "seats": [
+            4,
+            4,
+            4,
+            4,
+            4,
+            4
+          ],
+          "winRate": 0.25,
+          "meanScore": 69.75,
+          "meanBalance": 7.25,
+          "meanSpent": 162.5,
+          "meanTilesWon": 12.583333333333334,
+          "meanPlace": 2.5416666666666665
+        },
+        "FirstPrice": {
+          "matches": 24,
+          "wins": 10.5,
+          "score": 1837,
+          "balance": 80,
+          "spent": 4157,
+          "tilesWon": 344,
+          "place": 45.5,
+          "seats": [
+            4,
+            4,
+            4,
+            4,
+            4,
+            4
+          ],
+          "winRate": 0.4375,
+          "meanScore": 76.54166666666667,
+          "meanBalance": 3.3333333333333335,
+          "meanSpent": 173.20833333333334,
+          "meanTilesWon": 14.333333333333334,
+          "meanPlace": 1.8958333333333333
+        }
+      },
+      "winRate": 0.34375,
+      "meanScore": 73.14583333333333,
+      "meanBalance": 5.291666666666667,
+      "meanSpent": 167.85416666666666,
+      "meanTilesWon": 13.458333333333334,
+      "meanPlace": 2.21875
+    },
+    {
+      "name": "pressure-14",
+      "matches": 48,
+      "wins": 9,
+      "score": 3232,
+      "balance": 46,
+      "spent": 7986,
+      "tilesWon": 634,
+      "place": 142.5,
+      "maxDecisionMs": 38.269207999999935,
+      "seats": [
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ],
+      "byMode": {
+        "SecondPrice": {
+          "matches": 24,
+          "wins": 8,
+          "score": 1866,
+          "balance": 38,
+          "spent": 4228,
+          "tilesWon": 365,
+          "place": 56,
+          "seats": [
+            4,
+            4,
+            4,
+            4,
+            4,
+            4
+          ],
+          "winRate": 0.3333333333333333,
+          "meanScore": 77.75,
+          "meanBalance": 1.5833333333333333,
+          "meanSpent": 176.16666666666666,
+          "meanTilesWon": 15.208333333333334,
+          "meanPlace": 2.3333333333333335
+        },
+        "FirstPrice": {
+          "matches": 24,
+          "wins": 1,
+          "score": 1366,
+          "balance": 8,
+          "spent": 3758,
+          "tilesWon": 269,
+          "place": 86.5,
+          "seats": [
+            4,
+            4,
+            4,
+            4,
+            4,
+            4
+          ],
+          "winRate": 0.041666666666666664,
+          "meanScore": 56.916666666666664,
+          "meanBalance": 0.3333333333333333,
+          "meanSpent": 156.58333333333334,
+          "meanTilesWon": 11.208333333333334,
+          "meanPlace": 3.6041666666666665
+        }
+      },
+      "winRate": 0.1875,
+      "meanScore": 67.33333333333333,
+      "meanBalance": 0.9583333333333334,
+      "meanSpent": 166.375,
+      "meanTilesWon": 13.208333333333334,
+      "meanPlace": 2.96875
+    },
+    {
+      "name": "pressure-16",
+      "matches": 48,
+      "wins": 4,
+      "score": 2461,
+      "balance": 44,
+      "spent": 7217,
+      "tilesWon": 494,
+      "place": 191,
+      "maxDecisionMs": 14.331624999999804,
+      "seats": [
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ],
+      "byMode": {
+        "SecondPrice": {
+          "matches": 24,
+          "wins": 2,
+          "score": 1272,
+          "balance": 34,
+          "spent": 3638,
+          "tilesWon": 262,
+          "place": 96,
+          "seats": [
+            4,
+            4,
+            4,
+            4,
+            4,
+            4
+          ],
+          "winRate": 0.08333333333333333,
+          "meanScore": 53,
+          "meanBalance": 1.4166666666666667,
+          "meanSpent": 151.58333333333334,
+          "meanTilesWon": 10.916666666666666,
+          "meanPlace": 4
+        },
+        "FirstPrice": {
+          "matches": 24,
+          "wins": 2,
+          "score": 1189,
+          "balance": 10,
+          "spent": 3579,
+          "tilesWon": 232,
+          "place": 95,
+          "seats": [
+            4,
+            4,
+            4,
+            4,
+            4,
+            4
+          ],
+          "winRate": 0.08333333333333333,
+          "meanScore": 49.541666666666664,
+          "meanBalance": 0.4166666666666667,
+          "meanSpent": 149.125,
+          "meanTilesWon": 9.666666666666666,
+          "meanPlace": 3.9583333333333335
+        }
+      },
+      "winRate": 0.08333333333333333,
+      "meanScore": 51.270833333333336,
+      "meanBalance": 0.9166666666666666,
+      "meanSpent": 150.35416666666666,
+      "meanTilesWon": 10.291666666666666,
+      "meanPlace": 3.9791666666666665
+    },
+    {
+      "name": "pressure-18",
+      "matches": 48,
+      "wins": 1,
+      "score": 2068,
+      "balance": 82,
+      "spent": 6786,
+      "tilesWon": 430,
+      "place": 228,
+      "maxDecisionMs": 16.59775000000036,
+      "seats": [
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ],
+      "byMode": {
+        "SecondPrice": {
+          "matches": 24,
+          "wins": 0,
+          "score": 1083,
+          "balance": 46,
+          "spent": 3437,
+          "tilesWon": 230,
+          "place": 116,
+          "seats": [
+            4,
+            4,
+            4,
+            4,
+            4,
+            4
+          ],
+          "winRate": 0,
+          "meanScore": 45.125,
+          "meanBalance": 1.9166666666666667,
+          "meanSpent": 143.20833333333334,
+          "meanTilesWon": 9.583333333333334,
+          "meanPlace": 4.833333333333333
+        },
+        "FirstPrice": {
+          "matches": 24,
+          "wins": 1,
+          "score": 985,
+          "balance": 36,
+          "spent": 3349,
+          "tilesWon": 200,
+          "place": 112,
+          "seats": [
+            4,
+            4,
+            4,
+            4,
+            4,
+            4
+          ],
+          "winRate": 0.041666666666666664,
+          "meanScore": 41.041666666666664,
+          "meanBalance": 1.5,
+          "meanSpent": 139.54166666666666,
+          "meanTilesWon": 8.333333333333334,
+          "meanPlace": 4.666666666666667
+        }
+      },
+      "winRate": 0.020833333333333332,
+      "meanScore": 43.083333333333336,
+      "meanBalance": 1.7083333333333333,
+      "meanSpent": 141.375,
+      "meanTilesWon": 8.958333333333334,
+      "meanPlace": 4.75
+    },
+    {
+      "name": "patient-seven",
+      "matches": 48,
+      "wins": 1,
+      "score": 1826,
+      "balance": 4962,
+      "spent": 1664,
+      "tilesWon": 237,
+      "place": 240.5,
+      "maxDecisionMs": 17.906790999999885,
+      "seats": [
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ],
+      "byMode": {
+        "SecondPrice": {
+          "matches": 24,
+          "wins": 0,
+          "score": 863,
+          "balance": 2529,
+          "spent": 734,
+          "tilesWon": 104,
+          "place": 129,
+          "seats": [
+            4,
+            4,
+            4,
+            4,
+            4,
+            4
+          ],
+          "winRate": 0,
+          "meanScore": 35.958333333333336,
+          "meanBalance": 105.375,
+          "meanSpent": 30.583333333333332,
+          "meanTilesWon": 4.333333333333333,
+          "meanPlace": 5.375
+        },
+        "FirstPrice": {
+          "matches": 24,
+          "wins": 1,
+          "score": 963,
+          "balance": 2433,
+          "spent": 930,
+          "tilesWon": 133,
+          "place": 111.5,
+          "seats": [
+            4,
+            4,
+            4,
+            4,
+            4,
+            4
+          ],
+          "winRate": 0.041666666666666664,
+          "meanScore": 40.125,
+          "meanBalance": 101.375,
+          "meanSpent": 38.75,
+          "meanTilesWon": 5.541666666666667,
+          "meanPlace": 4.645833333333333
+        }
+      },
+      "winRate": 0.020833333333333332,
+      "meanScore": 38.041666666666664,
+      "meanBalance": 103.375,
+      "meanSpent": 34.666666666666664,
+      "meanTilesWon": 4.9375,
+      "meanPlace": 5.010416666666667
+    }
+  ],
+  "startedAt": "2026-10-25T06:31:38.306Z",
+  "elapsedMs": 69326.58079200001,
+  "finishedAt": "2026-10-25T06:32:47.632Z"
+}
