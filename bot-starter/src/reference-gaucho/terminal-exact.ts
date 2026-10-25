@@ -65,16 +65,42 @@ class PartitionOracle {
       while (fits(word, rest)) { change(word, rest, -1); greedy.push(word.index); score += word.score; }
     }
     let best: ExactPartition = { score, words: greedy, exact: true };
-    if (score < face * 3) for (let j = 0; j < this.candidates.length; j++) {
-      if ((j & 63) === 0) this.guard();
-      const word = this.candidates[j]!;
-      if (!fits(word, rack) || word.score + 3 * (face - word.face) <= best.score) continue;
-      change(word, rack, -1);
-      let tail: ExactPartition;
-      try { tail = this.solve(rack, face - word.face); }
-      finally { change(word, rack, 1); }
-      if (word.score + tail.score > best.score) best = { score: word.score + tail.score, words: [word.index, ...tail.words], exact: true };
-      if (best.score === face * 3) break;
+    if (score < face * 3) {
+      // Branch on the most constrained remaining letter. Every optimal packing
+      // either leaves one such tile unused, or contains a word using it. This
+      // avoids exploring every ordering of unrelated words while retaining an
+      // exhaustive search, including repeated tiles and unused letters.
+      const frequencies = new Uint32Array(26), playable: Candidate[] = [];
+      for (let j = 0; j < this.candidates.length; j++) {
+        if ((j & 127) === 0) this.guard();
+        const word = this.candidates[j]!;
+        if (!fits(word, rack)) continue;
+        playable.push(word);
+        for (let k = 0; k < word.sparse.length; k += 2) frequencies[word.sparse[k]!]!++;
+      }
+      let pivot = -1;
+      for (let i = 0; i < 26; i++) if (rack[i]! > 0 && (pivot < 0 || frequencies[i]! < frequencies[pivot]!)) pivot = i;
+      if (pivot >= 0) {
+        const ignored = frequencies[pivot] === 0 ? rack[pivot]! : 1;
+        if (3 * (face - ignored * VALUE[pivot]!) > best.score) {
+          rack[pivot]! -= ignored;
+          let tail: ExactPartition;
+          try { tail = this.solve(rack, face - ignored * VALUE[pivot]!); }
+          finally { rack[pivot]! += ignored; }
+          if (tail.score > best.score) best = tail;
+        }
+        for (let j = 0; j < playable.length; j++) {
+          if ((j & 63) === 0) this.guard();
+          const word = playable[j]!;
+          if (!this.dictionary.counts[word.index * 26 + pivot] || word.score + 3 * (face - word.face) <= best.score) continue;
+          change(word, rack, -1);
+          let tail: ExactPartition;
+          try { tail = this.solve(rack, face - word.face); }
+          finally { change(word, rack, 1); }
+          if (word.score + tail.score > best.score) best = { score: word.score + tail.score, words: [word.index, ...tail.words], exact: true };
+          if (best.score === face * 3) break;
+        }
+      }
     }
     this.memo.set(signature, best);
     return best;
@@ -85,6 +111,38 @@ class PartitionOracle {
 export function exactTerminalPartition(dictionary: Dict, rack: Int32Array, options: ExactTerminalOptions = {}): ExactPartition | null {
   try { return new PartitionOracle(dictionary, rack, options).solve(new Int32Array(rack)); }
   catch (error) { if (error === EXPIRED) return null; throw error; }
+}
+
+export interface TerminalCashout {
+  readonly word: string | null;
+  readonly credit: number;
+  readonly loseScore: number;
+  readonly winScore: number;
+}
+/** Joint cashout/purchase frontier, restricted to sales preserving the lose-case
+ * optimal payout. One shared bounded oracle certifies every returned outcome.
+ */
+export function terminalCashoutFrontier(dictionary: Dict, rack: Int32Array, letter: number, options: ExactTerminalOptions = {}): TerminalCashout[] | null {
+  if (!Number.isInteger(letter) || letter < 0 || letter >= 26) return null;
+  try {
+    const augmented = new Int32Array(rack); augmented[letter]!++;
+    const oracle = new PartitionOracle(dictionary, augmented, options);
+    const before = oracle.solve(new Int32Array(rack)), after = oracle.solve(new Int32Array(augmented));
+    const choices: TerminalCashout[] = [{ word: null, credit: 0, loseScore: before.score, winScore: after.score }];
+    const seen = new Set<string>();
+    for (const index of spellableList(dictionary, rack, dictionary.n)) {
+      const rest = new Int32Array(rack);
+      for (let i = 0; i < 26; i++) rest[i]! -= dictionary.counts[index * 26 + i]!;
+      const signature = key(rest);
+      if (seen.has(signature)) continue;
+      seen.add(signature);
+      const credit = dictionary.rew[index]!, loseScore = credit + oracle.solve(rest).score;
+      if (loseScore !== before.score) continue;
+      rest[letter]!++;
+      choices.push({ word: dictionary.words[index]!, credit, loseScore, winScore: credit + oracle.solve(rest).score });
+    }
+    return choices;
+  } catch (error) { if (error === EXPIRED) return null; throw error; }
 }
 
 /**

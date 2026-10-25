@@ -3,7 +3,7 @@
  * See LICENSE, UPSTREAM.json and README.md for source and compatibility notes.
  */
 import { chooseWords, decideBid, DEFAULT_PARAMS, type Params, type View } from './core/policy.js';
-import { bestWord, spellableList, type Dict } from './core/dict.js';
+import { bestWord, spellableList, potential, type Dict } from './core/dict.js';
 import { BAG, reward, VALUE, rackFromMap } from './core/rules.js';
 import vickrey from './params/vickrey.json' with { type: 'json' };
 import firstprice from './params/firstprice.json' with { type: 'json' };
@@ -76,6 +76,20 @@ export class GauchoReference {
     const { p, v } = this.state(ctx);
     const letter = (ctx.letter ?? '').charCodeAt(0) - 65;
     return letter >= 0 && letter < 26 ? decideBid(this.dictionary, p, v, letter) : 0;
+  }
+  /** Expose the licensed policy's single-word heuristic for cashflow comparisons.
+   * Uses the same horizon adjustment as its private opts() helper; no new data.
+   */
+  potentialValue(ctx: GauchoContext, rack: ReadonlyMap<string, number> = ctx.myRack): number {
+    const { p, v } = this.state(ctx);
+    let aHalf = p.aHalf;
+    if (p.horizonW > 0) {
+      const unseen = v.unseen.reduce((sum, n) => sum + n, 0);
+      const fraction = unseen > 0 ? Math.min(1, Math.max(.02, v.auctionsLeft / unseen)) : 1;
+      aHalf /= Math.pow(fraction, p.horizonW);
+    }
+    return potential(this.dictionary, rackFromMap(new Map(rack)), { unseen: v.unseen,
+      maxMissing: Math.max(0, Math.min(p.maxMissing, v.auctionsLeft)), pBase: p.pBase, aHalf, minLen: p.minLen });
   }
   word(ctx: GauchoContext): string | null {
     const { p, v } = this.state(ctx);

@@ -1,0 +1,28 @@
+{
+  "checkedAt": "2026-10-25T07:34:54.154563+00:00",
+  "tournamentId": 1,
+  "round": 1,
+  "phase": "Swiss",
+  "matchId": 16856,
+  "status": "Ended",
+  "botId": 145,
+  "score": 102,
+  "rank": 1,
+  "players": 6,
+  "otherScores": [
+    92,
+    79,
+    65,
+    61,
+    30
+  ],
+  "swissPointsAwarded": 6,
+  "endedAt": "2026-10-25T07:32:14.754241+00:00",
+  "liveRevision": "330d6a747b23e8327e102cb9ace99de53dcc539b",
+  "verification": [
+    "SELECT * FROM match_state WHERE id = 16856",
+    "SELECT * FROM match_participant WHERE match_id = 16856",
+    "SELECT * FROM tournament_entry WHERE bot_id = 145"
+  ],
+  "note": "Existing live policy achieved this win; experimental score-100 changes were not deployed."
+}
