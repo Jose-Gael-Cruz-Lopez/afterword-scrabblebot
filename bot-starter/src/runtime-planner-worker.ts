@@ -4,16 +4,17 @@ import { createStrategy, type BidContext } from "./strategy.js";
 import { createGauchoStrategy } from "./reference-gaucho/adapter.js";
 import { ExactTerminalStrategy } from "./reference-gaucho/terminal-exact.js";
 import { LastTileDenial, type LastTilePolicy } from "./last-tile-denial.js";
+import { createFundedRuntimePolicy } from "./reference-gaucho/funded-runtime.js";
 
 if (!parentPort) throw new Error("The planner must run in a worker thread");
 const dictionary = readFileSync(workerData.dictionaryPath, "utf8").split(/\r?\n/)
   .map(w => w.trim().toUpperCase()).filter(w => /^[A-Z]{2,}$/.test(w));
 if (!dictionary.length) throw new Error("The official dictionary is empty");
 // Build the full index exactly once, before the bot enters a live match.
-// The strongest tested candidate is the attributed MIT-licensed Gaucho policy.
-// Original Afterword and experimental market policy remain explicit opt-ins.
+// Preserve the licensed baseline as a rollback. The funded bidder is an
+// explicit opt-in after paired score/win confirmation, not a new default.
 const policy = process.env.BOT_POLICY ?? "licensed";
-if(!["licensed","original"].includes(policy))throw new Error("BOT_POLICY must be licensed or original");
+if(!["licensed","original","funded"].includes(policy))throw new Error("BOT_POLICY must be licensed, original or funded");
 const original = policy === "original" ? createStrategy(dictionary, { marketRebuild: process.env.MARKET_REBUILD === "1" }) : undefined;
 const matches = new Map<string,LastTilePolicy>();
 // Compile the shared dictionary before connecting, outside auction latency.
@@ -22,7 +23,7 @@ function reference(ctx:BidContext):LastTilePolicy{
   const key=ctx.matchId??"test";
   let planner=matches.get(key);
   if(!planner){
-    planner = new LastTileDenial(new ExactTerminalStrategy(
+    planner = policy === "funded" ? createFundedRuntimePolicy(dictionary) : new LastTileDenial(new ExactTerminalStrategy(
       createGauchoStrategy(dictionary, { name: "Afterword", terminalSafe: true }),
       { timeBudgetMs: 18, maxNodes: 8000 },
     ));

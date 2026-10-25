@@ -1,0 +1,1655 @@
+{
+  "selected": {
+    "name": "refresh16-full",
+    "options": {
+      "maximumRounds": 16,
+      "strength": 1,
+      "samples": 4,
+      "timeBudgetMs": 70,
+      "riskPenalty": 0.5,
+      "improvementMargin": 0.5,
+      "thresholdSamples": 16
+    }
+  },
+  "diagnosticOnly": true,
+  "results": [
+    {
+      "category": "positiveWinFlips",
+      "scenario": {
+        "seed": 883895928,
+        "mode": "SecondPrice",
+        "players": 6,
+        "seat": 4,
+        "roster": 0
+      },
+      "control": {
+        "attempts": 0,
+        "expired": 0,
+        "changed": 0,
+        "raised": 0,
+        "lowered": 0,
+        "score": 79,
+        "win": 0,
+        "rank": 3,
+        "balance": 9,
+        "spent": 170,
+        "tiles": 10,
+        "maxDecisionMs": 1.4344590000036987,
+        "meanDecisionMs": 0.4304292805756383
+      },
+      "candidate": {
+        "attempts": 14,
+        "expired": 2,
+        "changed": 2,
+        "raised": 0,
+        "lowered": 2,
+        "score": 96,
+        "win": 1,
+        "rank": 1,
+        "balance": 14,
+        "spent": 182,
+        "tiles": 11,
+        "maxDecisionMs": 71.0063749999972,
+        "meanDecisionMs": 3.950106630434807
+      },
+      "firstDivergence": {
+        "round": 55,
+        "left": 14,
+        "letter": "U",
+        "rack": "AIROV",
+        "balance": 33,
+        "controlBid": 15,
+        "candidateBid": 0,
+        "recomputedBid": 0,
+        "reproduced": true,
+        "decision": {
+          "normal": 15,
+          "chosen": 0,
+          "optimal": 0,
+          "expired": false,
+          "prices": [
+            {
+              "threshold": 7,
+              "cost": 7,
+              "weight": 0.125,
+              "meanGain": -1.75
+            },
+            {
+              "threshold": 8,
+              "cost": 8,
+              "weight": 0.125,
+              "meanGain": -4.75
+            },
+            {
+              "threshold": 9,
+              "cost": 9,
+              "weight": 0.0625,
+              "meanGain": -6
+            },
+            {
+              "threshold": 10,
+              "cost": 10,
+              "weight": 0.1875,
+              "meanGain": -5
+            },
+            {
+              "threshold": 12,
+              "cost": 12,
+              "weight": 0.125,
+              "meanGain": -2.25
+            },
+            {
+              "threshold": 13,
+              "cost": 13,
+              "weight": 0.0625,
+              "meanGain": -4.75
+            },
+            {
+              "threshold": 14,
+              "cost": 14,
+              "weight": 0.125,
+              "meanGain": -4.75
+            },
+            {
+              "threshold": 15,
+              "cost": 15,
+              "weight": 0.0625,
+              "meanGain": -7.25
+            },
+            {
+              "threshold": 18,
+              "cost": 18,
+              "weight": 0.0625,
+              "meanGain": -9.75
+            },
+            {
+              "threshold": 24,
+              "cost": 24,
+              "weight": 0.0625,
+              "meanGain": -21.25
+            }
+          ],
+          "bids": [
+            {
+              "bid": 0,
+              "meanGain": 3.296875,
+              "se": 3.3141087877877013,
+              "lowerGain": 1.6398206061061493
+            },
+            {
+              "bid": 8,
+              "meanGain": 3.078125,
+              "se": 2.971914431915058,
+              "lowerGain": 1.592167784042471
+            },
+            {
+              "bid": 9,
+              "meanGain": 2.484375,
+              "se": 2.3644743458730244,
+              "lowerGain": 1.3021378270634878
+            },
+            {
+              "bid": 10,
+              "meanGain": 2.109375,
+              "se": 2.08609842544042,
+              "lowerGain": 1.06632578727979
+            },
+            {
+              "bid": 11,
+              "meanGain": 1.171875,
+              "se": 1.2327917060983984,
+              "lowerGain": 0.5554791469508008
+            },
+            {
+              "bid": 13,
+              "meanGain": 0.890625,
+              "se": 0.8939084212742376,
+              "lowerGain": 0.4436707893628812
+            },
+            {
+              "bid": 14,
+              "meanGain": 0.59375,
+              "se": 0.5959389475161585,
+              "lowerGain": 0.29578052624192075
+            },
+            {
+              "bid": 15,
+              "meanGain": 0,
+              "se": 0,
+              "lowerGain": 0
+            },
+            {
+              "bid": 16,
+              "meanGain": -0.453125,
+              "se": 0.2273245087791166,
+              "lowerGain": -0.5667872543895583
+            },
+            {
+              "bid": 19,
+              "meanGain": -1.0625,
+              "se": 0.5038911092686593,
+              "lowerGain": -1.3144455546343297
+            },
+            {
+              "bid": 25,
+              "meanGain": -2.390625,
+              "se": 0.511823104817475,
+              "lowerGain": -2.6465365524087376
+            },
+            {
+              "bid": 33,
+              "meanGain": -2.390625,
+              "se": 0.511823104817475,
+              "lowerGain": -2.6465365524087376
+            }
+          ]
+        }
+      },
+      "caveat": "Post-hoc model reproduction is timing-bounded; recorded game outcomes remain authoritative. Future events were not passed to the model."
+    },
+    {
+      "category": "positiveWinFlips",
+      "scenario": {
+        "seed": 899365953,
+        "mode": "SecondPrice",
+        "players": 6,
+        "seat": 2,
+        "roster": 1
+      },
+      "control": {
+        "attempts": 0,
+        "expired": 0,
+        "changed": 0,
+        "raised": 0,
+        "lowered": 0,
+        "score": 87,
+        "win": 0,
+        "rank": 3,
+        "balance": 40,
+        "spent": 147,
+        "tiles": 10,
+        "maxDecisionMs": 3.7286669999884907,
+        "meanDecisionMs": 0.3936666739135272
+      },
+      "candidate": {
+        "attempts": 14,
+        "expired": 0,
+        "changed": 3,
+        "raised": 2,
+        "lowered": 1,
+        "score": 96,
+        "win": 1,
+        "rank": 1,
+        "balance": 10,
+        "spent": 186,
+        "tiles": 11,
+        "maxDecisionMs": 38.54312499999651,
+        "meanDecisionMs": 2.448276071943654
+      },
+      "firstDivergence": {
+        "round": 55,
+        "left": 14,
+        "letter": "D",
+        "rack": "AEOVCDL",
+        "balance": 16,
+        "controlBid": 7,
+        "candidateBid": 16,
+        "recomputedBid": 16,
+        "reproduced": true,
+        "decision": {
+          "normal": 7,
+          "chosen": 16,
+          "optimal": 16,
+          "expired": false,
+          "prices": [
+            {
+              "threshold": 12,
+              "cost": 12,
+              "weight": 0.0625,
+              "meanGain": 8.5
+            },
+            {
+              "threshold": 14,
+              "cost": 14,
+              "weight": 0.1875,
+              "meanGain": 7.75
+            },
+            {
+              "threshold": 15,
+              "cost": 15,
+              "weight": 0.0625,
+              "meanGain": 8.25
+            }
+          ],
+          "bids": [
+            {
+              "bid": 0,
+              "meanGain": 0,
+              "se": 0,
+              "lowerGain": 0
+            },
+            {
+              "bid": 7,
+              "meanGain": 0,
+              "se": 0,
+              "lowerGain": 0
+            },
+            {
+              "bid": 13,
+              "meanGain": 0.53125,
+              "se": 0.07438987946398802,
+              "lowerGain": 0.494055060268006
+            },
+            {
+              "bid": 15,
+              "meanGain": 1.984375,
+              "se": 0.7466832041044359,
+              "lowerGain": 1.611033397947782
+            },
+            {
+              "bid": 16,
+              "meanGain": 2.5,
+              "se": 0.9461407356554661,
+              "lowerGain": 2.026929632172267
+            }
+          ]
+        }
+      },
+      "caveat": "Post-hoc model reproduction is timing-bounded; recorded game outcomes remain authoritative. Future events were not passed to the model."
+    },
+    {
+      "category": "positiveWinFlips",
+      "scenario": {
+        "seed": 737209660,
+        "mode": "SecondPrice",
+        "players": 7,
+        "seat": 3,
+        "roster": 1
+      },
+      "control": {
+        "attempts": 0,
+        "expired": 0,
+        "changed": 0,
+        "raised": 0,
+        "lowered": 0,
+        "score": 54,
+        "win": 0,
+        "rank": 6,
+        "balance": 22,
+        "spent": 132,
+        "tiles": 8,
+        "maxDecisionMs": 5.259374999994179,
+        "meanDecisionMs": 0.5497958671880951
+      },
+      "candidate": {
+        "attempts": 14,
+        "expired": 1,
+        "changed": 3,
+        "raised": 0,
+        "lowered": 3,
+        "score": 72,
+        "win": 1,
+        "rank": 1,
+        "balance": 31,
+        "spent": 141,
+        "tiles": 8,
+        "maxDecisionMs": 71.29079100000672,
+        "meanDecisionMs": 2.601480140625654
+      },
+      "firstDivergence": {
+        "round": 50,
+        "left": 14,
+        "letter": "I",
+        "rack": "OANED",
+        "balance": 27,
+        "controlBid": 15,
+        "candidateBid": 0,
+        "recomputedBid": 0,
+        "reproduced": true,
+        "decision": {
+          "normal": 15,
+          "chosen": 0,
+          "optimal": 0,
+          "expired": false,
+          "prices": [
+            {
+              "threshold": 8,
+              "cost": 8,
+              "weight": 0.0625,
+              "meanGain": -3
+            },
+            {
+              "threshold": 9,
+              "cost": 9,
+              "weight": 0.0625,
+              "meanGain": -4
+            },
+            {
+              "threshold": 10,
+              "cost": 10,
+              "weight": 0.125,
+              "meanGain": -4
+            },
+            {
+              "threshold": 11,
+              "cost": 11,
+              "weight": 0.125,
+              "meanGain": -4
+            },
+            {
+              "threshold": 12,
+              "cost": 12,
+              "weight": 0.0625,
+              "meanGain": -4
+            },
+            {
+              "threshold": 13,
+              "cost": 13,
+              "weight": 0.125,
+              "meanGain": -11.25
+            },
+            {
+              "threshold": 15,
+              "cost": 15,
+              "weight": 0.1875,
+              "meanGain": -15
+            },
+            {
+              "threshold": 16,
+              "cost": 16,
+              "weight": 0.0625,
+              "meanGain": -15
+            },
+            {
+              "threshold": 17,
+              "cost": 17,
+              "weight": 0.0625,
+              "meanGain": -17.5
+            },
+            {
+              "threshold": 20,
+              "cost": 20,
+              "weight": 0.0625,
+              "meanGain": -15.75
+            }
+          ],
+          "bids": [
+            {
+              "bid": 0,
+              "meanGain": 3.09375,
+              "se": 2.1778806355032407,
+              "lowerGain": 2.0048096822483794
+            },
+            {
+              "bid": 9,
+              "meanGain": 2.90625,
+              "se": 1.859221807414776,
+              "lowerGain": 1.9766390962926121
+            },
+            {
+              "bid": 10,
+              "meanGain": 2.65625,
+              "se": 1.6148521281632364,
+              "lowerGain": 1.8488239359183818
+            },
+            {
+              "bid": 11,
+              "meanGain": 2.15625,
+              "se": 1.1641061932515722,
+              "lowerGain": 1.5741969033742138
+            },
+            {
+              "bid": 12,
+              "meanGain": 1.65625,
+              "se": 0.8344393701761681,
+              "lowerGain": 1.239030314911916
+            },
+            {
+              "bid": 13,
+              "meanGain": 1.40625,
+              "se": 0.7678009046404326,
+              "lowerGain": 1.0223495476797837
+            },
+            {
+              "bid": 14,
+              "meanGain": 0,
+              "se": 0,
+              "lowerGain": 0
+            },
+            {
+              "bid": 15,
+              "meanGain": 0,
+              "se": 0,
+              "lowerGain": 0
+            },
+            {
+              "bid": 16,
+              "meanGain": -2.8125,
+              "se": 0.7538961301134262,
+              "lowerGain": -3.189448065056713
+            },
+            {
+              "bid": 17,
+              "meanGain": -3.75,
+              "se": 1.005194840151235,
+              "lowerGain": -4.252597420075618
+            },
+            {
+              "bid": 18,
+              "meanGain": -4.84375,
+              "se": 1.1587810136086973,
+              "lowerGain": -5.423140506804349
+            },
+            {
+              "bid": 21,
+              "meanGain": -5.828125,
+              "se": 1.3743784106369688,
+              "lowerGain": -6.515314205318484
+            },
+            {
+              "bid": 27,
+              "meanGain": -5.828125,
+              "se": 1.3743784106369688,
+              "lowerGain": -6.515314205318484
+            }
+          ]
+        }
+      },
+      "caveat": "Post-hoc model reproduction is timing-bounded; recorded game outcomes remain authoritative. Future events were not passed to the model."
+    },
+    {
+      "category": "negativeWinFlips",
+      "scenario": {
+        "seed": 721639632,
+        "mode": "SecondPrice",
+        "players": 6,
+        "seat": 5,
+        "roster": 0
+      },
+      "control": {
+        "attempts": 0,
+        "expired": 0,
+        "changed": 0,
+        "raised": 0,
+        "lowered": 0,
+        "score": 100,
+        "win": 1,
+        "rank": 1,
+        "balance": 23,
+        "spent": 177,
+        "tiles": 13,
+        "maxDecisionMs": 3.925958000000719,
+        "meanDecisionMs": 0.5206432158272671
+      },
+      "candidate": {
+        "attempts": 14,
+        "expired": 0,
+        "changed": 2,
+        "raised": 2,
+        "lowered": 0,
+        "score": 93,
+        "win": 0,
+        "rank": 2,
+        "balance": 17,
+        "spent": 176,
+        "tiles": 12,
+        "maxDecisionMs": 52.94016699999975,
+        "meanDecisionMs": 2.227123223021598
+      },
+      "firstDivergence": {
+        "round": 56,
+        "left": 13,
+        "letter": "F",
+        "rack": "EIRRSHC",
+        "balance": 21,
+        "controlBid": 12,
+        "candidateBid": 19,
+        "recomputedBid": 19,
+        "reproduced": true,
+        "decision": {
+          "normal": 12,
+          "chosen": 19,
+          "optimal": 19,
+          "expired": false,
+          "prices": [
+            {
+              "threshold": 9,
+              "cost": 9,
+              "weight": 0.0625,
+              "meanGain": 6.25
+            },
+            {
+              "threshold": 13,
+              "cost": 13,
+              "weight": 0.0625,
+              "meanGain": 3.25
+            },
+            {
+              "threshold": 14,
+              "cost": 14,
+              "weight": 0.1875,
+              "meanGain": 3.25
+            },
+            {
+              "threshold": 17,
+              "cost": 17,
+              "weight": 0.125,
+              "meanGain": 2.25
+            },
+            {
+              "threshold": 18,
+              "cost": 18,
+              "weight": 0.5625,
+              "meanGain": 2.25
+            }
+          ],
+          "bids": [
+            {
+              "bid": 0,
+              "meanGain": -0.390625,
+              "se": 0.3001464486296648,
+              "lowerGain": -0.5406982243148324
+            },
+            {
+              "bid": 10,
+              "meanGain": 0,
+              "se": 0,
+              "lowerGain": 0
+            },
+            {
+              "bid": 12,
+              "meanGain": 0,
+              "se": 0,
+              "lowerGain": 0
+            },
+            {
+              "bid": 14,
+              "meanGain": 0.203125,
+              "se": 0.19989417773328633,
+              "lowerGain": 0.10317791113335684
+            },
+            {
+              "bid": 15,
+              "meanGain": 0.8125,
+              "se": 0.7995767109331453,
+              "lowerGain": 0.41271164453342735
+            },
+            {
+              "bid": 18,
+              "meanGain": 1.09375,
+              "se": 1.1149726734319545,
+              "lowerGain": 0.5362636632840228
+            },
+            {
+              "bid": 19,
+              "meanGain": 2.359375,
+              "se": 2.5617853424174712,
+              "lowerGain": 1.0784823287912644
+            },
+            {
+              "bid": 21,
+              "meanGain": 2.359375,
+              "se": 2.5617853424174712,
+              "lowerGain": 1.0784823287912644
+            }
+          ]
+        }
+      },
+      "caveat": "Post-hoc model reproduction is timing-bounded; recorded game outcomes remain authoritative. Future events were not passed to the model."
+    },
+    {
+      "category": "negativeWinFlips",
+      "scenario": {
+        "seed": 916340852,
+        "mode": "SecondPrice",
+        "players": 6,
+        "seat": 3,
+        "roster": 0
+      },
+      "control": {
+        "attempts": 0,
+        "expired": 0,
+        "changed": 0,
+        "raised": 0,
+        "lowered": 0,
+        "score": 93,
+        "win": 1,
+        "rank": 1,
+        "balance": 22,
+        "spent": 171,
+        "tiles": 14,
+        "maxDecisionMs": 3.0480830000014976,
+        "meanDecisionMs": 0.5027571726618557
+      },
+      "candidate": {
+        "attempts": 14,
+        "expired": 6,
+        "changed": 2,
+        "raised": 0,
+        "lowered": 2,
+        "score": 82,
+        "win": 0,
+        "rank": 2,
+        "balance": 45,
+        "spent": 137,
+        "tiles": 12,
+        "maxDecisionMs": 71.82112500000221,
+        "meanDecisionMs": 5.474218805755234
+      },
+      "firstDivergence": {
+        "round": 59,
+        "left": 10,
+        "letter": "I",
+        "rack": "AOOOEUNTGD",
+        "balance": 17,
+        "controlBid": 15,
+        "candidateBid": 0,
+        "recomputedBid": 0,
+        "reproduced": true,
+        "decision": {
+          "normal": 15,
+          "chosen": 0,
+          "optimal": 0,
+          "expired": false,
+          "prices": [
+            {
+              "threshold": 3,
+              "cost": 3,
+              "weight": 0.0625,
+              "meanGain": -8
+            },
+            {
+              "threshold": 6,
+              "cost": 6,
+              "weight": 0.0625,
+              "meanGain": -8.25
+            },
+            {
+              "threshold": 8,
+              "cost": 8,
+              "weight": 0.125,
+              "meanGain": -4.5
+            },
+            {
+              "threshold": 10,
+              "cost": 10,
+              "weight": 0.0625,
+              "meanGain": -5
+            },
+            {
+              "threshold": 11,
+              "cost": 11,
+              "weight": 0.0625,
+              "meanGain": -4.25
+            },
+            {
+              "threshold": 14,
+              "cost": 14,
+              "weight": 0.0625,
+              "meanGain": -4.25
+            },
+            {
+              "threshold": 15,
+              "cost": 15,
+              "weight": 0.125,
+              "meanGain": -4.25
+            },
+            {
+              "threshold": 16,
+              "cost": 16,
+              "weight": 0.0625,
+              "meanGain": -3.25
+            }
+          ],
+          "bids": [
+            {
+              "bid": 0,
+              "meanGain": 2.421875,
+              "se": 1.6509102208453574,
+              "lowerGain": 1.5964198895773212
+            },
+            {
+              "bid": 4,
+              "meanGain": 1.921875,
+              "se": 1.370821064408116,
+              "lowerGain": 1.236464467795942
+            },
+            {
+              "bid": 7,
+              "meanGain": 1.40625,
+              "se": 1.0985015835977054,
+              "lowerGain": 0.8569992082011473
+            },
+            {
+              "bid": 9,
+              "meanGain": 0.84375,
+              "se": 0.6152891427342649,
+              "lowerGain": 0.5361054286328675
+            },
+            {
+              "bid": 11,
+              "meanGain": 0.53125,
+              "se": 0.3856980954494504,
+              "lowerGain": 0.3384009522752748
+            },
+            {
+              "bid": 12,
+              "meanGain": 0.265625,
+              "se": 0.14740595518838442,
+              "lowerGain": 0.1919220224058078
+            },
+            {
+              "bid": 15,
+              "meanGain": 0,
+              "se": 0,
+              "lowerGain": 0
+            },
+            {
+              "bid": 16,
+              "meanGain": -0.53125,
+              "se": 0.29481191037676885,
+              "lowerGain": -0.6786559551883844
+            },
+            {
+              "bid": 17,
+              "meanGain": -0.734375,
+              "se": 0.4487939567607835,
+              "lowerGain": -0.9587719783803917
+            }
+          ]
+        }
+      },
+      "caveat": "Post-hoc model reproduction is timing-bounded; recorded game outcomes remain authoritative. Future events were not passed to the model."
+    },
+    {
+      "category": "negativeWinFlips",
+      "scenario": {
+        "seed": 883995931,
+        "mode": "SecondPrice",
+        "players": 7,
+        "seat": 4,
+        "roster": 0
+      },
+      "control": {
+        "attempts": 0,
+        "expired": 0,
+        "changed": 0,
+        "raised": 0,
+        "lowered": 0,
+        "score": 99,
+        "win": 1,
+        "rank": 1,
+        "balance": 23,
+        "spent": 176,
+        "tiles": 11,
+        "maxDecisionMs": 2.2120000000140863,
+        "meanDecisionMs": 0.6818460312492789
+      },
+      "candidate": {
+        "attempts": 14,
+        "expired": 6,
+        "changed": 2,
+        "raised": 1,
+        "lowered": 1,
+        "score": 72,
+        "win": 0,
+        "rank": 2,
+        "balance": 35,
+        "spent": 137,
+        "tiles": 10,
+        "maxDecisionMs": 72.47579100000439,
+        "meanDecisionMs": 5.4487119296875335
+      },
+      "firstDivergence": {
+        "round": 53,
+        "left": 11,
+        "letter": "N",
+        "rack": "OEAISU",
+        "balance": 50,
+        "controlBid": 13,
+        "candidateBid": 19,
+        "recomputedBid": 19,
+        "reproduced": true,
+        "decision": {
+          "normal": 13,
+          "chosen": 19,
+          "optimal": 19,
+          "expired": false,
+          "prices": [
+            {
+              "threshold": 7,
+              "cost": 7,
+              "weight": 0.0625,
+              "meanGain": 5.25
+            },
+            {
+              "threshold": 9,
+              "cost": 9,
+              "weight": 0.0625,
+              "meanGain": 5
+            },
+            {
+              "threshold": 11,
+              "cost": 11,
+              "weight": 0.0625,
+              "meanGain": 5
+            },
+            {
+              "threshold": 12,
+              "cost": 12,
+              "weight": 0.0625,
+              "meanGain": 5
+            },
+            {
+              "threshold": 13,
+              "cost": 13,
+              "weight": 0.0625,
+              "meanGain": 5
+            },
+            {
+              "threshold": 15,
+              "cost": 15,
+              "weight": 0.0625,
+              "meanGain": 5
+            },
+            {
+              "threshold": 16,
+              "cost": 16,
+              "weight": 0.0625,
+              "meanGain": 2.75
+            },
+            {
+              "threshold": 18,
+              "cost": 18,
+              "weight": 0.0625,
+              "meanGain": 2.75
+            },
+            {
+              "threshold": 19,
+              "cost": 19,
+              "weight": 0.0625,
+              "meanGain": -5.5
+            },
+            {
+              "threshold": 22,
+              "cost": 22,
+              "weight": 0.0625,
+              "meanGain": -5.5
+            },
+            {
+              "threshold": 26,
+              "cost": 26,
+              "weight": 0.0625,
+              "meanGain": -5
+            },
+            {
+              "threshold": 27,
+              "cost": 27,
+              "weight": 0.125,
+              "meanGain": -5
+            },
+            {
+              "threshold": 32,
+              "cost": 32,
+              "weight": 0.0625,
+              "meanGain": -10
+            },
+            {
+              "threshold": 36,
+              "cost": 36,
+              "weight": 0.0625,
+              "meanGain": -13.5
+            },
+            {
+              "threshold": 37,
+              "cost": 37,
+              "weight": 0.0625,
+              "meanGain": -14.75
+            }
+          ],
+          "bids": [
+            {
+              "bid": 0,
+              "meanGain": -1.265625,
+              "se": 0.6791035566281478,
+              "lowerGain": -1.6051767783140738
+            },
+            {
+              "bid": 8,
+              "meanGain": -0.9375,
+              "se": 0.5134898976610932,
+              "lowerGain": -1.1942449488305467
+            },
+            {
+              "bid": 10,
+              "meanGain": -0.625,
+              "se": 0.3423265984407288,
+              "lowerGain": -0.7961632992203644
+            },
+            {
+              "bid": 12,
+              "meanGain": -0.3125,
+              "se": 0.1711632992203644,
+              "lowerGain": -0.3980816496101822
+            },
+            {
+              "bid": 13,
+              "meanGain": 0,
+              "se": 0,
+              "lowerGain": 0
+            },
+            {
+              "bid": 14,
+              "meanGain": 0.3125,
+              "se": 0.1711632992203644,
+              "lowerGain": 0.22691835038981778
+            },
+            {
+              "bid": 16,
+              "meanGain": 0.625,
+              "se": 0.3423265984407288,
+              "lowerGain": 0.45383670077963556
+            },
+            {
+              "bid": 17,
+              "meanGain": 0.796875,
+              "se": 0.5798117286024835,
+              "lowerGain": 0.5069691356987582
+            },
+            {
+              "bid": 19,
+              "meanGain": 0.96875,
+              "se": 0.8297448779594846,
+              "lowerGain": 0.5538775610202578
+            },
+            {
+              "bid": 20,
+              "meanGain": 0.625,
+              "se": 1.316214980540793,
+              "lowerGain": -0.0331074902703965
+            },
+            {
+              "bid": 23,
+              "meanGain": 0.28125,
+              "se": 1.884265302224362,
+              "lowerGain": -0.660882651112181
+            },
+            {
+              "bid": 27,
+              "meanGain": -0.03125,
+              "se": 2.4715174362120127,
+              "lowerGain": -1.2670087181060063
+            },
+            {
+              "bid": 28,
+              "meanGain": -0.65625,
+              "se": 3.680829064785088,
+              "lowerGain": -2.4966645323925443
+            },
+            {
+              "bid": 33,
+              "meanGain": -1.28125,
+              "se": 4.078454249161071,
+              "lowerGain": -3.3204771245805356
+            },
+            {
+              "bid": 37,
+              "meanGain": -2.125,
+              "se": 4.513651168954021,
+              "lowerGain": -4.38182558447701
+            },
+            {
+              "bid": 38,
+              "meanGain": -3.046875,
+              "se": 4.921345871028744,
+              "lowerGain": -5.507547935514372
+            },
+            {
+              "bid": 50,
+              "meanGain": -3.046875,
+              "se": 4.921345871028744,
+              "lowerGain": -5.507547935514372
+            }
+          ]
+        }
+      },
+      "caveat": "Post-hoc model reproduction is timing-bounded; recorded game outcomes remain authoritative. Future events were not passed to the model."
+    },
+    {
+      "category": "scoreRegressions",
+      "scenario": {
+        "seed": 851419328,
+        "mode": "SecondPrice",
+        "players": 6,
+        "seat": 1,
+        "roster": 0
+      },
+      "control": {
+        "attempts": 0,
+        "expired": 0,
+        "changed": 0,
+        "raised": 0,
+        "lowered": 0,
+        "score": 75,
+        "win": 0,
+        "rank": 5,
+        "balance": 23,
+        "spent": 152,
+        "tiles": 11,
+        "maxDecisionMs": 5.179333000000042,
+        "meanDecisionMs": 0.49004470289851865
+      },
+      "candidate": {
+        "attempts": 14,
+        "expired": 0,
+        "changed": 3,
+        "raised": 1,
+        "lowered": 2,
+        "score": 65,
+        "win": 0,
+        "rank": 5,
+        "balance": 19,
+        "spent": 146,
+        "tiles": 11,
+        "maxDecisionMs": 48.400666000001365,
+        "meanDecisionMs": 2.784071855072556
+      },
+      "firstDivergence": {
+        "round": 53,
+        "left": 16,
+        "letter": "T",
+        "rack": "ARROPD",
+        "balance": 30,
+        "controlBid": 11,
+        "candidateBid": 15,
+        "recomputedBid": 15,
+        "reproduced": true,
+        "decision": {
+          "normal": 11,
+          "chosen": 15,
+          "optimal": 15,
+          "expired": false,
+          "prices": [
+            {
+              "threshold": 10,
+              "cost": 10,
+              "weight": 0.125,
+              "meanGain": 2.5
+            },
+            {
+              "threshold": 11,
+              "cost": 11,
+              "weight": 0.125,
+              "meanGain": 1.75
+            },
+            {
+              "threshold": 12,
+              "cost": 12,
+              "weight": 0.125,
+              "meanGain": 1.5
+            },
+            {
+              "threshold": 14,
+              "cost": 14,
+              "weight": 0.1875,
+              "meanGain": 3.25
+            },
+            {
+              "threshold": 15,
+              "cost": 15,
+              "weight": 0.0625,
+              "meanGain": -0.75
+            },
+            {
+              "threshold": 18,
+              "cost": 18,
+              "weight": 0.125,
+              "meanGain": -1
+            },
+            {
+              "threshold": 21,
+              "cost": 21,
+              "weight": 0.0625,
+              "meanGain": -8.25
+            },
+            {
+              "threshold": 22,
+              "cost": 22,
+              "weight": 0.0625,
+              "meanGain": -8.25
+            },
+            {
+              "threshold": 25,
+              "cost": 25,
+              "weight": 0.0625,
+              "meanGain": -9
+            }
+          ],
+          "bids": [
+            {
+              "bid": 0,
+              "meanGain": -0.3125,
+              "se": 0.2072890493972125,
+              "lowerGain": -0.41614452469860624
+            },
+            {
+              "bid": 11,
+              "meanGain": 0,
+              "se": 0,
+              "lowerGain": 0
+            },
+            {
+              "bid": 12,
+              "meanGain": 0.21875,
+              "se": 0.1795175827043134,
+              "lowerGain": 0.1289912086478433
+            },
+            {
+              "bid": 13,
+              "meanGain": 0.40625,
+              "se": 0.35858155162621885,
+              "lowerGain": 0.22695922418689057
+            },
+            {
+              "bid": 15,
+              "meanGain": 1.015625,
+              "se": 0.40131213823116124,
+              "lowerGain": 0.8149689308844194
+            },
+            {
+              "bid": 16,
+              "meanGain": 0.96875,
+              "se": 0.5627892774683374,
+              "lowerGain": 0.6873553612658313
+            },
+            {
+              "bid": 19,
+              "meanGain": 0.84375,
+              "se": 0.8639555954059985,
+              "lowerGain": 0.41177220229700073
+            },
+            {
+              "bid": 22,
+              "meanGain": 0.328125,
+              "se": 1.1190162043621175,
+              "lowerGain": -0.23138310218105873
+            },
+            {
+              "bid": 23,
+              "meanGain": -0.1875,
+              "se": 1.3785465625070485,
+              "lowerGain": -0.8767732812535243
+            },
+            {
+              "bid": 26,
+              "meanGain": -0.75,
+              "se": 1.635582528744219,
+              "lowerGain": -1.5677912643721095
+            },
+            {
+              "bid": 30,
+              "meanGain": -0.75,
+              "se": 1.635582528744219,
+              "lowerGain": -1.5677912643721095
+            }
+          ]
+        }
+      },
+      "caveat": "Post-hoc model reproduction is timing-bounded; recorded game outcomes remain authoritative. Future events were not passed to the model."
+    },
+    {
+      "category": "scoreRegressions",
+      "scenario": {
+        "seed": 754176640,
+        "mode": "SecondPrice",
+        "players": 7,
+        "seat": 3,
+        "roster": 0
+      },
+      "control": {
+        "attempts": 0,
+        "expired": 0,
+        "changed": 0,
+        "raised": 0,
+        "lowered": 0,
+        "score": 55,
+        "win": 0,
+        "rank": 4,
+        "balance": 12,
+        "spent": 143,
+        "tiles": 8,
+        "maxDecisionMs": 4.536374999996042,
+        "meanDecisionMs": 0.7954222109376587
+      },
+      "candidate": {
+        "attempts": 14,
+        "expired": 1,
+        "changed": 3,
+        "raised": 2,
+        "lowered": 1,
+        "score": 41,
+        "win": 0,
+        "rank": 7,
+        "balance": 24,
+        "spent": 117,
+        "tiles": 7,
+        "maxDecisionMs": 71.52987500000745,
+        "meanDecisionMs": 4.774087843749271
+      },
+      "firstDivergence": {
+        "round": 49,
+        "left": 15,
+        "letter": "A",
+        "rack": "ELAOSTWDR",
+        "balance": 35,
+        "controlBid": 8,
+        "candidateBid": 34,
+        "recomputedBid": 34,
+        "reproduced": true,
+        "decision": {
+          "normal": 8,
+          "chosen": 34,
+          "optimal": 34,
+          "expired": false,
+          "prices": [
+            {
+              "threshold": 8,
+              "cost": 8,
+              "weight": 0.0625,
+              "meanGain": 4.25
+            },
+            {
+              "threshold": 9,
+              "cost": 9,
+              "weight": 0.0625,
+              "meanGain": 3.25
+            },
+            {
+              "threshold": 10,
+              "cost": 10,
+              "weight": 0.0625,
+              "meanGain": 2.75
+            },
+            {
+              "threshold": 11,
+              "cost": 11,
+              "weight": 0.0625,
+              "meanGain": 2.75
+            },
+            {
+              "threshold": 12,
+              "cost": 12,
+              "weight": 0.0625,
+              "meanGain": 5
+            },
+            {
+              "threshold": 13,
+              "cost": 13,
+              "weight": 0.1875,
+              "meanGain": 4.5
+            },
+            {
+              "threshold": 14,
+              "cost": 14,
+              "weight": 0.0625,
+              "meanGain": 4.5
+            },
+            {
+              "threshold": 15,
+              "cost": 15,
+              "weight": 0.125,
+              "meanGain": 3.75
+            },
+            {
+              "threshold": 16,
+              "cost": 16,
+              "weight": 0.125,
+              "meanGain": 1.25
+            },
+            {
+              "threshold": 18,
+              "cost": 18,
+              "weight": 0.0625,
+              "meanGain": 1.25
+            },
+            {
+              "threshold": 21,
+              "cost": 21,
+              "weight": 0.0625,
+              "meanGain": 1.5
+            },
+            {
+              "threshold": 33,
+              "cost": 33,
+              "weight": 0.0625,
+              "meanGain": 0.75
+            }
+          ],
+          "bids": [
+            {
+              "bid": 0,
+              "meanGain": 0,
+              "se": 0,
+              "lowerGain": 0
+            },
+            {
+              "bid": 8,
+              "meanGain": 0,
+              "se": 0,
+              "lowerGain": 0
+            },
+            {
+              "bid": 9,
+              "meanGain": 0.265625,
+              "se": 0.1915788974765575,
+              "lowerGain": 0.16983555126172123
+            },
+            {
+              "bid": 10,
+              "meanGain": 0.46875,
+              "se": 0.4280983872507191,
+              "lowerGain": 0.25470080637464043
+            },
+            {
+              "bid": 11,
+              "meanGain": 0.640625,
+              "se": 0.6507082479562813,
+              "lowerGain": 0.3152708760218593
+            },
+            {
+              "bid": 12,
+              "meanGain": 0.8125,
+              "se": 0.874255635764887,
+              "lowerGain": 0.3753721821175565
+            },
+            {
+              "bid": 13,
+              "meanGain": 1.125,
+              "se": 0.9905149123898471,
+              "lowerGain": 0.6297425438050764
+            },
+            {
+              "bid": 14,
+              "meanGain": 1.96875,
+              "se": 1.327174905265567,
+              "lowerGain": 1.3051625473672166
+            },
+            {
+              "bid": 15,
+              "meanGain": 2.25,
+              "se": 1.44585434662924,
+              "lowerGain": 1.5270728266853801
+            },
+            {
+              "bid": 16,
+              "meanGain": 2.71875,
+              "se": 1.6635061178627106,
+              "lowerGain": 1.8869969410686447
+            },
+            {
+              "bid": 17,
+              "meanGain": 2.875,
+              "se": 1.63119811539453,
+              "lowerGain": 2.059400942302735
+            },
+            {
+              "bid": 19,
+              "meanGain": 2.953125,
+              "se": 1.6168414988154116,
+              "lowerGain": 2.1447042505922944
+            },
+            {
+              "bid": 22,
+              "meanGain": 3.046875,
+              "se": 1.608363355181803,
+              "lowerGain": 2.2426933224090986
+            },
+            {
+              "bid": 34,
+              "meanGain": 3.09375,
+              "se": 1.5791817831290564,
+              "lowerGain": 2.3041591084354716
+            },
+            {
+              "bid": 35,
+              "meanGain": 3.09375,
+              "se": 1.5791817831290564,
+              "lowerGain": 2.3041591084354716
+            }
+          ]
+        }
+      },
+      "caveat": "Post-hoc model reproduction is timing-bounded; recorded game outcomes remain authoritative. Future events were not passed to the model."
+    },
+    {
+      "category": "scoreRegressions",
+      "scenario": {
+        "seed": 802015343,
+        "mode": "SecondPrice",
+        "players": 6,
+        "seat": 3,
+        "roster": 1
+      },
+      "control": {
+        "attempts": 0,
+        "expired": 0,
+        "changed": 0,
+        "raised": 0,
+        "lowered": 0,
+        "score": 84,
+        "win": 0,
+        "rank": 2,
+        "balance": 26,
+        "spent": 158,
+        "tiles": 11,
+        "maxDecisionMs": 4.964166000005207,
+        "meanDecisionMs": 0.442679906475212
+      },
+      "candidate": {
+        "attempts": 14,
+        "expired": 0,
+        "changed": 2,
+        "raised": 0,
+        "lowered": 2,
+        "score": 76,
+        "win": 0,
+        "rank": 3,
+        "balance": 1,
+        "spent": 175,
+        "tiles": 12,
+        "maxDecisionMs": 25.337375000002794,
+        "meanDecisionMs": 1.428118438848961
+      },
+      "firstDivergence": {
+        "round": 53,
+        "left": 16,
+        "letter": "I",
+        "rack": "LWOUT",
+        "balance": 20,
+        "controlBid": 13,
+        "candidateBid": 0,
+        "recomputedBid": 0,
+        "reproduced": true,
+        "decision": {
+          "normal": 13,
+          "chosen": 0,
+          "optimal": 0,
+          "expired": false,
+          "prices": [
+            {
+              "threshold": 9,
+              "cost": 9,
+              "weight": 0.125,
+              "meanGain": -3.75
+            },
+            {
+              "threshold": 10,
+              "cost": 10,
+              "weight": 0.0625,
+              "meanGain": -1.25
+            },
+            {
+              "threshold": 11,
+              "cost": 11,
+              "weight": 0.125,
+              "meanGain": -11.5
+            },
+            {
+              "threshold": 12,
+              "cost": 12,
+              "weight": 0.125,
+              "meanGain": -11.5
+            },
+            {
+              "threshold": 13,
+              "cost": 13,
+              "weight": 0.0625,
+              "meanGain": -11.5
+            },
+            {
+              "threshold": 14,
+              "cost": 14,
+              "weight": 0.125,
+              "meanGain": -12.5
+            },
+            {
+              "threshold": 15,
+              "cost": 15,
+              "weight": 0.125,
+              "meanGain": -12.5
+            },
+            {
+              "threshold": 17,
+              "cost": 17,
+              "weight": 0.0625,
+              "meanGain": -14.75
+            }
+          ],
+          "bids": [
+            {
+              "bid": 0,
+              "meanGain": 3.421875,
+              "se": 0.9555127195865404,
+              "lowerGain": 2.94411864020673
+            },
+            {
+              "bid": 10,
+              "meanGain": 2.953125,
+              "se": 0.38559258372665833,
+              "lowerGain": 2.760328708136671
+            },
+            {
+              "bid": 11,
+              "meanGain": 2.875,
+              "se": 0.2602082499332666,
+              "lowerGain": 2.7448958750333667
+            },
+            {
+              "bid": 12,
+              "meanGain": 1.4375,
+              "se": 0.1301041249666333,
+              "lowerGain": 1.3724479375166834
+            },
+            {
+              "bid": 13,
+              "meanGain": 0,
+              "se": 0,
+              "lowerGain": 0
+            },
+            {
+              "bid": 14,
+              "meanGain": -0.71875,
+              "se": 0.06505206248331664,
+              "lowerGain": -0.7512760312416583
+            },
+            {
+              "bid": 15,
+              "meanGain": -2.28125,
+              "se": 0.12103072956898178,
+              "lowerGain": -2.3417653647844907
+            },
+            {
+              "bid": 16,
+              "meanGain": -3.84375,
+              "se": 0.19515618744994995,
+              "lowerGain": -3.941328093724975
+            },
+            {
+              "bid": 18,
+              "meanGain": -4.765625,
+              "se": 0.225888004606265,
+              "lowerGain": -4.8785690023031325
+            },
+            {
+              "bid": 20,
+              "meanGain": -4.765625,
+              "se": 0.225888004606265,
+              "lowerGain": -4.8785690023031325
+            }
+          ]
+        }
+      },
+      "caveat": "Post-hoc model reproduction is timing-bounded; recorded game outcomes remain authoritative. Future events were not passed to the model."
+    }
+  ]
+}

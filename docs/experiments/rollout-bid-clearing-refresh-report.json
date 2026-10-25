@@ -1,0 +1,2371 @@
+{
+  "name": "rollout-bid-clearing-refresh",
+  "startedAt": "2026-10-25T08:21:25.666Z",
+  "methodology": "Last16 clearing-price integrated funded purchase valuation with refreshed localdictionary every3purchases andcashout, Vickrey. Current rival-threshold prior16equal-massquantiles; BUY-at-actualcost versusLOSE paired futurepayouts integratedonlywhenbid>threshold. Candidatebidboundaries threshold+1,0,normal,cash. Compare expectedutilityvsnormal includingnonmonotonecashouttriggers. Current exact+denial word/tail control. ForceLOSE versus BUY-at-cost share public-estimated futures, credits from actual simulated cashouts, and depleted future purchasing capital. Require full path to final payout. Two prespecified variants on26 paired training scenarios, balanced6/7seats; selected before52 untouched paired holdoutscenarios. No actual future/rival thresholds supplied.",
+  "candidates": [
+    {
+      "name": "refresh16-full",
+      "options": {
+        "maximumRounds": 16,
+        "strength": 1,
+        "samples": 4,
+        "timeBudgetMs": 70,
+        "riskPenalty": 0.5,
+        "improvementMargin": 0.5,
+        "thresholdSamples": 16
+      }
+    },
+    {
+      "name": "refresh16-half",
+      "options": {
+        "maximumRounds": 16,
+        "strength": 0.5,
+        "samples": 4,
+        "timeBudgetMs": 70,
+        "riskPenalty": 0.5,
+        "improvementMargin": 0.5,
+        "thresholdSamples": 16
+      }
+    }
+  ],
+  "rosters": [
+    "production-clones-and-mutants",
+    "production-and-pressure",
+    "production-and-patient"
+  ],
+  "sourceHashes": {
+    "./rollout-bid-clearing-refresh.mts": "aa077143675a627d067b6e9b7def2bc799c0fc5e78e07b4938d6570046149470",
+    "../../bot-starter/src/reference-gaucho/threshold-prior.ts": "a5d77255750a8c118c75e73fbf100eaff5afc480c8b43fac274e9b6cb5c1afde",
+    "../../bot-starter/src/reference-gaucho/rollout-bid-clearing.ts": "d770a26b63ac07dabc691acd61b51a045b799a7446b3f7718043aa1d2567fc12",
+    "../../bot-starter/src/simulate.ts": "40a664e8da991fb92d7c641012f477b5f4e362ded669fd4b35517a7c96770d20",
+    "../../bot-starter/src/strategy.ts": "2c8583113947d2c80b4f04569b69678b86b18c763de5cec7e593a52ebba1559d",
+    "../../bot-starter/src/reference-gaucho/rollout-bid-rank.ts": "2c77026489c0bb55ea83a74d2fd2befa0740bffec230764cdf5d8a189f8fc8ad",
+    "../../bot-starter/src/reference-gaucho/rollout-bid.ts": "ee409467ec219433370b29ef6b2db6de9adea60438a9205989ae170f7e88ec76",
+    "../../bot-starter/src/reference-gaucho/rollout-cashout.ts": "580c988bceb92bebd36c9131dfab68591afaafce53ba1fefcd3908f3520c505c",
+    "../../bot-starter/src/reference-gaucho/adapter.ts": "4add270da3d8e1c1cc68a680d1fff436b479b59183134961842d1993b6886a2b",
+    "../../bot-starter/src/reference-gaucho/terminal-exact.ts": "1d38bcb444b0bb268d911157416085d5c6d7cf837b544ed3c6e4a824ce6bf5c0",
+    "../../bot-starter/src/last-tile-denial.ts": "cad8b2c39a0aed5b2d77e488145edbe79d58236463188d9149ae50e65cedc056"
+  },
+  "trainingScenarios": [
+    {
+      "seed": 3670600229,
+      "mode": "SecondPrice",
+      "players": 6,
+      "seat": 0,
+      "roster": 0
+    },
+    {
+      "seed": 3670608148,
+      "mode": "SecondPrice",
+      "players": 6,
+      "seat": 1,
+      "roster": 1
+    },
+    {
+      "seed": 3670616067,
+      "mode": "SecondPrice",
+      "players": 6,
+      "seat": 2,
+      "roster": 2
+    },
+    {
+      "seed": 3670623986,
+      "mode": "SecondPrice",
+      "players": 6,
+      "seat": 3,
+      "roster": 0
+    },
+    {
+      "seed": 3670631905,
+      "mode": "SecondPrice",
+      "players": 6,
+      "seat": 4,
+      "roster": 1
+    },
+    {
+      "seed": 3670639824,
+      "mode": "SecondPrice",
+      "players": 6,
+      "seat": 5,
+      "roster": 2
+    },
+    {
+      "seed": 3670647743,
+      "mode": "SecondPrice",
+      "players": 6,
+      "seat": 0,
+      "roster": 0
+    },
+    {
+      "seed": 3670655662,
+      "mode": "SecondPrice",
+      "players": 6,
+      "seat": 1,
+      "roster": 1
+    },
+    {
+      "seed": 3670663581,
+      "mode": "SecondPrice",
+      "players": 6,
+      "seat": 2,
+      "roster": 2
+    },
+    {
+      "seed": 3670671500,
+      "mode": "SecondPrice",
+      "players": 6,
+      "seat": 3,
+      "roster": 0
+    },
+    {
+      "seed": 3670679419,
+      "mode": "SecondPrice",
+      "players": 6,
+      "seat": 4,
+      "roster": 1
+    },
+    {
+      "seed": 3670687338,
+      "mode": "SecondPrice",
+      "players": 6,
+      "seat": 5,
+      "roster": 2
+    },
+    {
+      "seed": 3670700232,
+      "mode": "SecondPrice",
+      "players": 7,
+      "seat": 0,
+      "roster": 0
+    },
+    {
+      "seed": 3670708151,
+      "mode": "SecondPrice",
+      "players": 7,
+      "seat": 1,
+      "roster": 1
+    },
+    {
+      "seed": 3670716070,
+      "mode": "SecondPrice",
+      "players": 7,
+      "seat": 2,
+      "roster": 2
+    },
+    {
+      "seed": 3670723989,
+      "mode": "SecondPrice",
+      "players": 7,
+      "seat": 3,
+      "roster": 0
+    },
+    {
+      "seed": 3670731908,
+      "mode": "SecondPrice",
+      "players": 7,
+      "seat": 4,
+      "roster": 1
+    },
+    {
+      "seed": 3670739827,
+      "mode": "SecondPrice",
+      "players": 7,
+      "seat": 5,
+      "roster": 2
+    },
+    {
+      "seed": 3670747746,
+      "mode": "SecondPrice",
+      "players": 7,
+      "seat": 6,
+      "roster": 0
+    },
+    {
+      "seed": 3670755665,
+      "mode": "SecondPrice",
+      "players": 7,
+      "seat": 0,
+      "roster": 1
+    },
+    {
+      "seed": 3670763584,
+      "mode": "SecondPrice",
+      "players": 7,
+      "seat": 1,
+      "roster": 2
+    },
+    {
+      "seed": 3670771503,
+      "mode": "SecondPrice",
+      "players": 7,
+      "seat": 2,
+      "roster": 0
+    },
+    {
+      "seed": 3670779422,
+      "mode": "SecondPrice",
+      "players": 7,
+      "seat": 3,
+      "roster": 1
+    },
+    {
+      "seed": 3670787341,
+      "mode": "SecondPrice",
+      "players": 7,
+      "seat": 4,
+      "roster": 2
+    },
+    {
+      "seed": 3670795260,
+      "mode": "SecondPrice",
+      "players": 7,
+      "seat": 5,
+      "roster": 0
+    },
+    {
+      "seed": 3670803179,
+      "mode": "SecondPrice",
+      "players": 7,
+      "seat": 6,
+      "roster": 1
+    }
+  ],
+  "training": [
+    {
+      "candidate": {
+        "name": "refresh16-full",
+        "options": {
+          "maximumRounds": 16,
+          "strength": 1,
+          "samples": 4,
+          "timeBudgetMs": 70,
+          "riskPenalty": 0.5,
+          "improvementMargin": 0.5,
+          "thresholdSamples": 16
+        }
+      },
+      "summary": {
+        "games": 26,
+        "wins": 5,
+        "winRate": 0.19230769230769232,
+        "meanScore": 76.92307692307692,
+        "meanRank": 2.3076923076923075,
+        "meanBalance": 10.615384615384615,
+        "meanSpent": 166.30769230769232,
+        "meanTiles": 10.5,
+        "maxDecisionMs": 71.60429100000147,
+        "meanDecisionMs": 2.2384303215183587
+      },
+      "paired": {
+        "scoreDelta": 1.3076923076923077,
+        "winDelta": 0.038461538461538464,
+        "scoreSE": 1.2388198239506092,
+        "winSE": 0.03846153846153844,
+        "betterScores": 8,
+        "worseScores": 5
+      },
+      "outcomes": [
+        {
+          "score": 86,
+          "win": 0,
+          "rank": 2,
+          "balance": 2,
+          "spent": 184,
+          "tiles": 13,
+          "maxDecisionMs": 36.705417000001034,
+          "meanDecisionMs": 2.0508195467625603
+        },
+        {
+          "score": 93,
+          "win": 1,
+          "rank": 1,
+          "balance": 1,
+          "spent": 192,
+          "tiles": 14,
+          "maxDecisionMs": 61.94620799999939,
+          "meanDecisionMs": 1.732437043165427
+        },
+        {
+          "score": 73,
+          "win": 0,
+          "rank": 2,
+          "balance": 6,
+          "spent": 167,
+          "tiles": 10,
+          "maxDecisionMs": 2.9408330000005662,
+          "meanDecisionMs": 0.466948143884902
+        },
+        {
+          "score": 92,
+          "win": 0,
+          "rank": 2,
+          "balance": 9,
+          "spent": 183,
+          "tiles": 11,
+          "maxDecisionMs": 26.612624999999753,
+          "meanDecisionMs": 1.7159241438848571
+        },
+        {
+          "score": 92,
+          "win": 0,
+          "rank": 2,
+          "balance": 8,
+          "spent": 184,
+          "tiles": 13,
+          "maxDecisionMs": 70.63424999999916,
+          "meanDecisionMs": 3.2312134244604893
+        },
+        {
+          "score": 82,
+          "win": 0,
+          "rank": 2,
+          "balance": 12,
+          "spent": 170,
+          "tiles": 12,
+          "maxDecisionMs": 67.83258299999943,
+          "meanDecisionMs": 2.2153585107913885
+        },
+        {
+          "score": 91,
+          "win": 1,
+          "rank": 1,
+          "balance": 4,
+          "spent": 187,
+          "tiles": 12,
+          "maxDecisionMs": 35.34058299999924,
+          "meanDecisionMs": 2.400283251798532
+        },
+        {
+          "score": 91,
+          "win": 0,
+          "rank": 2,
+          "balance": 11,
+          "spent": 180,
+          "tiles": 15,
+          "maxDecisionMs": 68.1822919999995,
+          "meanDecisionMs": 2.4037666571428935
+        },
+        {
+          "score": 87,
+          "win": 0,
+          "rank": 2,
+          "balance": 12,
+          "spent": 175,
+          "tiles": 14,
+          "maxDecisionMs": 70.69337500000074,
+          "meanDecisionMs": 4.035957435714279
+        },
+        {
+          "score": 63,
+          "win": 0,
+          "rank": 4,
+          "balance": 6,
+          "spent": 157,
+          "tiles": 11,
+          "maxDecisionMs": 65.71958300000006,
+          "meanDecisionMs": 2.3355648840580097
+        },
+        {
+          "score": 72,
+          "win": 0,
+          "rank": 3,
+          "balance": 7,
+          "spent": 165,
+          "tiles": 12,
+          "maxDecisionMs": 8.683083999998416,
+          "meanDecisionMs": 0.5679445395684355
+        },
+        {
+          "score": 96,
+          "win": 0,
+          "rank": 2,
+          "balance": 4,
+          "spent": 192,
+          "tiles": 12,
+          "maxDecisionMs": 21.694750000000568,
+          "meanDecisionMs": 1.4535319710144718
+        },
+        {
+          "score": 52,
+          "win": 0,
+          "rank": 5,
+          "balance": 18,
+          "spent": 134,
+          "tiles": 8,
+          "maxDecisionMs": 62.20637499999975,
+          "meanDecisionMs": 4.531915713178263
+        },
+        {
+          "score": 72,
+          "win": 0,
+          "rank": 3,
+          "balance": 17,
+          "spent": 155,
+          "tiles": 10,
+          "maxDecisionMs": 50.086708000000726,
+          "meanDecisionMs": 2.1024329218748647
+        },
+        {
+          "score": 60,
+          "win": 0,
+          "rank": 3,
+          "balance": 17,
+          "spent": 143,
+          "tiles": 8,
+          "maxDecisionMs": 16.97766700000102,
+          "meanDecisionMs": 1.4129250930232504
+        },
+        {
+          "score": 81,
+          "win": 0,
+          "rank": 2,
+          "balance": 8,
+          "spent": 173,
+          "tiles": 10,
+          "maxDecisionMs": 71.60429100000147,
+          "meanDecisionMs": 3.531623390625114
+        },
+        {
+          "score": 71,
+          "win": 0,
+          "rank": 2,
+          "balance": 27,
+          "spent": 144,
+          "tiles": 8,
+          "maxDecisionMs": 22.76716700000179,
+          "meanDecisionMs": 1.555311775193557
+        },
+        {
+          "score": 65,
+          "win": 0,
+          "rank": 2,
+          "balance": 6,
+          "spent": 159,
+          "tiles": 10,
+          "maxDecisionMs": 47.35375000000204,
+          "meanDecisionMs": 2.426866804687421
+        },
+        {
+          "score": 61,
+          "win": 0,
+          "rank": 3,
+          "balance": 13,
+          "spent": 148,
+          "tiles": 7,
+          "maxDecisionMs": 66.21799999999712,
+          "meanDecisionMs": 2.878462289062412
+        },
+        {
+          "score": 89,
+          "win": 1,
+          "rank": 1,
+          "balance": 9,
+          "spent": 180,
+          "tiles": 10,
+          "maxDecisionMs": 31.965374999999767,
+          "meanDecisionMs": 2.0523397751939503
+        },
+        {
+          "score": 54,
+          "win": 0,
+          "rank": 4,
+          "balance": 13,
+          "spent": 141,
+          "tiles": 7,
+          "maxDecisionMs": 12.327957999998034,
+          "meanDecisionMs": 1.3357366640626651
+        },
+        {
+          "score": 67,
+          "win": 0,
+          "rank": 3,
+          "balance": 20,
+          "spent": 147,
+          "tiles": 8,
+          "maxDecisionMs": 70.87708399999974,
+          "meanDecisionMs": 3.0505290156249885
+        },
+        {
+          "score": 79,
+          "win": 1,
+          "rank": 1,
+          "balance": 11,
+          "spent": 168,
+          "tiles": 11,
+          "maxDecisionMs": 68.75575000000026,
+          "meanDecisionMs": 2.5297260930233314
+        },
+        {
+          "score": 65,
+          "win": 0,
+          "rank": 3,
+          "balance": 5,
+          "spent": 160,
+          "tiles": 10,
+          "maxDecisionMs": 46.48133299999972,
+          "meanDecisionMs": 2.243503224806293
+        },
+        {
+          "score": 90,
+          "win": 1,
+          "rank": 1,
+          "balance": 16,
+          "spent": 174,
+          "tiles": 9,
+          "maxDecisionMs": 36.80512499999895,
+          "meanDecisionMs": 1.7664088515623462
+        },
+        {
+          "score": 76,
+          "win": 0,
+          "rank": 2,
+          "balance": 14,
+          "spent": 162,
+          "tiles": 8,
+          "maxDecisionMs": 66.41954199999964,
+          "meanDecisionMs": 2.1716571953126333
+        }
+      ]
+    },
+    {
+      "candidate": {
+        "name": "refresh16-half",
+        "options": {
+          "maximumRounds": 16,
+          "strength": 0.5,
+          "samples": 4,
+          "timeBudgetMs": 70,
+          "riskPenalty": 0.5,
+          "improvementMargin": 0.5,
+          "thresholdSamples": 16
+        }
+      },
+      "summary": {
+        "games": 26,
+        "wins": 5,
+        "winRate": 0.19230769230769232,
+        "meanScore": 76.92307692307692,
+        "meanRank": 2.3846153846153846,
+        "meanBalance": 13.115384615384615,
+        "meanSpent": 163.80769230769232,
+        "meanTiles": 10.346153846153847,
+        "maxDecisionMs": 70.88758300000336,
+        "meanDecisionMs": 2.351002738375141
+      },
+      "paired": {
+        "scoreDelta": 1.3076923076923077,
+        "winDelta": 0.038461538461538464,
+        "scoreSE": 1.128333326049779,
+        "winSE": 0.03846153846153844,
+        "betterScores": 6,
+        "worseScores": 3
+      },
+      "outcomes": [
+        {
+          "score": 89,
+          "win": 0,
+          "rank": 2,
+          "balance": 9,
+          "spent": 180,
+          "tiles": 13,
+          "maxDecisionMs": 37.67987500000163,
+          "meanDecisionMs": 2.0965890503597255
+        },
+        {
+          "score": 93,
+          "win": 1,
+          "rank": 1,
+          "balance": 1,
+          "spent": 192,
+          "tiles": 14,
+          "maxDecisionMs": 63.14258300000074,
+          "meanDecisionMs": 1.7275728848920369
+        },
+        {
+          "score": 73,
+          "win": 0,
+          "rank": 2,
+          "balance": 6,
+          "spent": 167,
+          "tiles": 10,
+          "maxDecisionMs": 3.1957079999992857,
+          "meanDecisionMs": 0.47373476978419676
+        },
+        {
+          "score": 92,
+          "win": 0,
+          "rank": 2,
+          "balance": 9,
+          "spent": 183,
+          "tiles": 11,
+          "maxDecisionMs": 26.321374999999534,
+          "meanDecisionMs": 1.7315866546763468
+        },
+        {
+          "score": 92,
+          "win": 0,
+          "rank": 2,
+          "balance": 8,
+          "spent": 184,
+          "tiles": 13,
+          "maxDecisionMs": 70.18799999999828,
+          "meanDecisionMs": 3.255723705036099
+        },
+        {
+          "score": 82,
+          "win": 0,
+          "rank": 2,
+          "balance": 12,
+          "spent": 170,
+          "tiles": 12,
+          "maxDecisionMs": 69.49479200000133,
+          "meanDecisionMs": 2.2199741870502967
+        },
+        {
+          "score": 91,
+          "win": 1,
+          "rank": 1,
+          "balance": 4,
+          "spent": 187,
+          "tiles": 12,
+          "maxDecisionMs": 36.31587500000023,
+          "meanDecisionMs": 2.4489199280574834
+        },
+        {
+          "score": 93,
+          "win": 0,
+          "rank": 2,
+          "balance": 2,
+          "spent": 191,
+          "tiles": 15,
+          "maxDecisionMs": 69.08224999999948,
+          "meanDecisionMs": 2.732329524822709
+        },
+        {
+          "score": 84,
+          "win": 0,
+          "rank": 2,
+          "balance": 54,
+          "spent": 130,
+          "tiles": 13,
+          "maxDecisionMs": 70.78600000000006,
+          "meanDecisionMs": 5.714499702898441
+        },
+        {
+          "score": 65,
+          "win": 0,
+          "rank": 4,
+          "balance": 8,
+          "spent": 157,
+          "tiles": 11,
+          "maxDecisionMs": 62.28937500000029,
+          "meanDecisionMs": 2.1765506402878585
+        },
+        {
+          "score": 76,
+          "win": 0,
+          "rank": 3,
+          "balance": 8,
+          "spent": 168,
+          "tiles": 11,
+          "maxDecisionMs": 11.596917000002577,
+          "meanDecisionMs": 0.8272631726618823
+        },
+        {
+          "score": 96,
+          "win": 0,
+          "rank": 2,
+          "balance": 4,
+          "spent": 192,
+          "tiles": 12,
+          "maxDecisionMs": 22.483250000001135,
+          "meanDecisionMs": 1.4557328550727107
+        },
+        {
+          "score": 52,
+          "win": 0,
+          "rank": 5,
+          "balance": 19,
+          "spent": 133,
+          "tiles": 8,
+          "maxDecisionMs": 62.107874999997875,
+          "meanDecisionMs": 4.53642311627902
+        },
+        {
+          "score": 72,
+          "win": 0,
+          "rank": 3,
+          "balance": 17,
+          "spent": 155,
+          "tiles": 10,
+          "maxDecisionMs": 49.172458000000915,
+          "meanDecisionMs": 2.076142242187643
+        },
+        {
+          "score": 54,
+          "win": 0,
+          "rank": 4,
+          "balance": 23,
+          "spent": 131,
+          "tiles": 7,
+          "maxDecisionMs": 16.934917000002315,
+          "meanDecisionMs": 1.4066214651160296
+        },
+        {
+          "score": 81,
+          "win": 0,
+          "rank": 2,
+          "balance": 8,
+          "spent": 173,
+          "tiles": 10,
+          "maxDecisionMs": 70.34920799999963,
+          "meanDecisionMs": 3.489775765625012
+        },
+        {
+          "score": 71,
+          "win": 0,
+          "rank": 3,
+          "balance": 25,
+          "spent": 146,
+          "tiles": 8,
+          "maxDecisionMs": 23.01770899999974,
+          "meanDecisionMs": 1.6030322868216955
+        },
+        {
+          "score": 65,
+          "win": 0,
+          "rank": 2,
+          "balance": 22,
+          "spent": 143,
+          "tiles": 9,
+          "maxDecisionMs": 50.63745799999742,
+          "meanDecisionMs": 2.2761116562500376
+        },
+        {
+          "score": 61,
+          "win": 0,
+          "rank": 3,
+          "balance": 13,
+          "spent": 148,
+          "tiles": 7,
+          "maxDecisionMs": 66.17112499999712,
+          "meanDecisionMs": 2.848546585937612
+        },
+        {
+          "score": 89,
+          "win": 1,
+          "rank": 1,
+          "balance": 9,
+          "spent": 180,
+          "tiles": 10,
+          "maxDecisionMs": 33.092124999999214,
+          "meanDecisionMs": 2.1121608837209407
+        },
+        {
+          "score": 54,
+          "win": 0,
+          "rank": 4,
+          "balance": 13,
+          "spent": 141,
+          "tiles": 7,
+          "maxDecisionMs": 12.444625000003725,
+          "meanDecisionMs": 1.3570381093750825
+        },
+        {
+          "score": 67,
+          "win": 0,
+          "rank": 3,
+          "balance": 20,
+          "spent": 147,
+          "tiles": 8,
+          "maxDecisionMs": 70.88758300000336,
+          "meanDecisionMs": 3.0853018281250684
+        },
+        {
+          "score": 84,
+          "win": 1,
+          "rank": 1,
+          "balance": 12,
+          "spent": 172,
+          "tiles": 11,
+          "maxDecisionMs": 68.57062500000029,
+          "meanDecisionMs": 2.819033612403353
+        },
+        {
+          "score": 58,
+          "win": 0,
+          "rank": 3,
+          "balance": 5,
+          "spent": 153,
+          "tiles": 10,
+          "maxDecisionMs": 49.16291600000113,
+          "meanDecisionMs": 2.656905234374676
+        },
+        {
+          "score": 90,
+          "win": 1,
+          "rank": 1,
+          "balance": 16,
+          "spent": 174,
+          "tiles": 9,
+          "maxDecisionMs": 36.7434160000048,
+          "meanDecisionMs": 1.786198562500374
+        },
+        {
+          "score": 76,
+          "win": 0,
+          "rank": 2,
+          "balance": 14,
+          "spent": 162,
+          "tiles": 8,
+          "maxDecisionMs": 67.74454100000003,
+          "meanDecisionMs": 2.2123027734373295
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "trainingControl": {
+    "games": 26,
+    "wins": 4,
+    "winRate": 0.15384615384615385,
+    "meanScore": 75.61538461538461,
+    "meanRank": 2.5,
+    "meanBalance": 11.346153846153847,
+    "meanSpent": 164.26923076923077,
+    "meanTiles": 10.307692307692308,
+    "maxDecisionMs": 4.408957999999984,
+    "meanDecisionMs": 0.4275626237496427
+  },
+  "games": 182,
+  "elapsedMs": 79867.566416,
+  "selectedBeforeHoldout": {
+    "name": "refresh16-full",
+    "options": {
+      "maximumRounds": 16,
+      "strength": 1,
+      "samples": 4,
+      "timeBudgetMs": 70,
+      "riskPenalty": 0.5,
+      "improvementMargin": 0.5,
+      "thresholdSamples": 16
+    }
+  },
+  "jointTrainingWinner": true,
+  "holdout": {
+    "scenarios": [
+      {
+        "seed": 3930600241,
+        "mode": "SecondPrice",
+        "players": 6,
+        "seat": 0,
+        "roster": 0
+      },
+      {
+        "seed": 3930608160,
+        "mode": "SecondPrice",
+        "players": 6,
+        "seat": 1,
+        "roster": 1
+      },
+      {
+        "seed": 3930616079,
+        "mode": "SecondPrice",
+        "players": 6,
+        "seat": 2,
+        "roster": 2
+      },
+      {
+        "seed": 3930623998,
+        "mode": "SecondPrice",
+        "players": 6,
+        "seat": 3,
+        "roster": 0
+      },
+      {
+        "seed": 3930631917,
+        "mode": "SecondPrice",
+        "players": 6,
+        "seat": 4,
+        "roster": 1
+      },
+      {
+        "seed": 3930639836,
+        "mode": "SecondPrice",
+        "players": 6,
+        "seat": 5,
+        "roster": 2
+      },
+      {
+        "seed": 3930647755,
+        "mode": "SecondPrice",
+        "players": 6,
+        "seat": 0,
+        "roster": 0
+      },
+      {
+        "seed": 3930655674,
+        "mode": "SecondPrice",
+        "players": 6,
+        "seat": 1,
+        "roster": 1
+      },
+      {
+        "seed": 3930663593,
+        "mode": "SecondPrice",
+        "players": 6,
+        "seat": 2,
+        "roster": 2
+      },
+      {
+        "seed": 3930671512,
+        "mode": "SecondPrice",
+        "players": 6,
+        "seat": 3,
+        "roster": 0
+      },
+      {
+        "seed": 3930679431,
+        "mode": "SecondPrice",
+        "players": 6,
+        "seat": 4,
+        "roster": 1
+      },
+      {
+        "seed": 3930687350,
+        "mode": "SecondPrice",
+        "players": 6,
+        "seat": 5,
+        "roster": 2
+      },
+      {
+        "seed": 3930695269,
+        "mode": "SecondPrice",
+        "players": 6,
+        "seat": 0,
+        "roster": 0
+      },
+      {
+        "seed": 3930703188,
+        "mode": "SecondPrice",
+        "players": 6,
+        "seat": 1,
+        "roster": 1
+      },
+      {
+        "seed": 3930711107,
+        "mode": "SecondPrice",
+        "players": 6,
+        "seat": 2,
+        "roster": 2
+      },
+      {
+        "seed": 3930719026,
+        "mode": "SecondPrice",
+        "players": 6,
+        "seat": 3,
+        "roster": 0
+      },
+      {
+        "seed": 3930726945,
+        "mode": "SecondPrice",
+        "players": 6,
+        "seat": 4,
+        "roster": 1
+      },
+      {
+        "seed": 3930734864,
+        "mode": "SecondPrice",
+        "players": 6,
+        "seat": 5,
+        "roster": 2
+      },
+      {
+        "seed": 3930742783,
+        "mode": "SecondPrice",
+        "players": 6,
+        "seat": 0,
+        "roster": 0
+      },
+      {
+        "seed": 3930750702,
+        "mode": "SecondPrice",
+        "players": 6,
+        "seat": 1,
+        "roster": 1
+      },
+      {
+        "seed": 3930758621,
+        "mode": "SecondPrice",
+        "players": 6,
+        "seat": 2,
+        "roster": 2
+      },
+      {
+        "seed": 3930766540,
+        "mode": "SecondPrice",
+        "players": 6,
+        "seat": 3,
+        "roster": 0
+      },
+      {
+        "seed": 3930774459,
+        "mode": "SecondPrice",
+        "players": 6,
+        "seat": 4,
+        "roster": 1
+      },
+      {
+        "seed": 3930782378,
+        "mode": "SecondPrice",
+        "players": 6,
+        "seat": 5,
+        "roster": 2
+      },
+      {
+        "seed": 3930700244,
+        "mode": "SecondPrice",
+        "players": 7,
+        "seat": 0,
+        "roster": 0
+      },
+      {
+        "seed": 3930708163,
+        "mode": "SecondPrice",
+        "players": 7,
+        "seat": 1,
+        "roster": 1
+      },
+      {
+        "seed": 3930716082,
+        "mode": "SecondPrice",
+        "players": 7,
+        "seat": 2,
+        "roster": 2
+      },
+      {
+        "seed": 3930724001,
+        "mode": "SecondPrice",
+        "players": 7,
+        "seat": 3,
+        "roster": 0
+      },
+      {
+        "seed": 3930731920,
+        "mode": "SecondPrice",
+        "players": 7,
+        "seat": 4,
+        "roster": 1
+      },
+      {
+        "seed": 3930739839,
+        "mode": "SecondPrice",
+        "players": 7,
+        "seat": 5,
+        "roster": 2
+      },
+      {
+        "seed": 3930747758,
+        "mode": "SecondPrice",
+        "players": 7,
+        "seat": 6,
+        "roster": 0
+      },
+      {
+        "seed": 3930755677,
+        "mode": "SecondPrice",
+        "players": 7,
+        "seat": 0,
+        "roster": 1
+      },
+      {
+        "seed": 3930763596,
+        "mode": "SecondPrice",
+        "players": 7,
+        "seat": 1,
+        "roster": 2
+      },
+      {
+        "seed": 3930771515,
+        "mode": "SecondPrice",
+        "players": 7,
+        "seat": 2,
+        "roster": 0
+      },
+      {
+        "seed": 3930779434,
+        "mode": "SecondPrice",
+        "players": 7,
+        "seat": 3,
+        "roster": 1
+      },
+      {
+        "seed": 3930787353,
+        "mode": "SecondPrice",
+        "players": 7,
+        "seat": 4,
+        "roster": 2
+      },
+      {
+        "seed": 3930795272,
+        "mode": "SecondPrice",
+        "players": 7,
+        "seat": 5,
+        "roster": 0
+      },
+      {
+        "seed": 3930803191,
+        "mode": "SecondPrice",
+        "players": 7,
+        "seat": 6,
+        "roster": 1
+      },
+      {
+        "seed": 3930811110,
+        "mode": "SecondPrice",
+        "players": 7,
+        "seat": 0,
+        "roster": 2
+      },
+      {
+        "seed": 3930819029,
+        "mode": "SecondPrice",
+        "players": 7,
+        "seat": 1,
+        "roster": 0
+      },
+      {
+        "seed": 3930826948,
+        "mode": "SecondPrice",
+        "players": 7,
+        "seat": 2,
+        "roster": 1
+      },
+      {
+        "seed": 3930834867,
+        "mode": "SecondPrice",
+        "players": 7,
+        "seat": 3,
+        "roster": 2
+      },
+      {
+        "seed": 3930842786,
+        "mode": "SecondPrice",
+        "players": 7,
+        "seat": 4,
+        "roster": 0
+      },
+      {
+        "seed": 3930850705,
+        "mode": "SecondPrice",
+        "players": 7,
+        "seat": 5,
+        "roster": 1
+      },
+      {
+        "seed": 3930858624,
+        "mode": "SecondPrice",
+        "players": 7,
+        "seat": 6,
+        "roster": 2
+      },
+      {
+        "seed": 3930866543,
+        "mode": "SecondPrice",
+        "players": 7,
+        "seat": 0,
+        "roster": 0
+      },
+      {
+        "seed": 3930874462,
+        "mode": "SecondPrice",
+        "players": 7,
+        "seat": 1,
+        "roster": 1
+      },
+      {
+        "seed": 3930882381,
+        "mode": "SecondPrice",
+        "players": 7,
+        "seat": 2,
+        "roster": 2
+      },
+      {
+        "seed": 3930890300,
+        "mode": "SecondPrice",
+        "players": 7,
+        "seat": 3,
+        "roster": 0
+      },
+      {
+        "seed": 3930898219,
+        "mode": "SecondPrice",
+        "players": 7,
+        "seat": 4,
+        "roster": 1
+      },
+      {
+        "seed": 3930906138,
+        "mode": "SecondPrice",
+        "players": 7,
+        "seat": 5,
+        "roster": 2
+      },
+      {
+        "seed": 3930914057,
+        "mode": "SecondPrice",
+        "players": 7,
+        "seat": 6,
+        "roster": 0
+      }
+    ],
+    "control": {
+      "games": 52,
+      "wins": 14.5,
+      "winRate": 0.27884615384615385,
+      "meanScore": 74.98076923076923,
+      "meanRank": 2.75,
+      "meanBalance": 12.942307692307692,
+      "meanSpent": 162.03846153846155,
+      "meanTiles": 10.134615384615385,
+      "maxDecisionMs": 5.5466250000026776,
+      "meanDecisionMs": 0.4307806752491362
+    },
+    "candidate": {
+      "games": 52,
+      "wins": 17,
+      "winRate": 0.3269230769230769,
+      "meanScore": 75.59615384615384,
+      "meanRank": 2.6923076923076925,
+      "meanBalance": 14.038461538461538,
+      "meanSpent": 161.55769230769232,
+      "meanTiles": 10.23076923076923,
+      "maxDecisionMs": 72.15458299999591,
+      "meanDecisionMs": 2.513314568962052
+    },
+    "paired": {
+      "scoreDelta": 0.6153846153846154,
+      "winDelta": 0.04807692307692308,
+      "scoreSE": 1.281953239086751,
+      "winSE": 0.04398086659058353,
+      "betterScores": 16,
+      "worseScores": 15
+    },
+    "controlOutcomes": [
+      {
+        "score": 81,
+        "win": 0,
+        "rank": 2,
+        "balance": 34,
+        "spent": 147,
+        "tiles": 10,
+        "maxDecisionMs": 3.903959000002942,
+        "meanDecisionMs": 0.3868608260864689
+      },
+      {
+        "score": 100,
+        "win": 1,
+        "rank": 1,
+        "balance": 4,
+        "spent": 196,
+        "tiles": 15,
+        "maxDecisionMs": 1.4773340000028838,
+        "meanDecisionMs": 0.48510062142818894
+      },
+      {
+        "score": 75,
+        "win": 0,
+        "rank": 3,
+        "balance": 6,
+        "spent": 169,
+        "tiles": 9,
+        "maxDecisionMs": 1.2769159999952535,
+        "meanDecisionMs": 0.4292512173912879
+      },
+      {
+        "score": 69,
+        "win": 0,
+        "rank": 5,
+        "balance": 7,
+        "spent": 162,
+        "tiles": 10,
+        "maxDecisionMs": 2.150374999997439,
+        "meanDecisionMs": 0.4603332536231998
+      },
+      {
+        "score": 148,
+        "win": 1,
+        "rank": 1,
+        "balance": 28,
+        "spent": 220,
+        "tiles": 19,
+        "maxDecisionMs": 3.370374999998603,
+        "meanDecisionMs": 0.34969214388458714
+      },
+      {
+        "score": 88,
+        "win": 1,
+        "rank": 1,
+        "balance": 2,
+        "spent": 186,
+        "tiles": 13,
+        "maxDecisionMs": 1.1374160000050324,
+        "meanDecisionMs": 0.42822439285700964
+      },
+      {
+        "score": 52,
+        "win": 0,
+        "rank": 5,
+        "balance": 2,
+        "spent": 150,
+        "tiles": 11,
+        "maxDecisionMs": 1.6730839999945601,
+        "meanDecisionMs": 0.5554792246375523
+      },
+      {
+        "score": 93,
+        "win": 1,
+        "rank": 1,
+        "balance": 5,
+        "spent": 188,
+        "tiles": 12,
+        "maxDecisionMs": 1.2757090000013704,
+        "meanDecisionMs": 0.3793018776980474
+      },
+      {
+        "score": 65,
+        "win": 0,
+        "rank": 3,
+        "balance": 2,
+        "spent": 163,
+        "tiles": 10,
+        "maxDecisionMs": 1.231500000001688,
+        "meanDecisionMs": 0.4885578489209745
+      },
+      {
+        "score": 104,
+        "win": 1,
+        "rank": 1,
+        "balance": 34,
+        "spent": 170,
+        "tiles": 11,
+        "maxDecisionMs": 4.021374999996624,
+        "meanDecisionMs": 0.3958264028776723
+      },
+      {
+        "score": 53,
+        "win": 0,
+        "rank": 3,
+        "balance": 2,
+        "spent": 151,
+        "tiles": 10,
+        "maxDecisionMs": 1.7902499999981956,
+        "meanDecisionMs": 0.2856852949635467
+      },
+      {
+        "score": 68,
+        "win": 0,
+        "rank": 4,
+        "balance": 5,
+        "spent": 163,
+        "tiles": 11,
+        "maxDecisionMs": 1.4702499999984866,
+        "meanDecisionMs": 0.42884691304372635
+      },
+      {
+        "score": 65,
+        "win": 0,
+        "rank": 3,
+        "balance": 7,
+        "spent": 158,
+        "tiles": 9,
+        "maxDecisionMs": 1.1117909999957192,
+        "meanDecisionMs": 0.43125897841725924
+      },
+      {
+        "score": 89,
+        "win": 0,
+        "rank": 2,
+        "balance": 12,
+        "spent": 177,
+        "tiles": 12,
+        "maxDecisionMs": 1.1388330000045244,
+        "meanDecisionMs": 0.3617988273381212
+      },
+      {
+        "score": 83,
+        "win": 0,
+        "rank": 2,
+        "balance": 9,
+        "spent": 174,
+        "tiles": 14,
+        "maxDecisionMs": 1.1755419999972219,
+        "meanDecisionMs": 0.4509442733814722
+      },
+      {
+        "score": 65,
+        "win": 0,
+        "rank": 4,
+        "balance": 14,
+        "spent": 151,
+        "tiles": 10,
+        "maxDecisionMs": 4.317167000001064,
+        "meanDecisionMs": 0.47073067391323525
+      },
+      {
+        "score": 62,
+        "win": 0,
+        "rank": 3,
+        "balance": 1,
+        "spent": 161,
+        "tiles": 11,
+        "maxDecisionMs": 2.027416999997513,
+        "meanDecisionMs": 0.47711005755384006
+      },
+      {
+        "score": 89,
+        "win": 0,
+        "rank": 2,
+        "balance": 3,
+        "spent": 186,
+        "tiles": 12,
+        "maxDecisionMs": 1.1654580000031274,
+        "meanDecisionMs": 0.3554715652174217
+      },
+      {
+        "score": 75,
+        "win": 0,
+        "rank": 3,
+        "balance": 0,
+        "spent": 175,
+        "tiles": 11,
+        "maxDecisionMs": 1.81395799999882,
+        "meanDecisionMs": 0.4799151666668257
+      },
+      {
+        "score": 61,
+        "win": 0,
+        "rank": 2,
+        "balance": 3,
+        "spent": 158,
+        "tiles": 10,
+        "maxDecisionMs": 1.3052910000042175,
+        "meanDecisionMs": 0.4144109202897053
+      },
+      {
+        "score": 108,
+        "win": 1,
+        "rank": 1,
+        "balance": 5,
+        "spent": 203,
+        "tiles": 13,
+        "maxDecisionMs": 2.9605830000000424,
+        "meanDecisionMs": 0.3465297050358897
+      },
+      {
+        "score": 63,
+        "win": 0,
+        "rank": 4,
+        "balance": 2,
+        "spent": 161,
+        "tiles": 11,
+        "maxDecisionMs": 1.1293749999967986,
+        "meanDecisionMs": 0.3950527985613243
+      },
+      {
+        "score": 120,
+        "win": 1,
+        "rank": 1,
+        "balance": 57,
+        "spent": 163,
+        "tiles": 15,
+        "maxDecisionMs": 3.189250000003085,
+        "meanDecisionMs": 0.3442913741006293
+      },
+      {
+        "score": 85,
+        "win": 0,
+        "rank": 3,
+        "balance": 8,
+        "spent": 177,
+        "tiles": 12,
+        "maxDecisionMs": 1.3002500000002328,
+        "meanDecisionMs": 0.45060190647514287
+      },
+      {
+        "score": 55,
+        "win": 0,
+        "rank": 4,
+        "balance": 20,
+        "spent": 135,
+        "tiles": 7,
+        "maxDecisionMs": 4.3950000000040745,
+        "meanDecisionMs": 0.4932658604651693
+      },
+      {
+        "score": 88,
+        "win": 1,
+        "rank": 1,
+        "balance": 25,
+        "spent": 163,
+        "tiles": 9,
+        "maxDecisionMs": 3.8381250000020373,
+        "meanDecisionMs": 0.34393813281263874
+      },
+      {
+        "score": 72,
+        "win": 0,
+        "rank": 3,
+        "balance": 16,
+        "spent": 156,
+        "tiles": 10,
+        "maxDecisionMs": 1.5350409999955446,
+        "meanDecisionMs": 0.45434532812475936
+      },
+      {
+        "score": 67,
+        "win": 0,
+        "rank": 4,
+        "balance": 5,
+        "spent": 162,
+        "tiles": 9,
+        "maxDecisionMs": 1.1036249999961,
+        "meanDecisionMs": 0.46401238281299584
+      },
+      {
+        "score": 70,
+        "win": 0,
+        "rank": 2,
+        "balance": 5,
+        "spent": 165,
+        "tiles": 10,
+        "maxDecisionMs": 1.3884580000012647,
+        "meanDecisionMs": 0.5115166796866788
+      },
+      {
+        "score": 57,
+        "win": 0,
+        "rank": 4,
+        "balance": 19,
+        "spent": 138,
+        "tiles": 8,
+        "maxDecisionMs": 3.8459169999987353,
+        "meanDecisionMs": 0.41519496874991546
+      },
+      {
+        "score": 51,
+        "win": 0,
+        "rank": 5,
+        "balance": 18,
+        "spent": 133,
+        "tiles": 6,
+        "maxDecisionMs": 1.830999999998312,
+        "meanDecisionMs": 0.5471930390621651
+      },
+      {
+        "score": 53,
+        "win": 0,
+        "rank": 3,
+        "balance": 11,
+        "spent": 142,
+        "tiles": 6,
+        "maxDecisionMs": 1.0811249999969732,
+        "meanDecisionMs": 0.4292936171873407
+      },
+      {
+        "score": 82,
+        "win": 1,
+        "rank": 1,
+        "balance": 38,
+        "spent": 144,
+        "tiles": 8,
+        "maxDecisionMs": 4.825041999996756,
+        "meanDecisionMs": 0.41913967187502976
+      },
+      {
+        "score": 69,
+        "win": 0,
+        "rank": 2,
+        "balance": 23,
+        "spent": 146,
+        "tiles": 9,
+        "maxDecisionMs": 5.088167000001704,
+        "meanDecisionMs": 0.38025805426313897
+      },
+      {
+        "score": 88,
+        "win": 1,
+        "rank": 1,
+        "balance": 5,
+        "spent": 183,
+        "tiles": 10,
+        "maxDecisionMs": 1.6399579999997513,
+        "meanDecisionMs": 0.3559114651163059
+      },
+      {
+        "score": 84,
+        "win": 1,
+        "rank": 1,
+        "balance": 15,
+        "spent": 169,
+        "tiles": 9,
+        "maxDecisionMs": 2.435541999999259,
+        "meanDecisionMs": 0.42135007751951276
+      },
+      {
+        "score": 58,
+        "win": 0,
+        "rank": 5,
+        "balance": 28,
+        "spent": 130,
+        "tiles": 8,
+        "maxDecisionMs": 5.121832999997423,
+        "meanDecisionMs": 0.5929935156250394
+      },
+      {
+        "score": 65,
+        "win": 0,
+        "rank": 4,
+        "balance": 6,
+        "spent": 159,
+        "tiles": 8,
+        "maxDecisionMs": 1.2856660000106785,
+        "meanDecisionMs": 0.4280028992247688
+      },
+      {
+        "score": 64,
+        "win": 0,
+        "rank": 3,
+        "balance": 15,
+        "spent": 149,
+        "tiles": 8,
+        "maxDecisionMs": 1.1239159999968251,
+        "meanDecisionMs": 0.47164943750067323
+      },
+      {
+        "score": 64,
+        "win": 0,
+        "rank": 4,
+        "balance": 19,
+        "spent": 145,
+        "tiles": 7,
+        "maxDecisionMs": 1.6864159999968251,
+        "meanDecisionMs": 0.5519687421863182
+      },
+      {
+        "score": 82,
+        "win": 1,
+        "rank": 1,
+        "balance": 5,
+        "spent": 177,
+        "tiles": 10,
+        "maxDecisionMs": 1.4424999999901047,
+        "meanDecisionMs": 0.3846194806203919
+      },
+      {
+        "score": 61,
+        "win": 0,
+        "rank": 5,
+        "balance": 24,
+        "spent": 137,
+        "tiles": 8,
+        "maxDecisionMs": 3.530916999996407,
+        "meanDecisionMs": 0.49741207031286194
+      },
+      {
+        "score": 41,
+        "win": 0,
+        "rank": 7,
+        "balance": 5,
+        "spent": 136,
+        "tiles": 8,
+        "maxDecisionMs": 1.4963329999882262,
+        "meanDecisionMs": 0.501300164061945
+      },
+      {
+        "score": 69,
+        "win": 0,
+        "rank": 4,
+        "balance": 15,
+        "spent": 154,
+        "tiles": 10,
+        "maxDecisionMs": 5.5466250000026776,
+        "meanDecisionMs": 0.43798968992243403
+      },
+      {
+        "score": 68,
+        "win": 0,
+        "rank": 3,
+        "balance": 12,
+        "spent": 156,
+        "tiles": 9,
+        "maxDecisionMs": 1.0993750000052387,
+        "meanDecisionMs": 0.36915436434079424
+      },
+      {
+        "score": 81,
+        "win": 0.5,
+        "rank": 1,
+        "balance": 16,
+        "spent": 165,
+        "tiles": 10,
+        "maxDecisionMs": 1.101250000006985,
+        "meanDecisionMs": 0.3393694843754247
+      },
+      {
+        "score": 55,
+        "win": 0,
+        "rank": 2,
+        "balance": 4,
+        "spent": 151,
+        "tiles": 8,
+        "maxDecisionMs": 1.293459000007715,
+        "meanDecisionMs": 0.42992253125032676
+      },
+      {
+        "score": 62,
+        "win": 0,
+        "rank": 5,
+        "balance": 0,
+        "spent": 162,
+        "tiles": 9,
+        "maxDecisionMs": 1.50350000000617,
+        "meanDecisionMs": 0.37932392187485675
+      },
+      {
+        "score": 66,
+        "win": 0,
+        "rank": 4,
+        "balance": 13,
+        "spent": 153,
+        "tiles": 8,
+        "maxDecisionMs": 3.7836669999960577,
+        "meanDecisionMs": 0.555737705426241
+      },
+      {
+        "score": 99,
+        "win": 1,
+        "rank": 1,
+        "balance": 3,
+        "spent": 196,
+        "tiles": 12,
+        "maxDecisionMs": 1.369542000000365,
+        "meanDecisionMs": 0.38201266406247214
+      },
+      {
+        "score": 75,
+        "win": 0,
+        "rank": 2,
+        "balance": 26,
+        "spent": 149,
+        "tiles": 10,
+        "maxDecisionMs": 1.8001670000085142,
+        "meanDecisionMs": 0.4349671171864884
+      },
+      {
+        "score": 92,
+        "win": 1,
+        "rank": 1,
+        "balance": 30,
+        "spent": 162,
+        "tiles": 12,
+        "maxDecisionMs": 4.867583999992348,
+        "meanDecisionMs": 0.35747578294526755
+      }
+    ],
+    "candidateOutcomes": [
+      {
+        "score": 86,
+        "win": 1,
+        "rank": 1,
+        "balance": 8,
+        "spent": 178,
+        "tiles": 12,
+        "maxDecisionMs": 43.183083000003535,
+        "meanDecisionMs": 2.301043071942475
+      },
+      {
+        "score": 91,
+        "win": 1,
+        "rank": 1,
+        "balance": 14,
+        "spent": 177,
+        "tiles": 13,
+        "maxDecisionMs": 13.458374999994703,
+        "meanDecisionMs": 1.209375287769578
+      },
+      {
+        "score": 75,
+        "win": 0,
+        "rank": 3,
+        "balance": 6,
+        "spent": 169,
+        "tiles": 9,
+        "maxDecisionMs": 3.185875000002852,
+        "meanDecisionMs": 0.5815876086957544
+      },
+      {
+        "score": 74,
+        "win": 0,
+        "rank": 4,
+        "balance": 6,
+        "spent": 168,
+        "tiles": 11,
+        "maxDecisionMs": 24.34020800000144,
+        "meanDecisionMs": 1.2028828345321554
+      },
+      {
+        "score": 140,
+        "win": 1,
+        "rank": 1,
+        "balance": 72,
+        "spent": 168,
+        "tiles": 18,
+        "maxDecisionMs": 71.00204099999974,
+        "meanDecisionMs": 5.245029114285665
+      },
+      {
+        "score": 86,
+        "win": 1,
+        "rank": 1,
+        "balance": 2,
+        "spent": 184,
+        "tiles": 11,
+        "maxDecisionMs": 28.875542000001587,
+        "meanDecisionMs": 0.9221121294961208
+      },
+      {
+        "score": 60,
+        "win": 0,
+        "rank": 5,
+        "balance": 4,
+        "spent": 156,
+        "tiles": 10,
+        "maxDecisionMs": 64.67570799999521,
+        "meanDecisionMs": 2.776875557970978
+      },
+      {
+        "score": 76,
+        "win": 0,
+        "rank": 2,
+        "balance": 13,
+        "spent": 163,
+        "tiles": 11,
+        "maxDecisionMs": 70.59162500000093,
+        "meanDecisionMs": 3.0361228992813056
+      },
+      {
+        "score": 65,
+        "win": 0,
+        "rank": 3,
+        "balance": 2,
+        "spent": 163,
+        "tiles": 10,
+        "maxDecisionMs": 51.296957999998995,
+        "meanDecisionMs": 2.3976259712228134
+      },
+      {
+        "score": 104,
+        "win": 1,
+        "rank": 1,
+        "balance": 34,
+        "spent": 170,
+        "tiles": 11,
+        "maxDecisionMs": 36.50383299999521,
+        "meanDecisionMs": 2.2389376187053105
+      },
+      {
+        "score": 102,
+        "win": 1,
+        "rank": 1,
+        "balance": 27,
+        "spent": 175,
+        "tiles": 14,
+        "maxDecisionMs": 47.4183339999945,
+        "meanDecisionMs": 2.79185856115096
+      },
+      {
+        "score": 68,
+        "win": 0,
+        "rank": 4,
+        "balance": 5,
+        "spent": 163,
+        "tiles": 11,
+        "maxDecisionMs": 70.99412499999744,
+        "meanDecisionMs": 3.3009490144927374
+      },
+      {
+        "score": 65,
+        "win": 0,
+        "rank": 3,
+        "balance": 7,
+        "spent": 158,
+        "tiles": 9,
+        "maxDecisionMs": 1.5922500000015134,
+        "meanDecisionMs": 0.49841453956793735
+      },
+      {
+        "score": 89,
+        "win": 0,
+        "rank": 2,
+        "balance": 12,
+        "spent": 177,
+        "tiles": 12,
+        "maxDecisionMs": 19.250625000000582,
+        "meanDecisionMs": 1.0055973381291918
+      },
+      {
+        "score": 77,
+        "win": 0,
+        "rank": 3,
+        "balance": 12,
+        "spent": 165,
+        "tiles": 13,
+        "maxDecisionMs": 71.00749999999971,
+        "meanDecisionMs": 3.809876136690671
+      },
+      {
+        "score": 72,
+        "win": 0,
+        "rank": 4,
+        "balance": 18,
+        "spent": 154,
+        "tiles": 10,
+        "maxDecisionMs": 71.25329200000124,
+        "meanDecisionMs": 4.193599985507414
+      },
+      {
+        "score": 65,
+        "win": 0,
+        "rank": 2,
+        "balance": 0,
+        "spent": 165,
+        "tiles": 11,
+        "maxDecisionMs": 6.778542000000016,
+        "meanDecisionMs": 0.5962329208631535
+      },
+      {
+        "score": 93,
+        "win": 0,
+        "rank": 2,
+        "balance": 1,
+        "spent": 192,
+        "tiles": 13,
+        "maxDecisionMs": 30.51141700000153,
+        "meanDecisionMs": 1.5548078417265558
+      },
+      {
+        "score": 75,
+        "win": 0,
+        "rank": 3,
+        "balance": 0,
+        "spent": 175,
+        "tiles": 11,
+        "maxDecisionMs": 71.1906669999953,
+        "meanDecisionMs": 2.2251267971015833
+      },
+      {
+        "score": 61,
+        "win": 0,
+        "rank": 2,
+        "balance": 4,
+        "spent": 157,
+        "tiles": 10,
+        "maxDecisionMs": 20.61137499999313,
+        "meanDecisionMs": 0.9130429130432869
+      },
+      {
+        "score": 108,
+        "win": 1,
+        "rank": 1,
+        "balance": 5,
+        "spent": 203,
+        "tiles": 13,
+        "maxDecisionMs": 38.704499999999825,
+        "meanDecisionMs": 2.4174858633094956
+      },
+      {
+        "score": 63,
+        "win": 0,
+        "rank": 4,
+        "balance": 2,
+        "spent": 161,
+        "tiles": 11,
+        "maxDecisionMs": 71.93866700000217,
+        "meanDecisionMs": 4.894672633093401
+      },
+      {
+        "score": 104,
+        "win": 1,
+        "rank": 1,
+        "balance": 46,
+        "spent": 158,
+        "tiles": 14,
+        "maxDecisionMs": 70.54262500000186,
+        "meanDecisionMs": 4.080077357142727
+      },
+      {
+        "score": 85,
+        "win": 0,
+        "rank": 3,
+        "balance": 1,
+        "spent": 184,
+        "tiles": 13,
+        "maxDecisionMs": 13.812458000000333,
+        "meanDecisionMs": 0.9714056187049798
+      },
+      {
+        "score": 70,
+        "win": 0,
+        "rank": 3,
+        "balance": 8,
+        "spent": 162,
+        "tiles": 9,
+        "maxDecisionMs": 70.8649579999983,
+        "meanDecisionMs": 2.6510133281250887
+      },
+      {
+        "score": 92,
+        "win": 1,
+        "rank": 1,
+        "balance": 31,
+        "spent": 161,
+        "tiles": 9,
+        "maxDecisionMs": 31.345667000001413,
+        "meanDecisionMs": 1.8103624496126955
+      },
+      {
+        "score": 78,
+        "win": 0,
+        "rank": 2,
+        "balance": 7,
+        "spent": 171,
+        "tiles": 11,
+        "maxDecisionMs": 40.35558399999718,
+        "meanDecisionMs": 1.980176953488646
+      },
+      {
+        "score": 67,
+        "win": 0,
+        "rank": 4,
+        "balance": 5,
+        "spent": 162,
+        "tiles": 9,
+        "maxDecisionMs": 18.595541999995476,
+        "meanDecisionMs": 1.3828521796873474
+      },
+      {
+        "score": 64,
+        "win": 0,
+        "rank": 2,
+        "balance": 18,
+        "spent": 146,
+        "tiles": 9,
+        "maxDecisionMs": 70.86720899999636,
+        "meanDecisionMs": 3.2555339062500366
+      },
+      {
+        "score": 60,
+        "win": 0,
+        "rank": 4,
+        "balance": 10,
+        "spent": 150,
+        "tiles": 9,
+        "maxDecisionMs": 51.91533299999719,
+        "meanDecisionMs": 3.0398753125002713
+      },
+      {
+        "score": 38,
+        "win": 0,
+        "rank": 7,
+        "balance": 56,
+        "spent": 82,
+        "tiles": 5,
+        "maxDecisionMs": 71.29558299999917,
+        "meanDecisionMs": 5.598194687499813
+      },
+      {
+        "score": 53,
+        "win": 0,
+        "rank": 3,
+        "balance": 11,
+        "spent": 142,
+        "tiles": 6,
+        "maxDecisionMs": 5.905582999999751,
+        "meanDecisionMs": 0.6390358359376478
+      },
+      {
+        "score": 82,
+        "win": 1,
+        "rank": 1,
+        "balance": 38,
+        "spent": 144,
+        "tiles": 8,
+        "maxDecisionMs": 27.00758300000598,
+        "meanDecisionMs": 1.4157789765624784
+      },
+      {
+        "score": 78,
+        "win": 1,
+        "rank": 1,
+        "balance": 20,
+        "spent": 158,
+        "tiles": 10,
+        "maxDecisionMs": 43.07633399999759,
+        "meanDecisionMs": 2.782431558139639
+      },
+      {
+        "score": 85,
+        "win": 1,
+        "rank": 1,
+        "balance": 8,
+        "spent": 177,
+        "tiles": 10,
+        "maxDecisionMs": 50.724709000001894,
+        "meanDecisionMs": 1.9281298604648553
+      },
+      {
+        "score": 84,
+        "win": 1,
+        "rank": 1,
+        "balance": 15,
+        "spent": 169,
+        "tiles": 9,
+        "maxDecisionMs": 12.064792000004672,
+        "meanDecisionMs": 0.9467432325583605
+      },
+      {
+        "score": 52,
+        "win": 0,
+        "rank": 6,
+        "balance": 39,
+        "spent": 113,
+        "tiles": 7,
+        "maxDecisionMs": 71.3044579999987,
+        "meanDecisionMs": 4.762166687500496
+      },
+      {
+        "score": 70,
+        "win": 0,
+        "rank": 3,
+        "balance": 6,
+        "spent": 164,
+        "tiles": 8,
+        "maxDecisionMs": 37.14550000001327,
+        "meanDecisionMs": 1.8920436015630457
+      },
+      {
+        "score": 64,
+        "win": 0,
+        "rank": 3,
+        "balance": 22,
+        "spent": 142,
+        "tiles": 8,
+        "maxDecisionMs": 48.31312500000058,
+        "meanDecisionMs": 2.038512718749871
+      },
+      {
+        "score": 64,
+        "win": 0,
+        "rank": 5,
+        "balance": 16,
+        "spent": 148,
+        "tiles": 7,
+        "maxDecisionMs": 67.2621669999935,
+        "meanDecisionMs": 4.067932265625359
+      },
+      {
+        "score": 78,
+        "win": 1,
+        "rank": 1,
+        "balance": 0,
+        "spent": 178,
+        "tiles": 10,
+        "maxDecisionMs": 71.07574999998906,
+        "meanDecisionMs": 3.229772460938989
+      },
+      {
+        "score": 63,
+        "win": 0,
+        "rank": 4,
+        "balance": 12,
+        "spent": 151,
+        "tiles": 9,
+        "maxDecisionMs": 71.43579200000386,
+        "meanDecisionMs": 3.6072157441859285
+      },
+      {
+        "score": 39,
+        "win": 0,
+        "rank": 7,
+        "balance": 13,
+        "spent": 126,
+        "tiles": 7,
+        "maxDecisionMs": 71.22229099999822,
+        "meanDecisionMs": 5.423720070312811
+      },
+      {
+        "score": 69,
+        "win": 0,
+        "rank": 4,
+        "balance": 16,
+        "spent": 153,
+        "tiles": 10,
+        "maxDecisionMs": 71.2692090000055,
+        "meanDecisionMs": 3.5013860155037078
+      },
+      {
+        "score": 82,
+        "win": 1,
+        "rank": 1,
+        "balance": 7,
+        "spent": 175,
+        "tiles": 11,
+        "maxDecisionMs": 51.14787500000966,
+        "meanDecisionMs": 3.314999007752351
+      },
+      {
+        "score": 69,
+        "win": 0,
+        "rank": 2,
+        "balance": 9,
+        "spent": 160,
+        "tiles": 10,
+        "maxDecisionMs": 34.624792000002344,
+        "meanDecisionMs": 1.7314935116284138
+      },
+      {
+        "score": 55,
+        "win": 0,
+        "rank": 2,
+        "balance": 4,
+        "spent": 151,
+        "tiles": 8,
+        "maxDecisionMs": 5.6357090000092285,
+        "meanDecisionMs": 0.6489992968760134
+      },
+      {
+        "score": 62,
+        "win": 0,
+        "rank": 5,
+        "balance": 0,
+        "spent": 162,
+        "tiles": 9,
+        "maxDecisionMs": 18.40733299999556,
+        "meanDecisionMs": 0.9937874687490194
+      },
+      {
+        "score": 65,
+        "win": 0,
+        "rank": 6,
+        "balance": 37,
+        "spent": 128,
+        "tiles": 7,
+        "maxDecisionMs": 72.15458299999591,
+        "meanDecisionMs": 6.1973520775195645
+      },
+      {
+        "score": 93,
+        "win": 1,
+        "rank": 1,
+        "balance": 4,
+        "spent": 189,
+        "tiles": 12,
+        "maxDecisionMs": 47.47699999999895,
+        "meanDecisionMs": 1.3023959844957047
+      },
+      {
+        "score": 75,
+        "win": 0,
+        "rank": 2,
+        "balance": 4,
+        "spent": 171,
+        "tiles": 11,
+        "maxDecisionMs": 51.912624999997206,
+        "meanDecisionMs": 2.0820335390624223
+      },
+      {
+        "score": 96,
+        "win": 1,
+        "rank": 1,
+        "balance": 13,
+        "spent": 183,
+        "tiles": 13,
+        "maxDecisionMs": 53.22070899998653,
+        "meanDecisionMs": 3.3036792403098976
+      }
+    ],
+    "groups": {
+      "6-SecondPrice": {
+        "control": {
+          "games": 24,
+          "wins": 7,
+          "winRate": 0.2916666666666667,
+          "meanScore": 81.70833333333333,
+          "meanRank": 2.5,
+          "meanBalance": 10.5,
+          "meanSpent": 171.20833333333334,
+          "meanTiles": 11.708333333333334,
+          "maxDecisionMs": 4.317167000001064,
+          "meanDecisionMs": 0.4188031776817969
+        },
+        "candidate": {
+          "games": 24,
+          "wins": 8,
+          "winRate": 0.3333333333333333,
+          "meanScore": 82.66666666666667,
+          "meanRank": 2.375,
+          "meanBalance": 12.541666666666666,
+          "meanSpent": 170.125,
+          "meanTiles": 11.708333333333334,
+          "maxDecisionMs": 71.93866700000217,
+          "meanDecisionMs": 2.2985308172677597
+        },
+        "paired": {
+          "scoreDelta": 0.9583333333333334,
+          "winDelta": 0.041666666666666664,
+          "scoreSE": 2.443921153364964,
+          "winSE": 0.07320723677962593,
+          "betterScores": 7,
+          "worseScores": 6
+        }
+      },
+      "7-SecondPrice": {
+        "control": {
+          "games": 28,
+          "wins": 7.5,
+          "winRate": 0.26785714285714285,
+          "meanScore": 69.21428571428571,
+          "meanRank": 2.9642857142857144,
+          "meanBalance": 15.035714285714286,
+          "meanSpent": 154.17857142857142,
+          "meanTiles": 8.785714285714286,
+          "maxDecisionMs": 5.5466250000026776,
+          "meanDecisionMs": 0.44104710173542694
+        },
+        "candidate": {
+          "games": 28,
+          "wins": 9,
+          "winRate": 0.32142857142857145,
+          "meanScore": 69.53571428571429,
+          "meanRank": 2.9642857142857144,
+          "meanBalance": 15.321428571428571,
+          "meanSpent": 154.21428571428572,
+          "meanTiles": 8.964285714285714,
+          "maxDecisionMs": 72.15458299999591,
+          "meanDecisionMs": 2.6974149275571597
+        },
+        "paired": {
+          "scoreDelta": 0.32142857142857145,
+          "winDelta": 0.05357142857142857,
+          "scoreSE": 1.181933636115584,
+          "winSE": 0.053571428571428555,
+          "betterScores": 9,
+          "worseScores": 9
+        }
+      }
+    }
+  },
+  "finishedAt": "2026-10-25T08:22:45.535Z",
+  "recommendation": "observed joint heldout improvement; assess uncertainty before adoption"
+}
