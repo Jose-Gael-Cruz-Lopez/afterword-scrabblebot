@@ -4,11 +4,14 @@ export { LETTER_VALUE } from './engine.js';
 const DISTRIBUTION: Record<string,number> = {A:9,B:2,C:2,D:4,E:12,F:2,G:3,H:2,I:9,J:1,K:1,L:4,M:2,N:6,O:8,P:2,Q:1,R:6,S:4,T:6,U:4,V:2,W:2,X:1,Y:2,Z:1};
 export interface PublicPlayer { seat?:number; name?:string; balance:number; score:number }
 export interface PublicAuction { round?:number; letter:string; winner?:number; paid:number }
+/** Already submitted words are public; initial opponent racks remain private. */
+export interface PublicWordPlay { seat:number; word:string; reward:number; round?:number }
 export interface PlanningContext {
-  myRack:Map<string,number>; myBalance?:number; dictionary?:string[]; matchId?:string;
+  myRack:Map<string,number>; myBalance?:number; dictionary?:string[]; matchId?:string; seat?:number;
   roundsRemaining?:number; round?:number; auctionType?:string; letter?:string;
   players?:ReadonlyArray<PublicPlayer>; history?:ReadonlyArray<PublicAuction>;
   initialRack?:ReadonlyMap<string,number>;
+  publicWords?:ReadonlyArray<PublicWordPlay>;
 }
 export interface BidContext extends PlanningContext { letter:string; myBalance:number }
 export interface WordContext extends PlanningContext { dictionary:string[] }

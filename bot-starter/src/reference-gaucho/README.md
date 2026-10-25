@@ -31,3 +31,24 @@ node --import tsx src/reference-gaucho/benchmark-cross.ts
 ## Afterword endgame extensions
 
 `terminal-exact.ts` is original Afterword code; vendored core/params remain unchanged. It deduplicates anagrams in the terminal search, certifies complete bounded partition solutions, caches suffixes and preserves a feasible pre-purchase payout floor. The outer `src/last-tile-denial.ts` spends otherwise valueless terminal cash to deny a final useful tile, and calls the inner bid first to preserve the floor. Earlier policy decisions are unchanged. See `docs/experiments/exact-denial-combo.md`:48fresh matched pairs, zero regressions, equal wins/scores. This is a correctness/rank-opportunity extension, not an established win-rate improvement. `liquidity.ts` remains experimental and is not used by the worker.
+
+## Controlled funded-bidding policy
+
+`BOT_POLICY=funded` opts into `createFundedRuntimePolicy` from `funded-runtime.ts`.
+The default `licensed` policy remains available for rollback. The funded policy
+changes only second-price bids with 3–16 auctions remaining. It compares buying
+at plausible clearing prices with passing, using the same sampled future tiles,
+funded continuation purchases/cashouts and final payout. It refreshes word
+targets after three hypothetical purchases and after hypothetical cashouts.
+Four shared samples and 16 current-price quantiles run within a 70 ms model
+budget; an incomplete calculation delegates to the normal bid. Public rival
+cashouts invalidate same-auction cached bids. Cashout selection and the exact
+terminal/denial policy remain the licensed baseline.
+
+Three fixed-candidate holdouts total 408 matched six/seven-player cases. All
+three improved aggregate mean score and fractional wins; the largest 252-case
+set improved mean score by 0.802 and win rate by 1.72 percentage points, with
+uncertainty including zero for wins. Gains were concentrated against mixed
+pressure opponents; the all-clones subset lost two wins. This is a controlled
+competitive trial, not evidence of first place or universal dominance. See
+`docs/experiments/funded-runtime-release.md` for configuration and limitations.

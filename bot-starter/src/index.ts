@@ -218,11 +218,21 @@ class BotSession {
     work.initialRack ??= reconstructInitialRack(rack, myWords.map(w => w.word), results.filter(r => r.winnerBotId === this.botId).map(r => r.letter), match.startingRackSize);
     const context: BidContext = {
       matchId: String(matchId), myRack: rack, myBalance: Number(participant.balance), letter: auction.letter,
+      seat: participants.findIndex(p => p.botId === this.botId),
       initialRack: work.initialRack, round: match.currentRound,
       roundsRemaining: auctionsRemaining(match.startingRackSize, participants.length, match.currentRound),
       auctionType: match.auctionType.tag,
       players: participants.map((p, seat) => ({ seat, name: this.conn.db.bot.id.find(p.botId)?.name, balance: Number(p.balance), score: Number(p.score) })),
-      history: results.map((r, i) => ({ round: i + 1, letter: r.letter, paid: Number(r.paid), winner: participants.findIndex(p => p.botId === r.winnerBotId) })),
+      history: results.map((r, i) => {
+        const winner = participants.findIndex(p => p.botId === r.winnerBotId);
+        return { round: i + 1, letter: r.letter, paid: Number(r.paid), winner: winner < 0 ? undefined : winner };
+      }),
+      publicWords: [...this.conn.db.wordPlay.iter()].filter(w => w.matchId === matchId).map(w => ({
+        seat: participants.findIndex(p => p.botId === w.botId), word: w.word, reward: Number(w.totalReward),
+        // Equal timestamps are ambiguous; treating that award as available
+        // avoids overstating letters proved to have been in an initial rack.
+        round: 1 + results.filter(r => r.closedAt.microsSinceUnixEpoch <= w.playedAt.microsSinceUnixEpoch).length,
+      })),
     };
     const rackSnapshot = `${rackKey(rack)}:${myWords.length}`;
     const fingerprint = `${auction.id}:${rackSnapshot}:${participant.balance}:${participants.map(p => `${p.botId}/${p.balance}/${p.score}`).join(",")}:${results.length}`;
@@ -391,7 +401,7 @@ async function main() {
   if (TOURNAMENT_ID !== "auto" && TOURNAMENT_ID !== "none" && !/^\d+$/.test(TOURNAMENT_ID)) throw new Error("TOURNAMENT_ID must be auto, none, or a numeric id");
   if (!fs.existsSync(DICTIONARY_PATH)) throw new Error(`Missing official dictionary: ${DICTIONARY_PATH}`);
   planner = new RuntimePlanner(DICTIONARY_PATH);
-  log(`indexed ${await planner.ready} official words in the planner worker; policy=${process.env.BOT_POLICY ?? "licensed"}; endgame=${process.env.BOT_POLICY === "original" ? "original" : "exact+denial"}; nonBlockingBids=true`);
+  log(`indexed ${await planner.ready} official words in the planner worker; policy=${process.env.BOT_POLICY ?? "licensed"}; endgame=${process.env.BOT_POLICY === "original" ? "original" : "exact+denial"}; funded=${process.env.BOT_POLICY === "funded" ? "refresh16/4samples/70ms" : "off"}; nonBlockingBids=true`);
   connect();
 }
 void main().catch(async error => { log(`startup failed: ${errorMessage(error)}`); await shutdown(1); });

@@ -1,0 +1,22 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {ClearingPriceRolloutBidStrategy} from './rollout-bid-clearing.js';
+import {GauchoReference} from './adapter.js';
+import type {RolloutBidFactory} from './rollout-bid.js';
+const ctx={myRack:new Map([['A',1]]),myBalance:40,letter:'E',round:1,roundsRemaining:8,auctionType:'SecondPrice'};
+const ref=new GauchoReference(['AT','ATE'],{terminalSafe:true});
+const factory=(gain:(price:number)=>number):RolloutBidFactory=>()=>({sampleCount:4,horizon:7,reachesFinalPayout:true,evaluatePurchase:cost=>[0,0,0,0].map(()=>cost===null?40:40+gain(cost))});
+test('clearing integration crosses low-cost policy loss when weighted higher prices justify it',()=>{const p=new ClearingPriceRolloutBidStrategy({word:()=>null,bid:()=>0},ref,{strength:1,improvementMargin:.1,riskPenalty:0},factory(cost=>cost<10?-3:10),(_,q)=>q<.25?4:15);assert.equal(p.bid(ctx),16);assert.ok(p.lastDecision!.prices[0]!.meanGain<0);});
+test('integer threshold+1 boundaries avoid coarse price-ceiling truncation',()=>{const p=new ClearingPriceRolloutBidStrategy({word:()=>null,bid:()=>24},ref,{strength:1,improvementMargin:.1,riskPenalty:0},factory(cost=>18.5-cost),(_,q)=>Math.floor(q*24));assert.equal(p.bid(ctx),19);assert.ok(p.lastDecision!.bids.some(b=>b.bid===19));});
+test('high prices are not charged in lost outcomes and cash is bounded',()=>{const costs:number[]=[];const f:RolloutBidFactory=()=>({sampleCount:4,horizon:7,reachesFinalPayout:true,evaluatePurchase:c=>{if(c!==null)costs.push(c);return[0,0,0,0].map(()=>c===null?30:50);}});const p=new ClearingPriceRolloutBidStrategy({word:()=>null,bid:()=>5},ref,{strength:1,improvementMargin:.1},f,(_,q)=>q<.5?7:100);assert.equal(p.bid(ctx),8);assert.deepEqual(costs,[7]);});
+test('exact tail and word policy are delegated, expired models leave normal bid',()=>{let calls=0;const base={word:()=>{calls++;return'ATE';},bid:()=>{calls++;return 13;}};const p=new ClearingPriceRolloutBidStrategy(base,ref,{},()=>null);assert.equal(p.word(ctx),'ATE');assert.equal(p.bid({...ctx,roundsRemaining:2}),13);assert.equal(p.bid(ctx),13);assert.equal(calls,3);assert.ok(p.lastDecision!.expired);});
+test('a public rival cashout invalidates the same-auction cached clearing decision',()=>{
+ let bundles=0;
+ const f:RolloutBidFactory=()=>{bundles++;return{sampleCount:4,horizon:7,reachesFinalPayout:true,evaluatePurchase:c=>[0,0,0,0].map(()=>c===null?30:50)};};
+ const p=new ClearingPriceRolloutBidStrategy({word:()=>null,bid:()=>5},ref,{strength:1,improvementMargin:.1},f,c=>Math.min(10,c.players?.find(x=>x.seat===1)?.balance??0));
+ const before={...ctx,seat:0,players:[{seat:0,balance:40,score:0},{seat:1,balance:5,score:0}]};
+ assert.equal(p.bid(before),6);assert.equal(p.bid(before),6);assert.equal(bundles,1);
+ const after={...before,players:[before.players[0]!,{seat:1,balance:20,score:15}]};
+ assert.equal(p.bid(after),11);assert.equal(bundles,2);
+ assert.equal(p.bid({...after,players:[after.players[0]!,{seat:1,balance:20,score:16}]}),11);assert.equal(bundles,3);
+});

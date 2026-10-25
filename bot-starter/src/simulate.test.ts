@@ -104,6 +104,26 @@ test("context exposes only public opponents and protects internal racks from mut
   assert.equal(match.players[0]!.rack.size, 0);
 });
 
+test("public word history contains only already committed words and is isolated from policy mutations", () => {
+  const snapshots: number[] = [];
+  const make = (name: string): SimStrategy => ({ name,
+    word: c => {
+      if (c.seat === 0 && c.round === 1 && (c.myRack.get('A') ?? 0) === 2) assert.equal(c.publicWords?.length, 0);
+      return (c.myRack.get('A') ?? 0) >= 2 ? 'AA' : null;
+    },
+    bid: c => {
+      snapshots.push(c.publicWords?.length ?? -1);
+      assert.deepEqual(c.publicWords?.map(w => [w.seat, w.word, w.reward, w.round]), [[0, 'AA', 2, 1], [1, 'AA', 2, 1]]);
+      if (c.publicWords?.[0]) (c.publicWords[0] as { reward:number }).reward = 10000;
+      return 0;
+    },
+  });
+  const match = runMatch([make('a'), make('b')], 9, { startingTiles:2, bag:['A','A','A','A','A','A'], dictionary:['AA'] });
+  assert.deepEqual(match.errors, []);
+  assert.deepEqual(match.players.map(p => p.score), [2, 2]);
+  assert.deepEqual(snapshots, [2, 2, 2, 2]);
+});
+
 test("integer length rewards match authoritative tiers", () => {
   assert.equal(wordReward("CAT"),5);
   assert.equal(wordReward("QUIZ"),33);

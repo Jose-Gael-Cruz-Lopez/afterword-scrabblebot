@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "checks": [
+    "fixture provenance hash",
+    "exclude focal cash from cap",
+    "future cap opt-out",
+    "one reproducible RNG draw",
+    "final unusable returns0",
+    "last usable tail bucket",
+    "normalized phase",
+    "invalid letter",
+    "zero opponent balances",
+    "six/seven context",
+    "all letter/round quantiles nonnegative monotone"
+  ],
+  "scope": "API checks only. No reactive gameplay test or deployment.",
+  "samplerSHA256": "a5d77255750a8c118c75e73fbf100eaff5afc480c8b43fac274e9b6cb5c1afde"
+}

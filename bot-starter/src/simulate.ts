@@ -37,6 +37,8 @@ export interface SimContext {
   auctionType: SimAuctionType;
   players: ReadonlyArray<SimPublicPlayer>;
   history: ReadonlyArray<SimAuctionResult>;
+  /** Only words already submitted, never an opponent's rack or future action. */
+  publicWords?: ReadonlyArray<{ seat:number; word:string; reward:number; round:number }>;
   /** Strategy-local seeded randomness, separate from dealing/tie randomness. */
   rng: () => number;
 }
@@ -143,6 +145,7 @@ export function runMatch(strategies: SimStrategy[], seed: number, options: SimOp
     player.rack.set(letter, (player.rack.get(letter) ?? 0) + 1);
   }
   const auctions: SimAuctionResult[] = [], trace: SimTraceEvent[] = [], errors: string[] = [];
+  const publicWords: Array<{ seat:number; word:string; reward:number; round:number }> = [];
   let round = 0;
   while (bag.length > 0) {
     const letter = bag.pop()!;
@@ -152,6 +155,7 @@ export function runMatch(strategies: SimStrategy[], seed: number, options: SimOp
       round, roundsRemaining: bag.length + 1, bagRemaining: bag.length, seat, auctionType,
       players: players.map(({ seat, name, balance, score }) => ({ seat, name, balance, score })),
       history: auctions.map(a => ({ ...a })), rng: strategyRandom[seat]!,
+      publicWords: publicWords.map(w => ({ ...w })),
     });
     // All clients can use their existing rack while this auction is open.
     // Thus initial tiles are playable and the final awarded tile is not.
@@ -178,6 +182,7 @@ export function runMatch(strategies: SimStrategy[], seed: number, options: SimOp
         }
         const reward = wordReward(word);
         player.score += reward; player.balance += reward; player.words.push(word);
+        publicWords.push({ seat, word, reward, round });
         if (options.trace) trace.push({ kind: "word", seat, round, word, reward });
       }
     }
