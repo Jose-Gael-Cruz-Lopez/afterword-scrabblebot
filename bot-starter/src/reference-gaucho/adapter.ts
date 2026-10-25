@@ -3,8 +3,9 @@
  * See LICENSE, UPSTREAM.json and README.md for source and compatibility notes.
  */
 import { chooseWords, decideBid, DEFAULT_PARAMS, type Params, type View } from './core/policy.js';
-import { bestWord, spellableList, type Dict } from './core/dict.js';
+import { bestWord, potential, type Dict } from './core/dict.js';
 import { BAG, reward, VALUE, rackFromMap } from './core/rules.js';
+import { findSafeTerminalCashout } from './terminal-search.js';
 import vickrey from './params/vickrey.json' with { type: 'json' };
 import firstprice from './params/firstprice.json' with { type: 'json' };
 import paidMarket from './params/market-paid.json' with { type: 'json' };
@@ -77,6 +78,20 @@ export class GauchoReference {
     const letter = (ctx.letter ?? '').charCodeAt(0) - 65;
     return letter >= 0 && letter < 26 ? decideBid(this.dictionary, p, v, letter) : 0;
   }
+  /** Expose the licensed policy's single-word heuristic for cashflow comparisons.
+   * Uses the same horizon adjustment as its private opts() helper; no new data.
+   */
+  potentialValue(ctx: GauchoContext, rack: ReadonlyMap<string, number> = ctx.myRack): number {
+    const { p, v } = this.state(ctx);
+    let aHalf = p.aHalf;
+    if (p.horizonW > 0) {
+      const unseen = v.unseen.reduce((sum, n) => sum + n, 0);
+      const fraction = unseen > 0 ? Math.min(1, Math.max(.02, v.auctionsLeft / unseen)) : 1;
+      aHalf /= Math.pow(fraction, p.horizonW);
+    }
+    return potential(this.dictionary, rackFromMap(new Map(rack)), { unseen: v.unseen,
+      maxMissing: Math.max(0, Math.min(p.maxMissing, v.auctionsLeft)), pBase: p.pBase, aHalf, minLen: p.minLen });
+  }
   word(ctx: GauchoContext): string | null {
     const { p, v } = this.state(ctx);
     if (this.terminalSafe && ctx.roundsRemaining === 2) {
@@ -101,66 +116,7 @@ export class GauchoReference {
    * Unfinished searches never certify a word.
    */
   private safeTerminalCashout(rack: Int32Array, letter: number): string | null {
-    const d = this.dictionary, augmented = new Int32Array(rack);
-    augmented[letter]!++;
-    const deadline = performance.now() + 30;
-    const expired = Symbol('terminal partition deadline');
-    const seen = new Set<string>();
-    const candidates = spellableList(d, augmented, d.n).flatMap(index => {
-      const offset = index * 26, sparse: number[] = [];
-      let face = 0;
-      for (let i = 0; i < 26; i++) if (d.counts[offset + i]) {
-        const n = d.counts[offset + i]!;
-        sparse.push(i, n); face += n * VALUE[i]!;
-      }
-      const key = sparse.join(',');
-      if (seen.has(key)) return [];
-      seen.add(key);
-      return [{ index, sparse, face, score: d.rew[index]! }];
-    });
-    const fits = (word: typeof candidates[number], r: Int32Array): boolean => {
-      for (let j = 0; j < word.sparse.length; j += 2) if (word.sparse[j + 1]! > r[word.sparse[j]!]!) return false;
-      return true;
-    };
-    const change = (word: typeof candidates[number], r: Int32Array, sign: number) => {
-      for (let j = 0; j < word.sparse.length; j += 2) r[word.sparse[j]!]! += sign * word.sparse[j + 1]!;
-    };
-    const memo = new Map<string, number>();
-    let nodes = 0;
-    const partition = (r: Int32Array, face: number): number => {
-      if (++nodes > 4000 || performance.now() >= deadline) throw expired;
-      const key = r.join(','), cached = memo.get(key);
-      if (cached !== undefined) return cached;
-      // A feasible greedy lower bound and the 3x maximum reward upper bound
-      // prune branches without assuming the longest word is optimal.
-      let best = 0;
-      const greed = new Int32Array(r);
-      for (const word of candidates) while (fits(word, greed)) { change(word, greed, -1); best += word.score; }
-      if (best < 3 * face) for (const word of candidates) {
-        if (!fits(word, r) || word.score + 3 * (face - word.face) <= best) continue;
-        change(word, r, -1);
-        const score = word.score + partition(r, face - word.face);
-        change(word, r, 1);
-        best = Math.max(best, score);
-        if (best === 3 * face) break;
-      }
-      memo.set(key, best);
-      return best;
-    };
-    let face = 0;
-    for (let i = 0; i < 26; i++) face += rack[i]! * VALUE[i]!;
-    try {
-      const before = partition(new Int32Array(rack), face);
-      const withTile = partition(new Int32Array(augmented), face + VALUE[letter]!);
-      for (const word of candidates) {
-        if (!fits(word, rack)) continue;
-        const rest = new Int32Array(rack), restWithTile = new Int32Array(augmented);
-        change(word, rest, -1); change(word, restWithTile, -1);
-        if (word.score + partition(rest, face - word.face) !== before) continue;
-        if (word.score + partition(restWithTile, face + VALUE[letter]! - word.face) === withTile) return d.words[word.index]!;
-      }
-    } catch (error) { if (error !== expired) throw error; }
-    return null;
+    return findSafeTerminalCashout(this.dictionary, rack, letter, { timeBudgetMs: 25, maxNodes: 8000 });
   }
 }
 export function createGauchoReference(dictionary: readonly string[], options: GauchoOptions = {}): SimStrategy {

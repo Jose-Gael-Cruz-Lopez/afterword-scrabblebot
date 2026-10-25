@@ -1,0 +1,162 @@
+/** Bounded exact set packing shared by cashout and final liquidation. */
+import { spellableList, type Dict } from './core/dict.js';
+import { VALUE } from './core/rules.js';
+
+export interface ExactTerminalOptions { timeBudgetMs?: number; maxNodes?: number }
+export interface ExactPartition { readonly score: number; readonly words: readonly number[]; readonly exact: true }
+interface Candidate { index: number; sparse: number[]; score: number; face: number }
+export const EXPIRED = Symbol('exact terminal budget');
+const key = (rack: Int32Array): string => rack.join(',');
+const finite = (n: number | undefined, fallback: number): number => n !== undefined && Number.isFinite(n) ? n : fallback;
+function faceValue(rack: Int32Array): number { let n = 0; for (let i = 0; i < 26; i++) n += rack[i]! * VALUE[i]!; return n; }
+function fits(word: Candidate, rack: Int32Array): boolean {
+  for (let i = 0; i < word.sparse.length; i += 2) if (word.sparse[i + 1]! > rack[word.sparse[i]!]!) return false;
+  return true;
+}
+function change(word: Candidate, rack: Int32Array, sign: number): void {
+  for (let i = 0; i < word.sparse.length; i += 2) rack[word.sparse[i]!]! += sign * word.sparse[i + 1]!;
+}
+
+/** One bounded search universe covers every subset of its maximum rack. */
+export class PartitionOracle {
+  private readonly candidates: Candidate[] = [];
+  private readonly memo = new Map<string, ExactPartition>();
+  private nodes = 0;
+  private readonly deadline: number;
+  private readonly maxNodes: number;
+  constructor(readonly dictionary: Dict, maximumRack: Int32Array, options: ExactTerminalOptions) {
+    this.deadline = performance.now() + Math.max(0, Math.min(25, finite(options.timeBudgetMs, 18)));
+    this.maxNodes = Math.max(0, Math.floor(finite(options.maxNodes, 8000)));
+    const seen = new Set<string>();
+    const available = spellableList(dictionary, maximumRack, dictionary.n);
+    for (let j = 0; j < available.length; j++) {
+      if ((j & 127) === 0) this.guard();
+      const index = available[j]!, offset = index * 26, sparse: number[] = [];
+      let face = 0;
+      for (let i = 0; i < 26; i++) if (dictionary.counts[offset + i]) {
+        const count = dictionary.counts[offset + i]!;
+        sparse.push(i, count); face += count * VALUE[i]!;
+      }
+      const signature = sparse.join(',');
+      // Anagrams have identical consumption and reward. They must not occupy
+      // several branch/beam slots and hide a different useful combination.
+      if (seen.has(signature)) continue;
+      seen.add(signature);
+      this.candidates.push({ index, sparse, face, score: dictionary.rew[index]! });
+    }
+    this.guard();
+  }
+  private guard(): void { if (this.nodes >= this.maxNodes || performance.now() >= this.deadline) throw EXPIRED; }
+  solve(rack: Int32Array, face = faceValue(rack)): ExactPartition {
+    this.guard();
+    const signature = key(rack), cached = this.memo.get(signature);
+    if (cached) return cached;
+    this.nodes++;
+    const rest = new Int32Array(rack), greedy: number[] = [];
+    let score = 0;
+    for (let j = 0; j < this.candidates.length; j++) {
+      if ((j & 127) === 0) this.guard();
+      const word = this.candidates[j]!;
+      while (fits(word, rest)) { change(word, rest, -1); greedy.push(word.index); score += word.score; }
+    }
+    let best: ExactPartition = { score, words: greedy, exact: true };
+    if (score < face * 3) {
+      // Branch on the most constrained remaining letter. Every optimal packing
+      // either leaves one such tile unused, or contains a word using it. This
+      // avoids exploring every ordering of unrelated words while retaining an
+      // exhaustive search, including repeated tiles and unused letters.
+      const frequencies = new Uint32Array(26), playable: Candidate[] = [];
+      for (let j = 0; j < this.candidates.length; j++) {
+        if ((j & 127) === 0) this.guard();
+        const word = this.candidates[j]!;
+        if (!fits(word, rack)) continue;
+        playable.push(word);
+        for (let k = 0; k < word.sparse.length; k += 2) frequencies[word.sparse[k]!]!++;
+      }
+      let pivot = -1;
+      for (let i = 0; i < 26; i++) if (rack[i]! > 0 && (pivot < 0 || frequencies[i]! < frequencies[pivot]!)) pivot = i;
+      if (pivot >= 0) {
+        const ignored = frequencies[pivot] === 0 ? rack[pivot]! : 1;
+        if (3 * (face - ignored * VALUE[pivot]!) > best.score) {
+          rack[pivot]! -= ignored;
+          let tail: ExactPartition;
+          try { tail = this.solve(rack, face - ignored * VALUE[pivot]!); }
+          finally { rack[pivot]! += ignored; }
+          if (tail.score > best.score) best = tail;
+        }
+        for (let j = 0; j < playable.length; j++) {
+          if ((j & 63) === 0) this.guard();
+          const word = playable[j]!;
+          if (!this.dictionary.counts[word.index * 26 + pivot] || word.score + 3 * (face - word.face) <= best.score) continue;
+          change(word, rack, -1);
+          let tail: ExactPartition;
+          try { tail = this.solve(rack, face - word.face); }
+          finally { change(word, rack, 1); }
+          if (word.score + tail.score > best.score) best = { score: word.score + tail.score, words: [word.index, ...tail.words], exact: true };
+          if (best.score === face * 3) break;
+        }
+      }
+    }
+    this.memo.set(signature, best);
+    return best;
+  }
+}
+
+/** Returns null on budget exhaustion; it never labels an approximate score exact. */
+export function exactTerminalPartition(dictionary: Dict, rack: Int32Array, options: ExactTerminalOptions = {}): ExactPartition | null {
+  try { return new PartitionOracle(dictionary, rack, options).solve(new Int32Array(rack)); }
+  catch (error) { if (error === EXPIRED) return null; throw error; }
+}
+
+export interface TerminalCashout {
+  readonly word: string | null;
+  readonly credit: number;
+  readonly loseScore: number;
+  readonly winScore: number;
+}
+/** Joint cashout/purchase frontier, restricted to sales preserving the lose-case
+ * optimal payout. One shared bounded oracle certifies every returned outcome.
+ */
+export function terminalCashoutFrontier(dictionary: Dict, rack: Int32Array, letter: number, options: ExactTerminalOptions = {}): TerminalCashout[] | null {
+  if (!Number.isInteger(letter) || letter < 0 || letter >= 26) return null;
+  try {
+    const augmented = new Int32Array(rack); augmented[letter]!++;
+    const oracle = new PartitionOracle(dictionary, augmented, options);
+    const before = oracle.solve(new Int32Array(rack)), after = oracle.solve(new Int32Array(augmented));
+    const choices: TerminalCashout[] = [{ word: null, credit: 0, loseScore: before.score, winScore: after.score }];
+    const seen = new Set<string>();
+    for (const index of spellableList(dictionary, rack, dictionary.n)) {
+      const rest = new Int32Array(rack);
+      for (let i = 0; i < 26; i++) rest[i]! -= dictionary.counts[index * 26 + i]!;
+      const signature = key(rest);
+      if (seen.has(signature)) continue;
+      seen.add(signature);
+      const credit = dictionary.rew[index]!, loseScore = credit + oracle.solve(rest).score;
+      if (loseScore !== before.score) continue;
+      rest[letter]!++;
+      choices.push({ word: dictionary.words[index]!, credit, loseScore, winScore: credit + oracle.solve(rest).score });
+    }
+    return choices;
+  } catch (error) { if (error === EXPIRED) return null; throw error; }
+}
+
+/** A sale is safe only if it preserves the certified optimal payout in both
+ * outcomes of the last usable auction. Return no sale if any proof expires.
+ */
+export function findSafeTerminalCashout(dictionary: Dict, rack: Int32Array, letter: number, options: ExactTerminalOptions = {}): string | null {
+  if (!Number.isInteger(letter) || letter < 0 || letter >= 26) return null;
+  try {
+    const augmented = new Int32Array(rack); augmented[letter]!++;
+    const oracle = new PartitionOracle(dictionary, augmented, options);
+    const before = oracle.solve(new Int32Array(rack)), after = oracle.solve(new Int32Array(augmented));
+    for (const index of spellableList(dictionary, rack, dictionary.n)) {
+      const rest = new Int32Array(rack);
+      for (let i = 0; i < 26; i++) rest[i]! -= dictionary.counts[index * 26 + i]!;
+      const credit = dictionary.rew[index]!;
+      if (credit + oracle.solve(rest).score !== before.score) continue;
+      rest[letter]!++;
+      if (credit + oracle.solve(rest).score === after.score) return dictionary.words[index]!;
+    }
+    return null;
+  } catch (error) { if (error === EXPIRED) return null; throw error; }
+}

@@ -1,91 +1,14 @@
-/**
- * Original bounded exact terminal extension around the attributed Gaucho adapter.
- * It does not modify the vendored policy, parameter files or dictionary layout.
- */
+/** Exact terminal extension around the attributed Gaucho adapter. */
 import { GauchoReference, type GauchoContext } from './adapter.js';
-import { bestPartition, spellableList, type Dict } from './core/dict.js';
-import { rackFromMap, VALUE } from './core/rules.js';
+import { bestPartition } from './core/dict.js';
+import { rackFromMap } from './core/rules.js';
+import { EXPIRED, PartitionOracle, exactTerminalPartition, type ExactTerminalOptions } from './terminal-search.js';
+export { exactTerminalPartition, terminalCashoutFrontier } from './terminal-search.js';
+export type { ExactTerminalOptions, ExactPartition, TerminalCashout } from './terminal-search.js';
 
-export interface ExactTerminalOptions { timeBudgetMs?: number; maxNodes?: number }
-export interface ExactPartition { readonly score: number; readonly words: readonly number[]; readonly exact: true }
 interface TerminalPlan { readonly score: number; readonly words: readonly number[]; readonly exact: boolean }
-interface Candidate { index: number; sparse: number[]; score: number; face: number }
-const EXPIRED = Symbol('exact terminal budget');
 const key = (rack: Int32Array): string => rack.join(',');
 const finite = (n: number | undefined, fallback: number): number => n !== undefined && Number.isFinite(n) ? n : fallback;
-function faceValue(rack: Int32Array): number { let n = 0; for (let i = 0; i < 26; i++) n += rack[i]! * VALUE[i]!; return n; }
-function fits(word: Candidate, rack: Int32Array): boolean {
-  for (let i = 0; i < word.sparse.length; i += 2) if (word.sparse[i + 1]! > rack[word.sparse[i]!]!) return false;
-  return true;
-}
-function change(word: Candidate, rack: Int32Array, sign: number): void {
-  for (let i = 0; i < word.sparse.length; i += 2) rack[word.sparse[i]!]! += sign * word.sparse[i + 1]!;
-}
-
-/** One bounded search universe covers every subset of its maximum rack. */
-class PartitionOracle {
-  private readonly candidates: Candidate[] = [];
-  private readonly memo = new Map<string, ExactPartition>();
-  private nodes = 0;
-  private readonly deadline: number;
-  private readonly maxNodes: number;
-  constructor(readonly dictionary: Dict, maximumRack: Int32Array, options: ExactTerminalOptions) {
-    this.deadline = performance.now() + Math.max(0, Math.min(25, finite(options.timeBudgetMs, 18)));
-    this.maxNodes = Math.max(0, Math.floor(finite(options.maxNodes, 8000)));
-    const seen = new Set<string>();
-    const available = spellableList(dictionary, maximumRack, dictionary.n);
-    for (let j = 0; j < available.length; j++) {
-      if ((j & 127) === 0) this.guard();
-      const index = available[j]!, offset = index * 26, sparse: number[] = [];
-      let face = 0;
-      for (let i = 0; i < 26; i++) if (dictionary.counts[offset + i]) {
-        const count = dictionary.counts[offset + i]!;
-        sparse.push(i, count); face += count * VALUE[i]!;
-      }
-      const signature = sparse.join(',');
-      // Anagrams have identical consumption and reward. They must not occupy
-      // several branch/beam slots and hide a different useful combination.
-      if (seen.has(signature)) continue;
-      seen.add(signature);
-      this.candidates.push({ index, sparse, face, score: dictionary.rew[index]! });
-    }
-    this.guard();
-  }
-  private guard(): void { if (this.nodes >= this.maxNodes || performance.now() >= this.deadline) throw EXPIRED; }
-  solve(rack: Int32Array, face = faceValue(rack)): ExactPartition {
-    this.guard();
-    const signature = key(rack), cached = this.memo.get(signature);
-    if (cached) return cached;
-    this.nodes++;
-    const rest = new Int32Array(rack), greedy: number[] = [];
-    let score = 0;
-    for (let j = 0; j < this.candidates.length; j++) {
-      if ((j & 127) === 0) this.guard();
-      const word = this.candidates[j]!;
-      while (fits(word, rest)) { change(word, rest, -1); greedy.push(word.index); score += word.score; }
-    }
-    let best: ExactPartition = { score, words: greedy, exact: true };
-    if (score < face * 3) for (let j = 0; j < this.candidates.length; j++) {
-      if ((j & 63) === 0) this.guard();
-      const word = this.candidates[j]!;
-      if (!fits(word, rack) || word.score + 3 * (face - word.face) <= best.score) continue;
-      change(word, rack, -1);
-      let tail: ExactPartition;
-      try { tail = this.solve(rack, face - word.face); }
-      finally { change(word, rack, 1); }
-      if (word.score + tail.score > best.score) best = { score: word.score + tail.score, words: [word.index, ...tail.words], exact: true };
-      if (best.score === face * 3) break;
-    }
-    this.memo.set(signature, best);
-    return best;
-  }
-}
-
-/** Returns null on budget exhaustion; it never labels an approximate score exact. */
-export function exactTerminalPartition(dictionary: Dict, rack: Int32Array, options: ExactTerminalOptions = {}): ExactPartition | null {
-  try { return new PartitionOracle(dictionary, rack, options).solve(new Int32Array(rack)); }
-  catch (error) { if (error === EXPIRED) return null; throw error; }
-}
 
 /**
  * Earlier behavior and validated terminal-safe cashouts come from `base`.

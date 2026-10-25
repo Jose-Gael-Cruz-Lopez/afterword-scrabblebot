@@ -1,0 +1,2516 @@
+{
+  "seedStart": 2067200157,
+  "method": "144 untouched matched Vickrey scenario pairs, each seat24times, three rival rosters equally. Controls/current exact+denial, candidate adds constrained-letter recursion and funded terminal frontier; control/rivals use frozen solver from330d6a7. Rivals include five legacy exact(no denial), five denial clones, or mixture with mutantparams. No actual private holdings/bids used in decision.",
+  "pairs": [
+    {
+      "seed": 2067200157,
+      "seat": 0,
+      "roster": 0,
+      "control": {
+        "score": 107,
+        "win": 1,
+        "rank": 1,
+        "maxMs": 2.3951660000000174
+      },
+      "candidate": {
+        "score": 107,
+        "win": 1,
+        "rank": 1,
+        "maxMs": 1.4984999999999218
+      }
+    },
+    {
+      "seed": 2067208076,
+      "seat": 1,
+      "roster": 0,
+      "control": {
+        "score": 83,
+        "win": 0,
+        "rank": 4,
+        "maxMs": 1.284458000000086
+      },
+      "candidate": {
+        "score": 83,
+        "win": 0,
+        "rank": 4,
+        "maxMs": 1.4003750000001673
+      }
+    },
+    {
+      "seed": 2067215995,
+      "seat": 2,
+      "roster": 0,
+      "control": {
+        "score": 87,
+        "win": 0,
+        "rank": 2,
+        "maxMs": 1.2711670000003323
+      },
+      "candidate": {
+        "score": 87,
+        "win": 0,
+        "rank": 2,
+        "maxMs": 1.3185419999999795
+      }
+    },
+    {
+      "seed": 2067223914,
+      "seat": 3,
+      "roster": 0,
+      "control": {
+        "score": 117,
+        "win": 1,
+        "rank": 1,
+        "maxMs": 3.1322079999999914
+      },
+      "candidate": {
+        "score": 117,
+        "win": 1,
+        "rank": 1,
+        "maxMs": 3.141417000000274
+      }
+    },
+    {
+      "seed": 2067231833,
+      "seat": 4,
+      "roster": 0,
+      "control": {
+        "score": 70,
+        "win": 0,
+        "rank": 6,
+        "maxMs": 1.7485830000000533
+      },
+      "candidate": {
+        "score": 70,
+        "win": 0,
+        "rank": 6,
+        "maxMs": 1.4813749999998436
+      }
+    },
+    {
+      "seed": 2067239752,
+      "seat": 5,
+      "roster": 0,
+      "control": {
+        "score": 75,
+        "win": 0,
+        "rank": 4,
+        "maxMs": 1.562792000000627
+      },
+      "candidate": {
+        "score": 75,
+        "win": 0,
+        "rank": 4,
+        "maxMs": 2.923999999999978
+      }
+    },
+    {
+      "seed": 2067247671,
+      "seat": 0,
+      "roster": 1,
+      "control": {
+        "score": 81,
+        "win": 0,
+        "rank": 4,
+        "maxMs": 1.1208329999999478
+      },
+      "candidate": {
+        "score": 81,
+        "win": 0,
+        "rank": 4,
+        "maxMs": 1.1297079999994821
+      }
+    },
+    {
+      "seed": 2067255590,
+      "seat": 1,
+      "roster": 1,
+      "control": {
+        "score": 102,
+        "win": 1,
+        "rank": 1,
+        "maxMs": 1.2276250000004438
+      },
+      "candidate": {
+        "score": 102,
+        "win": 1,
+        "rank": 1,
+        "maxMs": 1.9890830000003916
+      }
+    },
+    {
+      "seed": 2067263509,
+      "seat": 2,
+      "roster": 1,
+      "control": {
+        "score": 104,
+        "win": 1,
+        "rank": 1,
+        "maxMs": 2.6468340000001263
+      },
+      "candidate": {
+        "score": 104,
+        "win": 1,
+        "rank": 1,
+        "maxMs": 2.6823749999994106
+      }
+    },
+    {
+      "seed": 2067271428,
+      "seat": 3,
+      "roster": 1,
+      "control": {
+        "score": 81,
+        "win": 0,
+        "rank": 2,
+        "maxMs": 3.2246249999998327
+      },
+      "candidate": {
+        "score": 81,
+        "win": 0,
+        "rank": 2,
+        "maxMs": 3.270375000000058
+      }
+    },
+    {
+      "seed": 2067279347,
+      "seat": 4,
+      "roster": 1,
+      "control": {
+        "score": 83,
+        "win": 0,
+        "rank": 4,
+        "maxMs": 1.2253749999999854
+      },
+      "candidate": {
+        "score": 83,
+        "win": 0,
+        "rank": 4,
+        "maxMs": 1.2298750000009022
+      }
+    },
+    {
+      "seed": 2067287266,
+      "seat": 5,
+      "roster": 1,
+      "control": {
+        "score": 64,
+        "win": 0,
+        "rank": 6,
+        "maxMs": 4.622708999999304
+      },
+      "candidate": {
+        "score": 64,
+        "win": 0,
+        "rank": 6,
+        "maxMs": 4.551458999998431
+      }
+    },
+    {
+      "seed": 2067295185,
+      "seat": 0,
+      "roster": 2,
+      "control": {
+        "score": 55,
+        "win": 0,
+        "rank": 6,
+        "maxMs": 3.79320799999914
+      },
+      "candidate": {
+        "score": 55,
+        "win": 0,
+        "rank": 6,
+        "maxMs": 3.791832999999315
+      }
+    },
+    {
+      "seed": 2067303104,
+      "seat": 1,
+      "roster": 2,
+      "control": {
+        "score": 97,
+        "win": 1,
+        "rank": 1,
+        "maxMs": 1.5997499999994034
+      },
+      "candidate": {
+        "score": 97,
+        "win": 1,
+        "rank": 1,
+        "maxMs": 1.5783339999998134
+      }
+    },
+    {
+      "seed": 2067311023,
+      "seat": 2,
+      "roster": 2,
+      "control": {
+        "score": 60,
+        "win": 0,
+        "rank": 6,
+        "maxMs": 3.5100000000002183
+      },
+      "candidate": {
+        "score": 60,
+        "win": 0,
+        "rank": 6,
+        "maxMs": 3.3006660000010015
+      }
+    },
+    {
+      "seed": 2067318942,
+      "seat": 3,
+      "roster": 2,
+      "control": {
+        "score": 93,
+        "win": 1,
+        "rank": 1,
+        "maxMs": 1.8079579999994166
+      },
+      "candidate": {
+        "score": 93,
+        "win": 1,
+        "rank": 1,
+        "maxMs": 1.8587919999990845
+      }
+    },
+    {
+      "seed": 2067326861,
+      "seat": 4,
+      "roster": 2,
+      "control": {
+        "score": 87,
+        "win": 0,
+        "rank": 2,
+        "maxMs": 1.6232080000008864
+      },
+      "candidate": {
+        "score": 87,
+        "win": 0,
+        "rank": 2,
+        "maxMs": 1.6278329999986454
+      }
+    },
+    {
+      "seed": 2067334780,
+      "seat": 5,
+      "roster": 2,
+      "control": {
+        "score": 84,
+        "win": 0,
+        "rank": 2,
+        "maxMs": 2.699957999999242
+      },
+      "candidate": {
+        "score": 84,
+        "win": 0,
+        "rank": 2,
+        "maxMs": 2.685250000000451
+      }
+    },
+    {
+      "seed": 2067342699,
+      "seat": 0,
+      "roster": 0,
+      "control": {
+        "score": 103,
+        "win": 1,
+        "rank": 1,
+        "maxMs": 1.3954160000012052
+      },
+      "candidate": {
+        "score": 103,
+        "win": 1,
+        "rank": 1,
+        "maxMs": 1.3811249999998836
+      }
+    },
+    {
+      "seed": 2067350618,
+      "seat": 1,
+      "roster": 0,
+      "control": {
+        "score": 75,
+        "win": 0,
+        "rank": 5,
+        "maxMs": 3.8358750000006694
+      },
+      "candidate": {
+        "score": 75,
+        "win": 0,
+        "rank": 5,
+        "maxMs": 3.823374999999942
+      }
+    },
+    {
+      "seed": 2067358537,
+      "seat": 2,
+      "roster": 0,
+      "control": {
+        "score": 86,
+        "win": 0,
+        "rank": 2,
+        "maxMs": 2.075791000001118
+      },
+      "candidate": {
+        "score": 86,
+        "win": 0,
+        "rank": 2,
+        "maxMs": 2.14574999999968
+      }
+    },
+    {
+      "seed": 2067366456,
+      "seat": 3,
+      "roster": 0,
+      "control": {
+        "score": 72,
+        "win": 0,
+        "rank": 4,
+        "maxMs": 1.1002079999998386
+      },
+      "candidate": {
+        "score": 72,
+        "win": 0,
+        "rank": 4,
+        "maxMs": 1.0672090000007302
+      }
+    },
+    {
+      "seed": 2067374375,
+      "seat": 4,
+      "roster": 0,
+      "control": {
+        "score": 75,
+        "win": 0,
+        "rank": 4,
+        "maxMs": 1.6254580000022543
+      },
+      "candidate": {
+        "score": 75,
+        "win": 0,
+        "rank": 4,
+        "maxMs": 1.609415999999328
+      }
+    },
+    {
+      "seed": 2067382294,
+      "seat": 5,
+      "roster": 0,
+      "control": {
+        "score": 80,
+        "win": 0,
+        "rank": 3,
+        "maxMs": 1.381082999996579
+      },
+      "candidate": {
+        "score": 80,
+        "win": 0,
+        "rank": 3,
+        "maxMs": 1.3883330000026035
+      }
+    },
+    {
+      "seed": 2067390213,
+      "seat": 0,
+      "roster": 1,
+      "control": {
+        "score": 87,
+        "win": 0,
+        "rank": 2,
+        "maxMs": 3.753500000002532
+      },
+      "candidate": {
+        "score": 87,
+        "win": 0,
+        "rank": 2,
+        "maxMs": 3.9871669999993173
+      }
+    },
+    {
+      "seed": 2067398132,
+      "seat": 1,
+      "roster": 1,
+      "control": {
+        "score": 99,
+        "win": 1,
+        "rank": 1,
+        "maxMs": 1.4668340000025637
+      },
+      "candidate": {
+        "score": 99,
+        "win": 1,
+        "rank": 1,
+        "maxMs": 1.4373329999980342
+      }
+    },
+    {
+      "seed": 2067406051,
+      "seat": 2,
+      "roster": 1,
+      "control": {
+        "score": 60,
+        "win": 0,
+        "rank": 4,
+        "maxMs": 3.5458330000001297
+      },
+      "candidate": {
+        "score": 61,
+        "win": 0,
+        "rank": 4,
+        "maxMs": 3.5459999999984575
+      }
+    },
+    {
+      "seed": 2067413970,
+      "seat": 3,
+      "roster": 1,
+      "control": {
+        "score": 68,
+        "win": 0,
+        "rank": 4,
+        "maxMs": 2.2452090000006137
+      },
+      "candidate": {
+        "score": 68,
+        "win": 0,
+        "rank": 4,
+        "maxMs": 2.294332999998005
+      }
+    },
+    {
+      "seed": 2067421889,
+      "seat": 4,
+      "roster": 1,
+      "control": {
+        "score": 73,
+        "win": 0,
+        "rank": 4,
+        "maxMs": 4.613334000001487
+      },
+      "candidate": {
+        "score": 75,
+        "win": 0,
+        "rank": 3,
+        "maxMs": 4.440749999997934
+      }
+    },
+    {
+      "seed": 2067429808,
+      "seat": 5,
+      "roster": 1,
+      "control": {
+        "score": 84,
+        "win": 0,
+        "rank": 5,
+        "maxMs": 1.0806660000016564
+      },
+      "candidate": {
+        "score": 84,
+        "win": 0,
+        "rank": 5,
+        "maxMs": 1.5246669999978621
+      }
+    },
+    {
+      "seed": 2067437727,
+      "seat": 0,
+      "roster": 2,
+      "control": {
+        "score": 78,
+        "win": 0,
+        "rank": 3,
+        "maxMs": 1.122166000001016
+      },
+      "candidate": {
+        "score": 78,
+        "win": 0,
+        "rank": 3,
+        "maxMs": 1.0895000000018626
+      }
+    },
+    {
+      "seed": 2067445646,
+      "seat": 1,
+      "roster": 2,
+      "control": {
+        "score": 69,
+        "win": 0,
+        "rank": 4,
+        "maxMs": 1.7202499999984866
+      },
+      "candidate": {
+        "score": 69,
+        "win": 0,
+        "rank": 4,
+        "maxMs": 1.7249579999988782
+      }
+    },
+    {
+      "seed": 2067453565,
+      "seat": 2,
+      "roster": 2,
+      "control": {
+        "score": 84,
+        "win": 0,
+        "rank": 2,
+        "maxMs": 4.742374999997992
+      },
+      "candidate": {
+        "score": 84,
+        "win": 0,
+        "rank": 2,
+        "maxMs": 4.781875000000582
+      }
+    },
+    {
+      "seed": 2067461484,
+      "seat": 3,
+      "roster": 2,
+      "control": {
+        "score": 89,
+        "win": 1,
+        "rank": 1,
+        "maxMs": 1.3572500000009313
+      },
+      "candidate": {
+        "score": 89,
+        "win": 1,
+        "rank": 1,
+        "maxMs": 1.3132079999995767
+      }
+    },
+    {
+      "seed": 2067469403,
+      "seat": 4,
+      "roster": 2,
+      "control": {
+        "score": 72,
+        "win": 0,
+        "rank": 4,
+        "maxMs": 1.1670000000012806
+      },
+      "candidate": {
+        "score": 72,
+        "win": 0,
+        "rank": 4,
+        "maxMs": 1.1781670000018494
+      }
+    },
+    {
+      "seed": 2067477322,
+      "seat": 5,
+      "roster": 2,
+      "control": {
+        "score": 54,
+        "win": 0,
+        "rank": 6,
+        "maxMs": 2.5819589999991877
+      },
+      "candidate": {
+        "score": 54,
+        "win": 0,
+        "rank": 6,
+        "maxMs": 2.5485829999997804
+      }
+    },
+    {
+      "seed": 2067485241,
+      "seat": 0,
+      "roster": 0,
+      "control": {
+        "score": 54,
+        "win": 0,
+        "rank": 6,
+        "maxMs": 1.2841670000016165
+      },
+      "candidate": {
+        "score": 54,
+        "win": 0,
+        "rank": 6,
+        "maxMs": 1.2737919999999576
+      }
+    },
+    {
+      "seed": 2067493160,
+      "seat": 1,
+      "roster": 0,
+      "control": {
+        "score": 81,
+        "win": 0,
+        "rank": 4,
+        "maxMs": 4.2707919999993464
+      },
+      "candidate": {
+        "score": 81,
+        "win": 0,
+        "rank": 4,
+        "maxMs": 4.386000000002241
+      }
+    },
+    {
+      "seed": 2067501079,
+      "seat": 2,
+      "roster": 0,
+      "control": {
+        "score": 77,
+        "win": 0,
+        "rank": 4,
+        "maxMs": 1.2845830000005662
+      },
+      "candidate": {
+        "score": 77,
+        "win": 0,
+        "rank": 4,
+        "maxMs": 1.267083000002458
+      }
+    },
+    {
+      "seed": 2067508998,
+      "seat": 3,
+      "roster": 0,
+      "control": {
+        "score": 51,
+        "win": 0,
+        "rank": 6,
+        "maxMs": 1.859416000002966
+      },
+      "candidate": {
+        "score": 51,
+        "win": 0,
+        "rank": 6,
+        "maxMs": 1.8950829999994312
+      }
+    },
+    {
+      "seed": 2067516917,
+      "seat": 4,
+      "roster": 0,
+      "control": {
+        "score": 99,
+        "win": 1,
+        "rank": 1,
+        "maxMs": 3.282583000000159
+      },
+      "candidate": {
+        "score": 99,
+        "win": 1,
+        "rank": 1,
+        "maxMs": 3.3138749999998254
+      }
+    },
+    {
+      "seed": 2067524836,
+      "seat": 5,
+      "roster": 0,
+      "control": {
+        "score": 76,
+        "win": 0,
+        "rank": 3,
+        "maxMs": 2.160791000002064
+      },
+      "candidate": {
+        "score": 76,
+        "win": 0,
+        "rank": 3,
+        "maxMs": 2.19616600000154
+      }
+    },
+    {
+      "seed": 2067532755,
+      "seat": 0,
+      "roster": 1,
+      "control": {
+        "score": 87,
+        "win": 0.5,
+        "rank": 1,
+        "maxMs": 1.7672919999968144
+      },
+      "candidate": {
+        "score": 87,
+        "win": 0.5,
+        "rank": 1,
+        "maxMs": 1.2063750000015716
+      }
+    },
+    {
+      "seed": 2067540674,
+      "seat": 1,
+      "roster": 1,
+      "control": {
+        "score": 70,
+        "win": 0,
+        "rank": 6,
+        "maxMs": 1.1452920000010636
+      },
+      "candidate": {
+        "score": 70,
+        "win": 0,
+        "rank": 6,
+        "maxMs": 1.140958000003593
+      }
+    },
+    {
+      "seed": 2067548593,
+      "seat": 2,
+      "roster": 1,
+      "control": {
+        "score": 79,
+        "win": 0,
+        "rank": 5,
+        "maxMs": 4.385207999999693
+      },
+      "candidate": {
+        "score": 79,
+        "win": 0,
+        "rank": 5,
+        "maxMs": 4.378665999996883
+      }
+    },
+    {
+      "seed": 2067556512,
+      "seat": 3,
+      "roster": 1,
+      "control": {
+        "score": 72,
+        "win": 0,
+        "rank": 4,
+        "maxMs": 1.5152080000043497
+      },
+      "candidate": {
+        "score": 72,
+        "win": 0,
+        "rank": 4,
+        "maxMs": 1.5204579999990528
+      }
+    },
+    {
+      "seed": 2067564431,
+      "seat": 4,
+      "roster": 1,
+      "control": {
+        "score": 64,
+        "win": 0,
+        "rank": 6,
+        "maxMs": 2.488540999998804
+      },
+      "candidate": {
+        "score": 64,
+        "win": 0,
+        "rank": 6,
+        "maxMs": 2.3906669999996666
+      }
+    },
+    {
+      "seed": 2067572350,
+      "seat": 5,
+      "roster": 1,
+      "control": {
+        "score": 84,
+        "win": 0,
+        "rank": 4,
+        "maxMs": 1.0972919999985606
+      },
+      "candidate": {
+        "score": 84,
+        "win": 0,
+        "rank": 4,
+        "maxMs": 1.1188330000004498
+      }
+    },
+    {
+      "seed": 2067580269,
+      "seat": 0,
+      "roster": 2,
+      "control": {
+        "score": 75,
+        "win": 0,
+        "rank": 3,
+        "maxMs": 1.101250000006985
+      },
+      "candidate": {
+        "score": 75,
+        "win": 0,
+        "rank": 3,
+        "maxMs": 1.0955839999951422
+      }
+    },
+    {
+      "seed": 2067588188,
+      "seat": 1,
+      "roster": 2,
+      "control": {
+        "score": 100,
+        "win": 1,
+        "rank": 1,
+        "maxMs": 1.074083999999857
+      },
+      "candidate": {
+        "score": 100,
+        "win": 1,
+        "rank": 1,
+        "maxMs": 1.0233750000043074
+      }
+    },
+    {
+      "seed": 2067596107,
+      "seat": 2,
+      "roster": 2,
+      "control": {
+        "score": 78,
+        "win": 0,
+        "rank": 3,
+        "maxMs": 1.3412089999983436
+      },
+      "candidate": {
+        "score": 78,
+        "win": 0,
+        "rank": 3,
+        "maxMs": 1.580958999998984
+      }
+    },
+    {
+      "seed": 2067604026,
+      "seat": 3,
+      "roster": 2,
+      "control": {
+        "score": 101,
+        "win": 0,
+        "rank": 2,
+        "maxMs": 2.815875000000233
+      },
+      "candidate": {
+        "score": 101,
+        "win": 0,
+        "rank": 2,
+        "maxMs": 2.584583999996539
+      }
+    },
+    {
+      "seed": 2067611945,
+      "seat": 4,
+      "roster": 2,
+      "control": {
+        "score": 69,
+        "win": 0,
+        "rank": 4,
+        "maxMs": 1.4244160000016564
+      },
+      "candidate": {
+        "score": 69,
+        "win": 0,
+        "rank": 4,
+        "maxMs": 1.4565409999995609
+      }
+    },
+    {
+      "seed": 2067619864,
+      "seat": 5,
+      "roster": 2,
+      "control": {
+        "score": 76,
+        "win": 0,
+        "rank": 2,
+        "maxMs": 1.041417000000365
+      },
+      "candidate": {
+        "score": 76,
+        "win": 0,
+        "rank": 2,
+        "maxMs": 1.0782919999983278
+      }
+    },
+    {
+      "seed": 2067627783,
+      "seat": 0,
+      "roster": 0,
+      "control": {
+        "score": 84,
+        "win": 0,
+        "rank": 3,
+        "maxMs": 4.071416999999201
+      },
+      "candidate": {
+        "score": 84,
+        "win": 0,
+        "rank": 3,
+        "maxMs": 4.1944169999987935
+      }
+    },
+    {
+      "seed": 2067635702,
+      "seat": 1,
+      "roster": 0,
+      "control": {
+        "score": 55,
+        "win": 0,
+        "rank": 6,
+        "maxMs": 2.7230839999974705
+      },
+      "candidate": {
+        "score": 55,
+        "win": 0,
+        "rank": 6,
+        "maxMs": 2.8983749999970314
+      }
+    },
+    {
+      "seed": 2067643621,
+      "seat": 2,
+      "roster": 0,
+      "control": {
+        "score": 96,
+        "win": 1,
+        "rank": 1,
+        "maxMs": 4.333250000003318
+      },
+      "candidate": {
+        "score": 96,
+        "win": 1,
+        "rank": 1,
+        "maxMs": 4.199708000000101
+      }
+    },
+    {
+      "seed": 2067651540,
+      "seat": 3,
+      "roster": 0,
+      "control": {
+        "score": 81,
+        "win": 0,
+        "rank": 3,
+        "maxMs": 4.312583999999333
+      },
+      "candidate": {
+        "score": 81,
+        "win": 0,
+        "rank": 3,
+        "maxMs": 4.310333999994327
+      }
+    },
+    {
+      "seed": 2067659459,
+      "seat": 4,
+      "roster": 0,
+      "control": {
+        "score": 83,
+        "win": 0,
+        "rank": 4,
+        "maxMs": 3.155917000003683
+      },
+      "candidate": {
+        "score": 83,
+        "win": 0,
+        "rank": 4,
+        "maxMs": 3.1096249999973224
+      }
+    },
+    {
+      "seed": 2067667378,
+      "seat": 5,
+      "roster": 0,
+      "control": {
+        "score": 84,
+        "win": 0,
+        "rank": 2,
+        "maxMs": 1.2038749999992433
+      },
+      "candidate": {
+        "score": 84,
+        "win": 0,
+        "rank": 2,
+        "maxMs": 1.490709000005154
+      }
+    },
+    {
+      "seed": 2067675297,
+      "seat": 0,
+      "roster": 1,
+      "control": {
+        "score": 95,
+        "win": 0,
+        "rank": 2,
+        "maxMs": 2.394458000002487
+      },
+      "candidate": {
+        "score": 95,
+        "win": 0,
+        "rank": 2,
+        "maxMs": 2.4043750000055297
+      }
+    },
+    {
+      "seed": 2067683216,
+      "seat": 1,
+      "roster": 1,
+      "control": {
+        "score": 65,
+        "win": 0,
+        "rank": 5,
+        "maxMs": 3.4600829999981215
+      },
+      "candidate": {
+        "score": 65,
+        "win": 0,
+        "rank": 5,
+        "maxMs": 3.0742499999978463
+      }
+    },
+    {
+      "seed": 2067691135,
+      "seat": 2,
+      "roster": 1,
+      "control": {
+        "score": 66,
+        "win": 0,
+        "rank": 4,
+        "maxMs": 4.2612499999959255
+      },
+      "candidate": {
+        "score": 66,
+        "win": 0,
+        "rank": 4,
+        "maxMs": 4.297833999997238
+      }
+    },
+    {
+      "seed": 2067699054,
+      "seat": 3,
+      "roster": 1,
+      "control": {
+        "score": 115,
+        "win": 1,
+        "rank": 1,
+        "maxMs": 1.6789580000040587
+      },
+      "candidate": {
+        "score": 115,
+        "win": 1,
+        "rank": 1,
+        "maxMs": 1.7024170000004233
+      }
+    },
+    {
+      "seed": 2067706973,
+      "seat": 4,
+      "roster": 1,
+      "control": {
+        "score": 66,
+        "win": 0,
+        "rank": 5,
+        "maxMs": 1.3027080000028946
+      },
+      "candidate": {
+        "score": 66,
+        "win": 0,
+        "rank": 5,
+        "maxMs": 1.2732499999983702
+      }
+    },
+    {
+      "seed": 2067714892,
+      "seat": 5,
+      "roster": 1,
+      "control": {
+        "score": 118,
+        "win": 1,
+        "rank": 1,
+        "maxMs": 1.0722920000043814
+      },
+      "candidate": {
+        "score": 118,
+        "win": 1,
+        "rank": 1,
+        "maxMs": 1.06025000000227
+      }
+    },
+    {
+      "seed": 2067722811,
+      "seat": 0,
+      "roster": 2,
+      "control": {
+        "score": 71,
+        "win": 0,
+        "rank": 4,
+        "maxMs": 1.3545000000012806
+      },
+      "candidate": {
+        "score": 71,
+        "win": 0,
+        "rank": 4,
+        "maxMs": 1.3702090000006137
+      }
+    },
+    {
+      "seed": 2067730730,
+      "seat": 1,
+      "roster": 2,
+      "control": {
+        "score": 58,
+        "win": 0,
+        "rank": 5,
+        "maxMs": 2.9675420000057784
+      },
+      "candidate": {
+        "score": 58,
+        "win": 0,
+        "rank": 5,
+        "maxMs": 2.912292000000889
+      }
+    },
+    {
+      "seed": 2067738649,
+      "seat": 2,
+      "roster": 2,
+      "control": {
+        "score": 64,
+        "win": 0,
+        "rank": 5,
+        "maxMs": 2.145041999996465
+      },
+      "candidate": {
+        "score": 64,
+        "win": 0,
+        "rank": 5,
+        "maxMs": 2.136583999999857
+      }
+    },
+    {
+      "seed": 2067746568,
+      "seat": 3,
+      "roster": 2,
+      "control": {
+        "score": 80,
+        "win": 0,
+        "rank": 2,
+        "maxMs": 1.2690829999992275
+      },
+      "candidate": {
+        "score": 80,
+        "win": 0,
+        "rank": 2,
+        "maxMs": 1.327208000002429
+      }
+    },
+    {
+      "seed": 2067754487,
+      "seat": 4,
+      "roster": 2,
+      "control": {
+        "score": 57,
+        "win": 0,
+        "rank": 6,
+        "maxMs": 2.844666999997571
+      },
+      "candidate": {
+        "score": 57,
+        "win": 0,
+        "rank": 6,
+        "maxMs": 2.950124999995751
+      }
+    },
+    {
+      "seed": 2067762406,
+      "seat": 5,
+      "roster": 2,
+      "control": {
+        "score": 48,
+        "win": 0,
+        "rank": 6,
+        "maxMs": 2.895416999999725
+      },
+      "candidate": {
+        "score": 48,
+        "win": 0,
+        "rank": 6,
+        "maxMs": 2.810125000003609
+      }
+    },
+    {
+      "seed": 2067770325,
+      "seat": 0,
+      "roster": 0,
+      "control": {
+        "score": 78,
+        "win": 0,
+        "rank": 4,
+        "maxMs": 3.495042000002286
+      },
+      "candidate": {
+        "score": 78,
+        "win": 0,
+        "rank": 4,
+        "maxMs": 3.319499999997788
+      }
+    },
+    {
+      "seed": 2067778244,
+      "seat": 1,
+      "roster": 0,
+      "control": {
+        "score": 58,
+        "win": 0,
+        "rank": 6,
+        "maxMs": 1.391834000001836
+      },
+      "candidate": {
+        "score": 58,
+        "win": 0,
+        "rank": 6,
+        "maxMs": 1.4120419999962905
+      }
+    },
+    {
+      "seed": 2067786163,
+      "seat": 2,
+      "roster": 0,
+      "control": {
+        "score": 74,
+        "win": 0,
+        "rank": 5,
+        "maxMs": 2.014499999997497
+      },
+      "candidate": {
+        "score": 74,
+        "win": 0,
+        "rank": 5,
+        "maxMs": 2.003292000001238
+      }
+    },
+    {
+      "seed": 2067794082,
+      "seat": 3,
+      "roster": 0,
+      "control": {
+        "score": 77,
+        "win": 0,
+        "rank": 2,
+        "maxMs": 1.4831249999988358
+      },
+      "candidate": {
+        "score": 77,
+        "win": 0,
+        "rank": 2,
+        "maxMs": 1.3074589999960153
+      }
+    },
+    {
+      "seed": 2067802001,
+      "seat": 4,
+      "roster": 0,
+      "control": {
+        "score": 81,
+        "win": 0,
+        "rank": 3,
+        "maxMs": 1.1781250000058208
+      },
+      "candidate": {
+        "score": 81,
+        "win": 0,
+        "rank": 3,
+        "maxMs": 1.5488750000004075
+      }
+    },
+    {
+      "seed": 2067809920,
+      "seat": 5,
+      "roster": 0,
+      "control": {
+        "score": 105,
+        "win": 0,
+        "rank": 2,
+        "maxMs": 3.160042000003159
+      },
+      "candidate": {
+        "score": 105,
+        "win": 0,
+        "rank": 2,
+        "maxMs": 3.099792000000889
+      }
+    },
+    {
+      "seed": 2067817839,
+      "seat": 0,
+      "roster": 1,
+      "control": {
+        "score": 80,
+        "win": 0,
+        "rank": 3,
+        "maxMs": 1.8442500000019209
+      },
+      "candidate": {
+        "score": 80,
+        "win": 0,
+        "rank": 3,
+        "maxMs": 1.8669169999993755
+      }
+    },
+    {
+      "seed": 2067825758,
+      "seat": 1,
+      "roster": 1,
+      "control": {
+        "score": 106,
+        "win": 1,
+        "rank": 1,
+        "maxMs": 1.3791249999994761
+      },
+      "candidate": {
+        "score": 106,
+        "win": 1,
+        "rank": 1,
+        "maxMs": 1.3843330000017886
+      }
+    },
+    {
+      "seed": 2067833677,
+      "seat": 2,
+      "roster": 1,
+      "control": {
+        "score": 72,
+        "win": 0,
+        "rank": 4,
+        "maxMs": 1.497916999993322
+      },
+      "candidate": {
+        "score": 72,
+        "win": 0,
+        "rank": 4,
+        "maxMs": 1.4413749999948777
+      }
+    },
+    {
+      "seed": 2067841596,
+      "seat": 3,
+      "roster": 1,
+      "control": {
+        "score": 77,
+        "win": 0,
+        "rank": 4,
+        "maxMs": 1.5203750000000582
+      },
+      "candidate": {
+        "score": 77,
+        "win": 0,
+        "rank": 4,
+        "maxMs": 1.5126250000030268
+      }
+    },
+    {
+      "seed": 2067849515,
+      "seat": 4,
+      "roster": 1,
+      "control": {
+        "score": 69,
+        "win": 0,
+        "rank": 3,
+        "maxMs": 3.9831669999985024
+      },
+      "candidate": {
+        "score": 69,
+        "win": 0,
+        "rank": 3,
+        "maxMs": 4.002124999999069
+      }
+    },
+    {
+      "seed": 2067857434,
+      "seat": 5,
+      "roster": 1,
+      "control": {
+        "score": 77,
+        "win": 0,
+        "rank": 4,
+        "maxMs": 1.3372909999889089
+      },
+      "candidate": {
+        "score": 77,
+        "win": 0,
+        "rank": 4,
+        "maxMs": 1.3537500000093132
+      }
+    },
+    {
+      "seed": 2067865353,
+      "seat": 0,
+      "roster": 2,
+      "control": {
+        "score": 64,
+        "win": 0,
+        "rank": 5,
+        "maxMs": 4.634124999996857
+      },
+      "candidate": {
+        "score": 60,
+        "win": 0,
+        "rank": 5,
+        "maxMs": 4.689375000001746
+      }
+    },
+    {
+      "seed": 2067873272,
+      "seat": 1,
+      "roster": 2,
+      "control": {
+        "score": 57,
+        "win": 0,
+        "rank": 6,
+        "maxMs": 3.888374999994994
+      },
+      "candidate": {
+        "score": 57,
+        "win": 0,
+        "rank": 6,
+        "maxMs": 3.7536249999975553
+      }
+    },
+    {
+      "seed": 2067881191,
+      "seat": 2,
+      "roster": 2,
+      "control": {
+        "score": 87,
+        "win": 0,
+        "rank": 2,
+        "maxMs": 3.5760000000009313
+      },
+      "candidate": {
+        "score": 87,
+        "win": 0,
+        "rank": 2,
+        "maxMs": 3.4407499999942956
+      }
+    },
+    {
+      "seed": 2067889110,
+      "seat": 3,
+      "roster": 2,
+      "control": {
+        "score": 59,
+        "win": 0,
+        "rank": 6,
+        "maxMs": 1.5709160000114935
+      },
+      "candidate": {
+        "score": 59,
+        "win": 0,
+        "rank": 6,
+        "maxMs": 1.5670829999871785
+      }
+    },
+    {
+      "seed": 2067897029,
+      "seat": 4,
+      "roster": 2,
+      "control": {
+        "score": 90,
+        "win": 0,
+        "rank": 3,
+        "maxMs": 1.2522080000053393
+      },
+      "candidate": {
+        "score": 90,
+        "win": 0,
+        "rank": 3,
+        "maxMs": 1.2159589999937452
+      }
+    },
+    {
+      "seed": 2067904948,
+      "seat": 5,
+      "roster": 2,
+      "control": {
+        "score": 74,
+        "win": 0,
+        "rank": 4,
+        "maxMs": 4.722375000012107
+      },
+      "candidate": {
+        "score": 74,
+        "win": 0,
+        "rank": 4,
+        "maxMs": 4.3903750000026776
+      }
+    },
+    {
+      "seed": 2067912867,
+      "seat": 0,
+      "roster": 0,
+      "control": {
+        "score": 84,
+        "win": 0,
+        "rank": 2,
+        "maxMs": 2.1189160000067204
+      },
+      "candidate": {
+        "score": 84,
+        "win": 0,
+        "rank": 2,
+        "maxMs": 2.0451670000038575
+      }
+    },
+    {
+      "seed": 2067920786,
+      "seat": 1,
+      "roster": 0,
+      "control": {
+        "score": 44,
+        "win": 0,
+        "rank": 6,
+        "maxMs": 2.7880000000004657
+      },
+      "candidate": {
+        "score": 44,
+        "win": 0,
+        "rank": 6,
+        "maxMs": 2.8243749999965075
+      }
+    },
+    {
+      "seed": 2067928705,
+      "seat": 2,
+      "roster": 0,
+      "control": {
+        "score": 72,
+        "win": 0,
+        "rank": 5,
+        "maxMs": 5.375040999992052
+      },
+      "candidate": {
+        "score": 76,
+        "win": 0,
+        "rank": 5,
+        "maxMs": 5.429208999994444
+      }
+    },
+    {
+      "seed": 2067936624,
+      "seat": 3,
+      "roster": 0,
+      "control": {
+        "score": 78,
+        "win": 0,
+        "rank": 3,
+        "maxMs": 4.14908300001116
+      },
+      "candidate": {
+        "score": 78,
+        "win": 0,
+        "rank": 3,
+        "maxMs": 3.244749999998021
+      }
+    },
+    {
+      "seed": 2067944543,
+      "seat": 4,
+      "roster": 0,
+      "control": {
+        "score": 105,
+        "win": 1,
+        "rank": 1,
+        "maxMs": 1.3853340000059688
+      },
+      "candidate": {
+        "score": 105,
+        "win": 1,
+        "rank": 1,
+        "maxMs": 1.0979170000064187
+      }
+    },
+    {
+      "seed": 2067952462,
+      "seat": 5,
+      "roster": 0,
+      "control": {
+        "score": 81,
+        "win": 0,
+        "rank": 3,
+        "maxMs": 1.1124580000032438
+      },
+      "candidate": {
+        "score": 81,
+        "win": 0,
+        "rank": 3,
+        "maxMs": 1.2190409999893745
+      }
+    },
+    {
+      "seed": 2067960381,
+      "seat": 0,
+      "roster": 1,
+      "control": {
+        "score": 92,
+        "win": 0,
+        "rank": 2,
+        "maxMs": 1.883916999999201
+      },
+      "candidate": {
+        "score": 92,
+        "win": 0,
+        "rank": 2,
+        "maxMs": 1.301459000009345
+      }
+    },
+    {
+      "seed": 2067968300,
+      "seat": 1,
+      "roster": 1,
+      "control": {
+        "score": 78,
+        "win": 0,
+        "rank": 3,
+        "maxMs": 1.1502500000060536
+      },
+      "candidate": {
+        "score": 78,
+        "win": 0,
+        "rank": 3,
+        "maxMs": 1.3763330000074347
+      }
+    },
+    {
+      "seed": 2067976219,
+      "seat": 2,
+      "roster": 1,
+      "control": {
+        "score": 82,
+        "win": 0,
+        "rank": 3,
+        "maxMs": 3.2746250000054715
+      },
+      "candidate": {
+        "score": 82,
+        "win": 0,
+        "rank": 3,
+        "maxMs": 3.2425419999926817
+      }
+    },
+    {
+      "seed": 2067984138,
+      "seat": 3,
+      "roster": 1,
+      "control": {
+        "score": 81,
+        "win": 0,
+        "rank": 4,
+        "maxMs": 1.6486670000012964
+      },
+      "candidate": {
+        "score": 81,
+        "win": 0,
+        "rank": 4,
+        "maxMs": 1.703624999994645
+      }
+    },
+    {
+      "seed": 2067992057,
+      "seat": 4,
+      "roster": 1,
+      "control": {
+        "score": 87,
+        "win": 0,
+        "rank": 2,
+        "maxMs": 3.1298749999987194
+      },
+      "candidate": {
+        "score": 87,
+        "win": 0,
+        "rank": 2,
+        "maxMs": 2.9349999999976717
+      }
+    },
+    {
+      "seed": 2067999976,
+      "seat": 5,
+      "roster": 1,
+      "control": {
+        "score": 72,
+        "win": 0,
+        "rank": 4,
+        "maxMs": 5.370499999989988
+      },
+      "candidate": {
+        "score": 72,
+        "win": 0,
+        "rank": 4,
+        "maxMs": 5.340250000008382
+      }
+    },
+    {
+      "seed": 2068007895,
+      "seat": 0,
+      "roster": 2,
+      "control": {
+        "score": 90,
+        "win": 0,
+        "rank": 2,
+        "maxMs": 1.160375000006752
+      },
+      "candidate": {
+        "score": 90,
+        "win": 0,
+        "rank": 2,
+        "maxMs": 1.1613750000105938
+      }
+    },
+    {
+      "seed": 2068015814,
+      "seat": 1,
+      "roster": 2,
+      "control": {
+        "score": 91,
+        "win": 0,
+        "rank": 2,
+        "maxMs": 4.110125000006519
+      },
+      "candidate": {
+        "score": 91,
+        "win": 0,
+        "rank": 2,
+        "maxMs": 4.057749999992666
+      }
+    },
+    {
+      "seed": 2068023733,
+      "seat": 2,
+      "roster": 2,
+      "control": {
+        "score": 84,
+        "win": 0,
+        "rank": 4,
+        "maxMs": 4.283957999999984
+      },
+      "candidate": {
+        "score": 84,
+        "win": 0,
+        "rank": 4,
+        "maxMs": 4.349999999991269
+      }
+    },
+    {
+      "seed": 2068031652,
+      "seat": 3,
+      "roster": 2,
+      "control": {
+        "score": 55,
+        "win": 0,
+        "rank": 6,
+        "maxMs": 3.0898330000054557
+      },
+      "candidate": {
+        "score": 55,
+        "win": 0,
+        "rank": 6,
+        "maxMs": 1.5964999999996508
+      }
+    },
+    {
+      "seed": 2068039571,
+      "seat": 4,
+      "roster": 2,
+      "control": {
+        "score": 96,
+        "win": 1,
+        "rank": 1,
+        "maxMs": 1.459459000005154
+      },
+      "candidate": {
+        "score": 96,
+        "win": 1,
+        "rank": 1,
+        "maxMs": 1.4355829999985872
+      }
+    },
+    {
+      "seed": 2068047490,
+      "seat": 5,
+      "roster": 2,
+      "control": {
+        "score": 76,
+        "win": 0,
+        "rank": 3,
+        "maxMs": 4.406707999994978
+      },
+      "candidate": {
+        "score": 76,
+        "win": 0,
+        "rank": 3,
+        "maxMs": 4.4450420000066515
+      }
+    },
+    {
+      "seed": 2068055409,
+      "seat": 0,
+      "roster": 0,
+      "control": {
+        "score": 62,
+        "win": 0,
+        "rank": 6,
+        "maxMs": 1.818249999996624
+      },
+      "candidate": {
+        "score": 62,
+        "win": 0,
+        "rank": 6,
+        "maxMs": 1.8264580000104615
+      }
+    },
+    {
+      "seed": 2068063328,
+      "seat": 1,
+      "roster": 0,
+      "control": {
+        "score": 100,
+        "win": 1,
+        "rank": 1,
+        "maxMs": 2.8412499999976717
+      },
+      "candidate": {
+        "score": 100,
+        "win": 1,
+        "rank": 1,
+        "maxMs": 2.8573340000002645
+      }
+    },
+    {
+      "seed": 2068071247,
+      "seat": 2,
+      "roster": 0,
+      "control": {
+        "score": 72,
+        "win": 0,
+        "rank": 4,
+        "maxMs": 1.8877080000092974
+      },
+      "candidate": {
+        "score": 72,
+        "win": 0,
+        "rank": 4,
+        "maxMs": 1.866582999995444
+      }
+    },
+    {
+      "seed": 2068079166,
+      "seat": 3,
+      "roster": 0,
+      "control": {
+        "score": 51,
+        "win": 0,
+        "rank": 6,
+        "maxMs": 1.0762909999903059
+      },
+      "candidate": {
+        "score": 51,
+        "win": 0,
+        "rank": 6,
+        "maxMs": 1.0860840000095777
+      }
+    },
+    {
+      "seed": 2068087085,
+      "seat": 4,
+      "roster": 0,
+      "control": {
+        "score": 84,
+        "win": 0,
+        "rank": 3,
+        "maxMs": 1.1740839999984019
+      },
+      "candidate": {
+        "score": 84,
+        "win": 0,
+        "rank": 3,
+        "maxMs": 1.1550420000130543
+      }
+    },
+    {
+      "seed": 2068095004,
+      "seat": 5,
+      "roster": 0,
+      "control": {
+        "score": 73,
+        "win": 0,
+        "rank": 5,
+        "maxMs": 1.458333999995375
+      },
+      "candidate": {
+        "score": 73,
+        "win": 0,
+        "rank": 5,
+        "maxMs": 1.4731670000037411
+      }
+    },
+    {
+      "seed": 2068102923,
+      "seat": 0,
+      "roster": 1,
+      "control": {
+        "score": 89,
+        "win": 0,
+        "rank": 2,
+        "maxMs": 3.3277499999967404
+      },
+      "candidate": {
+        "score": 89,
+        "win": 0,
+        "rank": 2,
+        "maxMs": 3.381583000009414
+      }
+    },
+    {
+      "seed": 2068110842,
+      "seat": 1,
+      "roster": 1,
+      "control": {
+        "score": 90,
+        "win": 0,
+        "rank": 2,
+        "maxMs": 3.5817079999978887
+      },
+      "candidate": {
+        "score": 90,
+        "win": 0,
+        "rank": 2,
+        "maxMs": 3.6102910000045085
+      }
+    },
+    {
+      "seed": 2068118761,
+      "seat": 2,
+      "roster": 1,
+      "control": {
+        "score": 78,
+        "win": 0,
+        "rank": 3,
+        "maxMs": 2.6746669999993173
+      },
+      "candidate": {
+        "score": 78,
+        "win": 0,
+        "rank": 3,
+        "maxMs": 2.6882500000065193
+      }
+    },
+    {
+      "seed": 2068126680,
+      "seat": 3,
+      "roster": 1,
+      "control": {
+        "score": 93,
+        "win": 1,
+        "rank": 1,
+        "maxMs": 4.520749999996042
+      },
+      "candidate": {
+        "score": 93,
+        "win": 1,
+        "rank": 1,
+        "maxMs": 4.49687499999709
+      }
+    },
+    {
+      "seed": 2068134599,
+      "seat": 4,
+      "roster": 1,
+      "control": {
+        "score": 69,
+        "win": 0,
+        "rank": 4,
+        "maxMs": 1.402124999993248
+      },
+      "candidate": {
+        "score": 69,
+        "win": 0,
+        "rank": 4,
+        "maxMs": 1.4222500000032596
+      }
+    },
+    {
+      "seed": 2068142518,
+      "seat": 5,
+      "roster": 1,
+      "control": {
+        "score": 57,
+        "win": 0,
+        "rank": 6,
+        "maxMs": 1.5721250000060536
+      },
+      "candidate": {
+        "score": 57,
+        "win": 0,
+        "rank": 6,
+        "maxMs": 2.7875420000054874
+      }
+    },
+    {
+      "seed": 2068150437,
+      "seat": 0,
+      "roster": 2,
+      "control": {
+        "score": 98,
+        "win": 0,
+        "rank": 2,
+        "maxMs": 1.4410419999912847
+      },
+      "candidate": {
+        "score": 98,
+        "win": 0,
+        "rank": 2,
+        "maxMs": 1.4487080000108108
+      }
+    },
+    {
+      "seed": 2068158356,
+      "seat": 1,
+      "roster": 2,
+      "control": {
+        "score": 66,
+        "win": 0,
+        "rank": 4,
+        "maxMs": 1.9689999999973224
+      },
+      "candidate": {
+        "score": 66,
+        "win": 0,
+        "rank": 4,
+        "maxMs": 2.0875410000007832
+      }
+    },
+    {
+      "seed": 2068166275,
+      "seat": 2,
+      "roster": 2,
+      "control": {
+        "score": 80,
+        "win": 0,
+        "rank": 2,
+        "maxMs": 1.0918749999982538
+      },
+      "candidate": {
+        "score": 80,
+        "win": 0,
+        "rank": 2,
+        "maxMs": 1.106792000005953
+      }
+    },
+    {
+      "seed": 2068174194,
+      "seat": 3,
+      "roster": 2,
+      "control": {
+        "score": 94,
+        "win": 1,
+        "rank": 1,
+        "maxMs": 1.5462079999997513
+      },
+      "candidate": {
+        "score": 94,
+        "win": 1,
+        "rank": 1,
+        "maxMs": 1.51854099999764
+      }
+    },
+    {
+      "seed": 2068182113,
+      "seat": 4,
+      "roster": 2,
+      "control": {
+        "score": 76,
+        "win": 0,
+        "rank": 5,
+        "maxMs": 1.102792000005138
+      },
+      "candidate": {
+        "score": 76,
+        "win": 0,
+        "rank": 5,
+        "maxMs": 1.1518329999962589
+      }
+    },
+    {
+      "seed": 2068190032,
+      "seat": 5,
+      "roster": 2,
+      "control": {
+        "score": 72,
+        "win": 0,
+        "rank": 5,
+        "maxMs": 1.4205409999995027
+      },
+      "candidate": {
+        "score": 72,
+        "win": 0,
+        "rank": 5,
+        "maxMs": 1.4672080000018468
+      }
+    },
+    {
+      "seed": 2068197951,
+      "seat": 0,
+      "roster": 0,
+      "control": {
+        "score": 74,
+        "win": 0,
+        "rank": 4,
+        "maxMs": 1.9107500000100117
+      },
+      "candidate": {
+        "score": 74,
+        "win": 0,
+        "rank": 4,
+        "maxMs": 1.870666999995592
+      }
+    },
+    {
+      "seed": 2068205870,
+      "seat": 1,
+      "roster": 0,
+      "control": {
+        "score": 67,
+        "win": 0,
+        "rank": 6,
+        "maxMs": 3.012665999995079
+      },
+      "candidate": {
+        "score": 67,
+        "win": 0,
+        "rank": 6,
+        "maxMs": 3.0495000000082655
+      }
+    },
+    {
+      "seed": 2068213789,
+      "seat": 2,
+      "roster": 0,
+      "control": {
+        "score": 109,
+        "win": 0,
+        "rank": 2,
+        "maxMs": 3.57462499999383
+      },
+      "candidate": {
+        "score": 109,
+        "win": 0,
+        "rank": 2,
+        "maxMs": 3.5824589999974705
+      }
+    },
+    {
+      "seed": 2068221708,
+      "seat": 3,
+      "roster": 0,
+      "control": {
+        "score": 63,
+        "win": 0,
+        "rank": 6,
+        "maxMs": 4.0375829999975394
+      },
+      "candidate": {
+        "score": 63,
+        "win": 0,
+        "rank": 6,
+        "maxMs": 4.027707999994163
+      }
+    },
+    {
+      "seed": 2068229627,
+      "seat": 4,
+      "roster": 0,
+      "control": {
+        "score": 72,
+        "win": 0,
+        "rank": 5,
+        "maxMs": 3.7993749999877764
+      },
+      "candidate": {
+        "score": 72,
+        "win": 0,
+        "rank": 5,
+        "maxMs": 3.788209000005736
+      }
+    },
+    {
+      "seed": 2068237546,
+      "seat": 5,
+      "roster": 0,
+      "control": {
+        "score": 104,
+        "win": 1,
+        "rank": 1,
+        "maxMs": 4.155291999995825
+      },
+      "candidate": {
+        "score": 104,
+        "win": 1,
+        "rank": 1,
+        "maxMs": 4.129874999998719
+      }
+    },
+    {
+      "seed": 2068245465,
+      "seat": 0,
+      "roster": 1,
+      "control": {
+        "score": 75,
+        "win": 0,
+        "rank": 4,
+        "maxMs": 3.0458329999964917
+      },
+      "candidate": {
+        "score": 75,
+        "win": 0,
+        "rank": 4,
+        "maxMs": 3.0717919999879086
+      }
+    },
+    {
+      "seed": 2068253384,
+      "seat": 1,
+      "roster": 1,
+      "control": {
+        "score": 68,
+        "win": 0,
+        "rank": 5,
+        "maxMs": 2.0106659999873955
+      },
+      "candidate": {
+        "score": 68,
+        "win": 0,
+        "rank": 5,
+        "maxMs": 1.9654160000063712
+      }
+    },
+    {
+      "seed": 2068261303,
+      "seat": 2,
+      "roster": 1,
+      "control": {
+        "score": 81,
+        "win": 0,
+        "rank": 4,
+        "maxMs": 1.7876659999892581
+      },
+      "candidate": {
+        "score": 81,
+        "win": 0,
+        "rank": 4,
+        "maxMs": 1.7793329999985872
+      }
+    },
+    {
+      "seed": 2068269222,
+      "seat": 3,
+      "roster": 1,
+      "control": {
+        "score": 105,
+        "win": 1,
+        "rank": 1,
+        "maxMs": 3.670709000012721
+      },
+      "candidate": {
+        "score": 105,
+        "win": 1,
+        "rank": 1,
+        "maxMs": 3.5972080000065034
+      }
+    },
+    {
+      "seed": 2068277141,
+      "seat": 4,
+      "roster": 1,
+      "control": {
+        "score": 81,
+        "win": 0,
+        "rank": 3,
+        "maxMs": 3.7691670000058366
+      },
+      "candidate": {
+        "score": 81,
+        "win": 0,
+        "rank": 3,
+        "maxMs": 3.7705410000053234
+      }
+    },
+    {
+      "seed": 2068285060,
+      "seat": 5,
+      "roster": 1,
+      "control": {
+        "score": 53,
+        "win": 0,
+        "rank": 6,
+        "maxMs": 4.622208000000683
+      },
+      "candidate": {
+        "score": 53,
+        "win": 0,
+        "rank": 6,
+        "maxMs": 4.5778750000026776
+      }
+    },
+    {
+      "seed": 2068292979,
+      "seat": 0,
+      "roster": 2,
+      "control": {
+        "score": 60,
+        "win": 0,
+        "rank": 6,
+        "maxMs": 1.159749999991618
+      },
+      "candidate": {
+        "score": 60,
+        "win": 0,
+        "rank": 6,
+        "maxMs": 1.1592500000115251
+      }
+    },
+    {
+      "seed": 2068300898,
+      "seat": 1,
+      "roster": 2,
+      "control": {
+        "score": 98,
+        "win": 1,
+        "rank": 1,
+        "maxMs": 1.088333000006969
+      },
+      "candidate": {
+        "score": 98,
+        "win": 1,
+        "rank": 1,
+        "maxMs": 1.0738749999873107
+      }
+    },
+    {
+      "seed": 2068308817,
+      "seat": 2,
+      "roster": 2,
+      "control": {
+        "score": 87,
+        "win": 1,
+        "rank": 1,
+        "maxMs": 1.0975410000100965
+      },
+      "candidate": {
+        "score": 87,
+        "win": 1,
+        "rank": 1,
+        "maxMs": 1.0949580000014976
+      }
+    },
+    {
+      "seed": 2068316736,
+      "seat": 3,
+      "roster": 2,
+      "control": {
+        "score": 111,
+        "win": 1,
+        "rank": 1,
+        "maxMs": 1.2155409999977564
+      },
+      "candidate": {
+        "score": 111,
+        "win": 1,
+        "rank": 1,
+        "maxMs": 1.191500000000815
+      }
+    },
+    {
+      "seed": 2068324655,
+      "seat": 4,
+      "roster": 2,
+      "control": {
+        "score": 54,
+        "win": 0,
+        "rank": 5,
+        "maxMs": 4.534790999998222
+      },
+      "candidate": {
+        "score": 54,
+        "win": 0,
+        "rank": 5,
+        "maxMs": 4.60487500000454
+      }
+    },
+    {
+      "seed": 2068332574,
+      "seat": 5,
+      "roster": 2,
+      "control": {
+        "score": 67,
+        "win": 0,
+        "rank": 4,
+        "maxMs": 1.3170830000017304
+      },
+      "candidate": {
+        "score": 67,
+        "win": 0,
+        "rank": 4,
+        "maxMs": 1.3605830000014976
+      }
+    }
+  ],
+  "errors": [],
+  "hashes": {
+    "../../bot-starter/src/reference-gaucho/terminal-funded.ts": "cf41ffb406844617cc400e1a92ac5c29ac867a87640d789372e133a356ef5e86",
+    "../../bot-starter/src/reference-gaucho/terminal-exact.ts": "e2bec7548a6b7810b8ebfca1eb045e04dad15d81eadae50b5f1421bd5e4771c6"
+  },
+  "summary": {
+    "n": 144,
+    "controlScore": 79.04861111111111,
+    "candidateScore": 79.06944444444444,
+    "controlWins": 25.5,
+    "candidateWins": 25.5,
+    "delta": 0.020833333333333332,
+    "SE": 0.04235302985063925,
+    "improved": 3,
+    "regressed": 1,
+    "unchanged": 140,
+    "maxMs": 5.429208999994444
+  },
+  "byRoster": [
+    {
+      "roster": 0,
+      "n": 48,
+      "controlScore": 79.5625,
+      "candidateScore": 79.64583333333333,
+      "controlWins": 8,
+      "candidateWins": 8,
+      "delta": 0.08333333333333333,
+      "SE": 0.08333333333333334,
+      "improved": 1,
+      "regressed": 0,
+      "unchanged": 47,
+      "maxMs": 5.429208999994444
+    },
+    {
+      "roster": 1,
+      "n": 48,
+      "controlScore": 80.8125,
+      "candidateScore": 80.875,
+      "controlWins": 8.5,
+      "candidateWins": 8.5,
+      "delta": 0.0625,
+      "SE": 0.04618658197582853,
+      "improved": 2,
+      "regressed": 0,
+      "unchanged": 46,
+      "maxMs": 5.340250000008382
+    },
+    {
+      "roster": 2,
+      "n": 48,
+      "controlScore": 76.77083333333333,
+      "candidateScore": 76.6875,
+      "controlWins": 9,
+      "candidateWins": 9,
+      "delta": -0.08333333333333333,
+      "SE": 0.08333333333333334,
+      "improved": 0,
+      "regressed": 1,
+      "unchanged": 47,
+      "maxMs": 4.781875000000582
+    }
+  ]
+}

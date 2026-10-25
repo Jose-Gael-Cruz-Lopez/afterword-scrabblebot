@@ -1,0 +1,6592 @@
+{
+  "name": "score-100-search",
+  "startedAt": "2026-10-25T07:21:17.726Z",
+  "target": "Mean score and fraction >=100 in Vickrey; win rate retained as safety outcome",
+  "methodology": "Current exact+denial production composition. 36 fixed training scenarios cross every seat and three strong licensed clone/mutant rosters twice. Each candidate replaces only the same focal seat in a matched control scenario. Pick highest mean score before 72 untouched holdout pairs. No live data/credentials/future tiles.",
+  "candidates": [
+    {
+      "name": "two-word-025",
+      "overrides": {
+        "w2": 0.25
+      }
+    },
+    {
+      "name": "two-word-06",
+      "overrides": {
+        "w2": 0.6
+      }
+    },
+    {
+      "name": "two-word-1",
+      "overrides": {
+        "w2": 1
+      }
+    },
+    {
+      "name": "two-word-liquid",
+      "overrides": {
+        "w2": 0.6,
+        "lowCash": 16
+      }
+    },
+    {
+      "name": "earlier-terminal",
+      "overrides": {
+        "endN": 5
+      }
+    },
+    {
+      "name": "late-completions-only",
+      "overrides": {},
+      "late": {
+        "endN": 8,
+        "beta": 0,
+        "gamma": 0,
+        "pace": 0,
+        "floorMult": 0
+      }
+    },
+    {
+      "name": "more-tiles",
+      "overrides": {
+        "letterTarget": 16,
+        "slack": 1,
+        "floorMult": 0.9
+      }
+    },
+    {
+      "name": "orphan-q-discount",
+      "overrides": {
+        "qW": 0.35
+      }
+    },
+    {
+      "name": "idle-discount",
+      "overrides": {
+        "idleBeta": 0.3
+      }
+    },
+    {
+      "name": "two-word-q",
+      "overrides": {
+        "w2": 0.6,
+        "qW": 0.35
+      }
+    },
+    {
+      "name": "lower-cost",
+      "overrides": {
+        "c0": 0.2
+      }
+    },
+    {
+      "name": "selective-cashout",
+      "overrides": {
+        "minPlayReward": 28,
+        "holdKappa": 0.95
+      }
+    }
+  ],
+  "rosters": [
+    [
+      {},
+      {},
+      {},
+      {},
+      {}
+    ],
+    [
+      {
+        "c0": 0.7,
+        "lowCash": 18
+      },
+      {
+        "minPlayReward": 48,
+        "maxMissing": 3,
+        "pBase": 0.9
+      },
+      {
+        "c0": 0.3
+      },
+      {
+        "minPlayReward": 32,
+        "lowCash": 16
+      },
+      {
+        "alpha": 1.2
+      }
+    ],
+    [
+      {
+        "c0": 0.3,
+        "minPlayReward": 50
+      },
+      {
+        "letterTarget": 16,
+        "slack": 1
+      },
+      {
+        "beta": 1.8
+      },
+      {
+        "minPlayReward": 32,
+        "holdKappa": 1
+      },
+      {
+        "maxMissing": 3,
+        "pBase": 0.9,
+        "aHalf": 0.6
+      }
+    ]
+  ],
+  "sourceHashes": {
+    "../../bot-starter/src/reference-gaucho/adapter.ts": "1a3f1cd2603aa8b51b4398e8ea1e076ff890284dbf4db6e9bdfeae4d2ea66617",
+    "../../bot-starter/src/reference-gaucho/terminal-exact.ts": "37ab933e256686d067d6e72273c6e89ca3f55c0f4f05f2d49f3ae0d3087544d2",
+    "../../bot-starter/src/simulate.ts": "6e882e20b8f9ce1ca30200836db12f63eb7653ec09a2a74dcfa5bba1c183d5d7"
+  },
+  "training": [
+    {
+      "candidate": {
+        "name": "two-word-025",
+        "overrides": {
+          "w2": 0.25
+        }
+      },
+      "summary": {
+        "games": 36,
+        "meanScore": 83.16666666666667,
+        "wins": 6.5,
+        "atLeast100": 5,
+        "meanRank": 3.0555555555555554,
+        "meanBalance": 17.02777777777778,
+        "maxMs": 29.24991599999703
+      },
+      "paired": {
+        "meanScoreDelta": -0.5277777777777778,
+        "scoreDeltaSE": 1.9507776679314779,
+        "improvements": 16,
+        "regressions": 16,
+        "ties": 4,
+        "winDelta": -3
+      },
+      "outcomes": [
+        {
+          "score": 75,
+          "win": 0,
+          "rank": 3,
+          "balance": 7,
+          "tiles": 13,
+          "spent": 168,
+          "maxMs": 2.665499999999156
+        },
+        {
+          "score": 82,
+          "win": 0,
+          "rank": 3,
+          "balance": 9,
+          "tiles": 14,
+          "spent": 173,
+          "maxMs": 4.415874999998778
+        },
+        {
+          "score": 67,
+          "win": 0,
+          "rank": 5,
+          "balance": 36,
+          "tiles": 9,
+          "spent": 131,
+          "maxMs": 4.634125000000495
+        },
+        {
+          "score": 78,
+          "win": 0,
+          "rank": 5,
+          "balance": 36,
+          "tiles": 10,
+          "spent": 142,
+          "maxMs": 7.095124999999825
+        },
+        {
+          "score": 119,
+          "win": 1,
+          "rank": 1,
+          "balance": 13,
+          "tiles": 15,
+          "spent": 206,
+          "maxMs": 2.2983749999984866
+        },
+        {
+          "score": 72,
+          "win": 0,
+          "rank": 4,
+          "balance": 7,
+          "tiles": 11,
+          "spent": 165,
+          "maxMs": 3.3816249999981665
+        },
+        {
+          "score": 55,
+          "win": 0,
+          "rank": 6,
+          "balance": 8,
+          "tiles": 10,
+          "spent": 147,
+          "maxMs": 3.9383750000015425
+        },
+        {
+          "score": 74,
+          "win": 0,
+          "rank": 2,
+          "balance": 13,
+          "tiles": 11,
+          "spent": 161,
+          "maxMs": 2.538250000001426
+        },
+        {
+          "score": 88,
+          "win": 0,
+          "rank": 2,
+          "balance": 15,
+          "tiles": 11,
+          "spent": 173,
+          "maxMs": 4.159791999998561
+        },
+        {
+          "score": 71,
+          "win": 0,
+          "rank": 4,
+          "balance": 6,
+          "tiles": 9,
+          "spent": 165,
+          "maxMs": 2.5609589999985474
+        },
+        {
+          "score": 69,
+          "win": 0,
+          "rank": 4,
+          "balance": 18,
+          "tiles": 11,
+          "spent": 151,
+          "maxMs": 5.083750000001601
+        },
+        {
+          "score": 83,
+          "win": 0,
+          "rank": 3,
+          "balance": 19,
+          "tiles": 12,
+          "spent": 164,
+          "maxMs": 29.24991599999703
+        },
+        {
+          "score": 72,
+          "win": 0,
+          "rank": 4,
+          "balance": 10,
+          "tiles": 11,
+          "spent": 162,
+          "maxMs": 2.090959000001021
+        },
+        {
+          "score": 68,
+          "win": 0,
+          "rank": 4,
+          "balance": 14,
+          "tiles": 8,
+          "spent": 154,
+          "maxMs": 3.3598330000022543
+        },
+        {
+          "score": 80,
+          "win": 0,
+          "rank": 2,
+          "balance": 6,
+          "tiles": 11,
+          "spent": 174,
+          "maxMs": 3.1389579999995476
+        },
+        {
+          "score": 72,
+          "win": 0,
+          "rank": 5,
+          "balance": 16,
+          "tiles": 12,
+          "spent": 156,
+          "maxMs": 3.129584000002069
+        },
+        {
+          "score": 108,
+          "win": 1,
+          "rank": 1,
+          "balance": 22,
+          "tiles": 13,
+          "spent": 186,
+          "maxMs": 2.9782500000001164
+        },
+        {
+          "score": 116,
+          "win": 1,
+          "rank": 1,
+          "balance": 18,
+          "tiles": 16,
+          "spent": 198,
+          "maxMs": 2.2439999999987776
+        },
+        {
+          "score": 72,
+          "win": 0,
+          "rank": 4,
+          "balance": 17,
+          "tiles": 11,
+          "spent": 155,
+          "maxMs": 15.616624999998749
+        },
+        {
+          "score": 78,
+          "win": 0,
+          "rank": 3,
+          "balance": 17,
+          "tiles": 13,
+          "spent": 161,
+          "maxMs": 16.27520799999911
+        },
+        {
+          "score": 92,
+          "win": 0,
+          "rank": 2,
+          "balance": 7,
+          "tiles": 12,
+          "spent": 185,
+          "maxMs": 3.895082999999431
+        },
+        {
+          "score": 75,
+          "win": 0,
+          "rank": 3,
+          "balance": 3,
+          "tiles": 12,
+          "spent": 172,
+          "maxMs": 6.639624999999796
+        },
+        {
+          "score": 96,
+          "win": 1,
+          "rank": 1,
+          "balance": 1,
+          "tiles": 12,
+          "spent": 195,
+          "maxMs": 4.797459000001254
+        },
+        {
+          "score": 78,
+          "win": 0,
+          "rank": 4,
+          "balance": 11,
+          "tiles": 10,
+          "spent": 167,
+          "maxMs": 5.094249999998283
+        },
+        {
+          "score": 70,
+          "win": 0,
+          "rank": 4,
+          "balance": 0,
+          "tiles": 14,
+          "spent": 170,
+          "maxMs": 2.293707999997423
+        },
+        {
+          "score": 66,
+          "win": 0,
+          "rank": 4,
+          "balance": 36,
+          "tiles": 9,
+          "spent": 130,
+          "maxMs": 5.358166999998502
+        },
+        {
+          "score": 77,
+          "win": 0,
+          "rank": 3,
+          "balance": 14,
+          "tiles": 14,
+          "spent": 163,
+          "maxMs": 2.2034999999996217
+        },
+        {
+          "score": 93,
+          "win": 1,
+          "rank": 1,
+          "balance": 41,
+          "tiles": 12,
+          "spent": 152,
+          "maxMs": 5.106999999999971
+        },
+        {
+          "score": 69,
+          "win": 0,
+          "rank": 5,
+          "balance": 42,
+          "tiles": 11,
+          "spent": 127,
+          "maxMs": 4.750082999998995
+        },
+        {
+          "score": 81,
+          "win": 0,
+          "rank": 4,
+          "balance": 34,
+          "tiles": 12,
+          "spent": 147,
+          "maxMs": 2.3436250000013388
+        },
+        {
+          "score": 94,
+          "win": 0,
+          "rank": 2,
+          "balance": 11,
+          "tiles": 13,
+          "spent": 183,
+          "maxMs": 4.319125000001804
+        },
+        {
+          "score": 89,
+          "win": 0,
+          "rank": 2,
+          "balance": 17,
+          "tiles": 12,
+          "spent": 172,
+          "maxMs": 2.9932079999998678
+        },
+        {
+          "score": 78,
+          "win": 0,
+          "rank": 3,
+          "balance": 27,
+          "tiles": 11,
+          "spent": 151,
+          "maxMs": 5.1504169999971054
+        },
+        {
+          "score": 108,
+          "win": 0.5,
+          "rank": 1,
+          "balance": 19,
+          "tiles": 13,
+          "spent": 189,
+          "maxMs": 5.007707999997365
+        },
+        {
+          "score": 71,
+          "win": 0,
+          "rank": 4,
+          "balance": 16,
+          "tiles": 9,
+          "spent": 155,
+          "maxMs": 2.3269579999978305
+        },
+        {
+          "score": 158,
+          "win": 1,
+          "rank": 1,
+          "balance": 27,
+          "tiles": 18,
+          "spent": 231,
+          "maxMs": 2.5988329999963753
+        }
+      ]
+    },
+    {
+      "candidate": {
+        "name": "two-word-06",
+        "overrides": {
+          "w2": 0.6
+        }
+      },
+      "summary": {
+        "games": 36,
+        "meanScore": 78.52777777777777,
+        "wins": 5.333333333333333,
+        "atLeast100": 4,
+        "meanRank": 3.3055555555555554,
+        "meanBalance": 15.5,
+        "maxMs": 7.518666000003577
+      },
+      "paired": {
+        "meanScoreDelta": -5.166666666666667,
+        "scoreDeltaSE": 3.269265244377586,
+        "improvements": 14,
+        "regressions": 20,
+        "ties": 2,
+        "winDelta": -4.166666666666667
+      },
+      "outcomes": [
+        {
+          "score": 87,
+          "win": 0,
+          "rank": 2,
+          "balance": 14,
+          "tiles": 12,
+          "spent": 173,
+          "maxMs": 2.4066660000025877
+        },
+        {
+          "score": 69,
+          "win": 0,
+          "rank": 5,
+          "balance": 16,
+          "tiles": 8,
+          "spent": 153,
+          "maxMs": 3.9449170000007143
+        },
+        {
+          "score": 55,
+          "win": 0,
+          "rank": 5,
+          "balance": 9,
+          "tiles": 9,
+          "spent": 146,
+          "maxMs": 2.2557080000042333
+        },
+        {
+          "score": 71,
+          "win": 0,
+          "rank": 6,
+          "balance": 6,
+          "tiles": 12,
+          "spent": 165,
+          "maxMs": 1.941500000000815
+        },
+        {
+          "score": 98,
+          "win": 0,
+          "rank": 2,
+          "balance": 15,
+          "tiles": 11,
+          "spent": 183,
+          "maxMs": 2.8462499999950523
+        },
+        {
+          "score": 76,
+          "win": 0,
+          "rank": 4,
+          "balance": 14,
+          "tiles": 10,
+          "spent": 162,
+          "maxMs": 3.6222080000006827
+        },
+        {
+          "score": 68,
+          "win": 0,
+          "rank": 6,
+          "balance": 10,
+          "tiles": 10,
+          "spent": 158,
+          "maxMs": 2.3622919999979786
+        },
+        {
+          "score": 61,
+          "win": 0,
+          "rank": 6,
+          "balance": 19,
+          "tiles": 9,
+          "spent": 142,
+          "maxMs": 5.1018330000006245
+        },
+        {
+          "score": 97,
+          "win": 1,
+          "rank": 1,
+          "balance": 9,
+          "tiles": 12,
+          "spent": 188,
+          "maxMs": 2.813584000003175
+        },
+        {
+          "score": 35,
+          "win": 0,
+          "rank": 6,
+          "balance": 9,
+          "tiles": 7,
+          "spent": 126,
+          "maxMs": 2.0708749999976135
+        },
+        {
+          "score": 80,
+          "win": 0,
+          "rank": 3,
+          "balance": 15,
+          "tiles": 10,
+          "spent": 165,
+          "maxMs": 3.7289590000000317
+        },
+        {
+          "score": 68,
+          "win": 0,
+          "rank": 4,
+          "balance": 8,
+          "tiles": 11,
+          "spent": 160,
+          "maxMs": 1.9357919999965816
+        },
+        {
+          "score": 87,
+          "win": 0,
+          "rank": 2,
+          "balance": 53,
+          "tiles": 10,
+          "spent": 134,
+          "maxMs": 3.6535000000003492
+        },
+        {
+          "score": 75,
+          "win": 0,
+          "rank": 3,
+          "balance": 1,
+          "tiles": 13,
+          "spent": 174,
+          "maxMs": 3.3972500000018044
+        },
+        {
+          "score": 90,
+          "win": 0.3333333333333333,
+          "rank": 1,
+          "balance": 2,
+          "tiles": 11,
+          "spent": 188,
+          "maxMs": 5.953958000005514
+        },
+        {
+          "score": 68,
+          "win": 0,
+          "rank": 5,
+          "balance": 9,
+          "tiles": 11,
+          "spent": 159,
+          "maxMs": 4.907624999999825
+        },
+        {
+          "score": 96,
+          "win": 0,
+          "rank": 3,
+          "balance": 32,
+          "tiles": 15,
+          "spent": 164,
+          "maxMs": 6.360166000005847
+        },
+        {
+          "score": 109,
+          "win": 1,
+          "rank": 1,
+          "balance": 21,
+          "tiles": 15,
+          "spent": 188,
+          "maxMs": 4.023083000000042
+        },
+        {
+          "score": 64,
+          "win": 0,
+          "rank": 4,
+          "balance": 17,
+          "tiles": 9,
+          "spent": 147,
+          "maxMs": 2.1667919999963487
+        },
+        {
+          "score": 77,
+          "win": 0,
+          "rank": 3,
+          "balance": 14,
+          "tiles": 12,
+          "spent": 163,
+          "maxMs": 3.3838749999995343
+        },
+        {
+          "score": 84,
+          "win": 0,
+          "rank": 2,
+          "balance": 15,
+          "tiles": 12,
+          "spent": 169,
+          "maxMs": 4.211416999998619
+        },
+        {
+          "score": 107,
+          "win": 1,
+          "rank": 1,
+          "balance": 15,
+          "tiles": 13,
+          "spent": 192,
+          "maxMs": 2.2230409999974654
+        },
+        {
+          "score": 91,
+          "win": 0,
+          "rank": 2,
+          "balance": 20,
+          "tiles": 11,
+          "spent": 171,
+          "maxMs": 4.143499999998312
+        },
+        {
+          "score": 110,
+          "win": 1,
+          "rank": 1,
+          "balance": 5,
+          "tiles": 16,
+          "spent": 205,
+          "maxMs": 3.3124580000003334
+        },
+        {
+          "score": 67,
+          "win": 0,
+          "rank": 3,
+          "balance": 19,
+          "tiles": 10,
+          "spent": 148,
+          "maxMs": 7.518666000003577
+        },
+        {
+          "score": 68,
+          "win": 0,
+          "rank": 3,
+          "balance": 11,
+          "tiles": 9,
+          "spent": 157,
+          "maxMs": 2.069082999994862
+        },
+        {
+          "score": 75,
+          "win": 0,
+          "rank": 2,
+          "balance": 11,
+          "tiles": 12,
+          "spent": 164,
+          "maxMs": 2.2535419999985606
+        },
+        {
+          "score": 78,
+          "win": 0,
+          "rank": 3,
+          "balance": 11,
+          "tiles": 10,
+          "spent": 167,
+          "maxMs": 1.8639170000024023
+        },
+        {
+          "score": 72,
+          "win": 0,
+          "rank": 5,
+          "balance": 23,
+          "tiles": 12,
+          "spent": 149,
+          "maxMs": 3.656541999996989
+        },
+        {
+          "score": 60,
+          "win": 0,
+          "rank": 5,
+          "balance": 22,
+          "tiles": 10,
+          "spent": 138,
+          "maxMs": 5.11962499999936
+        },
+        {
+          "score": 72,
+          "win": 0,
+          "rank": 5,
+          "balance": 43,
+          "tiles": 11,
+          "spent": 129,
+          "maxMs": 4.738917000002402
+        },
+        {
+          "score": 81,
+          "win": 0,
+          "rank": 2,
+          "balance": 8,
+          "tiles": 12,
+          "spent": 173,
+          "maxMs": 1.899834000003466
+        },
+        {
+          "score": 90,
+          "win": 0,
+          "rank": 2,
+          "balance": 7,
+          "tiles": 15,
+          "spent": 183,
+          "maxMs": 3.832457999997132
+        },
+        {
+          "score": 69,
+          "win": 0,
+          "rank": 4,
+          "balance": 19,
+          "tiles": 7,
+          "spent": 150,
+          "maxMs": 3.3452089999991586
+        },
+        {
+          "score": 55,
+          "win": 0,
+          "rank": 6,
+          "balance": 23,
+          "tiles": 8,
+          "spent": 132,
+          "maxMs": 6.298999999999069
+        },
+        {
+          "score": 117,
+          "win": 1,
+          "rank": 1,
+          "balance": 13,
+          "tiles": 13,
+          "spent": 204,
+          "maxMs": 4.151749999997264
+        }
+      ]
+    },
+    {
+      "candidate": {
+        "name": "two-word-1",
+        "overrides": {
+          "w2": 1
+        }
+      },
+      "summary": {
+        "games": 36,
+        "meanScore": 68.63888888888889,
+        "wins": 3.5,
+        "atLeast100": 2,
+        "meanRank": 4.361111111111111,
+        "meanBalance": 23.833333333333332,
+        "maxMs": 6.607540999997582
+      },
+      "paired": {
+        "meanScoreDelta": -15.055555555555555,
+        "scoreDeltaSE": 3.510289737158559,
+        "improvements": 9,
+        "regressions": 24,
+        "ties": 3,
+        "winDelta": -6
+      },
+      "outcomes": [
+        {
+          "score": 59,
+          "win": 0,
+          "rank": 6,
+          "balance": 13,
+          "tiles": 10,
+          "spent": 146,
+          "maxMs": 2.6528330000001006
+        },
+        {
+          "score": 60,
+          "win": 0,
+          "rank": 6,
+          "balance": 18,
+          "tiles": 8,
+          "spent": 142,
+          "maxMs": 2.429166999994777
+        },
+        {
+          "score": 56,
+          "win": 0,
+          "rank": 5,
+          "balance": 19,
+          "tiles": 9,
+          "spent": 137,
+          "maxMs": 5.128791999995883
+        },
+        {
+          "score": 74,
+          "win": 0,
+          "rank": 5,
+          "balance": 30,
+          "tiles": 10,
+          "spent": 144,
+          "maxMs": 4.550374999998894
+        },
+        {
+          "score": 46,
+          "win": 0,
+          "rank": 6,
+          "balance": 60,
+          "tiles": 5,
+          "spent": 86,
+          "maxMs": 5.419957999998587
+        },
+        {
+          "score": 67,
+          "win": 0,
+          "rank": 5,
+          "balance": 11,
+          "tiles": 9,
+          "spent": 156,
+          "maxMs": 2.2079589999993914
+        },
+        {
+          "score": 38,
+          "win": 0,
+          "rank": 6,
+          "balance": 48,
+          "tiles": 6,
+          "spent": 90,
+          "maxMs": 5.340708999996423
+        },
+        {
+          "score": 40,
+          "win": 0,
+          "rank": 6,
+          "balance": 54,
+          "tiles": 5,
+          "spent": 86,
+          "maxMs": 6.415041000000201
+        },
+        {
+          "score": 73,
+          "win": 0,
+          "rank": 5,
+          "balance": 16,
+          "tiles": 10,
+          "spent": 157,
+          "maxMs": 2.3559169999934966
+        },
+        {
+          "score": 66,
+          "win": 0,
+          "rank": 5,
+          "balance": 26,
+          "tiles": 8,
+          "spent": 140,
+          "maxMs": 3.905292000003101
+        },
+        {
+          "score": 57,
+          "win": 0,
+          "rank": 5,
+          "balance": 12,
+          "tiles": 9,
+          "spent": 145,
+          "maxMs": 2.009165999996185
+        },
+        {
+          "score": 59,
+          "win": 0,
+          "rank": 5,
+          "balance": 14,
+          "tiles": 9,
+          "spent": 145,
+          "maxMs": 4.12804199999664
+        },
+        {
+          "score": 84,
+          "win": 0,
+          "rank": 3,
+          "balance": 9,
+          "tiles": 12,
+          "spent": 175,
+          "maxMs": 3.510375000005297
+        },
+        {
+          "score": 67,
+          "win": 0,
+          "rank": 5,
+          "balance": 5,
+          "tiles": 13,
+          "spent": 162,
+          "maxMs": 3.7194579999995767
+        },
+        {
+          "score": 68,
+          "win": 0,
+          "rank": 5,
+          "balance": 26,
+          "tiles": 9,
+          "spent": 142,
+          "maxMs": 2.634124999996857
+        },
+        {
+          "score": 81,
+          "win": 0,
+          "rank": 4,
+          "balance": 41,
+          "tiles": 11,
+          "spent": 140,
+          "maxMs": 5.433833999995841
+        },
+        {
+          "score": 112,
+          "win": 0.5,
+          "rank": 1,
+          "balance": 28,
+          "tiles": 15,
+          "spent": 184,
+          "maxMs": 4.9511249999995925
+        },
+        {
+          "score": 99,
+          "win": 1,
+          "rank": 1,
+          "balance": 22,
+          "tiles": 11,
+          "spent": 177,
+          "maxMs": 2.0803329999980633
+        },
+        {
+          "score": 20,
+          "win": 0,
+          "rank": 6,
+          "balance": 31,
+          "tiles": 6,
+          "spent": 89,
+          "maxMs": 5.157500000001164
+        },
+        {
+          "score": 75,
+          "win": 0,
+          "rank": 4,
+          "balance": 42,
+          "tiles": 12,
+          "spent": 133,
+          "maxMs": 6.607540999997582
+        },
+        {
+          "score": 60,
+          "win": 0,
+          "rank": 6,
+          "balance": 36,
+          "tiles": 9,
+          "spent": 124,
+          "maxMs": 4.034792000005837
+        },
+        {
+          "score": 85,
+          "win": 0,
+          "rank": 3,
+          "balance": 9,
+          "tiles": 12,
+          "spent": 176,
+          "maxMs": 2.556624999997439
+        },
+        {
+          "score": 81,
+          "win": 0,
+          "rank": 4,
+          "balance": 15,
+          "tiles": 11,
+          "spent": 166,
+          "maxMs": 1.6766250000073342
+        },
+        {
+          "score": 78,
+          "win": 0,
+          "rank": 4,
+          "balance": 43,
+          "tiles": 11,
+          "spent": 135,
+          "maxMs": 5.294167000000016
+        },
+        {
+          "score": 78,
+          "win": 0,
+          "rank": 3,
+          "balance": 21,
+          "tiles": 10,
+          "spent": 157,
+          "maxMs": 2.152542000010726
+        },
+        {
+          "score": 25,
+          "win": 0,
+          "rank": 6,
+          "balance": 36,
+          "tiles": 4,
+          "spent": 89,
+          "maxMs": 5.806291000000783
+        },
+        {
+          "score": 84,
+          "win": 0,
+          "rank": 2,
+          "balance": 5,
+          "tiles": 13,
+          "spent": 179,
+          "maxMs": 2.366667000009329
+        },
+        {
+          "score": 103,
+          "win": 1,
+          "rank": 1,
+          "balance": 18,
+          "tiles": 13,
+          "spent": 185,
+          "maxMs": 2.559957999998005
+        },
+        {
+          "score": 63,
+          "win": 0,
+          "rank": 6,
+          "balance": 34,
+          "tiles": 11,
+          "spent": 129,
+          "maxMs": 5.6027500000054715
+        },
+        {
+          "score": 85,
+          "win": 1,
+          "rank": 1,
+          "balance": 6,
+          "tiles": 10,
+          "spent": 179,
+          "maxMs": 2.3286669999943115
+        },
+        {
+          "score": 72,
+          "win": 0,
+          "rank": 5,
+          "balance": 37,
+          "tiles": 12,
+          "spent": 135,
+          "maxMs": 5.800208999993629
+        },
+        {
+          "score": 72,
+          "win": 0,
+          "rank": 4,
+          "balance": 19,
+          "tiles": 13,
+          "spent": 153,
+          "maxMs": 2.039374999993015
+        },
+        {
+          "score": 75,
+          "win": 0,
+          "rank": 5,
+          "balance": 8,
+          "tiles": 12,
+          "spent": 167,
+          "maxMs": 2.5517499999987194
+        },
+        {
+          "score": 67,
+          "win": 0,
+          "rank": 5,
+          "balance": 19,
+          "tiles": 11,
+          "spent": 148,
+          "maxMs": 1.7642500000074506
+        },
+        {
+          "score": 66,
+          "win": 0,
+          "rank": 5,
+          "balance": 17,
+          "tiles": 9,
+          "spent": 149,
+          "maxMs": 4.050457999997889
+        },
+        {
+          "score": 76,
+          "win": 0,
+          "rank": 3,
+          "balance": 10,
+          "tiles": 12,
+          "spent": 166,
+          "maxMs": 1.7629170000000158
+        }
+      ]
+    },
+    {
+      "candidate": {
+        "name": "two-word-liquid",
+        "overrides": {
+          "w2": 0.6,
+          "lowCash": 16
+        }
+      },
+      "summary": {
+        "games": 36,
+        "meanScore": 76.38888888888889,
+        "wins": 4.333333333333333,
+        "atLeast100": 3,
+        "meanRank": 3.4722222222222223,
+        "meanBalance": 12.166666666666666,
+        "maxMs": 12.182000000000698
+      },
+      "paired": {
+        "meanScoreDelta": -7.305555555555555,
+        "scoreDeltaSE": 3.361032401019881,
+        "improvements": 12,
+        "regressions": 23,
+        "ties": 1,
+        "winDelta": -5.166666666666667
+      },
+      "outcomes": [
+        {
+          "score": 87,
+          "win": 0,
+          "rank": 2,
+          "balance": 14,
+          "tiles": 12,
+          "spent": 173,
+          "maxMs": 2.6260419999889564
+        },
+        {
+          "score": 72,
+          "win": 0,
+          "rank": 5,
+          "balance": 12,
+          "tiles": 10,
+          "spent": 160,
+          "maxMs": 3.9074169999948936
+        },
+        {
+          "score": 55,
+          "win": 0,
+          "rank": 5,
+          "balance": 9,
+          "tiles": 9,
+          "spent": 146,
+          "maxMs": 2.133165999999619
+        },
+        {
+          "score": 62,
+          "win": 0,
+          "rank": 6,
+          "balance": 19,
+          "tiles": 10,
+          "spent": 143,
+          "maxMs": 2.0018329999875277
+        },
+        {
+          "score": 98,
+          "win": 0,
+          "rank": 2,
+          "balance": 15,
+          "tiles": 11,
+          "spent": 183,
+          "maxMs": 1.985000000000582
+        },
+        {
+          "score": 76,
+          "win": 0,
+          "rank": 4,
+          "balance": 14,
+          "tiles": 10,
+          "spent": 162,
+          "maxMs": 3.7050000000017462
+        },
+        {
+          "score": 68,
+          "win": 0,
+          "rank": 6,
+          "balance": 10,
+          "tiles": 10,
+          "spent": 158,
+          "maxMs": 4.34687500000291
+        },
+        {
+          "score": 53,
+          "win": 0,
+          "rank": 6,
+          "balance": 3,
+          "tiles": 10,
+          "spent": 150,
+          "maxMs": 2.2302500000078
+        },
+        {
+          "score": 57,
+          "win": 0,
+          "rank": 6,
+          "balance": 12,
+          "tiles": 9,
+          "spent": 145,
+          "maxMs": 2.1167920000007143
+        },
+        {
+          "score": 35,
+          "win": 0,
+          "rank": 6,
+          "balance": 9,
+          "tiles": 7,
+          "spent": 126,
+          "maxMs": 1.8849999999947613
+        },
+        {
+          "score": 80,
+          "win": 0,
+          "rank": 3,
+          "balance": 1,
+          "tiles": 11,
+          "spent": 179,
+          "maxMs": 2.7323750000068685
+        },
+        {
+          "score": 68,
+          "win": 0,
+          "rank": 4,
+          "balance": 8,
+          "tiles": 11,
+          "spent": 160,
+          "maxMs": 2.0504579999978887
+        },
+        {
+          "score": 93,
+          "win": 1,
+          "rank": 1,
+          "balance": 11,
+          "tiles": 14,
+          "spent": 182,
+          "maxMs": 2.307958999997936
+        },
+        {
+          "score": 75,
+          "win": 0,
+          "rank": 3,
+          "balance": 1,
+          "tiles": 13,
+          "spent": 174,
+          "maxMs": 3.2504579999949783
+        },
+        {
+          "score": 90,
+          "win": 0.3333333333333333,
+          "rank": 1,
+          "balance": 2,
+          "tiles": 11,
+          "spent": 188,
+          "maxMs": 2.834458999990602
+        },
+        {
+          "score": 68,
+          "win": 0,
+          "rank": 5,
+          "balance": 9,
+          "tiles": 11,
+          "spent": 159,
+          "maxMs": 2.7830830000020796
+        },
+        {
+          "score": 96,
+          "win": 0,
+          "rank": 3,
+          "balance": 32,
+          "tiles": 15,
+          "spent": 164,
+          "maxMs": 6.744124999997439
+        },
+        {
+          "score": 97,
+          "win": 0,
+          "rank": 2,
+          "balance": 4,
+          "tiles": 15,
+          "spent": 193,
+          "maxMs": 2.1630830000067363
+        },
+        {
+          "score": 64,
+          "win": 0,
+          "rank": 4,
+          "balance": 17,
+          "tiles": 9,
+          "spent": 147,
+          "maxMs": 12.182000000000698
+        },
+        {
+          "score": 77,
+          "win": 0,
+          "rank": 3,
+          "balance": 14,
+          "tiles": 12,
+          "spent": 163,
+          "maxMs": 3.1924160000053234
+        },
+        {
+          "score": 84,
+          "win": 0,
+          "rank": 2,
+          "balance": 7,
+          "tiles": 12,
+          "spent": 177,
+          "maxMs": 2.2582499999989523
+        },
+        {
+          "score": 107,
+          "win": 1,
+          "rank": 1,
+          "balance": 15,
+          "tiles": 13,
+          "spent": 192,
+          "maxMs": 2.7936250000057044
+        },
+        {
+          "score": 91,
+          "win": 0,
+          "rank": 2,
+          "balance": 20,
+          "tiles": 11,
+          "spent": 171,
+          "maxMs": 4.489499999996042
+        },
+        {
+          "score": 110,
+          "win": 1,
+          "rank": 1,
+          "balance": 5,
+          "tiles": 16,
+          "spent": 205,
+          "maxMs": 3.624874999994063
+        },
+        {
+          "score": 67,
+          "win": 0,
+          "rank": 3,
+          "balance": 12,
+          "tiles": 10,
+          "spent": 155,
+          "maxMs": 2.060874999995576
+        },
+        {
+          "score": 68,
+          "win": 0,
+          "rank": 3,
+          "balance": 11,
+          "tiles": 9,
+          "spent": 157,
+          "maxMs": 2.676166999997804
+        },
+        {
+          "score": 75,
+          "win": 0,
+          "rank": 2,
+          "balance": 11,
+          "tiles": 12,
+          "spent": 164,
+          "maxMs": 2.1115000000136206
+        },
+        {
+          "score": 78,
+          "win": 0,
+          "rank": 3,
+          "balance": 11,
+          "tiles": 10,
+          "spent": 167,
+          "maxMs": 2.4452500000043074
+        },
+        {
+          "score": 72,
+          "win": 0,
+          "rank": 5,
+          "balance": 23,
+          "tiles": 12,
+          "spent": 149,
+          "maxMs": 4.047374999994645
+        },
+        {
+          "score": 66,
+          "win": 0,
+          "rank": 4,
+          "balance": 1,
+          "tiles": 12,
+          "spent": 165,
+          "maxMs": 1.9622919999965234
+        },
+        {
+          "score": 72,
+          "win": 0,
+          "rank": 5,
+          "balance": 43,
+          "tiles": 11,
+          "spent": 129,
+          "maxMs": 5.190749999994296
+        },
+        {
+          "score": 81,
+          "win": 0,
+          "rank": 2,
+          "balance": 8,
+          "tiles": 12,
+          "spent": 173,
+          "maxMs": 1.944959000000381
+        },
+        {
+          "score": 80,
+          "win": 0,
+          "rank": 3,
+          "balance": 15,
+          "tiles": 14,
+          "spent": 165,
+          "maxMs": 2.620708000002196
+        },
+        {
+          "score": 57,
+          "win": 0,
+          "rank": 5,
+          "balance": 5,
+          "tiles": 10,
+          "spent": 152,
+          "maxMs": 1.608583000008366
+        },
+        {
+          "score": 54,
+          "win": 0,
+          "rank": 6,
+          "balance": 22,
+          "tiles": 8,
+          "spent": 132,
+          "maxMs": 3.103458999990835
+        },
+        {
+          "score": 117,
+          "win": 1,
+          "rank": 1,
+          "balance": 13,
+          "tiles": 13,
+          "spent": 204,
+          "maxMs": 4.210208000004059
+        }
+      ]
+    },
+    {
+      "candidate": {
+        "name": "earlier-terminal",
+        "overrides": {
+          "endN": 5
+        }
+      },
+      "summary": {
+        "games": 36,
+        "meanScore": 83.83333333333333,
+        "wins": 9.5,
+        "atLeast100": 5,
+        "meanRank": 2.861111111111111,
+        "meanBalance": 18.52777777777778,
+        "maxMs": 10.0814160000009
+      },
+      "paired": {
+        "meanScoreDelta": 0.1388888888888889,
+        "scoreDeltaSE": 0.2076045453893386,
+        "improvements": 2,
+        "regressions": 2,
+        "ties": 32,
+        "winDelta": 0
+      },
+      "outcomes": [
+        {
+          "score": 87,
+          "win": 0,
+          "rank": 2,
+          "balance": 33,
+          "tiles": 10,
+          "spent": 154,
+          "maxMs": 5.421833000000333
+        },
+        {
+          "score": 81,
+          "win": 0,
+          "rank": 4,
+          "balance": 19,
+          "tiles": 12,
+          "spent": 162,
+          "maxMs": 2.264707999987877
+        },
+        {
+          "score": 67,
+          "win": 0,
+          "rank": 5,
+          "balance": 37,
+          "tiles": 9,
+          "spent": 130,
+          "maxMs": 4.286041000013938
+        },
+        {
+          "score": 72,
+          "win": 0,
+          "rank": 5,
+          "balance": 24,
+          "tiles": 10,
+          "spent": 148,
+          "maxMs": 4.583541999993031
+        },
+        {
+          "score": 101,
+          "win": 0,
+          "rank": 2,
+          "balance": 46,
+          "tiles": 12,
+          "spent": 155,
+          "maxMs": 5.107583000004524
+        },
+        {
+          "score": 84,
+          "win": 0,
+          "rank": 3,
+          "balance": 12,
+          "tiles": 12,
+          "spent": 172,
+          "maxMs": 5.574875000005704
+        },
+        {
+          "score": 94,
+          "win": 1,
+          "rank": 1,
+          "balance": 3,
+          "tiles": 11,
+          "spent": 191,
+          "maxMs": 2.5496249999996508
+        },
+        {
+          "score": 61,
+          "win": 0,
+          "rank": 5,
+          "balance": 26,
+          "tiles": 10,
+          "spent": 135,
+          "maxMs": 5.664791000002879
+        },
+        {
+          "score": 86,
+          "win": 1,
+          "rank": 1,
+          "balance": 13,
+          "tiles": 11,
+          "spent": 173,
+          "maxMs": 1.2930830000113929
+        },
+        {
+          "score": 87,
+          "win": 1,
+          "rank": 1,
+          "balance": 7,
+          "tiles": 10,
+          "spent": 180,
+          "maxMs": 1.6408749999973224
+        },
+        {
+          "score": 55,
+          "win": 0,
+          "rank": 6,
+          "balance": 10,
+          "tiles": 9,
+          "spent": 145,
+          "maxMs": 2.442165999993449
+        },
+        {
+          "score": 92,
+          "win": 0,
+          "rank": 3,
+          "balance": 18,
+          "tiles": 12,
+          "spent": 174,
+          "maxMs": 2.582416999997804
+        },
+        {
+          "score": 72,
+          "win": 0,
+          "rank": 4,
+          "balance": 18,
+          "tiles": 12,
+          "spent": 154,
+          "maxMs": 4.258709000001545
+        },
+        {
+          "score": 71,
+          "win": 0,
+          "rank": 4,
+          "balance": 10,
+          "tiles": 8,
+          "spent": 161,
+          "maxMs": 1.6013329999987036
+        },
+        {
+          "score": 78,
+          "win": 0,
+          "rank": 3,
+          "balance": 13,
+          "tiles": 10,
+          "spent": 165,
+          "maxMs": 2.107958000007784
+        },
+        {
+          "score": 77,
+          "win": 0,
+          "rank": 4,
+          "balance": 21,
+          "tiles": 12,
+          "spent": 156,
+          "maxMs": 1.9570410000014817
+        },
+        {
+          "score": 130,
+          "win": 1,
+          "rank": 1,
+          "balance": 27,
+          "tiles": 15,
+          "spent": 203,
+          "maxMs": 4.5101250000006985
+        },
+        {
+          "score": 105,
+          "win": 1,
+          "rank": 1,
+          "balance": 32,
+          "tiles": 14,
+          "spent": 173,
+          "maxMs": 3.657374999995227
+        },
+        {
+          "score": 58,
+          "win": 0,
+          "rank": 5,
+          "balance": 7,
+          "tiles": 11,
+          "spent": 151,
+          "maxMs": 1.370374999998603
+        },
+        {
+          "score": 87,
+          "win": 0,
+          "rank": 2,
+          "balance": 51,
+          "tiles": 11,
+          "spent": 136,
+          "maxMs": 4.6808750000054715
+        },
+        {
+          "score": 72,
+          "win": 0,
+          "rank": 4,
+          "balance": 7,
+          "tiles": 11,
+          "spent": 165,
+          "maxMs": 4.59483299999556
+        },
+        {
+          "score": 82,
+          "win": 0,
+          "rank": 2,
+          "balance": 13,
+          "tiles": 13,
+          "spent": 169,
+          "maxMs": 2.278915999995661
+        },
+        {
+          "score": 84,
+          "win": 0.5,
+          "rank": 1,
+          "balance": 17,
+          "tiles": 11,
+          "spent": 167,
+          "maxMs": 5.776249999995343
+        },
+        {
+          "score": 78,
+          "win": 0,
+          "rank": 5,
+          "balance": 45,
+          "tiles": 12,
+          "spent": 133,
+          "maxMs": 10.0814160000009
+        },
+        {
+          "score": 72,
+          "win": 0,
+          "rank": 3,
+          "balance": 15,
+          "tiles": 11,
+          "spent": 157,
+          "maxMs": 1.299417000001995
+        },
+        {
+          "score": 78,
+          "win": 0,
+          "rank": 2,
+          "balance": 6,
+          "tiles": 12,
+          "spent": 172,
+          "maxMs": 1.4391250000044238
+        },
+        {
+          "score": 80,
+          "win": 1,
+          "rank": 1,
+          "balance": 10,
+          "tiles": 14,
+          "spent": 170,
+          "maxMs": 3.767874999990454
+        },
+        {
+          "score": 98,
+          "win": 1,
+          "rank": 1,
+          "balance": 14,
+          "tiles": 14,
+          "spent": 184,
+          "maxMs": 1.3832919999986188
+        },
+        {
+          "score": 63,
+          "win": 0,
+          "rank": 4,
+          "balance": 9,
+          "tiles": 13,
+          "spent": 154,
+          "maxMs": 5.0480420000094455
+        },
+        {
+          "score": 89,
+          "win": 0,
+          "rank": 3,
+          "balance": 8,
+          "tiles": 12,
+          "spent": 181,
+          "maxMs": 1.370333999991999
+        },
+        {
+          "score": 94,
+          "win": 0,
+          "rank": 2,
+          "balance": 12,
+          "tiles": 13,
+          "spent": 182,
+          "maxMs": 2.7299999999959255
+        },
+        {
+          "score": 79,
+          "win": 0,
+          "rank": 2,
+          "balance": 13,
+          "tiles": 12,
+          "spent": 166,
+          "maxMs": 4.420249999995576
+        },
+        {
+          "score": 74,
+          "win": 0,
+          "rank": 4,
+          "balance": 11,
+          "tiles": 10,
+          "spent": 163,
+          "maxMs": 1.6107500000071013
+        },
+        {
+          "score": 111,
+          "win": 1,
+          "rank": 1,
+          "balance": 11,
+          "tiles": 12,
+          "spent": 200,
+          "maxMs": 4.445000000006985
+        },
+        {
+          "score": 66,
+          "win": 0,
+          "rank": 5,
+          "balance": 26,
+          "tiles": 9,
+          "spent": 140,
+          "maxMs": 5.784207999997307
+        },
+        {
+          "score": 153,
+          "win": 1,
+          "rank": 1,
+          "balance": 23,
+          "tiles": 17,
+          "spent": 230,
+          "maxMs": 2.1643330000079004
+        }
+      ]
+    },
+    {
+      "candidate": {
+        "name": "late-completions-only",
+        "overrides": {},
+        "late": {
+          "endN": 8,
+          "beta": 0,
+          "gamma": 0,
+          "pace": 0,
+          "floorMult": 0
+        }
+      },
+      "summary": {
+        "games": 36,
+        "meanScore": 83.38888888888889,
+        "wins": 8,
+        "atLeast100": 5,
+        "meanRank": 3.0833333333333335,
+        "meanBalance": 22.88888888888889,
+        "maxMs": 6.228791999994428
+      },
+      "paired": {
+        "meanScoreDelta": -0.3055555555555556,
+        "scoreDeltaSE": 0.4909004432162512,
+        "improvements": 4,
+        "regressions": 11,
+        "ties": 21,
+        "winDelta": -1.5
+      },
+      "outcomes": [
+        {
+          "score": 87,
+          "win": 0,
+          "rank": 2,
+          "balance": 33,
+          "tiles": 10,
+          "spent": 154,
+          "maxMs": 5.861334000001079
+        },
+        {
+          "score": 78,
+          "win": 0,
+          "rank": 6,
+          "balance": 32,
+          "tiles": 11,
+          "spent": 146,
+          "maxMs": 2.1308329999883426
+        },
+        {
+          "score": 67,
+          "win": 0,
+          "rank": 5,
+          "balance": 37,
+          "tiles": 9,
+          "spent": 130,
+          "maxMs": 4.539166999995359
+        },
+        {
+          "score": 72,
+          "win": 0,
+          "rank": 5,
+          "balance": 24,
+          "tiles": 10,
+          "spent": 148,
+          "maxMs": 4.994416999994428
+        },
+        {
+          "score": 104,
+          "win": 0,
+          "rank": 2,
+          "balance": 67,
+          "tiles": 11,
+          "spent": 137,
+          "maxMs": 5.432624999986729
+        },
+        {
+          "score": 79,
+          "win": 0,
+          "rank": 3,
+          "balance": 9,
+          "tiles": 11,
+          "spent": 170,
+          "maxMs": 6.228791999994428
+        },
+        {
+          "score": 93,
+          "win": 0,
+          "rank": 2,
+          "balance": 15,
+          "tiles": 10,
+          "spent": 178,
+          "maxMs": 1.758165999999619
+        },
+        {
+          "score": 61,
+          "win": 0,
+          "rank": 5,
+          "balance": 26,
+          "tiles": 10,
+          "spent": 135,
+          "maxMs": 5.452959000002011
+        },
+        {
+          "score": 86,
+          "win": 1,
+          "rank": 1,
+          "balance": 13,
+          "tiles": 11,
+          "spent": 173,
+          "maxMs": 1.8750419999996666
+        },
+        {
+          "score": 87,
+          "win": 1,
+          "rank": 1,
+          "balance": 7,
+          "tiles": 10,
+          "spent": 180,
+          "maxMs": 2.1001670000114245
+        },
+        {
+          "score": 55,
+          "win": 0,
+          "rank": 6,
+          "balance": 10,
+          "tiles": 9,
+          "spent": 145,
+          "maxMs": 2.3612080000020796
+        },
+        {
+          "score": 92,
+          "win": 0,
+          "rank": 3,
+          "balance": 18,
+          "tiles": 12,
+          "spent": 174,
+          "maxMs": 2.6500839999935124
+        },
+        {
+          "score": 74,
+          "win": 0,
+          "rank": 4,
+          "balance": 24,
+          "tiles": 11,
+          "spent": 150,
+          "maxMs": 4.570707999999286
+        },
+        {
+          "score": 71,
+          "win": 0,
+          "rank": 4,
+          "balance": 10,
+          "tiles": 8,
+          "spent": 161,
+          "maxMs": 1.7151250000024447
+        },
+        {
+          "score": 78,
+          "win": 0,
+          "rank": 3,
+          "balance": 13,
+          "tiles": 10,
+          "spent": 165,
+          "maxMs": 1.5267089999979362
+        },
+        {
+          "score": 72,
+          "win": 0,
+          "rank": 4,
+          "balance": 31,
+          "tiles": 11,
+          "spent": 141,
+          "maxMs": 1.80608399999619
+        },
+        {
+          "score": 130,
+          "win": 1,
+          "rank": 1,
+          "balance": 27,
+          "tiles": 15,
+          "spent": 203,
+          "maxMs": 5.056792000003043
+        },
+        {
+          "score": 105,
+          "win": 1,
+          "rank": 1,
+          "balance": 32,
+          "tiles": 14,
+          "spent": 173,
+          "maxMs": 3.9182090000103926
+        },
+        {
+          "score": 58,
+          "win": 0,
+          "rank": 5,
+          "balance": 8,
+          "tiles": 11,
+          "spent": 150,
+          "maxMs": 1.4699579999869457
+        },
+        {
+          "score": 87,
+          "win": 0,
+          "rank": 2,
+          "balance": 49,
+          "tiles": 11,
+          "spent": 138,
+          "maxMs": 5.134624999991502
+        },
+        {
+          "score": 72,
+          "win": 0,
+          "rank": 4,
+          "balance": 7,
+          "tiles": 11,
+          "spent": 165,
+          "maxMs": 5.2022500000020955
+        },
+        {
+          "score": 72,
+          "win": 0,
+          "rank": 3,
+          "balance": 18,
+          "tiles": 11,
+          "spent": 154,
+          "maxMs": 5.470958000005339
+        },
+        {
+          "score": 80,
+          "win": 0,
+          "rank": 3,
+          "balance": 37,
+          "tiles": 10,
+          "spent": 143,
+          "maxMs": 5.925083000009181
+        },
+        {
+          "score": 78,
+          "win": 0,
+          "rank": 5,
+          "balance": 45,
+          "tiles": 12,
+          "spent": 133,
+          "maxMs": 5.657624999992549
+        },
+        {
+          "score": 72,
+          "win": 0,
+          "rank": 3,
+          "balance": 15,
+          "tiles": 11,
+          "spent": 157,
+          "maxMs": 1.3945840000087628
+        },
+        {
+          "score": 78,
+          "win": 0,
+          "rank": 2,
+          "balance": 14,
+          "tiles": 12,
+          "spent": 164,
+          "maxMs": 2.223541999992449
+        },
+        {
+          "score": 90,
+          "win": 1,
+          "rank": 1,
+          "balance": 16,
+          "tiles": 13,
+          "spent": 174,
+          "maxMs": 4.856583999993745
+        },
+        {
+          "score": 98,
+          "win": 1,
+          "rank": 1,
+          "balance": 14,
+          "tiles": 14,
+          "spent": 184,
+          "maxMs": 1.418667000005371
+        },
+        {
+          "score": 69,
+          "win": 0,
+          "rank": 4,
+          "balance": 32,
+          "tiles": 12,
+          "spent": 137,
+          "maxMs": 5.516875000001164
+        },
+        {
+          "score": 87,
+          "win": 0,
+          "rank": 3,
+          "balance": 13,
+          "tiles": 10,
+          "spent": 174,
+          "maxMs": 3.7644169999985024
+        },
+        {
+          "score": 89,
+          "win": 0,
+          "rank": 2,
+          "balance": 27,
+          "tiles": 12,
+          "spent": 162,
+          "maxMs": 3.9626250000001164
+        },
+        {
+          "score": 84,
+          "win": 0,
+          "rank": 2,
+          "balance": 41,
+          "tiles": 11,
+          "spent": 143,
+          "maxMs": 4.687000000005355
+        },
+        {
+          "score": 72,
+          "win": 0,
+          "rank": 5,
+          "balance": 13,
+          "tiles": 10,
+          "spent": 159,
+          "maxMs": 1.531541999996989
+        },
+        {
+          "score": 111,
+          "win": 1,
+          "rank": 1,
+          "balance": 4,
+          "tiles": 12,
+          "spent": 207,
+          "maxMs": 4.5089589999988675
+        },
+        {
+          "score": 61,
+          "win": 0,
+          "rank": 6,
+          "balance": 20,
+          "tiles": 7,
+          "spent": 141,
+          "maxMs": 5.8897500000020955
+        },
+        {
+          "score": 153,
+          "win": 1,
+          "rank": 1,
+          "balance": 23,
+          "tiles": 17,
+          "spent": 230,
+          "maxMs": 1.580707999994047
+        }
+      ]
+    },
+    {
+      "candidate": {
+        "name": "more-tiles",
+        "overrides": {
+          "letterTarget": 16,
+          "slack": 1,
+          "floorMult": 0.9
+        }
+      },
+      "summary": {
+        "games": 36,
+        "meanScore": 84.27777777777777,
+        "wins": 8,
+        "atLeast100": 5,
+        "meanRank": 3.138888888888889,
+        "meanBalance": 17.305555555555557,
+        "maxMs": 33.541792000003625
+      },
+      "paired": {
+        "meanScoreDelta": 0.5833333333333334,
+        "scoreDeltaSE": 2.0155644370746373,
+        "improvements": 16,
+        "regressions": 15,
+        "ties": 5,
+        "winDelta": -1.5
+      },
+      "outcomes": [
+        {
+          "score": 77,
+          "win": 0,
+          "rank": 3,
+          "balance": 16,
+          "tiles": 14,
+          "spent": 161,
+          "maxMs": 1.9546249999984866
+        },
+        {
+          "score": 75,
+          "win": 0,
+          "rank": 6,
+          "balance": 37,
+          "tiles": 10,
+          "spent": 138,
+          "maxMs": 3.7936250000057044
+        },
+        {
+          "score": 67,
+          "win": 0,
+          "rank": 5,
+          "balance": 37,
+          "tiles": 9,
+          "spent": 130,
+          "maxMs": 4.133625000002212
+        },
+        {
+          "score": 81,
+          "win": 0,
+          "rank": 3,
+          "balance": 14,
+          "tiles": 12,
+          "spent": 167,
+          "maxMs": 1.5764590000035241
+        },
+        {
+          "score": 101,
+          "win": 0,
+          "rank": 2,
+          "balance": 57,
+          "tiles": 12,
+          "spent": 144,
+          "maxMs": 5.4808329999796115
+        },
+        {
+          "score": 94,
+          "win": 1,
+          "rank": 1,
+          "balance": 13,
+          "tiles": 13,
+          "spent": 181,
+          "maxMs": 2.19512499999837
+        },
+        {
+          "score": 75,
+          "win": 0,
+          "rank": 4,
+          "balance": 2,
+          "tiles": 12,
+          "spent": 173,
+          "maxMs": 1.7485410000081174
+        },
+        {
+          "score": 80,
+          "win": 0,
+          "rank": 3,
+          "balance": 7,
+          "tiles": 13,
+          "spent": 173,
+          "maxMs": 1.7690000000002328
+        },
+        {
+          "score": 86,
+          "win": 0,
+          "rank": 2,
+          "balance": 12,
+          "tiles": 13,
+          "spent": 174,
+          "maxMs": 1.5251249999855645
+        },
+        {
+          "score": 55,
+          "win": 0,
+          "rank": 6,
+          "balance": 14,
+          "tiles": 10,
+          "spent": 141,
+          "maxMs": 4.442125000001397
+        },
+        {
+          "score": 74,
+          "win": 0,
+          "rank": 3,
+          "balance": 2,
+          "tiles": 10,
+          "spent": 172,
+          "maxMs": 1.4196670000092126
+        },
+        {
+          "score": 90,
+          "win": 0,
+          "rank": 3,
+          "balance": 16,
+          "tiles": 13,
+          "spent": 174,
+          "maxMs": 3.9554170000192244
+        },
+        {
+          "score": 87,
+          "win": 1,
+          "rank": 1,
+          "balance": 6,
+          "tiles": 14,
+          "spent": 181,
+          "maxMs": 1.4999169999791775
+        },
+        {
+          "score": 90,
+          "win": 0,
+          "rank": 2,
+          "balance": 6,
+          "tiles": 13,
+          "spent": 184,
+          "maxMs": 1.6107090000004973
+        },
+        {
+          "score": 77,
+          "win": 0,
+          "rank": 4,
+          "balance": 20,
+          "tiles": 10,
+          "spent": 157,
+          "maxMs": 2.483957999997074
+        },
+        {
+          "score": 48,
+          "win": 0,
+          "rank": 5,
+          "balance": 4,
+          "tiles": 9,
+          "spent": 144,
+          "maxMs": 2.7014589999744203
+        },
+        {
+          "score": 130,
+          "win": 1,
+          "rank": 1,
+          "balance": 27,
+          "tiles": 15,
+          "spent": 203,
+          "maxMs": 3.9221250000118744
+        },
+        {
+          "score": 127,
+          "win": 1,
+          "rank": 1,
+          "balance": 7,
+          "tiles": 17,
+          "spent": 220,
+          "maxMs": 1.6552079999819398
+        },
+        {
+          "score": 56,
+          "win": 0,
+          "rank": 6,
+          "balance": 18,
+          "tiles": 10,
+          "spent": 138,
+          "maxMs": 1.615791000018362
+        },
+        {
+          "score": 89,
+          "win": 0,
+          "rank": 2,
+          "balance": 44,
+          "tiles": 12,
+          "spent": 145,
+          "maxMs": 4.820833000005223
+        },
+        {
+          "score": 75,
+          "win": 0,
+          "rank": 4,
+          "balance": 8,
+          "tiles": 12,
+          "spent": 167,
+          "maxMs": 4.395500000013271
+        },
+        {
+          "score": 75,
+          "win": 0,
+          "rank": 3,
+          "balance": 9,
+          "tiles": 13,
+          "spent": 166,
+          "maxMs": 1.8000420000171289
+        },
+        {
+          "score": 85,
+          "win": 0,
+          "rank": 2,
+          "balance": 15,
+          "tiles": 12,
+          "spent": 170,
+          "maxMs": 4.79954199999338
+        },
+        {
+          "score": 76,
+          "win": 0,
+          "rank": 4,
+          "balance": 22,
+          "tiles": 11,
+          "spent": 154,
+          "maxMs": 3.0092920000024606
+        },
+        {
+          "score": 65,
+          "win": 0,
+          "rank": 5,
+          "balance": 22,
+          "tiles": 10,
+          "spent": 143,
+          "maxMs": 3.236791999981506
+        },
+        {
+          "score": 84,
+          "win": 0,
+          "rank": 3,
+          "balance": 7,
+          "tiles": 15,
+          "spent": 177,
+          "maxMs": 3.4276670000108425
+        },
+        {
+          "score": 90,
+          "win": 1,
+          "rank": 1,
+          "balance": 14,
+          "tiles": 14,
+          "spent": 176,
+          "maxMs": 1.3433749999967404
+        },
+        {
+          "score": 109,
+          "win": 1,
+          "rank": 1,
+          "balance": 13,
+          "tiles": 15,
+          "spent": 196,
+          "maxMs": 2.173708999995142
+        },
+        {
+          "score": 72,
+          "win": 0,
+          "rank": 4,
+          "balance": 19,
+          "tiles": 13,
+          "spent": 153,
+          "maxMs": 2.6367500000051223
+        },
+        {
+          "score": 86,
+          "win": 0,
+          "rank": 3,
+          "balance": 14,
+          "tiles": 12,
+          "spent": 172,
+          "maxMs": 33.541792000003625
+        },
+        {
+          "score": 93,
+          "win": 1,
+          "rank": 1,
+          "balance": 21,
+          "tiles": 14,
+          "spent": 172,
+          "maxMs": 3.507166999974288
+        },
+        {
+          "score": 71,
+          "win": 0,
+          "rank": 5,
+          "balance": 38,
+          "tiles": 11,
+          "spent": 133,
+          "maxMs": 4.510624999995343
+        },
+        {
+          "score": 78,
+          "win": 0,
+          "rank": 5,
+          "balance": 40,
+          "tiles": 10,
+          "spent": 138,
+          "maxMs": 5.81354200001806
+        },
+        {
+          "score": 99,
+          "win": 0,
+          "rank": 2,
+          "balance": 7,
+          "tiles": 13,
+          "spent": 192,
+          "maxMs": 5.41529200001969
+        },
+        {
+          "score": 54,
+          "win": 0,
+          "rank": 6,
+          "balance": 6,
+          "tiles": 9,
+          "spent": 148,
+          "maxMs": 2.479583000007551
+        },
+        {
+          "score": 163,
+          "win": 1,
+          "rank": 1,
+          "balance": 9,
+          "tiles": 19,
+          "spent": 254,
+          "maxMs": 2.4170419999863952
+        }
+      ]
+    },
+    {
+      "candidate": {
+        "name": "orphan-q-discount",
+        "overrides": {
+          "qW": 0.35
+        }
+      },
+      "summary": {
+        "games": 36,
+        "meanScore": 83.69444444444444,
+        "wins": 9.5,
+        "atLeast100": 5,
+        "meanRank": 2.888888888888889,
+        "meanBalance": 17.97222222222222,
+        "maxMs": 5.869374999980209
+      },
+      "paired": {
+        "meanScoreDelta": 0,
+        "scoreDeltaSE": 0,
+        "improvements": 0,
+        "regressions": 0,
+        "ties": 36,
+        "winDelta": 0
+      },
+      "outcomes": [
+        {
+          "score": 87,
+          "win": 0,
+          "rank": 2,
+          "balance": 33,
+          "tiles": 10,
+          "spent": 154,
+          "maxMs": 5.307666999986395
+        },
+        {
+          "score": 81,
+          "win": 0,
+          "rank": 4,
+          "balance": 19,
+          "tiles": 12,
+          "spent": 162,
+          "maxMs": 4.433667000004789
+        },
+        {
+          "score": 67,
+          "win": 0,
+          "rank": 5,
+          "balance": 37,
+          "tiles": 9,
+          "spent": 130,
+          "maxMs": 4.018708000017796
+        },
+        {
+          "score": 72,
+          "win": 0,
+          "rank": 5,
+          "balance": 24,
+          "tiles": 10,
+          "spent": 148,
+          "maxMs": 4.675749999994878
+        },
+        {
+          "score": 101,
+          "win": 0,
+          "rank": 2,
+          "balance": 46,
+          "tiles": 12,
+          "spent": 155,
+          "maxMs": 5.694499999983236
+        },
+        {
+          "score": 84,
+          "win": 0,
+          "rank": 3,
+          "balance": 12,
+          "tiles": 12,
+          "spent": 172,
+          "maxMs": 5.439249999995809
+        },
+        {
+          "score": 94,
+          "win": 1,
+          "rank": 1,
+          "balance": 4,
+          "tiles": 11,
+          "spent": 190,
+          "maxMs": 2.281749999994645
+        },
+        {
+          "score": 61,
+          "win": 0,
+          "rank": 5,
+          "balance": 26,
+          "tiles": 10,
+          "spent": 135,
+          "maxMs": 5.060291000001598
+        },
+        {
+          "score": 86,
+          "win": 1,
+          "rank": 1,
+          "balance": 13,
+          "tiles": 11,
+          "spent": 173,
+          "maxMs": 1.9847500000032596
+        },
+        {
+          "score": 87,
+          "win": 1,
+          "rank": 1,
+          "balance": 7,
+          "tiles": 10,
+          "spent": 180,
+          "maxMs": 1.741875000006985
+        },
+        {
+          "score": 55,
+          "win": 0,
+          "rank": 6,
+          "balance": 10,
+          "tiles": 9,
+          "spent": 145,
+          "maxMs": 2.34945899999002
+        },
+        {
+          "score": 92,
+          "win": 0,
+          "rank": 3,
+          "balance": 18,
+          "tiles": 12,
+          "spent": 174,
+          "maxMs": 2.6676250000018626
+        },
+        {
+          "score": 74,
+          "win": 0,
+          "rank": 4,
+          "balance": 35,
+          "tiles": 11,
+          "spent": 139,
+          "maxMs": 4.717999999993481
+        },
+        {
+          "score": 71,
+          "win": 0,
+          "rank": 4,
+          "balance": 10,
+          "tiles": 8,
+          "spent": 161,
+          "maxMs": 1.84008300001733
+        },
+        {
+          "score": 78,
+          "win": 0,
+          "rank": 3,
+          "balance": 13,
+          "tiles": 10,
+          "spent": 165,
+          "maxMs": 2.230582999996841
+        },
+        {
+          "score": 77,
+          "win": 0,
+          "rank": 4,
+          "balance": 21,
+          "tiles": 12,
+          "spent": 156,
+          "maxMs": 2.795958000002429
+        },
+        {
+          "score": 130,
+          "win": 1,
+          "rank": 1,
+          "balance": 27,
+          "tiles": 15,
+          "spent": 203,
+          "maxMs": 4.0995420000108425
+        },
+        {
+          "score": 106,
+          "win": 1,
+          "rank": 1,
+          "balance": 8,
+          "tiles": 15,
+          "spent": 198,
+          "maxMs": 1.4184580000001006
+        },
+        {
+          "score": 58,
+          "win": 0,
+          "rank": 5,
+          "balance": 7,
+          "tiles": 11,
+          "spent": 151,
+          "maxMs": 1.4007909999927506
+        },
+        {
+          "score": 87,
+          "win": 0,
+          "rank": 2,
+          "balance": 51,
+          "tiles": 11,
+          "spent": 136,
+          "maxMs": 4.948124999995343
+        },
+        {
+          "score": 72,
+          "win": 0,
+          "rank": 4,
+          "balance": 7,
+          "tiles": 11,
+          "spent": 165,
+          "maxMs": 4.796999999991385
+        },
+        {
+          "score": 75,
+          "win": 0,
+          "rank": 3,
+          "balance": 3,
+          "tiles": 13,
+          "spent": 172,
+          "maxMs": 2.461458000005223
+        },
+        {
+          "score": 83,
+          "win": 0.5,
+          "rank": 1,
+          "balance": 14,
+          "tiles": 11,
+          "spent": 169,
+          "maxMs": 1.3973750000004657
+        },
+        {
+          "score": 78,
+          "win": 0,
+          "rank": 5,
+          "balance": 45,
+          "tiles": 12,
+          "spent": 133,
+          "maxMs": 5.408624999981839
+        },
+        {
+          "score": 72,
+          "win": 0,
+          "rank": 3,
+          "balance": 11,
+          "tiles": 11,
+          "spent": 161,
+          "maxMs": 1.4085000000195578
+        },
+        {
+          "score": 78,
+          "win": 0,
+          "rank": 2,
+          "balance": 6,
+          "tiles": 12,
+          "spent": 172,
+          "maxMs": 1.3334170000161976
+        },
+        {
+          "score": 80,
+          "win": 1,
+          "rank": 1,
+          "balance": 10,
+          "tiles": 14,
+          "spent": 170,
+          "maxMs": 2.633124999993015
+        },
+        {
+          "score": 98,
+          "win": 1,
+          "rank": 1,
+          "balance": 14,
+          "tiles": 14,
+          "spent": 184,
+          "maxMs": 1.53987499998766
+        },
+        {
+          "score": 63,
+          "win": 0,
+          "rank": 4,
+          "balance": 9,
+          "tiles": 13,
+          "spent": 154,
+          "maxMs": 2.6595000000088476
+        },
+        {
+          "score": 89,
+          "win": 0,
+          "rank": 3,
+          "balance": 8,
+          "tiles": 12,
+          "spent": 181,
+          "maxMs": 1.2438330000150017
+        },
+        {
+          "score": 94,
+          "win": 0,
+          "rank": 2,
+          "balance": 10,
+          "tiles": 13,
+          "spent": 184,
+          "maxMs": 2.776584000006551
+        },
+        {
+          "score": 79,
+          "win": 0,
+          "rank": 2,
+          "balance": 16,
+          "tiles": 12,
+          "spent": 163,
+          "maxMs": 3.2641249999869615
+        },
+        {
+          "score": 74,
+          "win": 0,
+          "rank": 4,
+          "balance": 13,
+          "tiles": 10,
+          "spent": 161,
+          "maxMs": 1.9272499999788124
+        },
+        {
+          "score": 111,
+          "win": 1,
+          "rank": 1,
+          "balance": 11,
+          "tiles": 12,
+          "spent": 200,
+          "maxMs": 4.157792000012705
+        },
+        {
+          "score": 66,
+          "win": 0,
+          "rank": 5,
+          "balance": 26,
+          "tiles": 9,
+          "spent": 140,
+          "maxMs": 5.869374999980209
+        },
+        {
+          "score": 153,
+          "win": 1,
+          "rank": 1,
+          "balance": 23,
+          "tiles": 17,
+          "spent": 230,
+          "maxMs": 1.2374159999890253
+        }
+      ]
+    },
+    {
+      "candidate": {
+        "name": "idle-discount",
+        "overrides": {
+          "idleBeta": 0.3
+        }
+      },
+      "summary": {
+        "games": 36,
+        "meanScore": 81.91666666666667,
+        "wins": 9,
+        "atLeast100": 5,
+        "meanRank": 3.111111111111111,
+        "meanBalance": 19.25,
+        "maxMs": 6.207916999992449
+      },
+      "paired": {
+        "meanScoreDelta": -1.7777777777777777,
+        "scoreDeltaSE": 1.2286985701818176,
+        "improvements": 1,
+        "regressions": 6,
+        "ties": 29,
+        "winDelta": -0.5
+      },
+      "outcomes": [
+        {
+          "score": 87,
+          "win": 0,
+          "rank": 2,
+          "balance": 33,
+          "tiles": 10,
+          "spent": 154,
+          "maxMs": 4.98499999998603
+        },
+        {
+          "score": 78,
+          "win": 0,
+          "rank": 5,
+          "balance": 42,
+          "tiles": 10,
+          "spent": 136,
+          "maxMs": 3.9928749999962747
+        },
+        {
+          "score": 67,
+          "win": 0,
+          "rank": 5,
+          "balance": 37,
+          "tiles": 9,
+          "spent": 130,
+          "maxMs": 4.150415999989491
+        },
+        {
+          "score": 72,
+          "win": 0,
+          "rank": 5,
+          "balance": 24,
+          "tiles": 10,
+          "spent": 148,
+          "maxMs": 4.55245799999102
+        },
+        {
+          "score": 101,
+          "win": 0,
+          "rank": 2,
+          "balance": 42,
+          "tiles": 11,
+          "spent": 159,
+          "maxMs": 4.777000000001863
+        },
+        {
+          "score": 75,
+          "win": 0,
+          "rank": 4,
+          "balance": 33,
+          "tiles": 10,
+          "spent": 142,
+          "maxMs": 5.368625000002794
+        },
+        {
+          "score": 94,
+          "win": 1,
+          "rank": 1,
+          "balance": 4,
+          "tiles": 11,
+          "spent": 190,
+          "maxMs": 2.1490409999969415
+        },
+        {
+          "score": 61,
+          "win": 0,
+          "rank": 5,
+          "balance": 26,
+          "tiles": 10,
+          "spent": 135,
+          "maxMs": 4.883166000014171
+        },
+        {
+          "score": 86,
+          "win": 1,
+          "rank": 1,
+          "balance": 13,
+          "tiles": 11,
+          "spent": 173,
+          "maxMs": 1.4373750000086147
+        },
+        {
+          "score": 87,
+          "win": 1,
+          "rank": 1,
+          "balance": 7,
+          "tiles": 10,
+          "spent": 180,
+          "maxMs": 2.431832999980543
+        },
+        {
+          "score": 55,
+          "win": 0,
+          "rank": 6,
+          "balance": 10,
+          "tiles": 9,
+          "spent": 145,
+          "maxMs": 2.4729999999981374
+        },
+        {
+          "score": 92,
+          "win": 0,
+          "rank": 3,
+          "balance": 18,
+          "tiles": 12,
+          "spent": 174,
+          "maxMs": 2.9447909999871626
+        },
+        {
+          "score": 74,
+          "win": 0,
+          "rank": 4,
+          "balance": 35,
+          "tiles": 11,
+          "spent": 139,
+          "maxMs": 4.75762499999837
+        },
+        {
+          "score": 82,
+          "win": 0,
+          "rank": 3,
+          "balance": 3,
+          "tiles": 10,
+          "spent": 179,
+          "maxMs": 1.3441670000029262
+        },
+        {
+          "score": 78,
+          "win": 0,
+          "rank": 3,
+          "balance": 13,
+          "tiles": 10,
+          "spent": 165,
+          "maxMs": 1.8081250000104774
+        },
+        {
+          "score": 47,
+          "win": 0,
+          "rank": 5,
+          "balance": 13,
+          "tiles": 8,
+          "spent": 134,
+          "maxMs": 2.06683300001896
+        },
+        {
+          "score": 130,
+          "win": 1,
+          "rank": 1,
+          "balance": 27,
+          "tiles": 15,
+          "spent": 203,
+          "maxMs": 3.8325410000106785
+        },
+        {
+          "score": 106,
+          "win": 1,
+          "rank": 1,
+          "balance": 8,
+          "tiles": 15,
+          "spent": 198,
+          "maxMs": 1.3949999999895226
+        },
+        {
+          "score": 58,
+          "win": 0,
+          "rank": 5,
+          "balance": 7,
+          "tiles": 11,
+          "spent": 151,
+          "maxMs": 1.9394999999785796
+        },
+        {
+          "score": 87,
+          "win": 0,
+          "rank": 2,
+          "balance": 51,
+          "tiles": 11,
+          "spent": 136,
+          "maxMs": 4.610667000000831
+        },
+        {
+          "score": 72,
+          "win": 0,
+          "rank": 4,
+          "balance": 7,
+          "tiles": 11,
+          "spent": 165,
+          "maxMs": 4.472957999998471
+        },
+        {
+          "score": 75,
+          "win": 0,
+          "rank": 3,
+          "balance": 3,
+          "tiles": 13,
+          "spent": 172,
+          "maxMs": 4.227582999999868
+        },
+        {
+          "score": 82,
+          "win": 0,
+          "rank": 2,
+          "balance": 33,
+          "tiles": 10,
+          "spent": 149,
+          "maxMs": 5.6571249999979045
+        },
+        {
+          "score": 78,
+          "win": 0,
+          "rank": 5,
+          "balance": 45,
+          "tiles": 12,
+          "spent": 133,
+          "maxMs": 5.326000000000931
+        },
+        {
+          "score": 72,
+          "win": 0,
+          "rank": 3,
+          "balance": 11,
+          "tiles": 11,
+          "spent": 161,
+          "maxMs": 1.234334000007948
+        },
+        {
+          "score": 48,
+          "win": 0,
+          "rank": 6,
+          "balance": 17,
+          "tiles": 8,
+          "spent": 131,
+          "maxMs": 5.878708000003826
+        },
+        {
+          "score": 80,
+          "win": 1,
+          "rank": 1,
+          "balance": 10,
+          "tiles": 14,
+          "spent": 170,
+          "maxMs": 2.6634159999957774
+        },
+        {
+          "score": 98,
+          "win": 1,
+          "rank": 1,
+          "balance": 14,
+          "tiles": 14,
+          "spent": 184,
+          "maxMs": 1.3638749999809079
+        },
+        {
+          "score": 63,
+          "win": 0,
+          "rank": 4,
+          "balance": 9,
+          "tiles": 13,
+          "spent": 154,
+          "maxMs": 2.4135829999868292
+        },
+        {
+          "score": 89,
+          "win": 0,
+          "rank": 3,
+          "balance": 8,
+          "tiles": 12,
+          "spent": 181,
+          "maxMs": 1.2283329999772832
+        },
+        {
+          "score": 94,
+          "win": 0,
+          "rank": 2,
+          "balance": 10,
+          "tiles": 13,
+          "spent": 184,
+          "maxMs": 2.843250000005355
+        },
+        {
+          "score": 79,
+          "win": 0,
+          "rank": 2,
+          "balance": 16,
+          "tiles": 12,
+          "spent": 163,
+          "maxMs": 3.4200000000128057
+        },
+        {
+          "score": 74,
+          "win": 0,
+          "rank": 4,
+          "balance": 13,
+          "tiles": 10,
+          "spent": 161,
+          "maxMs": 1.9313330000150017
+        },
+        {
+          "score": 111,
+          "win": 1,
+          "rank": 1,
+          "balance": 7,
+          "tiles": 12,
+          "spent": 204,
+          "maxMs": 4.158332999999402
+        },
+        {
+          "score": 64,
+          "win": 0,
+          "rank": 6,
+          "balance": 21,
+          "tiles": 9,
+          "spent": 143,
+          "maxMs": 6.207916999992449
+        },
+        {
+          "score": 153,
+          "win": 1,
+          "rank": 1,
+          "balance": 23,
+          "tiles": 17,
+          "spent": 230,
+          "maxMs": 2.02758300001733
+        }
+      ]
+    },
+    {
+      "candidate": {
+        "name": "two-word-q",
+        "overrides": {
+          "w2": 0.6,
+          "qW": 0.35
+        }
+      },
+      "summary": {
+        "games": 36,
+        "meanScore": 78.52777777777777,
+        "wins": 5.333333333333333,
+        "atLeast100": 4,
+        "meanRank": 3.3055555555555554,
+        "meanBalance": 15.5,
+        "maxMs": 15.553791999991518
+      },
+      "paired": {
+        "meanScoreDelta": -5.166666666666667,
+        "scoreDeltaSE": 3.269265244377586,
+        "improvements": 14,
+        "regressions": 20,
+        "ties": 2,
+        "winDelta": -4.166666666666667
+      },
+      "outcomes": [
+        {
+          "score": 87,
+          "win": 0,
+          "rank": 2,
+          "balance": 14,
+          "tiles": 12,
+          "spent": 173,
+          "maxMs": 2.3561249999911524
+        },
+        {
+          "score": 69,
+          "win": 0,
+          "rank": 5,
+          "balance": 16,
+          "tiles": 8,
+          "spent": 153,
+          "maxMs": 4.51624999998603
+        },
+        {
+          "score": 55,
+          "win": 0,
+          "rank": 5,
+          "balance": 9,
+          "tiles": 9,
+          "spent": 146,
+          "maxMs": 3.451915999990888
+        },
+        {
+          "score": 71,
+          "win": 0,
+          "rank": 6,
+          "balance": 6,
+          "tiles": 12,
+          "spent": 165,
+          "maxMs": 2.739332999975886
+        },
+        {
+          "score": 98,
+          "win": 0,
+          "rank": 2,
+          "balance": 15,
+          "tiles": 11,
+          "spent": 183,
+          "maxMs": 3.2217909999890253
+        },
+        {
+          "score": 76,
+          "win": 0,
+          "rank": 4,
+          "balance": 14,
+          "tiles": 10,
+          "spent": 162,
+          "maxMs": 4.140583000000333
+        },
+        {
+          "score": 68,
+          "win": 0,
+          "rank": 6,
+          "balance": 10,
+          "tiles": 10,
+          "spent": 158,
+          "maxMs": 2.6832919999724254
+        },
+        {
+          "score": 61,
+          "win": 0,
+          "rank": 6,
+          "balance": 19,
+          "tiles": 9,
+          "spent": 142,
+          "maxMs": 5.677209000015864
+        },
+        {
+          "score": 97,
+          "win": 1,
+          "rank": 1,
+          "balance": 9,
+          "tiles": 12,
+          "spent": 188,
+          "maxMs": 3.5964589999930467
+        },
+        {
+          "score": 35,
+          "win": 0,
+          "rank": 6,
+          "balance": 9,
+          "tiles": 7,
+          "spent": 126,
+          "maxMs": 2.449207999976352
+        },
+        {
+          "score": 80,
+          "win": 0,
+          "rank": 3,
+          "balance": 15,
+          "tiles": 10,
+          "spent": 165,
+          "maxMs": 3.224167000007583
+        },
+        {
+          "score": 68,
+          "win": 0,
+          "rank": 4,
+          "balance": 8,
+          "tiles": 11,
+          "spent": 160,
+          "maxMs": 2.376625000004424
+        },
+        {
+          "score": 87,
+          "win": 0,
+          "rank": 2,
+          "balance": 53,
+          "tiles": 10,
+          "spent": 134,
+          "maxMs": 3.922791999997571
+        },
+        {
+          "score": 75,
+          "win": 0,
+          "rank": 3,
+          "balance": 1,
+          "tiles": 13,
+          "spent": 174,
+          "maxMs": 3.5915830000012647
+        },
+        {
+          "score": 90,
+          "win": 0.3333333333333333,
+          "rank": 1,
+          "balance": 2,
+          "tiles": 11,
+          "spent": 188,
+          "maxMs": 2.7728340000030585
+        },
+        {
+          "score": 68,
+          "win": 0,
+          "rank": 5,
+          "balance": 9,
+          "tiles": 11,
+          "spent": 159,
+          "maxMs": 4.401707999990322
+        },
+        {
+          "score": 96,
+          "win": 0,
+          "rank": 3,
+          "balance": 32,
+          "tiles": 15,
+          "spent": 164,
+          "maxMs": 7.149291000008816
+        },
+        {
+          "score": 109,
+          "win": 1,
+          "rank": 1,
+          "balance": 21,
+          "tiles": 15,
+          "spent": 188,
+          "maxMs": 4.7401670000108425
+        },
+        {
+          "score": 64,
+          "win": 0,
+          "rank": 4,
+          "balance": 17,
+          "tiles": 9,
+          "spent": 147,
+          "maxMs": 3.7540830000070855
+        },
+        {
+          "score": 77,
+          "win": 0,
+          "rank": 3,
+          "balance": 14,
+          "tiles": 12,
+          "spent": 163,
+          "maxMs": 3.7395829999877606
+        },
+        {
+          "score": 84,
+          "win": 0,
+          "rank": 2,
+          "balance": 15,
+          "tiles": 12,
+          "spent": 169,
+          "maxMs": 4.520667000004323
+        },
+        {
+          "score": 107,
+          "win": 1,
+          "rank": 1,
+          "balance": 15,
+          "tiles": 13,
+          "spent": 192,
+          "maxMs": 3.1011660000076517
+        },
+        {
+          "score": 91,
+          "win": 0,
+          "rank": 2,
+          "balance": 20,
+          "tiles": 11,
+          "spent": 171,
+          "maxMs": 4.659583000000566
+        },
+        {
+          "score": 110,
+          "win": 1,
+          "rank": 1,
+          "balance": 5,
+          "tiles": 16,
+          "spent": 205,
+          "maxMs": 3.839749999984633
+        },
+        {
+          "score": 67,
+          "win": 0,
+          "rank": 3,
+          "balance": 19,
+          "tiles": 10,
+          "spent": 148,
+          "maxMs": 6.492417000001296
+        },
+        {
+          "score": 68,
+          "win": 0,
+          "rank": 3,
+          "balance": 11,
+          "tiles": 9,
+          "spent": 157,
+          "maxMs": 2.910915999993449
+        },
+        {
+          "score": 75,
+          "win": 0,
+          "rank": 2,
+          "balance": 11,
+          "tiles": 12,
+          "spent": 164,
+          "maxMs": 2.682749999978114
+        },
+        {
+          "score": 78,
+          "win": 0,
+          "rank": 3,
+          "balance": 11,
+          "tiles": 10,
+          "spent": 167,
+          "maxMs": 2.0396659999969415
+        },
+        {
+          "score": 72,
+          "win": 0,
+          "rank": 5,
+          "balance": 23,
+          "tiles": 12,
+          "spent": 149,
+          "maxMs": 4.0200410000106785
+        },
+        {
+          "score": 60,
+          "win": 0,
+          "rank": 5,
+          "balance": 22,
+          "tiles": 10,
+          "spent": 138,
+          "maxMs": 5.682957999990322
+        },
+        {
+          "score": 72,
+          "win": 0,
+          "rank": 5,
+          "balance": 43,
+          "tiles": 11,
+          "spent": 129,
+          "maxMs": 5.87704200000735
+        },
+        {
+          "score": 81,
+          "win": 0,
+          "rank": 2,
+          "balance": 8,
+          "tiles": 12,
+          "spent": 173,
+          "maxMs": 3.4497919999994338
+        },
+        {
+          "score": 90,
+          "win": 0,
+          "rank": 2,
+          "balance": 7,
+          "tiles": 15,
+          "spent": 183,
+          "maxMs": 3.465374999999767
+        },
+        {
+          "score": 69,
+          "win": 0,
+          "rank": 4,
+          "balance": 19,
+          "tiles": 7,
+          "spent": 150,
+          "maxMs": 3.2792499999923166
+        },
+        {
+          "score": 55,
+          "win": 0,
+          "rank": 6,
+          "balance": 23,
+          "tiles": 8,
+          "spent": 132,
+          "maxMs": 15.553791999991518
+        },
+        {
+          "score": 117,
+          "win": 1,
+          "rank": 1,
+          "balance": 13,
+          "tiles": 13,
+          "spent": 204,
+          "maxMs": 4.811916000006022
+        }
+      ]
+    },
+    {
+      "candidate": {
+        "name": "lower-cost",
+        "overrides": {
+          "c0": 0.2
+        }
+      },
+      "summary": {
+        "games": 36,
+        "meanScore": 76.83333333333333,
+        "wins": 4,
+        "atLeast100": 4,
+        "meanRank": 3.9166666666666665,
+        "meanBalance": 27.416666666666668,
+        "maxMs": 8.65729200001806
+      },
+      "paired": {
+        "meanScoreDelta": -6.861111111111111,
+        "scoreDeltaSE": 2.3651412850102562,
+        "improvements": 12,
+        "regressions": 23,
+        "ties": 1,
+        "winDelta": -5.5
+      },
+      "outcomes": [
+        {
+          "score": 66,
+          "win": 0,
+          "rank": 4,
+          "balance": 1,
+          "tiles": 12,
+          "spent": 165,
+          "maxMs": 5.797292000002926
+        },
+        {
+          "score": 52,
+          "win": 0,
+          "rank": 6,
+          "balance": 11,
+          "tiles": 10,
+          "spent": 141,
+          "maxMs": 2.990749999997206
+        },
+        {
+          "score": 68,
+          "win": 0,
+          "rank": 6,
+          "balance": 19,
+          "tiles": 9,
+          "spent": 149,
+          "maxMs": 4.072707999992417
+        },
+        {
+          "score": 77,
+          "win": 0,
+          "rank": 5,
+          "balance": 22,
+          "tiles": 11,
+          "spent": 155,
+          "maxMs": 2.016875000001164
+        },
+        {
+          "score": 83,
+          "win": 0,
+          "rank": 2,
+          "balance": 46,
+          "tiles": 11,
+          "spent": 137,
+          "maxMs": 5.4152910000120755
+        },
+        {
+          "score": 95,
+          "win": 0,
+          "rank": 2,
+          "balance": 27,
+          "tiles": 12,
+          "spent": 168,
+          "maxMs": 5.040124999999534
+        },
+        {
+          "score": 57,
+          "win": 0,
+          "rank": 6,
+          "balance": 17,
+          "tiles": 9,
+          "spent": 140,
+          "maxMs": 3.3795419999805745
+        },
+        {
+          "score": 68,
+          "win": 0,
+          "rank": 4,
+          "balance": 11,
+          "tiles": 11,
+          "spent": 157,
+          "maxMs": 5.499625000025844
+        },
+        {
+          "score": 90,
+          "win": 0,
+          "rank": 2,
+          "balance": 21,
+          "tiles": 11,
+          "spent": 169,
+          "maxMs": 3.7742079999879934
+        },
+        {
+          "score": 72,
+          "win": 0,
+          "rank": 6,
+          "balance": 9,
+          "tiles": 11,
+          "spent": 163,
+          "maxMs": 4.47774999999092
+        },
+        {
+          "score": 60,
+          "win": 0,
+          "rank": 5,
+          "balance": 19,
+          "tiles": 10,
+          "spent": 141,
+          "maxMs": 4.180041999992682
+        },
+        {
+          "score": 64,
+          "win": 0,
+          "rank": 6,
+          "balance": 15,
+          "tiles": 11,
+          "spent": 149,
+          "maxMs": 3.970832999999402
+        },
+        {
+          "score": 74,
+          "win": 0,
+          "rank": 4,
+          "balance": 44,
+          "tiles": 10,
+          "spent": 130,
+          "maxMs": 5.775624999980209
+        },
+        {
+          "score": 91,
+          "win": 0,
+          "rank": 2,
+          "balance": 42,
+          "tiles": 11,
+          "spent": 149,
+          "maxMs": 4.402624999987893
+        },
+        {
+          "score": 67,
+          "win": 0,
+          "rank": 5,
+          "balance": 24,
+          "tiles": 8,
+          "spent": 143,
+          "maxMs": 5.004125000006752
+        },
+        {
+          "score": 73,
+          "win": 0,
+          "rank": 5,
+          "balance": 12,
+          "tiles": 10,
+          "spent": 161,
+          "maxMs": 2.247457999998005
+        },
+        {
+          "score": 108,
+          "win": 1,
+          "rank": 1,
+          "balance": 17,
+          "tiles": 14,
+          "spent": 191,
+          "maxMs": 3.5250839999935124
+        },
+        {
+          "score": 117,
+          "win": 1,
+          "rank": 1,
+          "balance": 53,
+          "tiles": 12,
+          "spent": 164,
+          "maxMs": 7.861333000008017
+        },
+        {
+          "score": 43,
+          "win": 0,
+          "rank": 6,
+          "balance": 57,
+          "tiles": 7,
+          "spent": 86,
+          "maxMs": 8.65729200001806
+        },
+        {
+          "score": 83,
+          "win": 0,
+          "rank": 3,
+          "balance": 45,
+          "tiles": 12,
+          "spent": 138,
+          "maxMs": 5.997000000003027
+        },
+        {
+          "score": 58,
+          "win": 0,
+          "rank": 6,
+          "balance": 28,
+          "tiles": 10,
+          "spent": 130,
+          "maxMs": 5.554040999995777
+        },
+        {
+          "score": 70,
+          "win": 0,
+          "rank": 4,
+          "balance": 41,
+          "tiles": 9,
+          "spent": 129,
+          "maxMs": 4.83574999999837
+        },
+        {
+          "score": 79,
+          "win": 0,
+          "rank": 3,
+          "balance": 36,
+          "tiles": 12,
+          "spent": 143,
+          "maxMs": 6.517625000007683
+        },
+        {
+          "score": 90,
+          "win": 0,
+          "rank": 2,
+          "balance": 31,
+          "tiles": 11,
+          "spent": 159,
+          "maxMs": 2.581417000008514
+        },
+        {
+          "score": 65,
+          "win": 0,
+          "rank": 5,
+          "balance": 36,
+          "tiles": 10,
+          "spent": 129,
+          "maxMs": 4.178042000014102
+        },
+        {
+          "score": 53,
+          "win": 0,
+          "rank": 6,
+          "balance": 63,
+          "tiles": 6,
+          "spent": 90,
+          "maxMs": 7.842375000007451
+        },
+        {
+          "score": 63,
+          "win": 0,
+          "rank": 6,
+          "balance": 20,
+          "tiles": 9,
+          "spent": 143,
+          "maxMs": 1.5380420000001322
+        },
+        {
+          "score": 110,
+          "win": 1,
+          "rank": 1,
+          "balance": 25,
+          "tiles": 15,
+          "spent": 185,
+          "maxMs": 4.129291000019293
+        },
+        {
+          "score": 61,
+          "win": 0,
+          "rank": 5,
+          "balance": 31,
+          "tiles": 8,
+          "spent": 130,
+          "maxMs": 3.4526670000050217
+        },
+        {
+          "score": 72,
+          "win": 0,
+          "rank": 4,
+          "balance": 28,
+          "tiles": 11,
+          "spent": 144,
+          "maxMs": 4.847791000007419
+        },
+        {
+          "score": 76,
+          "win": 0,
+          "rank": 3,
+          "balance": 23,
+          "tiles": 12,
+          "spent": 153,
+          "maxMs": 4.779957999999169
+        },
+        {
+          "score": 66,
+          "win": 0,
+          "rank": 6,
+          "balance": 1,
+          "tiles": 12,
+          "spent": 165,
+          "maxMs": 6.213499999983469
+        },
+        {
+          "score": 90,
+          "win": 0,
+          "rank": 2,
+          "balance": 11,
+          "tiles": 11,
+          "spent": 179,
+          "maxMs": 4.48475000000326
+        },
+        {
+          "score": 95,
+          "win": 0,
+          "rank": 2,
+          "balance": 50,
+          "tiles": 11,
+          "spent": 145,
+          "maxMs": 5.967333000007784
+        },
+        {
+          "score": 74,
+          "win": 0,
+          "rank": 4,
+          "balance": 24,
+          "tiles": 9,
+          "spent": 150,
+          "maxMs": 3.6941250000090804
+        },
+        {
+          "score": 136,
+          "win": 1,
+          "rank": 1,
+          "balance": 27,
+          "tiles": 16,
+          "spent": 209,
+          "maxMs": 5.484166000009282
+        }
+      ]
+    },
+    {
+      "candidate": {
+        "name": "selective-cashout",
+        "overrides": {
+          "minPlayReward": 28,
+          "holdKappa": 0.95
+        }
+      },
+      "summary": {
+        "games": 36,
+        "meanScore": 83.02777777777777,
+        "wins": 8.5,
+        "atLeast100": 5,
+        "meanRank": 3,
+        "meanBalance": 13.25,
+        "maxMs": 14.203666999994311
+      },
+      "paired": {
+        "meanScoreDelta": -0.6666666666666666,
+        "scoreDeltaSE": 1.2215005084172055,
+        "improvements": 10,
+        "regressions": 9,
+        "ties": 17,
+        "winDelta": -1
+      },
+      "outcomes": [
+        {
+          "score": 87,
+          "win": 0,
+          "rank": 2,
+          "balance": 33,
+          "tiles": 10,
+          "spent": 154,
+          "maxMs": 5.380000000004657
+        },
+        {
+          "score": 75,
+          "win": 0,
+          "rank": 6,
+          "balance": 21,
+          "tiles": 11,
+          "spent": 154,
+          "maxMs": 3.047374999994645
+        },
+        {
+          "score": 67,
+          "win": 0,
+          "rank": 5,
+          "balance": 37,
+          "tiles": 9,
+          "spent": 130,
+          "maxMs": 4.517917000019224
+        },
+        {
+          "score": 74,
+          "win": 0,
+          "rank": 5,
+          "balance": 19,
+          "tiles": 11,
+          "spent": 155,
+          "maxMs": 3.0927080000110436
+        },
+        {
+          "score": 117,
+          "win": 1,
+          "rank": 1,
+          "balance": 0,
+          "tiles": 15,
+          "spent": 217,
+          "maxMs": 1.3222919999971054
+        },
+        {
+          "score": 84,
+          "win": 0,
+          "rank": 3,
+          "balance": 12,
+          "tiles": 12,
+          "spent": 172,
+          "maxMs": 6.13058299999102
+        },
+        {
+          "score": 77,
+          "win": 0,
+          "rank": 3,
+          "balance": 5,
+          "tiles": 12,
+          "spent": 172,
+          "maxMs": 4.024999999994179
+        },
+        {
+          "score": 61,
+          "win": 0,
+          "rank": 5,
+          "balance": 12,
+          "tiles": 12,
+          "spent": 149,
+          "maxMs": 2.1252499999827705
+        },
+        {
+          "score": 86,
+          "win": 1,
+          "rank": 1,
+          "balance": 13,
+          "tiles": 11,
+          "spent": 173,
+          "maxMs": 1.2094579999975394
+        },
+        {
+          "score": 87,
+          "win": 1,
+          "rank": 1,
+          "balance": 7,
+          "tiles": 10,
+          "spent": 180,
+          "maxMs": 1.6402500000258442
+        },
+        {
+          "score": 73,
+          "win": 0,
+          "rank": 4,
+          "balance": 8,
+          "tiles": 10,
+          "spent": 165,
+          "maxMs": 1.6857079999754205
+        },
+        {
+          "score": 81,
+          "win": 0,
+          "rank": 4,
+          "balance": 9,
+          "tiles": 13,
+          "spent": 172,
+          "maxMs": 1.9733330000017304
+        },
+        {
+          "score": 71,
+          "win": 0,
+          "rank": 3,
+          "balance": 8,
+          "tiles": 13,
+          "spent": 163,
+          "maxMs": 1.5001669999910519
+        },
+        {
+          "score": 71,
+          "win": 0,
+          "rank": 4,
+          "balance": 10,
+          "tiles": 8,
+          "spent": 161,
+          "maxMs": 1.5862080000224523
+        },
+        {
+          "score": 78,
+          "win": 0,
+          "rank": 3,
+          "balance": 13,
+          "tiles": 10,
+          "spent": 165,
+          "maxMs": 1.77424999998766
+        },
+        {
+          "score": 68,
+          "win": 0,
+          "rank": 5,
+          "balance": 12,
+          "tiles": 12,
+          "spent": 156,
+          "maxMs": 1.9905000000144355
+        },
+        {
+          "score": 113,
+          "win": 1,
+          "rank": 1,
+          "balance": 13,
+          "tiles": 14,
+          "spent": 200,
+          "maxMs": 3.8371249999909196
+        },
+        {
+          "score": 112,
+          "win": 1,
+          "rank": 1,
+          "balance": 19,
+          "tiles": 15,
+          "spent": 193,
+          "maxMs": 1.2821660000190604
+        },
+        {
+          "score": 62,
+          "win": 0,
+          "rank": 5,
+          "balance": 9,
+          "tiles": 12,
+          "spent": 153,
+          "maxMs": 1.8626670000085142
+        },
+        {
+          "score": 93,
+          "win": 0,
+          "rank": 2,
+          "balance": 26,
+          "tiles": 14,
+          "spent": 167,
+          "maxMs": 4.339540999993915
+        },
+        {
+          "score": 72,
+          "win": 0,
+          "rank": 4,
+          "balance": 7,
+          "tiles": 11,
+          "spent": 165,
+          "maxMs": 5.754791999992449
+        },
+        {
+          "score": 75,
+          "win": 0,
+          "rank": 4,
+          "balance": 3,
+          "tiles": 12,
+          "spent": 172,
+          "maxMs": 4.568792000005487
+        },
+        {
+          "score": 83,
+          "win": 0.5,
+          "rank": 1,
+          "balance": 14,
+          "tiles": 11,
+          "spent": 169,
+          "maxMs": 4.408124999987194
+        },
+        {
+          "score": 82,
+          "win": 0,
+          "rank": 4,
+          "balance": 11,
+          "tiles": 14,
+          "spent": 171,
+          "maxMs": 2.571083999995608
+        },
+        {
+          "score": 72,
+          "win": 0,
+          "rank": 3,
+          "balance": 11,
+          "tiles": 11,
+          "spent": 161,
+          "maxMs": 8.249500000005355
+        },
+        {
+          "score": 78,
+          "win": 0,
+          "rank": 2,
+          "balance": 6,
+          "tiles": 12,
+          "spent": 172,
+          "maxMs": 3.167583000002196
+        },
+        {
+          "score": 71,
+          "win": 0,
+          "rank": 4,
+          "balance": 10,
+          "tiles": 13,
+          "spent": 161,
+          "maxMs": 4.175542000011774
+        },
+        {
+          "score": 98,
+          "win": 1,
+          "rank": 1,
+          "balance": 14,
+          "tiles": 14,
+          "spent": 184,
+          "maxMs": 4.858041999978013
+        },
+        {
+          "score": 71,
+          "win": 0,
+          "rank": 3,
+          "balance": 9,
+          "tiles": 13,
+          "spent": 162,
+          "maxMs": 2.9355000000214204
+        },
+        {
+          "score": 79,
+          "win": 0,
+          "rank": 4,
+          "balance": 12,
+          "tiles": 11,
+          "spent": 167,
+          "maxMs": 3.214624999993248
+        },
+        {
+          "score": 83,
+          "win": 0,
+          "rank": 2,
+          "balance": 17,
+          "tiles": 13,
+          "spent": 166,
+          "maxMs": 4.720624999987194
+        },
+        {
+          "score": 79,
+          "win": 0,
+          "rank": 2,
+          "balance": 16,
+          "tiles": 12,
+          "spent": 163,
+          "maxMs": 14.203666999994311
+        },
+        {
+          "score": 74,
+          "win": 0,
+          "rank": 4,
+          "balance": 13,
+          "tiles": 10,
+          "spent": 161,
+          "maxMs": 2.1386249999923166
+        },
+        {
+          "score": 115,
+          "win": 1,
+          "rank": 1,
+          "balance": 15,
+          "tiles": 14,
+          "spent": 200,
+          "maxMs": 3.5466249999881256
+        },
+        {
+          "score": 67,
+          "win": 0,
+          "rank": 4,
+          "balance": 10,
+          "tiles": 13,
+          "spent": 157,
+          "maxMs": 3.409457999980077
+        },
+        {
+          "score": 153,
+          "win": 1,
+          "rank": 1,
+          "balance": 23,
+          "tiles": 17,
+          "spent": 230,
+          "maxMs": 4.916083999996772
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "train": {
+    "scenarios": [
+      {
+        "seed": 1557001031,
+        "seat": 0,
+        "roster": 0
+      },
+      {
+        "seed": 1557008950,
+        "seat": 1,
+        "roster": 0
+      },
+      {
+        "seed": 1557016869,
+        "seat": 2,
+        "roster": 0
+      },
+      {
+        "seed": 1557024788,
+        "seat": 3,
+        "roster": 0
+      },
+      {
+        "seed": 1557032707,
+        "seat": 4,
+        "roster": 0
+      },
+      {
+        "seed": 1557040626,
+        "seat": 5,
+        "roster": 0
+      },
+      {
+        "seed": 1557048545,
+        "seat": 0,
+        "roster": 1
+      },
+      {
+        "seed": 1557056464,
+        "seat": 1,
+        "roster": 1
+      },
+      {
+        "seed": 1557064383,
+        "seat": 2,
+        "roster": 1
+      },
+      {
+        "seed": 1557072302,
+        "seat": 3,
+        "roster": 1
+      },
+      {
+        "seed": 1557080221,
+        "seat": 4,
+        "roster": 1
+      },
+      {
+        "seed": 1557088140,
+        "seat": 5,
+        "roster": 1
+      },
+      {
+        "seed": 1557096059,
+        "seat": 0,
+        "roster": 2
+      },
+      {
+        "seed": 1557103978,
+        "seat": 1,
+        "roster": 2
+      },
+      {
+        "seed": 1557111897,
+        "seat": 2,
+        "roster": 2
+      },
+      {
+        "seed": 1557119816,
+        "seat": 3,
+        "roster": 2
+      },
+      {
+        "seed": 1557127735,
+        "seat": 4,
+        "roster": 2
+      },
+      {
+        "seed": 1557135654,
+        "seat": 5,
+        "roster": 2
+      },
+      {
+        "seed": 1557143573,
+        "seat": 0,
+        "roster": 0
+      },
+      {
+        "seed": 1557151492,
+        "seat": 1,
+        "roster": 0
+      },
+      {
+        "seed": 1557159411,
+        "seat": 2,
+        "roster": 0
+      },
+      {
+        "seed": 1557167330,
+        "seat": 3,
+        "roster": 0
+      },
+      {
+        "seed": 1557175249,
+        "seat": 4,
+        "roster": 0
+      },
+      {
+        "seed": 1557183168,
+        "seat": 5,
+        "roster": 0
+      },
+      {
+        "seed": 1557191087,
+        "seat": 0,
+        "roster": 1
+      },
+      {
+        "seed": 1557199006,
+        "seat": 1,
+        "roster": 1
+      },
+      {
+        "seed": 1557206925,
+        "seat": 2,
+        "roster": 1
+      },
+      {
+        "seed": 1557214844,
+        "seat": 3,
+        "roster": 1
+      },
+      {
+        "seed": 1557222763,
+        "seat": 4,
+        "roster": 1
+      },
+      {
+        "seed": 1557230682,
+        "seat": 5,
+        "roster": 1
+      },
+      {
+        "seed": 1557238601,
+        "seat": 0,
+        "roster": 2
+      },
+      {
+        "seed": 1557246520,
+        "seat": 1,
+        "roster": 2
+      },
+      {
+        "seed": 1557254439,
+        "seat": 2,
+        "roster": 2
+      },
+      {
+        "seed": 1557262358,
+        "seat": 3,
+        "roster": 2
+      },
+      {
+        "seed": 1557270277,
+        "seat": 4,
+        "roster": 2
+      },
+      {
+        "seed": 1557278196,
+        "seat": 5,
+        "roster": 2
+      }
+    ],
+    "control": {
+      "games": 36,
+      "meanScore": 83.69444444444444,
+      "wins": 9.5,
+      "atLeast100": 5,
+      "meanRank": 2.888888888888889,
+      "meanBalance": 17.97222222222222,
+      "maxMs": 6.792583000000036
+    },
+    "outcomes": [
+      {
+        "score": 87,
+        "win": 0,
+        "rank": 2,
+        "balance": 33,
+        "tiles": 10,
+        "spent": 154,
+        "maxMs": 6.792583000000036
+      },
+      {
+        "score": 81,
+        "win": 0,
+        "rank": 4,
+        "balance": 19,
+        "tiles": 12,
+        "spent": 162,
+        "maxMs": 2.1897919999998976
+      },
+      {
+        "score": 67,
+        "win": 0,
+        "rank": 5,
+        "balance": 37,
+        "tiles": 9,
+        "spent": 130,
+        "maxMs": 3.8683750000000146
+      },
+      {
+        "score": 72,
+        "win": 0,
+        "rank": 5,
+        "balance": 24,
+        "tiles": 10,
+        "spent": 148,
+        "maxMs": 3.988542000000052
+      },
+      {
+        "score": 101,
+        "win": 0,
+        "rank": 2,
+        "balance": 46,
+        "tiles": 12,
+        "spent": 155,
+        "maxMs": 5.0157500000000255
+      },
+      {
+        "score": 84,
+        "win": 0,
+        "rank": 3,
+        "balance": 12,
+        "tiles": 12,
+        "spent": 172,
+        "maxMs": 4.67816700000003
+      },
+      {
+        "score": 94,
+        "win": 1,
+        "rank": 1,
+        "balance": 4,
+        "tiles": 11,
+        "spent": 190,
+        "maxMs": 2.1321670000002086
+      },
+      {
+        "score": 61,
+        "win": 0,
+        "rank": 5,
+        "balance": 26,
+        "tiles": 10,
+        "spent": 135,
+        "maxMs": 4.171124999999847
+      },
+      {
+        "score": 86,
+        "win": 1,
+        "rank": 1,
+        "balance": 13,
+        "tiles": 11,
+        "spent": 173,
+        "maxMs": 1.064792000000125
+      },
+      {
+        "score": 87,
+        "win": 1,
+        "rank": 1,
+        "balance": 7,
+        "tiles": 10,
+        "spent": 180,
+        "maxMs": 1.5456670000003214
+      },
+      {
+        "score": 55,
+        "win": 0,
+        "rank": 6,
+        "balance": 10,
+        "tiles": 9,
+        "spent": 145,
+        "maxMs": 2.3649169999998776
+      },
+      {
+        "score": 92,
+        "win": 0,
+        "rank": 3,
+        "balance": 18,
+        "tiles": 12,
+        "spent": 174,
+        "maxMs": 2.669332999999824
+      },
+      {
+        "score": 74,
+        "win": 0,
+        "rank": 4,
+        "balance": 35,
+        "tiles": 11,
+        "spent": 139,
+        "maxMs": 4.28491699999995
+      },
+      {
+        "score": 71,
+        "win": 0,
+        "rank": 4,
+        "balance": 10,
+        "tiles": 8,
+        "spent": 161,
+        "maxMs": 1.1233339999998861
+      },
+      {
+        "score": 78,
+        "win": 0,
+        "rank": 3,
+        "balance": 13,
+        "tiles": 10,
+        "spent": 165,
+        "maxMs": 1.7358329999997295
+      },
+      {
+        "score": 77,
+        "win": 0,
+        "rank": 4,
+        "balance": 21,
+        "tiles": 12,
+        "spent": 156,
+        "maxMs": 1.8675419999999576
+      },
+      {
+        "score": 130,
+        "win": 1,
+        "rank": 1,
+        "balance": 27,
+        "tiles": 15,
+        "spent": 203,
+        "maxMs": 3.6477089999989403
+      },
+      {
+        "score": 106,
+        "win": 1,
+        "rank": 1,
+        "balance": 8,
+        "tiles": 15,
+        "spent": 198,
+        "maxMs": 1.860833000000639
+      },
+      {
+        "score": 58,
+        "win": 0,
+        "rank": 5,
+        "balance": 7,
+        "tiles": 11,
+        "spent": 151,
+        "maxMs": 1.3346669999991718
+      },
+      {
+        "score": 87,
+        "win": 0,
+        "rank": 2,
+        "balance": 51,
+        "tiles": 11,
+        "spent": 136,
+        "maxMs": 4.1368750000001455
+      },
+      {
+        "score": 72,
+        "win": 0,
+        "rank": 4,
+        "balance": 7,
+        "tiles": 11,
+        "spent": 165,
+        "maxMs": 3.86449999999968
+      },
+      {
+        "score": 75,
+        "win": 0,
+        "rank": 3,
+        "balance": 3,
+        "tiles": 13,
+        "spent": 172,
+        "maxMs": 1.380458000001454
+      },
+      {
+        "score": 83,
+        "win": 0.5,
+        "rank": 1,
+        "balance": 14,
+        "tiles": 11,
+        "spent": 169,
+        "maxMs": 1.2944580000003043
+      },
+      {
+        "score": 78,
+        "win": 0,
+        "rank": 5,
+        "balance": 45,
+        "tiles": 12,
+        "spent": 133,
+        "maxMs": 4.807916000001569
+      },
+      {
+        "score": 72,
+        "win": 0,
+        "rank": 3,
+        "balance": 11,
+        "tiles": 11,
+        "spent": 161,
+        "maxMs": 1.165458999999828
+      },
+      {
+        "score": 78,
+        "win": 0,
+        "rank": 2,
+        "balance": 6,
+        "tiles": 12,
+        "spent": 172,
+        "maxMs": 1.3159580000010465
+      },
+      {
+        "score": 80,
+        "win": 1,
+        "rank": 1,
+        "balance": 10,
+        "tiles": 14,
+        "spent": 170,
+        "maxMs": 2.3489169999993464
+      },
+      {
+        "score": 98,
+        "win": 1,
+        "rank": 1,
+        "balance": 14,
+        "tiles": 14,
+        "spent": 184,
+        "maxMs": 1.3763750000016444
+      },
+      {
+        "score": 63,
+        "win": 0,
+        "rank": 4,
+        "balance": 9,
+        "tiles": 13,
+        "spent": 154,
+        "maxMs": 2.242207999999664
+      },
+      {
+        "score": 89,
+        "win": 0,
+        "rank": 3,
+        "balance": 8,
+        "tiles": 12,
+        "spent": 181,
+        "maxMs": 1.7872500000012224
+      },
+      {
+        "score": 94,
+        "win": 0,
+        "rank": 2,
+        "balance": 10,
+        "tiles": 13,
+        "spent": 184,
+        "maxMs": 2.413125000000946
+      },
+      {
+        "score": 79,
+        "win": 0,
+        "rank": 2,
+        "balance": 16,
+        "tiles": 12,
+        "spent": 163,
+        "maxMs": 3.00379200000134
+      },
+      {
+        "score": 74,
+        "win": 0,
+        "rank": 4,
+        "balance": 13,
+        "tiles": 10,
+        "spent": 161,
+        "maxMs": 1.830500000000029
+      },
+      {
+        "score": 111,
+        "win": 1,
+        "rank": 1,
+        "balance": 11,
+        "tiles": 12,
+        "spent": 200,
+        "maxMs": 3.6229159999984404
+      },
+      {
+        "score": 66,
+        "win": 0,
+        "rank": 5,
+        "balance": 26,
+        "tiles": 9,
+        "spent": 140,
+        "maxMs": 5.225375000001804
+      },
+      {
+        "score": 153,
+        "win": 1,
+        "rank": 1,
+        "balance": 23,
+        "tiles": 17,
+        "spent": 230,
+        "maxMs": 1.1326249999983702
+      }
+    ]
+  },
+  "games": 612,
+  "elapsedMs": 323833.660958,
+  "selectedBeforeHoldout": {
+    "name": "more-tiles",
+    "overrides": {
+      "letterTarget": 16,
+      "slack": 1,
+      "floorMult": 0.9
+    }
+  },
+  "holdout": {
+    "scenarios": [
+      {
+        "seed": 1757001071,
+        "seat": 0,
+        "roster": 0
+      },
+      {
+        "seed": 1757008990,
+        "seat": 1,
+        "roster": 0
+      },
+      {
+        "seed": 1757016909,
+        "seat": 2,
+        "roster": 0
+      },
+      {
+        "seed": 1757024828,
+        "seat": 3,
+        "roster": 0
+      },
+      {
+        "seed": 1757032747,
+        "seat": 4,
+        "roster": 0
+      },
+      {
+        "seed": 1757040666,
+        "seat": 5,
+        "roster": 0
+      },
+      {
+        "seed": 1757048585,
+        "seat": 0,
+        "roster": 1
+      },
+      {
+        "seed": 1757056504,
+        "seat": 1,
+        "roster": 1
+      },
+      {
+        "seed": 1757064423,
+        "seat": 2,
+        "roster": 1
+      },
+      {
+        "seed": 1757072342,
+        "seat": 3,
+        "roster": 1
+      },
+      {
+        "seed": 1757080261,
+        "seat": 4,
+        "roster": 1
+      },
+      {
+        "seed": 1757088180,
+        "seat": 5,
+        "roster": 1
+      },
+      {
+        "seed": 1757096099,
+        "seat": 0,
+        "roster": 2
+      },
+      {
+        "seed": 1757104018,
+        "seat": 1,
+        "roster": 2
+      },
+      {
+        "seed": 1757111937,
+        "seat": 2,
+        "roster": 2
+      },
+      {
+        "seed": 1757119856,
+        "seat": 3,
+        "roster": 2
+      },
+      {
+        "seed": 1757127775,
+        "seat": 4,
+        "roster": 2
+      },
+      {
+        "seed": 1757135694,
+        "seat": 5,
+        "roster": 2
+      },
+      {
+        "seed": 1757143613,
+        "seat": 0,
+        "roster": 0
+      },
+      {
+        "seed": 1757151532,
+        "seat": 1,
+        "roster": 0
+      },
+      {
+        "seed": 1757159451,
+        "seat": 2,
+        "roster": 0
+      },
+      {
+        "seed": 1757167370,
+        "seat": 3,
+        "roster": 0
+      },
+      {
+        "seed": 1757175289,
+        "seat": 4,
+        "roster": 0
+      },
+      {
+        "seed": 1757183208,
+        "seat": 5,
+        "roster": 0
+      },
+      {
+        "seed": 1757191127,
+        "seat": 0,
+        "roster": 1
+      },
+      {
+        "seed": 1757199046,
+        "seat": 1,
+        "roster": 1
+      },
+      {
+        "seed": 1757206965,
+        "seat": 2,
+        "roster": 1
+      },
+      {
+        "seed": 1757214884,
+        "seat": 3,
+        "roster": 1
+      },
+      {
+        "seed": 1757222803,
+        "seat": 4,
+        "roster": 1
+      },
+      {
+        "seed": 1757230722,
+        "seat": 5,
+        "roster": 1
+      },
+      {
+        "seed": 1757238641,
+        "seat": 0,
+        "roster": 2
+      },
+      {
+        "seed": 1757246560,
+        "seat": 1,
+        "roster": 2
+      },
+      {
+        "seed": 1757254479,
+        "seat": 2,
+        "roster": 2
+      },
+      {
+        "seed": 1757262398,
+        "seat": 3,
+        "roster": 2
+      },
+      {
+        "seed": 1757270317,
+        "seat": 4,
+        "roster": 2
+      },
+      {
+        "seed": 1757278236,
+        "seat": 5,
+        "roster": 2
+      },
+      {
+        "seed": 1757286155,
+        "seat": 0,
+        "roster": 0
+      },
+      {
+        "seed": 1757294074,
+        "seat": 1,
+        "roster": 0
+      },
+      {
+        "seed": 1757301993,
+        "seat": 2,
+        "roster": 0
+      },
+      {
+        "seed": 1757309912,
+        "seat": 3,
+        "roster": 0
+      },
+      {
+        "seed": 1757317831,
+        "seat": 4,
+        "roster": 0
+      },
+      {
+        "seed": 1757325750,
+        "seat": 5,
+        "roster": 0
+      },
+      {
+        "seed": 1757333669,
+        "seat": 0,
+        "roster": 1
+      },
+      {
+        "seed": 1757341588,
+        "seat": 1,
+        "roster": 1
+      },
+      {
+        "seed": 1757349507,
+        "seat": 2,
+        "roster": 1
+      },
+      {
+        "seed": 1757357426,
+        "seat": 3,
+        "roster": 1
+      },
+      {
+        "seed": 1757365345,
+        "seat": 4,
+        "roster": 1
+      },
+      {
+        "seed": 1757373264,
+        "seat": 5,
+        "roster": 1
+      },
+      {
+        "seed": 1757381183,
+        "seat": 0,
+        "roster": 2
+      },
+      {
+        "seed": 1757389102,
+        "seat": 1,
+        "roster": 2
+      },
+      {
+        "seed": 1757397021,
+        "seat": 2,
+        "roster": 2
+      },
+      {
+        "seed": 1757404940,
+        "seat": 3,
+        "roster": 2
+      },
+      {
+        "seed": 1757412859,
+        "seat": 4,
+        "roster": 2
+      },
+      {
+        "seed": 1757420778,
+        "seat": 5,
+        "roster": 2
+      },
+      {
+        "seed": 1757428697,
+        "seat": 0,
+        "roster": 0
+      },
+      {
+        "seed": 1757436616,
+        "seat": 1,
+        "roster": 0
+      },
+      {
+        "seed": 1757444535,
+        "seat": 2,
+        "roster": 0
+      },
+      {
+        "seed": 1757452454,
+        "seat": 3,
+        "roster": 0
+      },
+      {
+        "seed": 1757460373,
+        "seat": 4,
+        "roster": 0
+      },
+      {
+        "seed": 1757468292,
+        "seat": 5,
+        "roster": 0
+      },
+      {
+        "seed": 1757476211,
+        "seat": 0,
+        "roster": 1
+      },
+      {
+        "seed": 1757484130,
+        "seat": 1,
+        "roster": 1
+      },
+      {
+        "seed": 1757492049,
+        "seat": 2,
+        "roster": 1
+      },
+      {
+        "seed": 1757499968,
+        "seat": 3,
+        "roster": 1
+      },
+      {
+        "seed": 1757507887,
+        "seat": 4,
+        "roster": 1
+      },
+      {
+        "seed": 1757515806,
+        "seat": 5,
+        "roster": 1
+      },
+      {
+        "seed": 1757523725,
+        "seat": 0,
+        "roster": 2
+      },
+      {
+        "seed": 1757531644,
+        "seat": 1,
+        "roster": 2
+      },
+      {
+        "seed": 1757539563,
+        "seat": 2,
+        "roster": 2
+      },
+      {
+        "seed": 1757547482,
+        "seat": 3,
+        "roster": 2
+      },
+      {
+        "seed": 1757555401,
+        "seat": 4,
+        "roster": 2
+      },
+      {
+        "seed": 1757563320,
+        "seat": 5,
+        "roster": 2
+      }
+    ],
+    "control": {
+      "games": 72,
+      "meanScore": 81.91666666666667,
+      "wins": 15,
+      "atLeast100": 9,
+      "meanRank": 3.1944444444444446,
+      "meanBalance": 16.333333333333332,
+      "maxMs": 8.293666000012308
+    },
+    "candidate": {
+      "games": 72,
+      "meanScore": 79.58333333333333,
+      "wins": 11,
+      "atLeast100": 9,
+      "meanRank": 3.236111111111111,
+      "meanBalance": 16.833333333333332,
+      "maxMs": 17.925791000016034
+    },
+    "paired": {
+      "meanScoreDelta": -2.3333333333333335,
+      "scoreDeltaSE": 1.6534688722271431,
+      "improvements": 28,
+      "regressions": 32,
+      "ties": 12,
+      "winDelta": -4
+    },
+    "controlOutcomes": [
+      {
+        "score": 81,
+        "win": 0,
+        "rank": 3,
+        "balance": 16,
+        "tiles": 12,
+        "spent": 165,
+        "maxMs": 1.3825829999987036
+      },
+      {
+        "score": 77,
+        "win": 0,
+        "rank": 4,
+        "balance": 21,
+        "tiles": 11,
+        "spent": 156,
+        "maxMs": 7.10479199999827
+      },
+      {
+        "score": 92,
+        "win": 1,
+        "rank": 1,
+        "balance": 14,
+        "tiles": 13,
+        "spent": 178,
+        "maxMs": 4.423458999983268
+      },
+      {
+        "score": 90,
+        "win": 0,
+        "rank": 2,
+        "balance": 37,
+        "tiles": 10,
+        "spent": 153,
+        "maxMs": 4.8442919999943115
+      },
+      {
+        "score": 62,
+        "win": 0,
+        "rank": 6,
+        "balance": 36,
+        "tiles": 10,
+        "spent": 126,
+        "maxMs": 5.7089580000028946
+      },
+      {
+        "score": 69,
+        "win": 0,
+        "rank": 5,
+        "balance": 5,
+        "tiles": 13,
+        "spent": 164,
+        "maxMs": 1.8683749999909196
+      },
+      {
+        "score": 99,
+        "win": 1,
+        "rank": 1,
+        "balance": 21,
+        "tiles": 13,
+        "spent": 178,
+        "maxMs": 4.206250000017462
+      },
+      {
+        "score": 90,
+        "win": 0.5,
+        "rank": 1,
+        "balance": 18,
+        "tiles": 11,
+        "spent": 172,
+        "maxMs": 2.0587910000176635
+      },
+      {
+        "score": 54,
+        "win": 0,
+        "rank": 6,
+        "balance": 8,
+        "tiles": 10,
+        "spent": 146,
+        "maxMs": 1.5281249999825377
+      },
+      {
+        "score": 69,
+        "win": 0,
+        "rank": 5,
+        "balance": 10,
+        "tiles": 12,
+        "spent": 159,
+        "maxMs": 3.2683329999854323
+      },
+      {
+        "score": 106,
+        "win": 1,
+        "rank": 1,
+        "balance": 13,
+        "tiles": 15,
+        "spent": 193,
+        "maxMs": 2.6768750000046566
+      },
+      {
+        "score": 67,
+        "win": 0,
+        "rank": 6,
+        "balance": 17,
+        "tiles": 9,
+        "spent": 150,
+        "maxMs": 2.1701670000038575
+      },
+      {
+        "score": 72,
+        "win": 0,
+        "rank": 5,
+        "balance": 0,
+        "tiles": 12,
+        "spent": 172,
+        "maxMs": 1.5161670000234153
+      },
+      {
+        "score": 81,
+        "win": 0,
+        "rank": 4,
+        "balance": 43,
+        "tiles": 10,
+        "spent": 138,
+        "maxMs": 4.991374999983236
+      },
+      {
+        "score": 83,
+        "win": 0,
+        "rank": 2,
+        "balance": 5,
+        "tiles": 9,
+        "spent": 178,
+        "maxMs": 1.4150410000002012
+      },
+      {
+        "score": 105,
+        "win": 1,
+        "rank": 1,
+        "balance": 23,
+        "tiles": 14,
+        "spent": 182,
+        "maxMs": 1.439957999973558
+      },
+      {
+        "score": 70,
+        "win": 0,
+        "rank": 5,
+        "balance": 9,
+        "tiles": 12,
+        "spent": 161,
+        "maxMs": 8.293666000012308
+      },
+      {
+        "score": 89,
+        "win": 0,
+        "rank": 2,
+        "balance": 16,
+        "tiles": 12,
+        "spent": 173,
+        "maxMs": 4.9167080000042915
+      },
+      {
+        "score": 63,
+        "win": 0,
+        "rank": 5,
+        "balance": 23,
+        "tiles": 8,
+        "spent": 140,
+        "maxMs": 6.965250000008382
+      },
+      {
+        "score": 63,
+        "win": 0,
+        "rank": 6,
+        "balance": 2,
+        "tiles": 10,
+        "spent": 161,
+        "maxMs": 3.99170899996534
+      },
+      {
+        "score": 85,
+        "win": 0,
+        "rank": 3,
+        "balance": 15,
+        "tiles": 10,
+        "spent": 170,
+        "maxMs": 4.281666999973822
+      },
+      {
+        "score": 83,
+        "win": 0,
+        "rank": 4,
+        "balance": 8,
+        "tiles": 12,
+        "spent": 175,
+        "maxMs": 2.8152920000138693
+      },
+      {
+        "score": 90,
+        "win": 0,
+        "rank": 2,
+        "balance": 6,
+        "tiles": 11,
+        "spent": 184,
+        "maxMs": 4.008833999978378
+      },
+      {
+        "score": 66,
+        "win": 0,
+        "rank": 6,
+        "balance": 35,
+        "tiles": 10,
+        "spent": 131,
+        "maxMs": 6.415708000015002
+      },
+      {
+        "score": 65,
+        "win": 0,
+        "rank": 4,
+        "balance": 32,
+        "tiles": 9,
+        "spent": 133,
+        "maxMs": 4.675457999983337
+      },
+      {
+        "score": 109,
+        "win": 1,
+        "rank": 1,
+        "balance": 16,
+        "tiles": 13,
+        "spent": 193,
+        "maxMs": 1.7005839999765158
+      },
+      {
+        "score": 99,
+        "win": 1,
+        "rank": 1,
+        "balance": 9,
+        "tiles": 14,
+        "spent": 190,
+        "maxMs": 4.148749999993015
+      },
+      {
+        "score": 93,
+        "win": 0.5,
+        "rank": 1,
+        "balance": 23,
+        "tiles": 13,
+        "spent": 170,
+        "maxMs": 5.382625000027474
+      },
+      {
+        "score": 86,
+        "win": 0,
+        "rank": 2,
+        "balance": 20,
+        "tiles": 13,
+        "spent": 166,
+        "maxMs": 3.2068750000325963
+      },
+      {
+        "score": 63,
+        "win": 0,
+        "rank": 6,
+        "balance": 36,
+        "tiles": 9,
+        "spent": 127,
+        "maxMs": 6.1400830000056885
+      },
+      {
+        "score": 106,
+        "win": 0,
+        "rank": 2,
+        "balance": 20,
+        "tiles": 15,
+        "spent": 186,
+        "maxMs": 4.12741700001061
+      },
+      {
+        "score": 93,
+        "win": 0,
+        "rank": 2,
+        "balance": 10,
+        "tiles": 14,
+        "spent": 183,
+        "maxMs": 1.3218749999650754
+      },
+      {
+        "score": 83,
+        "win": 0,
+        "rank": 2,
+        "balance": 8,
+        "tiles": 14,
+        "spent": 175,
+        "maxMs": 1.7249169999849983
+      },
+      {
+        "score": 90,
+        "win": 0,
+        "rank": 2,
+        "balance": 14,
+        "tiles": 14,
+        "spent": 176,
+        "maxMs": 2.6555829999851994
+      },
+      {
+        "score": 78,
+        "win": 0,
+        "rank": 5,
+        "balance": 6,
+        "tiles": 12,
+        "spent": 172,
+        "maxMs": 2.676666999992449
+      },
+      {
+        "score": 51,
+        "win": 0,
+        "rank": 6,
+        "balance": 9,
+        "tiles": 10,
+        "spent": 142,
+        "maxMs": 2.536167000012938
+      },
+      {
+        "score": 81,
+        "win": 0,
+        "rank": 3,
+        "balance": 25,
+        "tiles": 13,
+        "spent": 156,
+        "maxMs": 1.450042000040412
+      },
+      {
+        "score": 63,
+        "win": 0,
+        "rank": 5,
+        "balance": 13,
+        "tiles": 10,
+        "spent": 150,
+        "maxMs": 3.5587909999885596
+      },
+      {
+        "score": 79,
+        "win": 0,
+        "rank": 3,
+        "balance": 4,
+        "tiles": 10,
+        "spent": 175,
+        "maxMs": 3.5738330000313
+      },
+      {
+        "score": 93,
+        "win": 0,
+        "rank": 3,
+        "balance": 15,
+        "tiles": 12,
+        "spent": 178,
+        "maxMs": 3.6853339999797754
+      },
+      {
+        "score": 117,
+        "win": 1,
+        "rank": 1,
+        "balance": 21,
+        "tiles": 15,
+        "spent": 196,
+        "maxMs": 1.5104999999748543
+      },
+      {
+        "score": 96,
+        "win": 1,
+        "rank": 1,
+        "balance": 8,
+        "tiles": 12,
+        "spent": 188,
+        "maxMs": 7.402999999991152
+      },
+      {
+        "score": 51,
+        "win": 0,
+        "rank": 6,
+        "balance": 24,
+        "tiles": 6,
+        "spent": 127,
+        "maxMs": 2.898791999963578
+      },
+      {
+        "score": 78,
+        "win": 0,
+        "rank": 3,
+        "balance": 25,
+        "tiles": 10,
+        "spent": 153,
+        "maxMs": 1.8419170000124723
+      },
+      {
+        "score": 62,
+        "win": 0,
+        "rank": 5,
+        "balance": 7,
+        "tiles": 11,
+        "spent": 155,
+        "maxMs": 4.687249999959022
+      },
+      {
+        "score": 87,
+        "win": 0,
+        "rank": 2,
+        "balance": 49,
+        "tiles": 11,
+        "spent": 138,
+        "maxMs": 4.616416999953799
+      },
+      {
+        "score": 58,
+        "win": 0,
+        "rank": 6,
+        "balance": 2,
+        "tiles": 10,
+        "spent": 156,
+        "maxMs": 2.7435000000405125
+      },
+      {
+        "score": 90,
+        "win": 0,
+        "rank": 2,
+        "balance": 26,
+        "tiles": 12,
+        "spent": 164,
+        "maxMs": 1.344833999988623
+      },
+      {
+        "score": 96,
+        "win": 1,
+        "rank": 1,
+        "balance": 17,
+        "tiles": 12,
+        "spent": 179,
+        "maxMs": 2.308125000039581
+      },
+      {
+        "score": 110,
+        "win": 1,
+        "rank": 1,
+        "balance": 7,
+        "tiles": 16,
+        "spent": 203,
+        "maxMs": 1.8413749999599531
+      },
+      {
+        "score": 92,
+        "win": 0,
+        "rank": 3,
+        "balance": 12,
+        "tiles": 13,
+        "spent": 180,
+        "maxMs": 1.3954580000136048
+      },
+      {
+        "score": 72,
+        "win": 0,
+        "rank": 5,
+        "balance": 30,
+        "tiles": 10,
+        "spent": 142,
+        "maxMs": 4.727749999961816
+      },
+      {
+        "score": 84,
+        "win": 0,
+        "rank": 3,
+        "balance": 1,
+        "tiles": 12,
+        "spent": 183,
+        "maxMs": 3.4466669999528676
+      },
+      {
+        "score": 81,
+        "win": 0,
+        "rank": 4,
+        "balance": 6,
+        "tiles": 11,
+        "spent": 175,
+        "maxMs": 3.0878329999977723
+      },
+      {
+        "score": 78,
+        "win": 0,
+        "rank": 3,
+        "balance": 26,
+        "tiles": 12,
+        "spent": 152,
+        "maxMs": 4.472624999994878
+      },
+      {
+        "score": 70,
+        "win": 0,
+        "rank": 3,
+        "balance": 20,
+        "tiles": 8,
+        "spent": 150,
+        "maxMs": 1.4592500000144355
+      },
+      {
+        "score": 66,
+        "win": 0,
+        "rank": 4,
+        "balance": 2,
+        "tiles": 12,
+        "spent": 164,
+        "maxMs": 2.8061670000315644
+      },
+      {
+        "score": 56,
+        "win": 0,
+        "rank": 5,
+        "balance": 3,
+        "tiles": 12,
+        "spent": 153,
+        "maxMs": 5.410042000003159
+      },
+      {
+        "score": 107,
+        "win": 0,
+        "rank": 2,
+        "balance": 16,
+        "tiles": 14,
+        "spent": 191,
+        "maxMs": 3.2318329999689013
+      },
+      {
+        "score": 81,
+        "win": 0,
+        "rank": 3,
+        "balance": 40,
+        "tiles": 10,
+        "spent": 141,
+        "maxMs": 4.757541999977548
+      },
+      {
+        "score": 100,
+        "win": 0,
+        "rank": 2,
+        "balance": 5,
+        "tiles": 17,
+        "spent": 195,
+        "maxMs": 2.40483299997868
+      },
+      {
+        "score": 111,
+        "win": 1,
+        "rank": 1,
+        "balance": 13,
+        "tiles": 14,
+        "spent": 198,
+        "maxMs": 1.1887080000014976
+      },
+      {
+        "score": 78,
+        "win": 0,
+        "rank": 2,
+        "balance": 17,
+        "tiles": 12,
+        "spent": 161,
+        "maxMs": 1.6225829999893904
+      },
+      {
+        "score": 99,
+        "win": 1,
+        "rank": 1,
+        "balance": 7,
+        "tiles": 13,
+        "spent": 192,
+        "maxMs": 1.2203340000123717
+      },
+      {
+        "score": 91,
+        "win": 1,
+        "rank": 1,
+        "balance": 6,
+        "tiles": 13,
+        "spent": 185,
+        "maxMs": 1.2122920000110753
+      },
+      {
+        "score": 99,
+        "win": 1,
+        "rank": 1,
+        "balance": 23,
+        "tiles": 12,
+        "spent": 176,
+        "maxMs": 4.488957999972627
+      },
+      {
+        "score": 84,
+        "win": 0,
+        "rank": 4,
+        "balance": 25,
+        "tiles": 9,
+        "spent": 159,
+        "maxMs": 1.193749999976717
+      },
+      {
+        "score": 75,
+        "win": 0,
+        "rank": 4,
+        "balance": 27,
+        "tiles": 11,
+        "spent": 148,
+        "maxMs": 3.202041999960784
+      },
+      {
+        "score": 75,
+        "win": 0,
+        "rank": 4,
+        "balance": 2,
+        "tiles": 13,
+        "spent": 173,
+        "maxMs": 1.9091669999761507
+      },
+      {
+        "score": 74,
+        "win": 0,
+        "rank": 5,
+        "balance": 34,
+        "tiles": 8,
+        "spent": 140,
+        "maxMs": 3.5652910000062548
+      },
+      {
+        "score": 70,
+        "win": 0,
+        "rank": 5,
+        "balance": 10,
+        "tiles": 9,
+        "spent": 160,
+        "maxMs": 1.4562499999883585
+      },
+      {
+        "score": 72,
+        "win": 0,
+        "rank": 3,
+        "balance": 4,
+        "tiles": 14,
+        "spent": 168,
+        "maxMs": 1.9525419999845326
+      }
+    ],
+    "candidateOutcomes": [
+      {
+        "score": 90,
+        "win": 0,
+        "rank": 3,
+        "balance": 16,
+        "tiles": 13,
+        "spent": 174,
+        "maxMs": 3.287041000003228
+      },
+      {
+        "score": 90,
+        "win": 0,
+        "rank": 3,
+        "balance": 12,
+        "tiles": 13,
+        "spent": 178,
+        "maxMs": 2.540333000011742
+      },
+      {
+        "score": 94,
+        "win": 1,
+        "rank": 1,
+        "balance": 10,
+        "tiles": 13,
+        "spent": 184,
+        "maxMs": 5.40091699999175
+      },
+      {
+        "score": 93,
+        "win": 0,
+        "rank": 2,
+        "balance": 41,
+        "tiles": 10,
+        "spent": 152,
+        "maxMs": 3.691167000011774
+      },
+      {
+        "score": 78,
+        "win": 0,
+        "rank": 2,
+        "balance": 45,
+        "tiles": 10,
+        "spent": 133,
+        "maxMs": 5.196250000008149
+      },
+      {
+        "score": 58,
+        "win": 0,
+        "rank": 6,
+        "balance": 27,
+        "tiles": 10,
+        "spent": 131,
+        "maxMs": 4.948750000010477
+      },
+      {
+        "score": 99,
+        "win": 1,
+        "rank": 1,
+        "balance": 21,
+        "tiles": 13,
+        "spent": 178,
+        "maxMs": 3.8791670000064187
+      },
+      {
+        "score": 67,
+        "win": 0,
+        "rank": 5,
+        "balance": 10,
+        "tiles": 12,
+        "spent": 157,
+        "maxMs": 2.8175000000046566
+      },
+      {
+        "score": 66,
+        "win": 0,
+        "rank": 5,
+        "balance": 12,
+        "tiles": 13,
+        "spent": 154,
+        "maxMs": 14.091457999980776
+      },
+      {
+        "score": 71,
+        "win": 0,
+        "rank": 5,
+        "balance": 13,
+        "tiles": 10,
+        "spent": 158,
+        "maxMs": 3.774082999996608
+      },
+      {
+        "score": 106,
+        "win": 1,
+        "rank": 1,
+        "balance": 13,
+        "tiles": 15,
+        "spent": 193,
+        "maxMs": 1.8068330000096466
+      },
+      {
+        "score": 66,
+        "win": 0,
+        "rank": 6,
+        "balance": 11,
+        "tiles": 13,
+        "spent": 155,
+        "maxMs": 2.5837499999906868
+      },
+      {
+        "score": 78,
+        "win": 0,
+        "rank": 3,
+        "balance": 6,
+        "tiles": 12,
+        "spent": 172,
+        "maxMs": 1.6969170000229497
+      },
+      {
+        "score": 84,
+        "win": 0,
+        "rank": 3,
+        "balance": 13,
+        "tiles": 12,
+        "spent": 171,
+        "maxMs": 1.9997089999960735
+      },
+      {
+        "score": 93,
+        "win": 0,
+        "rank": 2,
+        "balance": 16,
+        "tiles": 14,
+        "spent": 177,
+        "maxMs": 4.466417000017827
+      },
+      {
+        "score": 105,
+        "win": 1,
+        "rank": 1,
+        "balance": 23,
+        "tiles": 14,
+        "spent": 182,
+        "maxMs": 5.113583999976981
+      },
+      {
+        "score": 72,
+        "win": 0,
+        "rank": 5,
+        "balance": 41,
+        "tiles": 12,
+        "spent": 131,
+        "maxMs": 13.67266700003529
+      },
+      {
+        "score": 69,
+        "win": 0,
+        "rank": 5,
+        "balance": 8,
+        "tiles": 13,
+        "spent": 161,
+        "maxMs": 2.1625830000266433
+      },
+      {
+        "score": 70,
+        "win": 0,
+        "rank": 3,
+        "balance": 28,
+        "tiles": 8,
+        "spent": 142,
+        "maxMs": 3.922833000018727
+      },
+      {
+        "score": 51,
+        "win": 0,
+        "rank": 6,
+        "balance": 7,
+        "tiles": 11,
+        "spent": 144,
+        "maxMs": 5.290500000002794
+      },
+      {
+        "score": 90,
+        "win": 1,
+        "rank": 1,
+        "balance": 19,
+        "tiles": 12,
+        "spent": 171,
+        "maxMs": 1.6496250000200234
+      },
+      {
+        "score": 38,
+        "win": 0,
+        "rank": 6,
+        "balance": 49,
+        "tiles": 6,
+        "spent": 89,
+        "maxMs": 17.925791000016034
+      },
+      {
+        "score": 93,
+        "win": 0,
+        "rank": 2,
+        "balance": 4,
+        "tiles": 13,
+        "spent": 189,
+        "maxMs": 2.8552079999935813
+      },
+      {
+        "score": 83,
+        "win": 0,
+        "rank": 3,
+        "balance": 14,
+        "tiles": 14,
+        "spent": 169,
+        "maxMs": 3.2111670000012964
+      },
+      {
+        "score": 90,
+        "win": 0,
+        "rank": 3,
+        "balance": 6,
+        "tiles": 13,
+        "spent": 184,
+        "maxMs": 2.0124580000410788
+      },
+      {
+        "score": 109,
+        "win": 1,
+        "rank": 1,
+        "balance": 21,
+        "tiles": 13,
+        "spent": 188,
+        "maxMs": 4.359541999991052
+      },
+      {
+        "score": 116,
+        "win": 1,
+        "rank": 1,
+        "balance": 7,
+        "tiles": 13,
+        "spent": 209,
+        "maxMs": 7.451166999991983
+      },
+      {
+        "score": 92,
+        "win": 0,
+        "rank": 2,
+        "balance": 6,
+        "tiles": 12,
+        "spent": 186,
+        "maxMs": 2.4261249999981374
+      },
+      {
+        "score": 82,
+        "win": 0,
+        "rank": 2,
+        "balance": 10,
+        "tiles": 14,
+        "spent": 172,
+        "maxMs": 2.3312089999672025
+      },
+      {
+        "score": 90,
+        "win": 0,
+        "rank": 2,
+        "balance": 11,
+        "tiles": 12,
+        "spent": 179,
+        "maxMs": 1.379332999989856
+      },
+      {
+        "score": 106,
+        "win": 0,
+        "rank": 2,
+        "balance": 20,
+        "tiles": 15,
+        "spent": 186,
+        "maxMs": 4.069000000017695
+      },
+      {
+        "score": 78,
+        "win": 0,
+        "rank": 2,
+        "balance": 16,
+        "tiles": 13,
+        "spent": 162,
+        "maxMs": 3.3117919999640435
+      },
+      {
+        "score": 82,
+        "win": 0,
+        "rank": 2,
+        "balance": 4,
+        "tiles": 14,
+        "spent": 178,
+        "maxMs": 1.5682500000111759
+      },
+      {
+        "score": 90,
+        "win": 0,
+        "rank": 2,
+        "balance": 14,
+        "tiles": 14,
+        "spent": 176,
+        "maxMs": 2.642208000004757
+      },
+      {
+        "score": 64,
+        "win": 0,
+        "rank": 5,
+        "balance": 28,
+        "tiles": 10,
+        "spent": 136,
+        "maxMs": 5.7244169999612495
+      },
+      {
+        "score": 58,
+        "win": 0,
+        "rank": 6,
+        "balance": 1,
+        "tiles": 13,
+        "spent": 157,
+        "maxMs": 4.032500000030268
+      },
+      {
+        "score": 81,
+        "win": 0,
+        "rank": 2,
+        "balance": 8,
+        "tiles": 12,
+        "spent": 173,
+        "maxMs": 3.4439999999594875
+      },
+      {
+        "score": 66,
+        "win": 0,
+        "rank": 6,
+        "balance": 7,
+        "tiles": 11,
+        "spent": 159,
+        "maxMs": 2.2880419999710284
+      },
+      {
+        "score": 81,
+        "win": 0,
+        "rank": 2,
+        "balance": 14,
+        "tiles": 13,
+        "spent": 167,
+        "maxMs": 5.283958000014536
+      },
+      {
+        "score": 58,
+        "win": 0,
+        "rank": 6,
+        "balance": 30,
+        "tiles": 10,
+        "spent": 128,
+        "maxMs": 5.009582999977283
+      },
+      {
+        "score": 93,
+        "win": 0,
+        "rank": 3,
+        "balance": 17,
+        "tiles": 13,
+        "spent": 176,
+        "maxMs": 2.911208000034094
+      },
+      {
+        "score": 94,
+        "win": 1,
+        "rank": 1,
+        "balance": 20,
+        "tiles": 16,
+        "spent": 174,
+        "maxMs": 2.0507499999948777
+      },
+      {
+        "score": 43,
+        "win": 0,
+        "rank": 6,
+        "balance": 47,
+        "tiles": 7,
+        "spent": 96,
+        "maxMs": 16.305333000025712
+      },
+      {
+        "score": 84,
+        "win": 0,
+        "rank": 3,
+        "balance": 3,
+        "tiles": 11,
+        "spent": 181,
+        "maxMs": 1.3434160000178963
+      },
+      {
+        "score": 58,
+        "win": 0,
+        "rank": 6,
+        "balance": 8,
+        "tiles": 10,
+        "spent": 150,
+        "maxMs": 3.849625000031665
+      },
+      {
+        "score": 96,
+        "win": 0,
+        "rank": 2,
+        "balance": 20,
+        "tiles": 14,
+        "spent": 176,
+        "maxMs": 3.6909580000210553
+      },
+      {
+        "score": 85,
+        "win": 0,
+        "rank": 2,
+        "balance": 14,
+        "tiles": 13,
+        "spent": 171,
+        "maxMs": 2.5516249999636784
+      },
+      {
+        "score": 104,
+        "win": 0,
+        "rank": 2,
+        "balance": 50,
+        "tiles": 11,
+        "spent": 154,
+        "maxMs": 5.844083000032697
+      },
+      {
+        "score": 71,
+        "win": 0,
+        "rank": 5,
+        "balance": 17,
+        "tiles": 11,
+        "spent": 154,
+        "maxMs": 4.8181669999612495
+      },
+      {
+        "score": 110,
+        "win": 1,
+        "rank": 1,
+        "balance": 7,
+        "tiles": 16,
+        "spent": 203,
+        "maxMs": 1.936833999992814
+      },
+      {
+        "score": 78,
+        "win": 0,
+        "rank": 4,
+        "balance": 24,
+        "tiles": 11,
+        "spent": 154,
+        "maxMs": 3.2195000000065193
+      },
+      {
+        "score": 92,
+        "win": 0,
+        "rank": 2,
+        "balance": 7,
+        "tiles": 13,
+        "spent": 185,
+        "maxMs": 1.805584000016097
+      },
+      {
+        "score": 84,
+        "win": 0,
+        "rank": 3,
+        "balance": 1,
+        "tiles": 12,
+        "spent": 183,
+        "maxMs": 3.448499999998603
+      },
+      {
+        "score": 70,
+        "win": 0,
+        "rank": 4,
+        "balance": 18,
+        "tiles": 11,
+        "spent": 152,
+        "maxMs": 3.4597089999588206
+      },
+      {
+        "score": 81,
+        "win": 0,
+        "rank": 2,
+        "balance": 4,
+        "tiles": 13,
+        "spent": 177,
+        "maxMs": 5.879957999975886
+      },
+      {
+        "score": 60,
+        "win": 0,
+        "rank": 5,
+        "balance": 8,
+        "tiles": 12,
+        "spent": 152,
+        "maxMs": 3.8811659999773838
+      },
+      {
+        "score": 53,
+        "win": 0,
+        "rank": 6,
+        "balance": 3,
+        "tiles": 12,
+        "spent": 150,
+        "maxMs": 2.1181670000078157
+      },
+      {
+        "score": 52,
+        "win": 0,
+        "rank": 6,
+        "balance": 9,
+        "tiles": 11,
+        "spent": 143,
+        "maxMs": 2.8763330000219867
+      },
+      {
+        "score": 108,
+        "win": 0,
+        "rank": 2,
+        "balance": 20,
+        "tiles": 14,
+        "spent": 188,
+        "maxMs": 5.420083999983035
+      },
+      {
+        "score": 77,
+        "win": 0,
+        "rank": 2,
+        "balance": 9,
+        "tiles": 13,
+        "spent": 168,
+        "maxMs": 4.364916999998968
+      },
+      {
+        "score": 100,
+        "win": 0,
+        "rank": 2,
+        "balance": 5,
+        "tiles": 17,
+        "spent": 195,
+        "maxMs": 2.7940420000231825
+      },
+      {
+        "score": 75,
+        "win": 0,
+        "rank": 3,
+        "balance": 0,
+        "tiles": 14,
+        "spent": 175,
+        "maxMs": 1.3407919999444857
+      },
+      {
+        "score": 78,
+        "win": 0,
+        "rank": 2,
+        "balance": 17,
+        "tiles": 12,
+        "spent": 161,
+        "maxMs": 1.65462500002468
+      },
+      {
+        "score": 95,
+        "win": 1,
+        "rank": 1,
+        "balance": 45,
+        "tiles": 11,
+        "spent": 150,
+        "maxMs": 4.694583999982569
+      },
+      {
+        "score": 90,
+        "win": 1,
+        "rank": 1,
+        "balance": 5,
+        "tiles": 13,
+        "spent": 185,
+        "maxMs": 1.89266700000735
+      },
+      {
+        "score": 74,
+        "win": 0,
+        "rank": 5,
+        "balance": 22,
+        "tiles": 12,
+        "spent": 152,
+        "maxMs": 3.8464159999857657
+      },
+      {
+        "score": 62,
+        "win": 0,
+        "rank": 4,
+        "balance": 9,
+        "tiles": 10,
+        "spent": 153,
+        "maxMs": 2.685332999972161
+      },
+      {
+        "score": 67,
+        "win": 0,
+        "rank": 3,
+        "balance": 38,
+        "tiles": 10,
+        "spent": 129,
+        "maxMs": 4.257791000010911
+      },
+      {
+        "score": 70,
+        "win": 0,
+        "rank": 4,
+        "balance": 35,
+        "tiles": 11,
+        "spent": 135,
+        "maxMs": 5.175333000021055
+      },
+      {
+        "score": 60,
+        "win": 0,
+        "rank": 6,
+        "balance": 6,
+        "tiles": 13,
+        "spent": 154,
+        "maxMs": 2.6222920000436716
+      },
+      {
+        "score": 47,
+        "win": 0,
+        "rank": 6,
+        "balance": 58,
+        "tiles": 8,
+        "spent": 89,
+        "maxMs": 5.951166999991983
+      },
+      {
+        "score": 72,
+        "win": 0,
+        "rank": 3,
+        "balance": 4,
+        "tiles": 14,
+        "spent": 168,
+        "maxMs": 6.492084000026807
+      }
+    ]
+  },
+  "finishedAt": "2026-10-25T07:26:41.533Z"
+}
